@@ -1,0 +1,59 @@
+{
+  "id": "sa-pdpl-2021",
+  "title": "Saudi Personal Data Protection Law",
+  "title_ar": "نظام حماية البيانات الشخصية",
+  "official_title": "Personal Data Protection Law, promulgated by Royal Decree No. M/19 of 9/2/1443H",
+  "official_title_ar": "نظام حماية البيانات الشخصية الصادر بالمرسوم الملكي رقم م/19 وتاريخ 9/2/1443هـ",
+  "jurisdiction": "SA",
+  "instrument_class": "law",
+  "binding_status": "binding",
+  "lifecycle": "amended",
+  "themes": ["technology_digital.data_protection_privacy"],
+  "issuing_authority": "sa-king",
+  "language_of_official_text": "ar",
+  "english_text_unofficial": true,
+  "date_issued": "2021-09-16",
+  "date_effective": "2023-09-14",
+  "compliance_deadline": "2024-09-14",
+  "gazette": { "name": "Umm Al Qura", "number": null, "issue_date": "2021-09-24" },
+  "citation": "Personal Data Protection Law, promulgated by Royal Decree No. M/19 of 9/2/1443H (16 September 2021), as amended by Royal Decree No. M/148 of 5/9/1444H (27 March 2023)",
+  "summary": "The first comprehensive personal data protection law in Saudi Arabia, regulating the processing of personal data of individuals residing in the Kingdom, including processing by entities outside it. It establishes consent as the default lawful basis, grants data subjects rights of access, correction, and destruction, and assigns supervision to SDAIA.",
+  "summary_ar": "أول نظام شامل لحماية البيانات الشخصية في المملكة العربية السعودية، ينظم معالجة البيانات الشخصية للأفراد المقيمين في المملكة بما في ذلك المعالجة من جهات خارجها. ويجعل الموافقة الأساس النظامي الافتراضي للمعالجة، ويمنح أصحاب البيانات حقوق الاطلاع والتصحيح والإتلاف، ويسند الإشراف إلى سدايا.",
+  "impact_note": "Every entity processing personal data of individuals in Saudi Arabia falls in scope, including foreign entities processing residents' data from abroad. The law took effect on 14 September 2023 with a one year transition that ended on 14 September 2024, so obligations are now fully enforceable. Controllers need a lawful basis for each processing activity, internal records of processing, breach notification readiness, and a compliant mechanism for any transfer outside the Kingdom. Boards should treat SDAIA registration and transfer assessments as the immediate compliance workstream.",
+  "impact_note_ar": "يشمل النطاق كل جهة تعالج بيانات شخصية لأفراد في المملكة، بما في ذلك الجهات الأجنبية التي تعالج بيانات المقيمين من الخارج. دخل النظام حيز النفاذ في 14 سبتمبر 2023 مع فترة انتقالية انتهت في 14 سبتمبر 2024، وأصبحت الالتزامات واجبة التطبيق بالكامل. على جهات التحكم تحديد أساس نظامي لكل معالجة والاحتفاظ بسجلات المعالجة والاستعداد للإبلاغ عن الحوادث وتوفير آلية متوافقة لأي نقل خارج المملكة.",
+  "obligations": [
+    {
+      "description": "Establish a lawful basis for each processing activity, with consent as the default unless an exception applies",
+      "obligated_party": "Controllers",
+      "deadline": null
+    },
+    {
+      "description": "Notify SDAIA of personal data breaches within the period set by the Implementing Regulation",
+      "obligated_party": "Controllers",
+      "deadline": "within 72 hours, per the Implementing Regulation"
+    },
+    {
+      "description": "Respond to data subject requests for access, correction, and destruction",
+      "obligated_party": "Controllers",
+      "deadline": null
+    },
+    {
+      "description": "Apply a compliant mechanism for transfers of personal data outside the Kingdom",
+      "obligated_party": "Controllers",
+      "deadline": null
+    }
+  ],
+  "applicability": {
+    "entity_types": ["private companies", "public entities", "foreign entities processing data of Saudi residents"],
+    "sectors": ["all sectors"],
+    "extraterritorial": true,
+    "penalties": "Fines up to SAR 5 million, with criminal penalties for unlawful disclosure of sensitive personal data",
+    "grace_period": "One year transition from entry into force, ended 14 September 2024"
+  },
+  "relationships": [],
+  "source_url": "https://www.dlapiperdataprotection.com/?c=SA",
+  "source_confidence": "secondary",
+  "last_verified": "2026-06-11",
+  "tags": ["PDPL", "SDAIA", "data subject rights", "cross border transfers"],
+  "notes": "Core facts verified against multiple law firm analyses. Replace the source link with the Bureau of Experts consolidated Arabic text at laws.boe.gov.sa and confirm the Umm Al Qura issue number."
+}

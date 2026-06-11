@@ -1,0 +1,54 @@
+{
+  "id": "om-pdpl-executive-regulation-2024",
+  "title": "Executive Regulation of the Oman Personal Data Protection Law",
+  "title_ar": "اللائحة التنفيذية لقانون حماية البيانات الشخصية",
+  "official_title": "Executive Regulation of the Personal Data Protection Law, Ministerial Decision No. 34/2024",
+  "official_title_ar": "اللائحة التنفيذية لقانون حماية البيانات الشخصية الصادرة بالقرار الوزاري رقم 34/2024",
+  "jurisdiction": "OM",
+  "instrument_class": "regulation",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": ["technology_digital.data_protection_privacy"],
+  "issuing_authority": "om-mtcit",
+  "language_of_official_text": "ar",
+  "english_text_unofficial": true,
+  "date_issued": "2024-01-28",
+  "date_effective": "2024-02-05",
+  "compliance_deadline": "2025-02-05",
+  "gazette": { "name": "Official Gazette of Oman", "number": null, "issue_date": "2024-02-04" },
+  "citation": "Executive Regulation of the Personal Data Protection Law, Ministerial Decision No. 34/2024",
+  "summary": "The operational regulation under Oman's data protection law, issued by the Ministry of Transport, Communications and Information Technology. It details consent mechanics, sensitive data permit procedures and fees, breach notification timelines, data subject request handling, and transfer conditions, with a one year compliance window for existing processing.",
+  "summary_ar": null,
+  "impact_note": "This regulation started the real compliance clock in Oman: existing controllers had one year from its entry into force to align, ending in February 2025. The permit route for sensitive data processing now has defined procedures and fees, breach notification has fixed timelines, and data subject requests have response deadlines, so paper policies need to become operating procedures. Entities serving Oman from abroad should reassess transfer arrangements against the regulation's conditions.",
+  "impact_note_ar": null,
+  "obligations": [
+    {
+      "description": "Align existing processing operations with the law and regulation",
+      "obligated_party": "Controllers",
+      "deadline": "2025-02-05"
+    },
+    {
+      "description": "Notify the ministry of breaches within the regulation's timeline and inform affected data subjects",
+      "obligated_party": "Controllers",
+      "deadline": "as set by the regulation"
+    },
+    {
+      "description": "Apply for permits before processing sensitive data categories, following the defined procedure and fees",
+      "obligated_party": "Controllers",
+      "deadline": null
+    }
+  ],
+  "applicability": {
+    "entity_types": ["private companies", "controllers and processors in Oman"],
+    "sectors": ["all sectors"],
+    "extraterritorial": false,
+    "penalties": "Administrative penalties under the law's framework",
+    "grace_period": "One year for existing processing, ended 5 February 2025"
+  },
+  "relationships": [{ "type": "implements", "target_id": "om-pdpl-2022" }],
+  "source_url": "https://qanoon.om",
+  "source_confidence": "pending_verification",
+  "last_verified": "2026-06-11",
+  "tags": ["executive regulation", "permits", "breach notification"],
+  "notes": "Confirm the decision date, gazette issue, exact effective date, and breach notification timeline against the qanoon.om text before publishing; dates here follow secondary reporting."
+}

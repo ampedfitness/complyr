@@ -1,0 +1,54 @@
+{
+  "id": "ae-pdpl-2021",
+  "title": "UAE Personal Data Protection Law",
+  "title_ar": "قانون حماية البيانات الشخصية الاتحادي",
+  "official_title": "Federal Decree-Law No. 45 of 2021 on the Protection of Personal Data",
+  "official_title_ar": "مرسوم بقانون اتحادي رقم (45) لسنة 2021 في شأن حماية البيانات الشخصية",
+  "jurisdiction": "AE",
+  "instrument_class": "law",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": ["technology_digital.data_protection_privacy"],
+  "issuing_authority": "ae-president",
+  "language_of_official_text": "ar",
+  "english_text_unofficial": true,
+  "date_issued": "2021-09-20",
+  "date_effective": "2022-01-02",
+  "compliance_deadline": null,
+  "gazette": { "name": "Official Gazette of the United Arab Emirates", "number": null, "issue_date": null },
+  "citation": "Federal Decree-Law No. 45 of 2021 on the Protection of Personal Data",
+  "summary": "The UAE's first federal data protection law, applying onshore across the Emirates alongside the existing DIFC and ADGM regimes. It requires a lawful basis for processing, grants data subjects access, correction, deletion, and portability rights, and assigns supervision to the UAE Data Office.",
+  "summary_ar": "أول قانون اتحادي لحماية البيانات الشخصية في دولة الإمارات، يسري على المستوى الاتحادي إلى جانب نظامي مركز دبي المالي العالمي وسوق أبوظبي العالمي. يشترط أساساً قانونياً للمعالجة ويمنح أصحاب البيانات حقوق الاطلاع والتصحيح والمحو ونقل البيانات، ويسند الرقابة إلى مكتب الإمارات للبيانات.",
+  "impact_note": "Onshore UAE businesses now sit under a GDPR style federal regime, but its full operation awaits the executive regulations, which set the detail on notifications, transfers, and exemptions, and which had not been published when this record was last verified. Companies should map processing activities, prepare consent and rights handling processes, and watch for the executive regulations and Data Office activation, since compliance periods will run from those steps. Free zone entities in DIFC and ADGM remain under their own laws for in zone processing.",
+  "impact_note_ar": null,
+  "obligations": [
+    {
+      "description": "Process personal data only with consent or another basis permitted by the law",
+      "obligated_party": "Controllers and processors",
+      "deadline": null
+    },
+    {
+      "description": "Report personal data breaches that prejudice privacy to the UAE Data Office within the period to be set by the executive regulations",
+      "obligated_party": "Controllers",
+      "deadline": "to be set by the executive regulations"
+    },
+    {
+      "description": "Honour data subject rights of access, correction, deletion, restriction, and portability",
+      "obligated_party": "Controllers",
+      "deadline": null
+    }
+  ],
+  "applicability": {
+    "entity_types": ["private companies", "foreign entities processing data of UAE residents"],
+    "sectors": ["all sectors except government data, and sectors with their own regimes such as health and banking data"],
+    "extraterritorial": true,
+    "penalties": "Administrative penalties to be specified by cabinet resolution",
+    "grace_period": "Compliance period to run from issuance of the executive regulations"
+  },
+  "relationships": [{ "type": "references", "target_id": "ae-data-office-law-2021" }],
+  "source_url": "https://uaelegislation.gov.ae/en/legislations/1972",
+  "source_confidence": "official",
+  "last_verified": "2026-06-11",
+  "tags": ["PDPL", "UAE Data Office", "data subject rights"],
+  "notes": "Status of the executive regulations should be rechecked during research build out; they were still pending at last verification. Confirm the gazette issue number and the exact decree date, reported as 20 September 2021 by official sources and as 26 September 2021 in some analyses."
+}

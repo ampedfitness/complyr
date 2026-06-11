@@ -1,0 +1,54 @@
+{
+  "id": "om-pdpl-2022",
+  "title": "Oman Personal Data Protection Law",
+  "title_ar": "قانون حماية البيانات الشخصية",
+  "official_title": "Personal Data Protection Law, promulgated by Royal Decree No. 6/2022",
+  "official_title_ar": "مرسوم سلطاني رقم 6/2022 بإصدار قانون حماية البيانات الشخصية",
+  "jurisdiction": "OM",
+  "instrument_class": "law",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": ["technology_digital.data_protection_privacy"],
+  "issuing_authority": "om-sultan",
+  "language_of_official_text": "ar",
+  "english_text_unofficial": true,
+  "date_issued": "2022-02-09",
+  "date_effective": "2023-02-13",
+  "compliance_deadline": null,
+  "gazette": { "name": "Official Gazette of Oman", "number": null, "issue_date": "2022-02-13" },
+  "citation": "Personal Data Protection Law, promulgated by Royal Decree No. 6/2022, in force 13 February 2023",
+  "summary": "Oman's data protection law, replacing the limited provisions of the earlier electronic transactions regime. It is consent centric, requires permits for processing sensitive categories such as health and genetic data, grants data subjects rights, and is administered by the Ministry of Transport, Communications and Information Technology.",
+  "summary_ar": "قانون حماية البيانات الشخصية في سلطنة عمان، الصادر بالمرسوم السلطاني رقم 6/2022. يقوم على الموافقة كأساس للمعالجة، ويشترط تصريحاً لمعالجة الفئات الحساسة كالبيانات الصحية والجينية، ويمنح أصحاب البيانات حقوقاً، وتتولى وزارة النقل والاتصالات وتقنية المعلومات تطبيقه.",
+  "impact_note": "Oman's regime is stricter than it first appears: processing health, genetic, biometric, or financial data requires a permit from the ministry, a step many regional compliance programmes miss. Controllers operating in Oman need consent flows, a basis for any cross border transfer, and breach notification procedures, with the executive regulation of 2024 supplying the operational detail and transition period. Penalties reach OMR 500,000, high by regional standards relative to economy size.",
+  "impact_note_ar": null,
+  "obligations": [
+    {
+      "description": "Obtain express consent before processing unless another legal basis applies",
+      "obligated_party": "Controllers",
+      "deadline": null
+    },
+    {
+      "description": "Obtain a ministry permit before processing sensitive categories including health, genetic, and biometric data",
+      "obligated_party": "Controllers",
+      "deadline": null
+    },
+    {
+      "description": "Notify the ministry and affected data subjects of breaches as detailed in the executive regulation",
+      "obligated_party": "Controllers",
+      "deadline": null
+    }
+  ],
+  "applicability": {
+    "entity_types": ["private companies", "controllers and processors in Oman"],
+    "sectors": ["all sectors, with exemptions for national security and certain public interest processing"],
+    "extraterritorial": false,
+    "penalties": "Fines up to OMR 500,000",
+    "grace_period": "One year from publication before entry into force, ended 13 February 2023"
+  },
+  "relationships": [],
+  "source_url": "https://qanoon.om",
+  "source_confidence": "pending_verification",
+  "last_verified": "2026-06-11",
+  "tags": ["PDPL", "sensitive data permits"],
+  "notes": "Replace the source link with the decree page on qanoon.om and confirm the gazette issue number."
+}

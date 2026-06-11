@@ -1,0 +1,54 @@
+{
+  "id": "qa-pdppl-2016",
+  "title": "Qatar Personal Data Privacy Protection Law",
+  "title_ar": "قانون حماية خصوصية البيانات الشخصية",
+  "official_title": "Law No. 13 of 2016 Concerning Personal Data Privacy Protection",
+  "official_title_ar": "قانون رقم (13) لسنة 2016 بشأن حماية خصوصية البيانات الشخصية",
+  "jurisdiction": "QA",
+  "instrument_class": "law",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": ["technology_digital.data_protection_privacy"],
+  "issuing_authority": "qa-emir",
+  "language_of_official_text": "ar",
+  "english_text_unofficial": true,
+  "date_issued": "2016-11-03",
+  "date_effective": null,
+  "compliance_deadline": null,
+  "gazette": { "name": "Official Gazette of Qatar", "number": null, "issue_date": null },
+  "citation": "Law No. 13 of 2016 Concerning Personal Data Privacy Protection",
+  "summary": "The first standalone data protection law enacted in the GCC, applying to personal data processed electronically or obtained for electronic processing. It sets consent based processing, special protections for children's data and data of special nature, and direct marketing rules, with compliance now supervised within the National Cyber Security Agency.",
+  "summary_ar": null,
+  "impact_note": "Entities processing personal data electronically in Qatar need consent or a legal exemption, must protect data of special nature such as health and biometric data with additional measures, and face meaningful fines that have been actively applied. The fourteen official guidelines issued in 2021 are the practical compliance reference, and the move of the regulator into the National Cyber Security Agency signals closer integration of privacy and cyber enforcement. QFC entities follow the separate QFC Data Protection Regulations instead.",
+  "impact_note_ar": null,
+  "obligations": [
+    {
+      "description": "Process personal data only with consent or under a legal exception, with transparency about purposes",
+      "obligated_party": "Controllers",
+      "deadline": null
+    },
+    {
+      "description": "Apply heightened protections before processing data of special nature",
+      "obligated_party": "Controllers",
+      "deadline": null
+    },
+    {
+      "description": "Notify the competent department of breaches that may cause serious harm to personal data or privacy",
+      "obligated_party": "Controllers",
+      "deadline": null
+    }
+  ],
+  "applicability": {
+    "entity_types": ["private companies", "controllers and processors of electronic personal data"],
+    "sectors": ["all sectors outside the QFC regime"],
+    "extraterritorial": false,
+    "penalties": "Fines up to QAR 5 million",
+    "grace_period": null
+  },
+  "relationships": [],
+  "source_url": "https://www.almeezan.qa",
+  "source_confidence": "pending_verification",
+  "last_verified": "2026-06-11",
+  "tags": ["PDPPL", "data of special nature", "direct marketing"],
+  "notes": "Replace the source link with the Al Meezan law page, confirm the gazette details and the effective date, and add the 2021 guidelines and the QFC Data Protection Regulations 2021 as separate records during research build out."
+}

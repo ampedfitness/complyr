@@ -1,0 +1,59 @@
+{
+  "id": "sa-pdpl-implementing-regulation-2023",
+  "title": "Implementing Regulation of the Saudi Personal Data Protection Law",
+  "title_ar": "اللائحة التنفيذية لنظام حماية البيانات الشخصية",
+  "official_title": "Implementing Regulation of the Personal Data Protection Law",
+  "official_title_ar": "اللائحة التنفيذية لنظام حماية البيانات الشخصية",
+  "jurisdiction": "SA",
+  "instrument_class": "regulation",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": ["technology_digital.data_protection_privacy"],
+  "issuing_authority": "sa-sdaia",
+  "language_of_official_text": "ar",
+  "english_text_unofficial": true,
+  "date_issued": "2023-09-07",
+  "date_effective": "2023-09-14",
+  "compliance_deadline": "2024-09-14",
+  "gazette": { "name": "Umm Al Qura", "number": null, "issue_date": "2023-09-07" },
+  "citation": "Implementing Regulation of the Personal Data Protection Law, issued by SDAIA and published in the Official Gazette on 7 September 2023",
+  "summary": "The operational layer of the PDPL, issued by SDAIA one week before the law entered into force. It details consent mechanics, data subject request handling, breach notification, records of processing, data protection officer appointment triggers, and impact assessments.",
+  "summary_ar": null,
+  "impact_note": "This is where PDPL compliance becomes concrete. The regulation sets the 72 hour breach notification window to SDAIA, defines when a data protection officer must be appointed, prescribes the content of records of processing activities and privacy notices, and details legitimate interest assessments. Compliance teams should build their PDPL controls directly against this text rather than the law alone, and track SDAIA's subsequent amendments and guidance, which refine these requirements.",
+  "impact_note_ar": null,
+  "obligations": [
+    {
+      "description": "Notify SDAIA of personal data breaches that harm personal data or data subjects",
+      "obligated_party": "Controllers",
+      "deadline": "within 72 hours of becoming aware"
+    },
+    {
+      "description": "Appoint a data protection officer where the regulation's triggers are met",
+      "obligated_party": "Controllers",
+      "deadline": null
+    },
+    {
+      "description": "Maintain records of processing activities and make privacy notices available before collection",
+      "obligated_party": "Controllers",
+      "deadline": null
+    },
+    {
+      "description": "Conduct impact assessments for processing likely to cause high risk to data subjects",
+      "obligated_party": "Controllers",
+      "deadline": null
+    }
+  ],
+  "applicability": {
+    "entity_types": ["private companies", "public entities", "foreign entities processing data of Saudi residents"],
+    "sectors": ["all sectors"],
+    "extraterritorial": true,
+    "penalties": "Violations are sanctioned under the PDPL penalty framework",
+    "grace_period": "Aligned with the PDPL transition that ended 14 September 2024"
+  },
+  "relationships": [{ "type": "implements", "target_id": "sa-pdpl-2021" }],
+  "source_url": "https://sdaia.gov.sa/en/SDAIA/about/Documents/ImplementingRegulation.pdf",
+  "source_confidence": "official",
+  "last_verified": "2026-06-11",
+  "tags": ["PDPL", "breach notification", "DPO", "records of processing"],
+  "notes": "SDAIA amended this regulation in September 2024 alongside the transfer rules. The amendment is not yet recorded as a separate entry; add it during the research build out and move this record's lifecycle to amended."
+}

@@ -1,0 +1,54 @@
+{
+  "id": "bh-pdpl-2018",
+  "title": "Bahrain Personal Data Protection Law",
+  "title_ar": "قانون حماية البيانات الشخصية",
+  "official_title": "Law No. 30 of 2018 with respect to Personal Data Protection",
+  "official_title_ar": "قانون رقم (30) لسنة 2018 بإصدار قانون حماية البيانات الشخصية",
+  "jurisdiction": "BH",
+  "instrument_class": "law",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": ["technology_digital.data_protection_privacy"],
+  "issuing_authority": "bh-king",
+  "language_of_official_text": "ar",
+  "english_text_unofficial": true,
+  "date_issued": "2018-07-12",
+  "date_effective": "2019-08-01",
+  "compliance_deadline": null,
+  "gazette": { "name": "Official Gazette of Bahrain", "number": null, "issue_date": null },
+  "citation": "Law No. 30 of 2018 with respect to Personal Data Protection",
+  "summary": "The first comprehensive data protection law in the GCC, in force since August 2019. It requires a lawful basis for processing, regulates sensitive data and direct marketing, restricts transfers to jurisdictions without adequate protection, and provides for a Personal Data Protection Authority, with implementing resolutions issued in 2022.",
+  "summary_ar": null,
+  "impact_note": "Bahrain's regime is the GCC's longest running and the only one with criminal penalties at its core, so non compliance carries personal liability for managers, not just corporate fines. Entities processing personal data in Bahrain, or using means located there, need a lawful basis, transfer safeguards, and in some cases prior notification or authorisation from the authority. The 2022 ministerial resolutions made the operational requirements concrete, ending the period when the law was in force but procedurally hollow.",
+  "impact_note_ar": null,
+  "obligations": [
+    {
+      "description": "Establish a lawful basis for processing and obtain consent where no exception applies",
+      "obligated_party": "Data managers (controllers)",
+      "deadline": null
+    },
+    {
+      "description": "Apply safeguards or obtain authorisation before transferring personal data to jurisdictions without adequate protection",
+      "obligated_party": "Data managers (controllers)",
+      "deadline": null
+    },
+    {
+      "description": "Respect objection rights for direct marketing and automated decisions",
+      "obligated_party": "Data managers (controllers)",
+      "deadline": null
+    }
+  ],
+  "applicability": {
+    "entity_types": ["private companies", "individuals processing for business purposes", "entities processing via means located in Bahrain"],
+    "sectors": ["all sectors"],
+    "extraterritorial": true,
+    "penalties": "Criminal penalties including imprisonment up to one year and fines up to BHD 20,000 for listed violations",
+    "grace_period": null
+  },
+  "relationships": [],
+  "source_url": "https://www.legalaffairs.gov.bh",
+  "source_confidence": "pending_verification",
+  "last_verified": "2026-06-11",
+  "tags": ["PDPL", "criminal penalties", "direct marketing"],
+  "notes": "Replace the source link with the consolidated law text on the Legislation and Legal Opinion Commission portal and confirm the gazette details. The ten implementing ministerial resolutions of March 2022 should be added as separate records during research build out."
+}

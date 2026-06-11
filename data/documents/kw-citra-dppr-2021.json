@@ -1,0 +1,48 @@
+{
+  "id": "kw-citra-dppr-2021",
+  "title": "Kuwait Data Privacy Protection Regulation",
+  "title_ar": "لائحة حماية خصوصية البيانات",
+  "official_title": "CITRA Data Privacy Protection Regulation",
+  "official_title_ar": null,
+  "jurisdiction": "KW",
+  "instrument_class": "decision",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": ["technology_digital.data_protection_privacy", "technology_digital.telecommunications"],
+  "issuing_authority": "kw-citra",
+  "language_of_official_text": "both",
+  "date_issued": "2021-07-01",
+  "date_effective": null,
+  "compliance_deadline": null,
+  "gazette": null,
+  "citation": "CITRA, Data Privacy Protection Regulation, 2021",
+  "summary": "Kuwait's main data privacy instrument, issued by the telecommunications and IT regulator rather than as a general law. It imposes privacy duties on telecommunications and IT service providers licensed by CITRA, covering consent, purpose limitation, security measures, breach handling, and data localisation aspects for some services.",
+  "summary_ar": null,
+  "impact_note": "Kuwait has no general data protection law, so this regulation is the closest analogue and its sectoral framing is the key fact: obligations attach to CITRA licensed telecom and IT service providers, including cloud and platform providers serving Kuwait, rather than to every business. In scope providers need consent based processing, security controls, and breach response procedures, and should monitor CITRA for updated versions and for any move toward economy wide legislation.",
+  "impact_note_ar": null,
+  "obligations": [
+    {
+      "description": "Obtain consent and state purposes before collecting or processing users' personal data",
+      "obligated_party": "CITRA licensed service providers",
+      "deadline": null
+    },
+    {
+      "description": "Implement security measures protecting personal data and notify affected parties of breaches",
+      "obligated_party": "CITRA licensed service providers",
+      "deadline": null
+    }
+  ],
+  "applicability": {
+    "entity_types": ["telecommunications service providers", "IT and cloud service providers licensed by CITRA"],
+    "sectors": ["telecommunications", "information technology"],
+    "extraterritorial": false,
+    "penalties": "Regulatory enforcement by CITRA against licensed providers, including licence sanctions",
+    "grace_period": null
+  },
+  "relationships": [],
+  "source_url": "https://citra.gov.kw",
+  "source_confidence": "pending_verification",
+  "last_verified": "2026-06-11",
+  "tags": ["DPPR", "sectoral regulation", "telecom"],
+  "notes": "Confirm the issuing resolution number, the exact issue date approximated here to mid 2021, the effective date, and a direct link to the regulation text on the CITRA site before publishing."
+}

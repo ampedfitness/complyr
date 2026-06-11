@@ -1,0 +1,146 @@
+[
+  {
+    "id": "sa-king",
+    "name": "King of Saudi Arabia",
+    "name_ar": "ملك المملكة العربية السعودية",
+    "jurisdiction": "SA",
+    "type": "head_of_state",
+    "mandate": "Enacts primary legislation by royal decree on approval of the Council of Ministers and the Shura Council.",
+    "website": null
+  },
+  {
+    "id": "sa-sdaia",
+    "name": "Saudi Data and AI Authority",
+    "name_ar": "الهيئة السعودية للبيانات والذكاء الاصطناعي",
+    "jurisdiction": "SA",
+    "type": "sectoral_regulator",
+    "mandate": "National competent authority for data governance, personal data protection, and artificial intelligence in Saudi Arabia.",
+    "website": "https://sdaia.gov.sa"
+  },
+  {
+    "id": "ae-president",
+    "name": "President of the United Arab Emirates",
+    "name_ar": "رئيس دولة الإمارات العربية المتحدة",
+    "jurisdiction": "AE",
+    "type": "head_of_state",
+    "mandate": "Enacts federal decree laws and federal laws on the federal legislative process of the UAE.",
+    "website": null
+  },
+  {
+    "id": "ae-uae-data-office",
+    "name": "UAE Data Office",
+    "name_ar": "مكتب الإمارات للبيانات",
+    "jurisdiction": "AE",
+    "type": "sectoral_regulator",
+    "mandate": "Federal data protection regulator established to supervise the UAE Personal Data Protection Law and propose data policies.",
+    "website": null
+  },
+  {
+    "id": "ae-ai-office",
+    "name": "UAE Artificial Intelligence, Digital Economy and Remote Work Applications Office",
+    "name_ar": "مكتب الذكاء الاصطناعي والاقتصاد الرقمي وتطبيقات العمل عن بعد",
+    "jurisdiction": "AE",
+    "type": "ministry",
+    "mandate": "Government office leading UAE policy on artificial intelligence and the digital economy.",
+    "website": "https://ai.gov.ae"
+  },
+  {
+    "id": "ae-difc-cdp",
+    "name": "DIFC Commissioner of Data Protection",
+    "name_ar": "مفوض حماية البيانات في مركز دبي المالي العالمي",
+    "jurisdiction": "AE",
+    "type": "free_zone_authority",
+    "mandate": "Supervises and enforces the Data Protection Law of the Dubai International Financial Centre.",
+    "website": "https://www.difc.com"
+  },
+  {
+    "id": "ae-adgm-odp",
+    "name": "ADGM Office of Data Protection",
+    "name_ar": "مكتب حماية البيانات في سوق أبوظبي العالمي",
+    "jurisdiction": "AE",
+    "type": "free_zone_authority",
+    "mandate": "Administers and enforces the Data Protection Regulations of Abu Dhabi Global Market.",
+    "website": "https://www.adgm.com"
+  },
+  {
+    "id": "bh-king",
+    "name": "King of Bahrain",
+    "name_ar": "ملك مملكة البحرين",
+    "jurisdiction": "BH",
+    "type": "head_of_state",
+    "mandate": "Ratifies and promulgates laws passed by the National Assembly of Bahrain.",
+    "website": null
+  },
+  {
+    "id": "bh-pdpa",
+    "name": "Bahrain Personal Data Protection Authority",
+    "name_ar": "هيئة حماية البيانات الشخصية",
+    "jurisdiction": "BH",
+    "type": "sectoral_regulator",
+    "mandate": "Supervises and enforces the Bahrain Personal Data Protection Law.",
+    "website": "https://www.pdp.gov.bh"
+  },
+  {
+    "id": "bh-cbb",
+    "name": "Central Bank of Bahrain",
+    "name_ar": "مصرف البحرين المركزي",
+    "jurisdiction": "BH",
+    "type": "central_bank",
+    "mandate": "Regulates and supervises the banking, insurance, and capital markets sectors in Bahrain through the CBB Rulebook.",
+    "website": "https://www.cbb.gov.bh"
+  },
+  {
+    "id": "qa-emir",
+    "name": "Emir of Qatar",
+    "name_ar": "أمير دولة قطر",
+    "jurisdiction": "QA",
+    "type": "head_of_state",
+    "mandate": "Enacts laws and emiri decrees under the Constitution of Qatar.",
+    "website": null
+  },
+  {
+    "id": "qa-ncsa",
+    "name": "Qatar National Cyber Security Agency",
+    "name_ar": "الوكالة الوطنية للأمن السيبراني",
+    "jurisdiction": "QA",
+    "type": "sectoral_regulator",
+    "mandate": "National authority for cybersecurity in Qatar, hosting the compliance and data protection function for the personal data privacy law.",
+    "website": "https://www.ncsa.gov.qa"
+  },
+  {
+    "id": "qa-qfc-dpo",
+    "name": "QFC Data Protection Office",
+    "name_ar": "مكتب حماية البيانات في مركز قطر للمال",
+    "jurisdiction": "QA",
+    "type": "free_zone_authority",
+    "mandate": "Supervises and enforces the Data Protection Regulations of the Qatar Financial Centre.",
+    "website": "https://www.qfc.qa"
+  },
+  {
+    "id": "kw-citra",
+    "name": "Kuwait Communication and Information Technology Regulatory Authority",
+    "name_ar": "الهيئة العامة للاتصالات وتقنية المعلومات",
+    "jurisdiction": "KW",
+    "type": "sectoral_regulator",
+    "mandate": "Regulates telecommunications and information technology in Kuwait, including data privacy protection rules for service providers.",
+    "website": "https://citra.gov.kw"
+  },
+  {
+    "id": "om-sultan",
+    "name": "Sultan of Oman",
+    "name_ar": "سلطان عمان",
+    "jurisdiction": "OM",
+    "type": "head_of_state",
+    "mandate": "Enacts laws by royal decree as the supreme legislative authority of Oman.",
+    "website": null
+  },
+  {
+    "id": "om-mtcit",
+    "name": "Oman Ministry of Transport, Communications and Information Technology",
+    "name_ar": "وزارة النقل والاتصالات وتقنية المعلومات",
+    "jurisdiction": "OM",
+    "type": "ministry",
+    "mandate": "Ministry responsible for transport, communications, and information technology policy in Oman, including implementation of the personal data protection law.",
+    "website": "https://www.mtcit.gov.om"
+  }
+]
