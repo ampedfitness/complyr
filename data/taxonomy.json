@@ -1,0 +1,784 @@
+{
+  "version": "1.0.0",
+  "classification_rules": [
+    {
+      "id": "leaf_only_tagging",
+      "rule": "Tag documents at leaf level only. Parent branches are computed from leaf tags at build time and are never assigned directly."
+    },
+    {
+      "id": "multiple_leaves_allowed",
+      "rule": "A document may carry multiple leaf tags when it genuinely regulates more than one domain. A fintech regulation tags finance.fintech_payments, and also a technology leaf if it regulates the technology itself rather than the financial activity."
+    },
+    {
+      "id": "no_residual_categories",
+      "rule": "No general, other, or miscellaneous categories exist anywhere in the tree. If a document fits no leaf, the tree has a gap. Propose a new leaf with a scope statement instead of forcing a bad fit."
+    },
+    {
+      "id": "tag_against_scope",
+      "rule": "Every node carries a scope statement defining what is in and what is out. Classify against the scope statement, never against the label alone."
+    },
+    {
+      "id": "breach_duties_boundary",
+      "rule": "Personal data breach notification and response duties sit under technology_digital.data_protection_privacy, not under cybersecurity, even when the instrument is issued by a cybersecurity authority."
+    },
+    {
+      "id": "aml_boundary",
+      "rule": "Anti money laundering and counter terrorist financing obligations sit under finance.aml_cft regardless of the issuing regulator, including when issued by a non financial supervisor for designated non financial businesses and professions."
+    },
+    {
+      "id": "listing_rules_boundary",
+      "rule": "Listing rules and continuing obligations of listed companies sit under finance.capital_markets, not under trade_commerce.corporate_insolvency."
+    },
+    {
+      "id": "promulgating_decrees",
+      "rule": "A royal or emiri decree that merely promulgates a law is not a separate record. It belongs in the law's citation metadata. A decree is recorded separately only when it carries substantive provisions of its own."
+    }
+  ],
+  "instrument_classes": [
+    {
+      "id": "law",
+      "label": "Law",
+      "label_ar": "قانون",
+      "binding": true,
+      "scope": "Primary legislation enacted through the jurisdiction's constitutional lawmaking process and carrying the highest force below the constitution. Out of scope: implementing or executive regulations issued under a law, which belong under regulation, and decrees that merely promulgate a law, which live in the law's citation metadata.",
+      "jurisdiction_forms": {
+        "SA": "Nizam, issued by royal decree",
+        "AE": "Federal law or federal decree law",
+        "BH": "Law, issued by decree law or law",
+        "QA": "Law",
+        "KW": "Law or decree law",
+        "OM": "Law promulgated by royal decree"
+      }
+    },
+    {
+      "id": "decree",
+      "label": "Decree",
+      "label_ar": "مرسوم",
+      "binding": true,
+      "scope": "A royal or emiri decree carrying substantive provisions of its own, such as establishing an authority or ordering a specific measure. Out of scope: decrees that merely promulgate a law, which are recorded in the law's citation metadata, and federal decree laws, which belong under law.",
+      "jurisdiction_forms": {
+        "SA": "Royal decree or royal order",
+        "AE": "Federal decree or emiri decree",
+        "BH": "Royal decree",
+        "QA": "Emiri decree or emiri decision",
+        "KW": "Emiri decree",
+        "OM": "Royal decree"
+      }
+    },
+    {
+      "id": "regulation",
+      "label": "Regulation",
+      "label_ar": "لائحة",
+      "binding": true,
+      "scope": "An implementing or executive regulation issued under an enabling law to give it operational effect. Must link to its enabling law through an implements relationship. Out of scope: standalone rules issued by a sectoral regulator without a single enabling statute, which belong under decision or rulebook_module.",
+      "jurisdiction_forms": {
+        "SA": "La'ihah tanfidhiyyah, implementing regulation",
+        "AE": "Executive regulation by cabinet resolution",
+        "BH": "Implementing regulation by ministerial resolution",
+        "QA": "Executive regulation",
+        "KW": "Executive regulation",
+        "OM": "Executive regulation by ministerial decision"
+      }
+    },
+    {
+      "id": "resolution",
+      "label": "Resolution",
+      "label_ar": "قرار",
+      "binding": true,
+      "scope": "A cabinet or ministerial resolution with general binding effect, including resolutions that designate competent authorities or set sectoral requirements. Out of scope: resolutions whose sole content is an executive regulation, which belong under regulation, and instruments of sectoral regulators, which belong under decision.",
+      "jurisdiction_forms": {
+        "SA": "Council of Ministers resolution or ministerial resolution",
+        "AE": "Cabinet resolution or ministerial resolution",
+        "BH": "Ministerial resolution or edict",
+        "QA": "Council of Ministers decision or ministerial decision",
+        "KW": "Council of Ministers decision or ministerial resolution",
+        "OM": "Ministerial decision"
+      }
+    },
+    {
+      "id": "decision",
+      "label": "Regulator decision",
+      "label_ar": "قرار تنظيمي",
+      "binding": true,
+      "scope": "A binding instrument issued by a sectoral regulator within its statutory mandate, such as licensing conditions, technical rules, or administrative decisions of general application. Out of scope: cabinet and ministerial instruments, which belong under resolution, and regulator guidance without binding force, which belongs under guideline."
+    },
+    {
+      "id": "circular",
+      "label": "Circular",
+      "label_ar": "تعميم",
+      "binding": true,
+      "scope": "A binding instruction issued by a regulator or ministry to its supervised population or subordinate bodies, typically narrower and more operational than a decision. Out of scope: circulars that only explain existing rules without imposing duties, which belong under guideline."
+    },
+    {
+      "id": "rulebook_module",
+      "label": "Rulebook module",
+      "label_ar": "وحدة كتاب القواعد",
+      "binding": true,
+      "scope": "A module of a regulator's consolidated rulebook, recorded at module level because modules are amended independently. Covers structures such as the CBB Rulebook. Out of scope: standalone regulator instruments outside a rulebook structure, which belong under decision or circular."
+    },
+    {
+      "id": "national_strategy",
+      "label": "National strategy",
+      "label_ar": "استراتيجية وطنية",
+      "binding": false,
+      "scope": "A government wide strategy setting direction, targets, and institutional responsibilities for a policy domain. Out of scope: sector policies of a single ministry or regulator, which belong under policy."
+    },
+    {
+      "id": "policy",
+      "label": "Policy",
+      "label_ar": "سياسة",
+      "binding": false,
+      "scope": "A stated position or operating policy of a ministry or regulator that guides decisions without creating directly enforceable duties. Out of scope: government wide strategies, which belong under national_strategy, and documents that explain compliance steps, which belong under guideline."
+    },
+    {
+      "id": "guideline",
+      "label": "Guideline",
+      "label_ar": "دليل إرشادي",
+      "binding": false,
+      "scope": "Guidance explaining how to interpret or comply with binding instruments, or recommending practices, without itself creating enforceable duties. Out of scope: codes that operate on a comply or explain basis, which belong under code_of_practice, and binding circulars."
+    },
+    {
+      "id": "framework",
+      "label": "Framework",
+      "label_ar": "إطار",
+      "binding": false,
+      "scope": "A structured reference model organising principles, controls, or maturity levels for a domain, intended for adoption rather than enforcement. Out of scope: frameworks made mandatory by a binding instrument, which keep this class but carry conditionally_binding status with an enabled_by link."
+    },
+    {
+      "id": "handbook",
+      "label": "Handbook",
+      "label_ar": "كتيب",
+      "binding": false,
+      "scope": "An operational manual consolidating procedures and explanatory material for practitioners. Out of scope: regulator rulebooks with binding force, which belong under rulebook_module."
+    },
+    {
+      "id": "code_of_practice",
+      "label": "Code of practice",
+      "label_ar": "مدونة ممارسات",
+      "binding": false,
+      "scope": "A code of expected conduct for a sector or activity, often operating on a comply or explain basis. Out of scope: codes incorporated by reference into a binding instrument, which keep this class but carry conditionally_binding status with an enabled_by link."
+    },
+    {
+      "id": "standard",
+      "label": "Standard",
+      "label_ar": "معيار",
+      "binding": false,
+      "scope": "A technical or management standard specifying requirements or controls, voluntary unless incorporated by reference. Out of scope: none by form; standards made mandatory carry conditionally_binding status with an enabled_by link to the incorporating instrument."
+    },
+    {
+      "id": "consultation_paper",
+      "label": "Consultation paper",
+      "label_ar": "ورقة تشاور",
+      "binding": false,
+      "scope": "A document published to gather public or industry input on a proposed instrument or policy. Out of scope: the resulting instrument itself, which is recorded separately and linked through resulted_from_consultation."
+    },
+    {
+      "id": "white_paper",
+      "label": "White paper",
+      "label_ar": "ورقة بيضاء",
+      "binding": false,
+      "scope": "An analytical or position paper published by a public body to inform debate or signal regulatory direction, without proposing specific draft text. Out of scope: papers seeking structured feedback on draft rules, which belong under consultation_paper."
+    }
+  ],
+  "binding_statuses": [
+    {
+      "id": "binding",
+      "label": "Binding",
+      "label_ar": "ملزم",
+      "scope": "The instrument creates directly enforceable legal duties within its scope of application."
+    },
+    {
+      "id": "non_binding",
+      "label": "Non binding",
+      "label_ar": "غير ملزم",
+      "scope": "The instrument guides or informs without creating enforceable duties."
+    },
+    {
+      "id": "conditionally_binding",
+      "label": "Conditionally binding",
+      "label_ar": "ملزم بشروط",
+      "scope": "The instrument binds only through another instrument, such as a standard incorporated by reference or a comply or explain code. Requires an enabled_by relationship to the instrument that triggers the force."
+    }
+  ],
+  "lifecycle": [
+    {
+      "id": "consultation",
+      "label": "In consultation",
+      "label_ar": "قيد التشاور",
+      "scope": "Published as a draft or consultation and not yet enacted."
+    },
+    {
+      "id": "enacted",
+      "label": "Enacted",
+      "label_ar": "صادر",
+      "scope": "Formally issued but not yet in force, typically awaiting an effective date or implementing measures."
+    },
+    {
+      "id": "in_force",
+      "label": "In force",
+      "label_ar": "نافذ",
+      "scope": "Currently effective and enforceable, or operative in the case of non binding instruments."
+    },
+    {
+      "id": "amended",
+      "label": "Amended",
+      "label_ar": "معدل",
+      "scope": "In force with one or more amendments recorded through amended_by relationships. The record describes the instrument as amended."
+    },
+    {
+      "id": "repealed",
+      "label": "Repealed",
+      "label_ar": "ملغى",
+      "scope": "Formally abrogated by a later instrument, recorded through a repealed_by relationship."
+    },
+    {
+      "id": "superseded",
+      "label": "Superseded",
+      "label_ar": "مستبدل",
+      "scope": "Replaced in practice by a later instrument without formal repeal. Common for strategies and guidance that are quietly replaced. Distinct from repealed, which requires formal abrogation."
+    }
+  ],
+  "relationship_types": [
+    {
+      "forward": "amends",
+      "inverse": "amended_by",
+      "scope": "The source instrument changes the text or effect of the target instrument."
+    },
+    {
+      "forward": "repeals",
+      "inverse": "repealed_by",
+      "scope": "The source instrument formally abrogates the target instrument in whole or in part."
+    },
+    {
+      "forward": "supersedes",
+      "inverse": "superseded_by",
+      "scope": "The source instrument replaces the target in practice without formal repeal."
+    },
+    {
+      "forward": "implements",
+      "inverse": "implemented_by",
+      "scope": "The source instrument gives operational effect to the target enabling instrument, such as an executive regulation implementing its law."
+    },
+    {
+      "forward": "consults_on",
+      "inverse": "resulted_from_consultation",
+      "scope": "The source consultation paper seeks input on what became the target instrument."
+    },
+    {
+      "forward": "enabled_by",
+      "inverse": "enables",
+      "scope": "The source instrument derives binding force from the target, such as a standard incorporated by reference. Required for conditionally_binding instruments."
+    },
+    {
+      "forward": "references",
+      "inverse": "referenced_by",
+      "scope": "The source instrument materially relies on the target without amending or implementing it. Use sparingly, only where the reference matters for compliance."
+    }
+  ],
+  "themes": [
+    {
+      "id": "technology_digital",
+      "label": "Technology & Digital",
+      "label_ar": "التقنية والرقمنة",
+      "coverage": "full",
+      "scope": "Regulation of digital technologies, data, networks, and online activity. Out of scope: financial technology as a regulated financial activity, which sits under finance.fintech_payments, and health data, which sits under health.health_data_digital_health.",
+      "children": [
+        {
+          "id": "technology_digital.data_protection_privacy",
+          "label": "Data protection & privacy",
+          "label_ar": "حماية البيانات والخصوصية",
+          "scope": "Processing of personal data: lawful bases, data subject rights, controller and processor duties, cross border transfers, registration, and personal data breach notification and response duties, which sit here and not under cybersecurity. Out of scope: security of systems and networks generally, which sits under cybersecurity, and health specific data rules, which sit under health.health_data_digital_health."
+        },
+        {
+          "id": "technology_digital.ai_emerging_tech",
+          "label": "AI & emerging tech",
+          "label_ar": "الذكاء الاصطناعي والتقنيات الناشئة",
+          "scope": "Governance of artificial intelligence and emerging technologies: AI ethics and risk frameworks, generative AI rules, autonomous systems, and sandboxes for novel technologies. Out of scope: personal data aspects of AI systems, which also tag data_protection_privacy, and sector deployment rules that belong with the sector."
+        },
+        {
+          "id": "technology_digital.cybersecurity",
+          "label": "Cybersecurity",
+          "label_ar": "الأمن السيبراني",
+          "scope": "Security of systems, networks, and critical infrastructure: security controls, incident reporting for system compromise, cloud security requirements, and national cybersecurity frameworks. Out of scope: personal data breach notification duties, which sit under data_protection_privacy even when issued by a cybersecurity authority."
+        },
+        {
+          "id": "technology_digital.telecommunications",
+          "label": "Telecommunications",
+          "label_ar": "الاتصالات",
+          "scope": "Licensing and regulation of telecom networks and services, spectrum, interconnection, and communications infrastructure. Out of scope: content carried over networks, which sits under media_content, and general cybersecurity duties, which sit under cybersecurity."
+        },
+        {
+          "id": "technology_digital.digital_government",
+          "label": "Digital government",
+          "label_ar": "الحكومة الرقمية",
+          "scope": "Digital transformation of government: e government services, digital identity, government data sharing and open data, and government cloud policy. Out of scope: private sector data duties, which sit under data_protection_privacy or cybersecurity."
+        },
+        {
+          "id": "technology_digital.ecommerce_platforms",
+          "label": "E-commerce & platforms",
+          "label_ar": "التجارة الإلكترونية والمنصات",
+          "scope": "Online commerce and platform regulation: e commerce licensing, electronic transactions and trust services, platform duties, and online consumer disclosures specific to digital channels. Out of scope: general consumer protection, which sits under trade_commerce.consumer_protection, and payment services, which sit under finance.fintech_payments."
+        }
+      ]
+    },
+    {
+      "id": "finance",
+      "label": "Finance",
+      "label_ar": "المالية",
+      "coverage": "partial",
+      "scope": "Regulation of financial services, markets, and financial crime. Out of scope: taxation, which sits under taxation_public_finance, and general corporate law, which sits under trade_commerce.corporate_insolvency.",
+      "children": [
+        {
+          "id": "finance.banking",
+          "label": "Banking",
+          "label_ar": "الأعمال المصرفية",
+          "scope": "Licensing and prudential regulation of banks and financing companies, conduct of banking business, and outsourcing rules for banks. Out of scope: payment services and stored value, which sit under fintech_payments."
+        },
+        {
+          "id": "finance.capital_markets",
+          "label": "Capital markets",
+          "label_ar": "أسواق المال",
+          "scope": "Securities offering and trading, market infrastructure, investment funds, and listing rules with continuing obligations of listed companies, which sit here and not under corporate law. Out of scope: company formation and insolvency, which sit under trade_commerce.corporate_insolvency."
+        },
+        {
+          "id": "finance.insurance",
+          "label": "Insurance",
+          "label_ar": "التأمين",
+          "scope": "Licensing, prudential, and conduct regulation of insurers, reinsurers, and insurance intermediaries, including takaful. Out of scope: social insurance and pensions, which sit under social_civil_society.social_protection_pensions."
+        },
+        {
+          "id": "finance.fintech_payments",
+          "label": "Fintech & payments",
+          "label_ar": "التقنية المالية والمدفوعات",
+          "scope": "Payment services, e money, open banking, crypto assets as regulated financial activity, and fintech sandboxes. Out of scope: the underlying technologies where regulated as technology, which also tag a technology_digital leaf."
+        },
+        {
+          "id": "finance.aml_cft",
+          "label": "AML & CFT",
+          "label_ar": "مكافحة غسل الأموال وتمويل الإرهاب",
+          "scope": "Anti money laundering and counter terrorist financing duties for financial institutions and designated non financial businesses and professions. AML obligations sit here regardless of the issuing regulator. Out of scope: general anti corruption rules, which sit under justice_public_admin.anticorruption_integrity."
+        }
+      ]
+    },
+    {
+      "id": "energy_environment",
+      "label": "Energy & Environment",
+      "label_ar": "الطاقة والبيئة",
+      "coverage": "stub",
+      "scope": "Regulation of energy production and supply, utilities, and environmental protection. Out of scope: energy taxation, which sits under taxation_public_finance.",
+      "children": [
+        {
+          "id": "energy_environment.oil_gas",
+          "label": "Oil & gas",
+          "label_ar": "النفط والغاز",
+          "scope": "Upstream and downstream hydrocarbon regulation: concessions, licensing, local content in the petroleum sector, and petroleum products markets. Out of scope: petrochemical industrial licensing, which follows the relevant sector."
+        },
+        {
+          "id": "energy_environment.renewables",
+          "label": "Renewables",
+          "label_ar": "الطاقة المتجددة",
+          "scope": "Renewable energy programmes, licensing of renewable generation, and clean hydrogen frameworks. Out of scope: emissions and climate targets, which sit under climate_sustainability."
+        },
+        {
+          "id": "energy_environment.utilities",
+          "label": "Utilities",
+          "label_ar": "المرافق",
+          "scope": "Electricity and water sector regulation: generation, transmission, distribution, tariffs, and sector authorities. Out of scope: telecom utilities, which sit under technology_digital.telecommunications."
+        },
+        {
+          "id": "energy_environment.climate_sustainability",
+          "label": "Climate & sustainability",
+          "label_ar": "المناخ والاستدامة",
+          "scope": "Climate commitments, emissions regulation, environmental impact assessment, waste, and sustainability disclosure where environmental in character. Out of scope: sustainability disclosure as a listing obligation, which sits under finance.capital_markets."
+        }
+      ]
+    },
+    {
+      "id": "trade_commerce",
+      "label": "Trade & Commerce",
+      "label_ar": "التجارة",
+      "coverage": "stub",
+      "scope": "Regulation of trade, commercial activity, and market conduct. Out of scope: online commerce specifics, which sit under technology_digital.ecommerce_platforms.",
+      "children": [
+        {
+          "id": "trade_commerce.customs_crossborder",
+          "label": "Customs & cross-border trade",
+          "label_ar": "الجمارك والتجارة عبر الحدود",
+          "scope": "Customs law, tariffs, import and export controls, and trade facilitation including the GCC common customs framework. Out of scope: VAT and excise at the border, which sit under taxation_public_finance.vat_excise."
+        },
+        {
+          "id": "trade_commerce.free_zones",
+          "label": "Free zones",
+          "label_ar": "المناطق الحرة",
+          "scope": "Establishment and regulation of free zones and special economic zones, including financial free zones as jurisdictions. Out of scope: substantive rules issued by free zone authorities, which tag the relevant subject leaf with the free zone authority as issuer."
+        },
+        {
+          "id": "trade_commerce.competition",
+          "label": "Competition",
+          "label_ar": "المنافسة",
+          "scope": "Antitrust and competition law: anticompetitive agreements, abuse of dominance, and merger control. Out of scope: sector specific market access rules, which follow the sector."
+        },
+        {
+          "id": "trade_commerce.consumer_protection",
+          "label": "Consumer protection",
+          "label_ar": "حماية المستهلك",
+          "scope": "General consumer rights, product safety, pricing transparency, and unfair commercial practices. Out of scope: consumer duties specific to digital channels, which sit under technology_digital.ecommerce_platforms, and financial consumer protection, which follows the finance leaf."
+        },
+        {
+          "id": "trade_commerce.intellectual_property",
+          "label": "Intellectual property",
+          "label_ar": "الملكية الفكرية",
+          "scope": "Patents, trademarks, copyright, designs, trade secrets, and IP enforcement. Out of scope: data as property debates, which sit with the relevant data leaf."
+        },
+        {
+          "id": "trade_commerce.corporate_insolvency",
+          "label": "Corporate law & insolvency",
+          "label_ar": "قانون الشركات والإعسار",
+          "scope": "Company formation, governance of unlisted companies, commercial registers, bankruptcy, and restructuring. Out of scope: listing rules and continuing obligations of listed companies, which sit under finance.capital_markets."
+        }
+      ]
+    },
+    {
+      "id": "labour_workforce",
+      "label": "Labour & Workforce",
+      "label_ar": "العمل والقوى العاملة",
+      "coverage": "stub",
+      "scope": "Regulation of employment relationships and the labour market. Out of scope: residency and entry of foreign nationals, which sits under justice_public_admin.immigration_residency.",
+      "children": [
+        {
+          "id": "labour_workforce.employment",
+          "label": "Employment",
+          "label_ar": "العمل",
+          "scope": "Employment contracts, wages, working conditions, termination, and labour dispute resolution. Out of scope: occupational pension schemes, which sit under social_civil_society.social_protection_pensions."
+        },
+        {
+          "id": "labour_workforce.workforce_nationalisation",
+          "label": "Workforce nationalisation",
+          "label_ar": "توطين الوظائف",
+          "scope": "National employment quotas and programmes such as Saudisation, Emiratisation, and equivalents, including sector targets and compliance mechanics. Out of scope: general hiring rules, which sit under employment."
+        },
+        {
+          "id": "labour_workforce.professional_licensing",
+          "label": "Professional licensing",
+          "label_ar": "ترخيص المهن",
+          "scope": "Licensing and accreditation of regulated professions and occupational competence requirements. Out of scope: healthcare professional licensing, which sits under health.healthcare_facilities_professions."
+        }
+      ]
+    },
+    {
+      "id": "health",
+      "label": "Health",
+      "label_ar": "الصحة",
+      "coverage": "stub",
+      "scope": "Regulation of health services, products, and health data. Out of scope: health insurance as an insurance product, which sits under finance.insurance.",
+      "children": [
+        {
+          "id": "health.health_data_digital_health",
+          "label": "Health data & digital health",
+          "label_ar": "البيانات الصحية والصحة الرقمية",
+          "scope": "Health specific data rules, electronic health records, telehealth, and digital health platforms. Health data rules sit here rather than under data_protection_privacy when the instrument is specific to the health sector. Out of scope: general personal data law applied to health data, which sits under technology_digital.data_protection_privacy."
+        },
+        {
+          "id": "health.pharma_medical_devices",
+          "label": "Pharmaceuticals & medical devices",
+          "label_ar": "الأدوية والأجهزة الطبية",
+          "scope": "Marketing authorisation, manufacturing, distribution, and vigilance for medicines and medical devices. Out of scope: controlled substances criminal provisions, which sit under justice_public_admin."
+        },
+        {
+          "id": "health.healthcare_facilities_professions",
+          "label": "Healthcare facilities & professions",
+          "label_ar": "المنشآت والمهن الصحية",
+          "scope": "Licensing of hospitals, clinics, and healthcare professionals, and clinical practice standards. Out of scope: non clinical professional licensing, which sits under labour_workforce.professional_licensing."
+        }
+      ]
+    },
+    {
+      "id": "education_research",
+      "label": "Education & Research",
+      "label_ar": "التعليم والبحث",
+      "coverage": "stub",
+      "scope": "Regulation of education provision and research activity. Out of scope: vocational licensing of professions, which sits under labour_workforce.professional_licensing.",
+      "children": [
+        {
+          "id": "education_research.education_licensing",
+          "label": "Education licensing & accreditation",
+          "label_ar": "ترخيص واعتماد التعليم",
+          "scope": "Licensing and accreditation of schools, universities, and training providers, and quality assurance of institutions. Out of scope: recognition of individual qualifications, which sits under qualifications_frameworks."
+        },
+        {
+          "id": "education_research.qualifications_frameworks",
+          "label": "Qualifications frameworks",
+          "label_ar": "أطر المؤهلات",
+          "scope": "National qualifications frameworks, equivalency, and recognition of degrees and certificates. Out of scope: institutional accreditation, which sits under education_licensing."
+        },
+        {
+          "id": "education_research.research_governance",
+          "label": "Research governance",
+          "label_ar": "حوكمة البحث العلمي",
+          "scope": "Research funding rules, research ethics, and governance of research institutions. Out of scope: clinical trial product approvals, which sit under health.pharma_medical_devices."
+        }
+      ]
+    },
+    {
+      "id": "media_content",
+      "label": "Media & Content",
+      "label_ar": "الإعلام والمحتوى",
+      "coverage": "stub",
+      "scope": "Regulation of media, published content, and entertainment content. Out of scope: the networks carrying content, which sit under technology_digital.telecommunications.",
+      "children": [
+        {
+          "id": "media_content.broadcasting_press",
+          "label": "Broadcasting & press",
+          "label_ar": "البث والصحافة",
+          "scope": "Licensing of broadcasters, publishers, and media outlets, and media ownership rules. Out of scope: content rules applying across media, which sit under content_standards."
+        },
+        {
+          "id": "media_content.content_standards",
+          "label": "Content standards",
+          "label_ar": "معايير المحتوى",
+          "scope": "Rules on permissible content, classification, and online content moderation duties. Out of scope: commercial communications, which sit under advertising."
+        },
+        {
+          "id": "media_content.advertising",
+          "label": "Advertising",
+          "label_ar": "الإعلان",
+          "scope": "Advertising standards, influencer and social media advertising rules, and sector advertising restrictions. Out of scope: misleading commercial practices generally, which sit under trade_commerce.consumer_protection."
+        },
+        {
+          "id": "media_content.gaming_esports",
+          "label": "Gaming & esports",
+          "label_ar": "الألعاب والرياضات الإلكترونية",
+          "scope": "Regulation of video games, game classification, and esports organisation. Out of scope: gambling, which the region generally prohibits under criminal law within justice_public_admin."
+        }
+      ]
+    },
+    {
+      "id": "transport_logistics",
+      "label": "Transport & Logistics",
+      "label_ar": "النقل والخدمات اللوجستية",
+      "coverage": "stub",
+      "scope": "Regulation of transport modes and logistics services. Out of scope: customs treatment of moved goods, which sits under trade_commerce.customs_crossborder.",
+      "children": [
+        {
+          "id": "transport_logistics.aviation",
+          "label": "Aviation",
+          "label_ar": "الطيران",
+          "scope": "Civil aviation safety, air carrier licensing, airports, and drones for transport purposes. Out of scope: drone data capture rules, which also tag a technology_digital leaf."
+        },
+        {
+          "id": "transport_logistics.maritime_ports",
+          "label": "Maritime & ports",
+          "label_ar": "النقل البحري والموانئ",
+          "scope": "Shipping registration, maritime safety, and port regulation. Out of scope: free zone status of port areas, which sits under trade_commerce.free_zones."
+        },
+        {
+          "id": "transport_logistics.land_autonomous",
+          "label": "Land transport & autonomous mobility",
+          "label_ar": "النقل البري والتنقل الذاتي",
+          "scope": "Road transport, ride hailing, rail, and autonomous vehicle deployment rules. Autonomous vehicle instruments also tag technology_digital.ai_emerging_tech when they regulate the autonomy itself."
+        },
+        {
+          "id": "transport_logistics.logistics_postal",
+          "label": "Logistics & postal",
+          "label_ar": "الخدمات اللوجستية والبريد",
+          "scope": "Postal services, courier licensing, and logistics platforms. Out of scope: e commerce platform duties, which sit under technology_digital.ecommerce_platforms."
+        }
+      ]
+    },
+    {
+      "id": "real_estate_construction",
+      "label": "Real Estate & Construction",
+      "label_ar": "العقارات والبناء",
+      "coverage": "stub",
+      "scope": "Regulation of property markets, construction activity, and land use. Out of scope: real estate finance products, which sit under the relevant finance leaf.",
+      "children": [
+        {
+          "id": "real_estate_construction.registration_brokerage",
+          "label": "Real estate registration & brokerage",
+          "label_ar": "التسجيل العقاري والوساطة",
+          "scope": "Property registration, ownership rules including foreign ownership, brokerage licensing, and off plan sales regulation. Out of scope: mortgage regulation, which sits under finance.banking."
+        },
+        {
+          "id": "real_estate_construction.construction_codes",
+          "label": "Construction & building codes",
+          "label_ar": "البناء وكود البناء",
+          "scope": "Building codes, construction permits, and contractor classification. Out of scope: civil defence fire safety rules, which sit under defence_national_security.civil_defence."
+        },
+        {
+          "id": "real_estate_construction.urban_planning",
+          "label": "Urban planning",
+          "label_ar": "التخطيط العمراني",
+          "scope": "Zoning, master planning, and land use regulation. Out of scope: environmental impact assessment, which sits under energy_environment.climate_sustainability."
+        }
+      ]
+    },
+    {
+      "id": "tourism_culture_sport",
+      "label": "Tourism, Culture & Sport",
+      "label_ar": "السياحة والثقافة والرياضة",
+      "coverage": "stub",
+      "scope": "Regulation of tourism, cultural activity, events, and sport. Out of scope: media coverage of events, which sits under media_content.",
+      "children": [
+        {
+          "id": "tourism_culture_sport.tourism_licensing",
+          "label": "Tourism licensing",
+          "label_ar": "الترخيص السياحي",
+          "scope": "Licensing of hotels, tour operators, holiday rentals, and tourism activities. Out of scope: visit visas, which sit under justice_public_admin.immigration_residency."
+        },
+        {
+          "id": "tourism_culture_sport.cultural_heritage",
+          "label": "Cultural heritage",
+          "label_ar": "التراث الثقافي",
+          "scope": "Protection of antiquities, heritage sites, and cultural property. Out of scope: copyright in cultural works, which sits under trade_commerce.intellectual_property."
+        },
+        {
+          "id": "tourism_culture_sport.events_entertainment",
+          "label": "Events & entertainment",
+          "label_ar": "الفعاليات والترفيه",
+          "scope": "Permitting of public events, entertainment venues, and entertainment activities. Out of scope: content classification, which sits under media_content.content_standards."
+        },
+        {
+          "id": "tourism_culture_sport.sport_governance",
+          "label": "Sport governance",
+          "label_ar": "حوكمة الرياضة",
+          "scope": "Sports federations, club ownership and licensing, and athlete regulation. Out of scope: esports, which sits under media_content.gaming_esports."
+        }
+      ]
+    },
+    {
+      "id": "agriculture_food",
+      "label": "Agriculture & Food",
+      "label_ar": "الزراعة والغذاء",
+      "coverage": "stub",
+      "scope": "Regulation of food systems and agricultural production. Out of scope: food retail consumer rights, which sit under trade_commerce.consumer_protection.",
+      "children": [
+        {
+          "id": "agriculture_food.food_safety",
+          "label": "Food safety",
+          "label_ar": "سلامة الغذاء",
+          "scope": "Food standards, labelling, halal certification, import controls on food, and food establishment inspection. Out of scope: agricultural production rules, which sit under agriculture_fisheries."
+        },
+        {
+          "id": "agriculture_food.agriculture_fisheries",
+          "label": "Agriculture & fisheries",
+          "label_ar": "الزراعة والثروة السمكية",
+          "scope": "Farming, livestock, fisheries and aquaculture licensing, and agricultural support programmes. Out of scope: food processing standards, which sit under food_safety."
+        }
+      ]
+    },
+    {
+      "id": "taxation_public_finance",
+      "label": "Taxation & Public Finance",
+      "label_ar": "الضرائب والمالية العامة",
+      "coverage": "stub",
+      "scope": "Taxation, zakat, and the spending side of public finance. Out of scope: financial sector regulation, which sits under finance.",
+      "children": [
+        {
+          "id": "taxation_public_finance.corporate_income_tax",
+          "label": "Corporate & income tax",
+          "label_ar": "ضريبة الشركات والدخل",
+          "scope": "Corporate income tax, withholding tax, transfer pricing, and global minimum tax implementation. Out of scope: zakat, which has its own leaf."
+        },
+        {
+          "id": "taxation_public_finance.vat_excise",
+          "label": "VAT & excise",
+          "label_ar": "ضريبة القيمة المضافة والانتقائية",
+          "scope": "Value added tax, excise tax, and their administration including e invoicing mandates. Out of scope: customs duties, which sit under trade_commerce.customs_crossborder."
+        },
+        {
+          "id": "taxation_public_finance.zakat",
+          "label": "Zakat",
+          "label_ar": "الزكاة",
+          "scope": "Zakat assessment and collection rules for entities. Out of scope: charitable giving regulation, which sits under social_civil_society.charities_ngos."
+        },
+        {
+          "id": "taxation_public_finance.government_procurement",
+          "label": "Government procurement",
+          "label_ar": "المشتريات الحكومية",
+          "scope": "Public tendering, government contracting, and local content requirements in public procurement. Out of scope: defence procurement, which sits under defence_national_security.defence_industry_procurement."
+        }
+      ]
+    },
+    {
+      "id": "justice_public_admin",
+      "label": "Justice & Public Administration",
+      "label_ar": "العدالة والإدارة العامة",
+      "coverage": "stub",
+      "scope": "The justice system, public integrity, and the administrative relationship between state and resident. Out of scope: sector enforcement powers, which follow the sector.",
+      "children": [
+        {
+          "id": "justice_public_admin.judiciary_arbitration",
+          "label": "Judiciary & arbitration",
+          "label_ar": "القضاء والتحكيم",
+          "scope": "Court organisation, civil procedure, arbitration law, and enforcement of judgments and awards. Out of scope: regulatory tribunal procedures, which follow the sector."
+        },
+        {
+          "id": "justice_public_admin.anticorruption_integrity",
+          "label": "Anti-corruption & integrity",
+          "label_ar": "مكافحة الفساد والنزاهة",
+          "scope": "Bribery and corruption offences, asset disclosure, conflicts of interest, and integrity authorities. Out of scope: money laundering duties, which sit under finance.aml_cft."
+        },
+        {
+          "id": "justice_public_admin.immigration_residency",
+          "label": "Immigration & residency",
+          "label_ar": "الهجرة والإقامة",
+          "scope": "Entry, visas, residency permits including golden visa schemes, and sponsorship rules. Out of scope: work permit quotas tied to nationalisation, which sit under labour_workforce.workforce_nationalisation."
+        }
+      ]
+    },
+    {
+      "id": "defence_national_security",
+      "label": "Defence & National Security",
+      "label_ar": "الدفاع والأمن الوطني",
+      "coverage": "stub",
+      "scope": "Defence, national security, and emergency preparedness. Out of scope: cybersecurity of civilian systems, which sits under technology_digital.cybersecurity.",
+      "children": [
+        {
+          "id": "defence_national_security.defence_industry_procurement",
+          "label": "Defence industry & procurement",
+          "label_ar": "الصناعات الدفاعية والمشتريات",
+          "scope": "Defence procurement, localisation of defence industry, and export controls on defence goods. Out of scope: civilian procurement, which sits under taxation_public_finance.government_procurement."
+        },
+        {
+          "id": "defence_national_security.national_security",
+          "label": "National security",
+          "label_ar": "الأمن الوطني",
+          "scope": "National security legislation, critical infrastructure designation, and security clearances. Out of scope: technical cybersecurity controls, which sit under technology_digital.cybersecurity."
+        },
+        {
+          "id": "defence_national_security.civil_defence",
+          "label": "Civil defence",
+          "label_ar": "الدفاع المدني",
+          "scope": "Emergency preparedness, fire safety, and civil protection requirements. Out of scope: building permit mechanics, which sit under real_estate_construction.construction_codes."
+        }
+      ]
+    },
+    {
+      "id": "social_civil_society",
+      "label": "Social Affairs & Civil Society",
+      "label_ar": "الشؤون الاجتماعية والمجتمع المدني",
+      "coverage": "stub",
+      "scope": "Social protection, civil society organisations, and family law. Out of scope: labour rights in employment, which sit under labour_workforce.employment.",
+      "children": [
+        {
+          "id": "social_civil_society.social_protection_pensions",
+          "label": "Social protection & pensions",
+          "label_ar": "الحماية الاجتماعية والتقاعد",
+          "scope": "Social insurance, public pensions, end of service systems, and social support programmes. Out of scope: private insurance products, which sit under finance.insurance."
+        },
+        {
+          "id": "social_civil_society.charities_ngos",
+          "label": "Charities & NGOs",
+          "label_ar": "الجمعيات الخيرية والمنظمات الأهلية",
+          "scope": "Registration and governance of charities, associations, and non profit organisations, and fundraising rules. Out of scope: AML duties of non profits, which sit under finance.aml_cft."
+        },
+        {
+          "id": "social_civil_society.family_personal_status",
+          "label": "Family & personal status",
+          "label_ar": "الأسرة والأحوال الشخصية",
+          "scope": "Marriage, divorce, custody, inheritance, and personal status codes including those for non Muslims. Out of scope: civil court procedure, which sits under justice_public_admin.judiciary_arbitration."
+        }
+      ]
+    }
+  ]
+}
