@@ -29,7 +29,7 @@ The same legal form carries different names across the six jurisdictions. The ta
 
 A royal or emiri decree that merely promulgates a law is not a separate record; it lives in the law's citation string. This keeps the dataset from filling up with decree stubs.
 
-The theme tree has sixteen top level branches covering the whole regulatory space, each with leaf subcategories and a written scope statement. Documents tag leaves only; parents are computed. There are no general or miscellaneous categories anywhere: if nothing fits, the tree has a gap and the fix is a new leaf with a scope statement, not a junk drawer. Boundary calls are written into the scope statements, for example personal data breach duties sit under data protection rather than cybersecurity, and AML sits under finance regardless of which regulator issued it.
+The theme tree has seventeen top level branches covering the whole regulatory space, each with leaf subcategories and a written scope statement. Documents tag leaves only; parents are computed. There are no general or miscellaneous categories anywhere: if nothing fits, the tree has a gap and the fix is a new leaf with a scope statement, not a junk drawer. Boundary calls are written into the scope statements, for example personal data breach duties sit under data protection rather than cybersecurity, and AML sits under finance regardless of which regulator issued it.
 
 Lifecycle distinguishes `superseded` from `repealed`. Strategies and guidance get quietly replaced without formal repeal, and the data does not pretend otherwise.
 
@@ -120,7 +120,7 @@ Deployment is GitHub Pages via the workflow in `.github/workflows/deploy.yml`, t
 
 Complyr is a curated dataset, not a live monitoring service. Records are added and verified by hand, and each carries its own `last_verified` date. The dataset currently holds an initial demonstration set centred on data protection law across all six jurisdictions, with build out underway; entries marked `pending_verification` await confirmation against official sources before they should be relied on.
 
-Coverage status by theme branch: Technology & Digital is the launch focus (full), Finance is partial, and the remaining fourteen branches (Energy & Environment, Trade & Commerce, Labour & Workforce, Health, Education & Research, Media & Content, Transport & Logistics, Real Estate & Construction, Tourism, Culture & Sport, Agriculture & Food, Taxation & Public Finance, Justice & Public Administration, Defence & National Security, Social Affairs & Civil Society) exist as classified stubs so the tree stays collectively exhaustive while entries accumulate.
+Coverage status by theme branch: Technology & Digital is the launch focus (full), Finance is partial, and the remaining fifteen branches (Energy & Environment, Trade & Commerce, Labour & Workforce, Health, Education & Research, Media & Content, Transport & Logistics, Real Estate & Construction, Tourism, Culture & Sport, Agriculture & Food, Taxation & Public Finance, Justice & Public Administration, Defence & National Security, Social Affairs & Civil Society, Industry & Manufacturing) exist as classified stubs so the tree stays collectively exhaustive while entries accumulate. Constitutional and electoral law are deliberately out of scope.
 
 ## Roadmap
 

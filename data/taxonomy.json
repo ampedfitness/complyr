@@ -32,6 +32,14 @@
     {
       "id": "promulgating_decrees",
       "rule": "A royal or emiri decree that merely promulgates a law is not a separate record. It belongs in the law's citation metadata. A decree is recorded separately only when it carries substantive provisions of its own."
+    },
+    {
+      "id": "dataset_scope",
+      "rule": "Constitutional organisation, electoral law, and the political process are outside the dataset's scope. Complyr records instruments that regulate conduct and compliance, not the constitutional structure of the state."
+    },
+    {
+      "id": "cybercrime_boundary",
+      "rule": "Offences against information systems sit under technology_digital.cybersecurity. Online content offences sit under media_content.content_standards. A general penal statute covering both also tags justice_public_admin.criminal_justice."
     }
   ],
   "instrument_classes": [
@@ -299,7 +307,7 @@
           "id": "technology_digital.cybersecurity",
           "label": "Cybersecurity",
           "label_ar": "الأمن السيبراني",
-          "scope": "Security of systems, networks, and critical infrastructure: security controls, incident reporting for system compromise, cloud security requirements, and national cybersecurity frameworks. Out of scope: personal data breach notification duties, which sit under data_protection_privacy even when issued by a cybersecurity authority."
+          "scope": "Security of systems, networks, and critical infrastructure: security controls, incident reporting for system compromise, cloud security requirements, national cybersecurity frameworks, and offences against information systems such as unauthorised access and computer misuse. Out of scope: personal data breach notification duties, which sit under data_protection_privacy even when issued by a cybersecurity authority, and online content offences, which sit under media_content.content_standards."
         },
         {
           "id": "technology_digital.telecommunications",
@@ -311,7 +319,7 @@
           "id": "technology_digital.digital_government",
           "label": "Digital government",
           "label_ar": "الحكومة الرقمية",
-          "scope": "Digital transformation of government: e government services, digital identity, government data sharing and open data, and government cloud policy. Out of scope: private sector data duties, which sit under data_protection_privacy or cybersecurity."
+          "scope": "Digital transformation of government: e government services, digital identity, government data sharing and open data, and government cloud policy. Out of scope: private sector data duties, which sit under data_protection_privacy or cybersecurity, and official statistics and machinery of government, which sit under justice_public_admin.government_organisation."
         },
         {
           "id": "technology_digital.ecommerce_platforms",
@@ -482,7 +490,7 @@
           "id": "health.pharma_medical_devices",
           "label": "Pharmaceuticals & medical devices",
           "label_ar": "الأدوية والأجهزة الطبية",
-          "scope": "Marketing authorisation, manufacturing, distribution, and vigilance for medicines and medical devices. Out of scope: controlled substances criminal provisions, which sit under justice_public_admin."
+          "scope": "Marketing authorisation, manufacturing, distribution, and vigilance for medicines and medical devices. Out of scope: controlled substances criminal provisions, which sit under justice_public_admin.criminal_justice."
         },
         {
           "id": "health.healthcare_facilities_professions",
@@ -548,7 +556,7 @@
           "id": "media_content.gaming_esports",
           "label": "Gaming & esports",
           "label_ar": "الألعاب والرياضات الإلكترونية",
-          "scope": "Regulation of video games, game classification, and esports organisation. Out of scope: gambling, which the region generally prohibits under criminal law within justice_public_admin."
+          "scope": "Regulation of video games, game classification, and esports organisation. Out of scope: gambling, which sits under justice_public_admin.criminal_justice as a criminal law matter in the region."
         }
       ]
     },
@@ -561,9 +569,9 @@
       "children": [
         {
           "id": "transport_logistics.aviation",
-          "label": "Aviation",
-          "label_ar": "الطيران",
-          "scope": "Civil aviation safety, air carrier licensing, airports, and drones for transport purposes. Out of scope: drone data capture rules, which also tag a technology_digital leaf."
+          "label": "Aviation & space",
+          "label_ar": "الطيران والفضاء",
+          "scope": "Civil aviation safety, air carrier licensing, airports, drones for transport purposes, and space activities including launch, satellite, and space agency licensing regimes. Out of scope: drone data capture rules, which also tag a technology_digital leaf."
         },
         {
           "id": "transport_logistics.maritime_ports",
@@ -623,7 +631,7 @@
           "id": "tourism_culture_sport.tourism_licensing",
           "label": "Tourism licensing",
           "label_ar": "الترخيص السياحي",
-          "scope": "Licensing of hotels, tour operators, holiday rentals, and tourism activities. Out of scope: visit visas, which sit under justice_public_admin.immigration_residency."
+          "scope": "Licensing of hotels, tour operators, holiday rentals, and tourism activities, including hajj and umrah pilgrimage operators. Out of scope: visit visas, which sit under justice_public_admin.immigration_residency."
         },
         {
           "id": "tourism_culture_sport.cultural_heritage",
@@ -723,6 +731,18 @@
           "label": "Immigration & residency",
           "label_ar": "الهجرة والإقامة",
           "scope": "Entry, visas, residency permits including golden visa schemes, and sponsorship rules. Out of scope: work permit quotas tied to nationalisation, which sit under labour_workforce.workforce_nationalisation."
+        },
+        {
+          "id": "justice_public_admin.criminal_justice",
+          "label": "Criminal justice",
+          "label_ar": "العدالة الجنائية",
+          "scope": "Penal codes, criminal procedure, and offence regimes of general application, including gambling, controlled substances offences, and general penal statutes covering online conduct. Out of scope: offences against information systems, which sit under technology_digital.cybersecurity, online content offences, which sit under media_content.content_standards, and bribery offences, which sit under anticorruption_integrity."
+        },
+        {
+          "id": "justice_public_admin.government_organisation",
+          "label": "Government organisation & statistics",
+          "label_ar": "التنظيم الحكومي والإحصاء",
+          "scope": "Machinery of government, civil service rules, official statistics and census, and national archives. Out of scope: digital delivery of government services, which sits under technology_digital.digital_government, and instruments that merely establish an authority, which are themed by the authority's regulatory domain."
         }
       ]
     },
@@ -770,13 +790,40 @@
           "id": "social_civil_society.charities_ngos",
           "label": "Charities & NGOs",
           "label_ar": "الجمعيات الخيرية والمنظمات الأهلية",
-          "scope": "Registration and governance of charities, associations, and non profit organisations, and fundraising rules. Out of scope: AML duties of non profits, which sit under finance.aml_cft."
+          "scope": "Registration and governance of charities, associations, and non profit organisations, fundraising rules, and awqaf and endowment regulation. Out of scope: AML duties of non profits, which sit under finance.aml_cft."
         },
         {
           "id": "social_civil_society.family_personal_status",
           "label": "Family & personal status",
           "label_ar": "الأسرة والأحوال الشخصية",
           "scope": "Marriage, divorce, custody, inheritance, and personal status codes including those for non Muslims. Out of scope: civil court procedure, which sits under justice_public_admin.judiciary_arbitration."
+        }
+      ]
+    },
+    {
+      "id": "industry_manufacturing",
+      "label": "Industry & Manufacturing",
+      "label_ar": "الصناعة والتصنيع",
+      "coverage": "stub",
+      "scope": "Regulation of industrial activity, extraction of non hydrocarbon resources, and the national standards infrastructure. Out of scope: hydrocarbon extraction, which sits under energy_environment.oil_gas, and trade in manufactured goods, which sits under trade_commerce.",
+      "children": [
+        {
+          "id": "industry_manufacturing.industrial_licensing",
+          "label": "Industrial licensing",
+          "label_ar": "الترخيص الصناعي",
+          "scope": "Licensing of factories and industrial activity, industrial zones, and local content programmes for manufacturing. Out of scope: environmental permits for industrial sites, which sit under energy_environment.climate_sustainability."
+        },
+        {
+          "id": "industry_manufacturing.mining_quarrying",
+          "label": "Mining & quarrying",
+          "label_ar": "التعدين والمحاجر",
+          "scope": "Mining investment, exploration and exploitation licensing, and quarrying regulation for non hydrocarbon resources. Out of scope: oil and gas concessions, which sit under energy_environment.oil_gas."
+        },
+        {
+          "id": "industry_manufacturing.standards_metrology",
+          "label": "Standards & metrology",
+          "label_ar": "المواصفات والمقاييس",
+          "scope": "National standards bodies, technical regulations, conformity assessment, product marking, and metrology. Out of scope: standards specific to one sector, which tag that sector's leaf, and food standards, which sit under agriculture_food.food_safety."
         }
       ]
     }
