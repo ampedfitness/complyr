@@ -48,6 +48,8 @@ Official starting points by country:
 - Kuwait: official gazette Kuwait Al-Youm via e.gov.kw, citra.gov.kw
 - Oman: qanoon.om, mjla.gov.om
 
+Search in BOTH languages. Run every search in English AND in Arabic; many instruments, especially ministerial resolutions and gazette publications, are only findable in Arabic. Build Arabic queries from the instrument form plus the topic, for example: قانون (law), مرسوم or مرسوم ملكي or مرسوم سلطاني or مرسوم بقانون اتحادي (decree forms), لائحة تنفيذية (executive regulation), قرار وزاري (ministerial resolution), تعميم (circular), استراتيجية وطنية (national strategy), دليل or إرشادات (guideline). Combine with the Arabic topic terms for this subcategory. Browse the Arabic versions of the official portals, since they list more than their English versions. Translate findings into English for the table, but copy the official Arabic title verbatim into the Official name (AR) column.
+
 Type is a controlled vocabulary. Classify by legal form and issuer, never by the document's own title. Use exactly one of:
 - law: primary legislation passed through the country's lawmaking process. Includes a Saudi nizam, a UAE federal law or federal decree law, and any law promulgated by royal decree.
 - decree: a royal or emiri decree with substantive content of its own, such as establishing an authority or ordering a specific measure. A decree that merely promulgates a law is NOT a row at all.
