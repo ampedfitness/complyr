@@ -1,0 +1,54 @@
+---
+import '@fontsource-variable/source-serif-4';
+import '@fontsource/ibm-plex-sans/400.css';
+import '@fontsource/ibm-plex-sans/500.css';
+import '@fontsource/ibm-plex-sans/600.css';
+import '@fontsource/ibm-plex-mono/400.css';
+import '@fontsource/ibm-plex-mono/600.css';
+import '@fontsource/ibm-plex-sans-arabic/400.css';
+import '@fontsource/ibm-plex-sans-arabic/600.css';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+const base = import.meta.env.BASE_URL;
+const current = Astro.url.pathname;
+const isActive = (path: string) =>
+  current === base + path || current === base + path + '/' ? 'page' : undefined;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <a class="wordmark" href={base}>Complyr<span class="tld">.</span></a>
+        <nav class="site-nav" aria-label="Main">
+          <a href={base} aria-current={isActive('')}>Home</a>
+          <a href={`${base}developments/`} aria-current={isActive('developments')}>Latest developments</a>
+          <a href="https://github.com/ampedfitness/complyr">GitHub</a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <slot />
+      </div>
+    </main>
+    <footer class="site-footer">
+      <div class="container">
+        <span>Complyr. Open taxonomy and curated dataset for GCC regulation.</span>
+        <span>Code MIT. Data CC BY 4.0. Not legal advice.</span>
+      </div>
+    </footer>
+  </body>
+</html>
