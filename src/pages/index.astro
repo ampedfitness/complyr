@@ -1,13 +1,95 @@
 ---
-// Placeholder until Task 6 builds the real home page.
+import Base from '../layouts/Base.astro';
+import { dataset, recentDocuments, stats } from '../lib/data';
+import { JURISDICTION_NAMES } from '../lib/labels';
+
+const base = import.meta.env.BASE_URL;
+const classLabels = new Map(dataset.instrumentClasses.map((c) => [c.id, c.label]));
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Complyr</title>
-  </head>
-  <body>
-    <h1>Complyr</h1>
-  </body>
-</html>
+<Base
+  title="Complyr | Open taxonomy and dataset for GCC regulation"
+  description="An open source structured dataset and taxonomy of GCC regulation, starting with data protection, AI governance, and digital economy."
+>
+  <section class="hero">
+    <h1>GCC regulation, as structured data</h1>
+    <p>
+      There is no public, structured schema for GCC regulatory instruments. Laws, implementing
+      regulations, regulator decisions, and guidance live in scattered PDFs across six
+      jurisdictions, in two languages, with no machine readable way to say what an instrument is,
+      whether it binds, and what it amends or implements.
+    </p>
+    <p>
+      Complyr answers that with an open taxonomy and a curated dataset. Every instrument is
+      classified on three independent axes, legal form, subject matter, and lifecycle, linked to
+      its family of amendments and implementing measures, and verified against official sources.
+      Launch coverage is digital policy: data protection, AI governance, and digital economy.
+    </p>
+  </section>
+
+  <div class="stats-strip">
+    <div class="stat">
+      <span class="value">{stats.entries}</span>
+      <span class="label">Entries</span>
+    </div>
+    <div class="stat">
+      <span class="value">{stats.jurisdictions}</span>
+      <span class="label">Jurisdictions</span>
+    </div>
+    <div class="stat">
+      <span class="value">{stats.authorities}</span>
+      <span class="label">Authorities</span>
+    </div>
+    {
+      stats.dateRange && (
+        <div class="stat">
+          <span class="value mono" style="font-size:1.15rem; line-height:2.1rem;">
+            {stats.dateRange.from.slice(0, 4)}&ndash;{stats.dateRange.to.slice(0, 4)}
+          </span>
+          <span class="label">Coverage window</span>
+        </div>
+      )
+    }
+  </div>
+
+  <h2 class="section-title">Recently recorded</h2>
+  <ul class="recent-list">
+    {
+      recentDocuments.map((doc) => (
+        <li>
+          <a href={`${base}developments/`}>
+            <span class="title">{doc.title}</span>
+            <div class="meta">
+              {JURISDICTION_NAMES[doc.jurisdiction]} &middot;{' '}
+              {classLabels.get(doc.instrument_class) ?? doc.instrument_class} &middot;{' '}
+              <span class="mono">{doc.date_issued}</span>
+            </div>
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+
+  <section class="contribute">
+    <h2 style="margin-top:0">Contribute an entry</h2>
+    <p>
+      The dataset is built for pull requests. Every record is one JSON file, every classification
+      decision is written down in the taxonomy, and CI validates schema, theme tags, authority
+      references, and relationship targets before anything merges.
+    </p>
+    <ol>
+      <li>Pick an instrument and verify it against the official gazette or regulator source.</li>
+      <li>
+        Copy an existing record from <code class="mono">data/documents/</code> and fill in the
+        fields, tagging themes at leaf level only.
+      </li>
+      <li>
+        Run <code class="mono">npm run validate</code>, then open a pull request. The README walks
+        through every field.
+      </li>
+    </ol>
+    <p style="margin-top:0.9rem; margin-bottom:0">
+      <a href="https://github.com/ampedfitness/complyr">github.com/ampedfitness/complyr</a>
+    </p>
+  </section>
+</Base>
