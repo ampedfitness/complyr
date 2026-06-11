@@ -1,8 +1,9 @@
 ---
 import Base from '../layouts/Base.astro';
+import Flag from '../components/Flag.astro';
 import { dataset, stats } from '../lib/data';
 import { JURISDICTION_NAMES } from '../lib/labels';
-import type { Jurisdiction } from '../lib/types';
+import type { DocRecord, Jurisdiction } from '../lib/types';
 
 const base = import.meta.env.BASE_URL;
 const classLabels = new Map(dataset.instrumentClasses.map((c) => [c.id, c.label]));
@@ -12,105 +13,186 @@ const monthLabel = (iso: string) =>
     month: 'long',
     timeZone: 'UTC',
   });
-const yearOf = (iso: string) => iso.slice(0, 4);
+
+const dayLabel = (iso: string) =>
+  new Date(`${iso}T00:00:00Z`).toLocaleString('en-US', {
+    month: 'short',
+    day: 'numeric',
+    year: 'numeric',
+    timeZone: 'UTC',
+  });
 
 const firstSentence = (text: string) => {
   const idx = text.indexOf('. ');
   return idx === -1 ? text : text.slice(0, idx + 1);
 };
 
-const groups: { month: string; name: string; year: string; docs: typeof dataset.documents }[] = [];
+const groups: { month: string; name: string; year: string; docs: DocRecord[] }[] = [];
 for (const doc of dataset.documents) {
   const month = doc.date_issued.slice(0, 7);
   const group = groups.find((g) => g.month === month);
   if (group) group.docs.push(doc);
-  else groups.push({ month, name: monthLabel(month), year: yearOf(doc.date_issued), docs: [doc] });
+  else
+    groups.push({
+      month,
+      name: monthLabel(month),
+      year: doc.date_issued.slice(0, 4),
+      docs: [doc],
+    });
 }
 const lead = groups[0];
 const rest = groups.slice(1, 4);
 
-const ALL: Jurisdiction[] = ['SA', 'AE', 'QA', 'BH', 'KW', 'OM'];
+const typeChips = (docs: DocRecord[]) => {
+  const counts = new Map<string, number>();
+  for (const d of docs) {
+    const label = classLabels.get(d.instrument_class) ?? d.instrument_class;
+    counts.set(label, (counts.get(label) ?? 0) + 1);
+  }
+  return [...counts.entries()].map(([label, n]) => `${n} ${label}`);
+};
+
+const confidence = (doc: DocRecord) =>
+  doc.source_confidence === 'official'
+    ? { cls: 'high', label: 'High' }
+    : doc.source_confidence === 'secondary'
+      ? { cls: 'medium', label: 'Medium' }
+      : { cls: 'pending', label: 'Pending' };
+
+const ALL: Jurisdiction[] = ['BH', 'SA', 'AE', 'QA', 'KW', 'OM'];
 const jurCounts = ALL.map((j) => ({
   code: j,
   name: JURISDICTION_NAMES[j],
   count: dataset.documents.filter((d) => d.jurisdiction === j).length,
 }));
+
+const categoryCount = dataset.branches.length;
+const subcategoryCount = dataset.branches.reduce((n, b) => n + b.children.length, 0);
+const coverage = stats.dateRange
+  ? `${stats.dateRange.from.slice(0, 4)}–${stats.dateRange.to.slice(0, 4)}`
+  : '—';
+
+const statCards = [
+  {
+    label: 'Est. year',
+    value: '2026',
+    icon: 'M7 3v3M17 3v3M4 7.5h16M5.5 5h13A1.5 1.5 0 0 1 20 6.5v12a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 18.5v-12A1.5 1.5 0 0 1 5.5 5Z',
+  },
+  {
+    label: 'Total instruments',
+    value: String(stats.entries),
+    icon: 'M14 3H7a1.5 1.5 0 0 0-1.5 1.5v15A1.5 1.5 0 0 0 7 21h10a1.5 1.5 0 0 0 1.5-1.5V7.5L14 3ZM14 3v4.5h4.5M9 12h6M9 15.5h6',
+  },
+  {
+    label: 'Authorities',
+    value: String(stats.authorities),
+    icon: 'M3 21h18M5 21v-9M19 21v-9M9 21v-9M15 21v-9M3 9l9-6 9 6M3 9h18',
+  },
+  {
+    label: 'Coverage',
+    value: coverage,
+    icon: 'M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18ZM3 12h18M12 3a13.5 13.5 0 0 1 0 18M12 3a13.5 13.5 0 0 0 0 18',
+  },
+];
+
+const axes = [
+  {
+    name: 'Instrument class',
+    desc: 'What it is by legal form, split first by binding force.',
+    icon: 'M12 4v16M8 20h8M12 6 6 7.5M12 6l6 1.5M6 7.5l-2.5 6a3 3 0 0 0 5 0l-2.5-6ZM18 7.5l-2.5 6a3 3 0 0 0 5 0l-2.5-6Z',
+  },
+  {
+    name: 'Themes',
+    desc: `What it covers: ${categoryCount} categories and ${subcategoryCount} subcategories.`,
+    icon: 'M5 5h5v5H5zM14 5h5v5h-5zM5 14h5v5H5zM14 14h5v5h-5z',
+  },
+  {
+    name: 'Lifecycle',
+    desc: 'Where it is in its lifecycle, from consultation to force and beyond.',
+    icon: 'M20 12a8 8 0 1 1-2.3-5.6M20 4v4h-4',
+  },
+];
+
+const legend = [
+  { cls: 'high', name: 'High confidence', desc: 'Verified against an authoritative source' },
+  { cls: 'medium', name: 'Medium confidence', desc: 'Verified against a secondary source' },
+  { cls: 'pending', name: 'Pending verification', desc: 'Source confirmation in progress' },
+  { cls: 'info', name: 'All entries are source linked', desc: 'Transparency by design' },
+];
 ---
 
 <Base
-  title="Complyr | Open taxonomy and dataset for GCC regulation"
+  title="Complyr | GCC regulation, verified, structured, open"
   description="An open source structured dataset and taxonomy of GCC regulation, starting with data protection, AI governance, and digital economy."
 >
-  <div class="front">
-    <header class="mast reveal">
-      <div class="mast-meta">
-        <span>Open dataset &middot; Est. 2026</span>
-        <span class="hide-narrow">An independent register of GCC regulation</span>
-        <span
-          >Entries {stats.entries} &middot; Authorities {stats.authorities} &middot;
-          {stats.dateRange?.from.slice(0, 4)}&ndash;{stats.dateRange?.to.slice(0, 4)}</span
-        >
-      </div>
-      <h1 class="mast-title">GCC regulation,<br />as <em>structured data</em>.</h1>
-      <p class="mast-ar" lang="ar" dir="rtl">قاعدة بيانات مفتوحة ومنظّمة لتشريعات دول الخليج</p>
-      <div class="mast-rule" aria-hidden="true"></div>
-    </header>
-
-    <section class="lede">
-      <div class="lede-copy reveal d1">
-        <p>
-          There is no public, structured schema for GCC regulatory instruments. Laws, implementing
-          regulations, regulator decisions, and guidance live in scattered PDFs across six
-          jurisdictions, in two languages, with no machine readable way to say what an instrument
-          is, whether it binds, and what it amends or implements.
+  <div class="home">
+    <section class="hero">
+      <div class="hero-copy reveal">
+        <h1>GCC Regulation. Verified. Structured.&nbsp;Open.</h1>
+        <p class="hero-ar" lang="ar" dir="rtl">
+          تنظيمات دول مجلس التعاون الخليجي. موثقة. منظمة. ومفتوحة.
         </p>
-        <p>
-          Complyr answers that with an open taxonomy and a curated dataset. Every instrument is
-          verified against official sources, linked to its family of amendments and implementing
-          measures, and classified so that a compliance reader's first questions are the data
-          model's first fields. Launch coverage is digital policy: data protection, AI governance,
-          and digital economy.
+        <p class="hero-lede">
+          GCC regulation lives in scattered PDFs across six jurisdictions and two languages, with
+          no machine readable way to say what an instrument is, whether it binds, and what it
+          amends.
+        </p>
+        <p class="hero-lede">
+          Complyr solves this by providing a structured, source-verified register of regulatory
+          instruments across Bahrain, Saudi Arabia, UAE, Qatar, Kuwait, and Oman.
         </p>
       </div>
-      <aside class="axes reveal d2" aria-label="The three classification axes">
-        <h2>Every instrument, three axes</h2>
-        <ol>
-          <li>
-            <span class="num">01</span>
-            <span class="ax">
-              <span class="ax-name">Instrument class</span>
-              <span class="ax-desc">What it is by legal form, split first by binding force</span>
-            </span>
-          </li>
-          <li>
-            <span class="num">02</span>
-            <span class="ax">
-              <span class="ax-name">Themes</span>
-              <span class="ax-desc">What it regulates, tagged at leaf level of a seventeen branch tree</span>
-            </span>
-          </li>
-          <li>
-            <span class="num">03</span>
-            <span class="ax">
-              <span class="ax-name">Lifecycle</span>
-              <span class="ax-desc">Where it stands now, from consultation to quietly superseded</span>
-            </span>
-          </li>
-        </ol>
-      </aside>
-      <div class="watermark" aria-hidden="true">&sect;</div>
+      <div class="hero-side">
+        <div class="stat-row reveal d1">
+          {
+            statCards.map((s) => (
+              <div class="stat-card">
+                <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d={s.icon} />
+                </svg>
+                <span class="stat-label">{s.label}</span>
+                <span class="stat-value">{s.value}</span>
+              </div>
+            ))
+          }
+        </div>
+        <div class="classify reveal d2">
+          <h2>How Complyr classifies regulation</h2>
+          <div class="classify-axes">
+            {
+              axes.map((a) => (
+                <div class="axis">
+                  <svg class="axis-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d={a.icon} />
+                  </svg>
+                  <span class="axis-name">{a.name}</span>
+                  <span class="axis-desc">{a.desc}</span>
+                </div>
+              ))
+            }
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section class="stamps-section reveal d3" aria-label="Jurisdictions">
-      <h2 class="kicker"><span class="sign">&sect;</span> Six jurisdictions</h2>
-      <div class="stamps">
+    <section class="jurisdictions reveal d2" aria-label="Jurisdictions">
+      <h2 class="zone-title">Browse by jurisdiction</h2>
+      <div class="jur-grid">
         {
           jurCounts.map((j) => (
-            <a class={`stamp jur-${j.code}`} href={`${base}dashboard/?c=${j.code}`}>
-              <span class="code">{j.code}</span>
-              <span class="name">{j.name}</span>
-              <span class="count mono">
-                {j.count} {j.count === 1 ? 'entry' : 'entries'}
+            <a class="jur-tile" href={`${base}dashboard/?c=${j.code}`}>
+              <span class="jur-head">
+                <Flag code={j.code} />
+                <span class="jur-names">
+                  <span class="jur-code">{j.code}</span>
+                  <span class="jur-name">{j.name}</span>
+                </span>
+              </span>
+              <span class="jur-foot">
+                <span class="jur-count">
+                  {j.count} {j.count === 1 ? 'instrument' : 'instruments'}
+                </span>
+                <span class="go" aria-hidden="true">&rarr;</span>
               </span>
             </a>
           ))
@@ -118,578 +200,942 @@ const jurCounts = ALL.map((j) => ({
       </div>
     </section>
 
-    <section class="register reveal d4" aria-label="Latest updates">
-      <h2 class="kicker"><span class="sign">&sect;</span> Latest updates</h2>
-
-      <div class="month-block lead">
-        <div class="month-head">
-          <h3 class="month">{lead.name} <em>{lead.year}</em></h3>
-          <span class="mono muted">{lead.docs.length} {lead.docs.length === 1 ? 'entry' : 'entries'}</span>
+    <section class="updates-zone">
+      <div class="updates-card reveal d3">
+        <div class="updates-head">
+          <span class="pulse-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 12h4l2.5-7 5 14 2.5-7h4" />
+            </svg>
+          </span>
+          <div class="updates-titles">
+            <h2>Latest updates</h2>
+            <p>Track the most recent regulatory developments across the GCC.</p>
+          </div>
+          <a class="dash-link" href={`${base}dashboard/`}>View full dashboard &rarr;</a>
         </div>
-        <ul class="entries">
+
+        <div class="timeline">
+          <article class="month-block lead">
+            <header class="month-head">
+              <h3>{lead.name} {lead.year}</h3>
+              <span class="newest-tag">Newest</span>
+              <span class="month-count">
+                {lead.docs.length} {lead.docs.length === 1 ? 'update' : 'updates'}
+              </span>
+            </header>
+            <div class="update-table">
+              <div class="update-row head" aria-hidden="true">
+                <span>Date</span>
+                <span>Jurisdiction</span>
+                <span>Type</span>
+                <span>Title &amp; summary</span>
+                <span class="conf-col">Source confidence</span>
+                <span></span>
+              </div>
+              {
+                lead.docs.map((doc) => {
+                  const conf = confidence(doc);
+                  return (
+                    <a class="update-row" href={`${base}dashboard/?q=${encodeURIComponent(doc.title)}`}>
+                      <span class="u-date">{dayLabel(doc.date_issued)}</span>
+                      <span class="u-jur">
+                        <Flag code={doc.jurisdiction} />
+                        {doc.jurisdiction}
+                      </span>
+                      <span class="u-type">
+                        <span class="pill">{classLabels.get(doc.instrument_class) ?? doc.instrument_class}</span>
+                      </span>
+                      <span class="u-title">
+                        <span class="u-name">{doc.title}</span>
+                        <span class="u-line">{firstSentence(doc.summary)}</span>
+                      </span>
+                      <span class={`conf ${conf.cls} conf-col`}>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                          <path d="M12 3 5 5.5v5c0 4.5 3 8.5 7 10 4-1.5 7-5.5 7-10v-5L12 3Z" />
+                          <path d="m9 11.5 2 2 4-4" />
+                        </svg>
+                        {conf.label}
+                      </span>
+                      <span class="go" aria-hidden="true">&rarr;</span>
+                    </a>
+                  );
+                })
+              }
+            </div>
+          </article>
+
           {
-            lead.docs.map((doc) => (
-              <li>
-                <a href={`${base}dashboard/?q=${encodeURIComponent(doc.title)}`}>
-                  <span class="when mono">{doc.date_issued}</span>
-                  <span class="what">
-                    <span class="entry-meta">
-                      <span class={`badge jur-${doc.jurisdiction}`}>{doc.jurisdiction}</span>
-                      <span>{classLabels.get(doc.instrument_class) ?? doc.instrument_class}</span>
-                    </span>
-                    <span class="entry-title">{doc.title}</span>
-                    <span class="entry-line">{firstSentence(doc.summary)}</span>
+            rest.map((group) => (
+              <details class="month-block">
+                <summary>
+                  <h3>{group.name} {group.year}</h3>
+                  <span class="month-count">
+                    {group.docs.length} {group.docs.length === 1 ? 'update' : 'updates'}
                   </span>
-                </a>
+                  <span class="type-chips">
+                    {typeChips(group.docs).map((chip) => (
+                      <span class="type-chip">{chip}</span>
+                    ))}
+                  </span>
+                  <svg class="chev" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="m4 6 4 4 4-4" />
+                  </svg>
+                </summary>
+                <div class="update-table">
+                  {group.docs.map((doc) => {
+                    const conf = confidence(doc);
+                    return (
+                      <a class="update-row" href={`${base}dashboard/?q=${encodeURIComponent(doc.title)}`}>
+                        <span class="u-date">{dayLabel(doc.date_issued)}</span>
+                        <span class="u-jur">
+                          <Flag code={doc.jurisdiction} />
+                          {doc.jurisdiction}
+                        </span>
+                        <span class="u-type">
+                          <span class="pill">{classLabels.get(doc.instrument_class) ?? doc.instrument_class}</span>
+                        </span>
+                        <span class="u-title">
+                          <span class="u-name">{doc.title}</span>
+                        </span>
+                        <span class={`conf ${conf.cls} conf-col`}>
+                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M12 3 5 5.5v5c0 4.5 3 8.5 7 10 4-1.5 7-5.5 7-10v-5L12 3Z" />
+                            <path d="m9 11.5 2 2 4-4" />
+                          </svg>
+                          {conf.label}
+                        </span>
+                        <span class="go" aria-hidden="true">&rarr;</span>
+                      </a>
+                    );
+                  })}
+                </div>
+              </details>
+            ))
+          }
+        </div>
+
+        <ul class="legend">
+          {
+            legend.map((l) => (
+              <li>
+                <span class={`conf ${l.cls}`}>
+                  {l.cls === 'info' ? (
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <circle cx="12" cy="12" r="9" />
+                      <path d="M12 11v5M12 8h.01" />
+                    </svg>
+                  ) : (
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M12 3 5 5.5v5c0 4.5 3 8.5 7 10 4-1.5 7-5.5 7-10v-5L12 3Z" />
+                      <path d="m9 11.5 2 2 4-4" />
+                    </svg>
+                  )}
+                </span>
+                <span class="legend-text">
+                  <span class="legend-name">{l.name}</span>
+                  <span class="legend-desc">{l.desc}</span>
+                </span>
               </li>
             ))
           }
         </ul>
       </div>
 
-      <div class="register-rest">
-        {
-          rest.map((group) => (
-            <div class="month-block">
-              <div class="month-head">
-                <h3 class="month">
-                  {group.name} <em>{group.year}</em>
-                </h3>
-                <span class="mono muted">
-                  {group.docs.length} {group.docs.length === 1 ? 'entry' : 'entries'}
-                </span>
-              </div>
-              <ul class="entries">
-                {group.docs.map((doc) => (
-                  <li>
-                    <a href={`${base}dashboard/?q=${encodeURIComponent(doc.title)}`}>
-                      <span class="when mono">{doc.date_issued}</span>
-                      <span class="what">
-                        <span class="entry-meta">
-                          <span class={`badge jur-${doc.jurisdiction}`}>{doc.jurisdiction}</span>
-                          <span>{classLabels.get(doc.instrument_class) ?? doc.instrument_class}</span>
-                        </span>
-                        <span class="entry-title">{doc.title}</span>
-                      </span>
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))
-        }
-      </div>
-
-      <p class="register-more">
-        <a href={`${base}dashboard/`}>Browse the full dataset in the dashboard &rarr;</a>
-      </p>
-    </section>
-
-    <section class="notice reveal d5">
-      <h2>Notice to contributors</h2>
-      <p>
-        The dataset is built for pull requests. Every record is one JSON file, every classification
-        decision is written down in the taxonomy, and CI validates schema, theme tags, authority
-        references, and relationship targets before anything merges.
-      </p>
-      <ol>
-        <li>Pick an instrument and verify it against the official gazette or regulator source.</li>
-        <li>
-          Copy an existing record from <code class="mono">data/documents/</code> and fill in the
-          fields, tagging themes at leaf level only.
-        </li>
-        <li>
-          Run <code class="mono">npm run validate</code>, then open a pull request. The README
-          walks through every field.
-        </li>
-      </ol>
-      <p class="repo-link">
-        <a href="https://github.com/ampedfitness/complyr">github.com/ampedfitness/complyr</a>
-      </p>
+      <aside class="contribute-card reveal d4">
+        <h2>Contribute to Complyr</h2>
+        <p class="contribute-lede">
+          Open by design. Better together. Help us keep the register accurate and complete.
+        </p>
+        <ol class="steps">
+          <li>
+            <span class="step-num" aria-hidden="true">1</span>
+            <span class="step-body">
+              <span class="step-name">Find an issue or instrument to improve</span>
+              <span class="step-desc">Browse open issues or propose a new instrument.</span>
+            </span>
+          </li>
+          <li>
+            <span class="step-num" aria-hidden="true">2</span>
+            <span class="step-body">
+              <span class="step-name">Make a change</span>
+              <span class="step-desc">Fork the repo, add your changes, and open a pull request.</span>
+            </span>
+          </li>
+          <li>
+            <span class="step-num" aria-hidden="true">3</span>
+            <span class="step-body">
+              <span class="step-name">Review and publish</span>
+              <span class="step-desc">Maintainers review, verify sources, and publish.</span>
+            </span>
+          </li>
+        </ol>
+        <a class="gh-btn" href="https://github.com/ampedfitness/complyr">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.58 9.58 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.93.36.31.68.92.68 1.85v2.75c0 .27.18.58.69.48A10 10 0 0 0 12 2Z" />
+          </svg>
+          Contribute on GitHub
+          <span aria-hidden="true">&nearr;</span>
+        </a>
+      </aside>
     </section>
   </div>
 </Base>
 
 <style>
-  .front {
-    position: relative;
-  }
-
-  .front::before {
-    content: '';
-    position: fixed;
-    inset: 0;
-    z-index: 3;
-    pointer-events: none;
-    opacity: 0.05;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-  }
-
-  :global([data-theme='dark']) .front::before {
-    opacity: 0.07;
-  }
-
-  /* Masthead */
-  .mast-meta {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 0.3rem 2rem;
-    font-family: var(--mono);
-    font-size: 0.7rem;
-    font-weight: 600;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--ink-faint);
-    border-bottom: 1px solid var(--line);
-    padding-bottom: 0.55rem;
-  }
-
-  .mast-title {
-    font-family: var(--display);
-    font-size: clamp(2.7rem, 7vw, 4.6rem);
-    font-weight: 600;
-    line-height: 1.02;
-    letter-spacing: -0.02em;
-    margin: 1.8rem 0 0.7rem;
-  }
-
-  .mast-title em {
-    font-style: italic;
-    color: var(--accent);
-  }
-
-  .mast-ar {
-    font-family: var(--arabic);
-    font-size: 1.02rem;
-    color: var(--ink-faint);
-    margin: 0;
-  }
-
-  .mast-rule {
-    height: 8px;
-    border-top: 3px solid var(--ink);
-    border-bottom: 1px solid var(--ink);
-    margin-top: 1.5rem;
-  }
-
-  /* Lede */
-  .lede {
-    position: relative;
+  .home {
     display: grid;
-    grid-template-columns: minmax(0, 1.55fr) minmax(16rem, 1fr);
     gap: 2.6rem;
-    padding: 2.4rem 0 2.8rem;
   }
 
-  .lede-copy p {
-    font-size: 1.06rem;
-    line-height: 1.75;
-    color: var(--ink-soft);
-    margin: 0 0 1.1rem;
-    max-width: 42rem;
+  /* Hero */
+  .hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+    gap: 2.6rem;
+    align-items: start;
   }
 
-  .lede-copy p:first-of-type::first-letter {
-    font-family: var(--display);
-    font-weight: 600;
-    font-size: 3.6em;
-    line-height: 0.78;
-    float: left;
-    padding: 0.06em 0.14em 0 0;
-    color: var(--accent);
+  .hero-copy h1 {
+    font-size: clamp(2.2rem, 4.4vw, 3.2rem);
+    font-weight: 800;
+    letter-spacing: -0.035em;
+    line-height: 1.08;
+    margin: 0.4rem 0 0.9rem;
   }
 
-  .axes {
-    align-self: start;
-    background: var(--surface);
-    border: 1px solid var(--line-strong);
-    box-shadow: 7px 7px 0 var(--line);
-    padding: 1.25rem 1.4rem 1.4rem;
-  }
-
-  .axes h2 {
-    font-family: var(--display);
+  .hero-ar {
+    font-family: var(--arabic);
     font-size: 1.18rem;
     font-weight: 600;
+    color: var(--accent);
+    margin: 0 0 1.4rem;
+  }
+
+  .hero-lede {
+    font-size: 0.98rem;
+    line-height: 1.7;
+    color: var(--ink-soft);
+    margin: 0 0 0.9rem;
+    max-width: 34rem;
+  }
+
+  /* Stat cards */
+  .stat-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.9rem;
+  }
+
+  .stat-card {
+    display: grid;
+    justify-items: start;
+    gap: 0.15rem;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--r);
+    box-shadow: var(--shadow);
+    padding: 0.95rem 1.05rem;
+  }
+
+  .stat-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    color: var(--accent);
+    margin-bottom: 0.3rem;
+  }
+
+  .stat-label {
+    font-size: 0.74rem;
+    font-weight: 500;
+    color: var(--ink-faint);
+  }
+
+  .stat-value {
+    font-size: 1.35rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Classification panel */
+  .classify {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--r);
+    box-shadow: var(--shadow);
+    padding: 1.2rem 1.4rem 1.35rem;
+    margin-top: 0.9rem;
+  }
+
+  .classify h2 {
+    font-size: 1.02rem;
+    font-weight: 700;
+    margin: 0 0 1rem;
+  }
+
+  .classify-axes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .axis {
+    display: grid;
+    justify-items: center;
+    text-align: center;
+    gap: 0.2rem;
+    padding: 0 1.1rem;
+  }
+
+  .axis + .axis {
+    border-left: 1px solid var(--line);
+  }
+
+  .axis-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: var(--accent);
+    margin-bottom: 0.35rem;
+  }
+
+  .axis:nth-child(3) .axis-icon {
+    color: var(--ok);
+  }
+
+  .axis-name {
+    font-size: 0.87rem;
+    font-weight: 600;
+    color: var(--ink);
+  }
+
+  .axis-desc {
+    font-size: 0.78rem;
+    line-height: 1.5;
+    color: var(--ink-faint);
+  }
+
+  /* Jurisdiction tiles */
+  .zone-title {
+    font-size: 1.15rem;
+    font-weight: 700;
     margin: 0 0 0.9rem;
   }
 
-  .axes ol {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: grid;
-    gap: 0.85rem;
-  }
-
-  .axes li {
-    display: flex;
-    gap: 0.8rem;
-  }
-
-  .axes .num {
-    font-family: var(--mono);
-    font-size: 0.74rem;
-    font-weight: 600;
-    color: var(--accent);
-    padding-top: 0.22rem;
-  }
-
-  .axes .ax-name {
-    display: block;
-    font-family: var(--serif);
-    font-weight: 600;
-    font-size: 0.98rem;
-    color: var(--ink);
-  }
-
-  .axes .ax-desc {
-    display: block;
-    font-size: 0.83rem;
-    color: var(--ink-faint);
-    line-height: 1.45;
-  }
-
-  .watermark {
-    position: absolute;
-    top: -7rem;
-    right: -3rem;
-    z-index: -1;
-    font-family: var(--display);
-    font-size: clamp(20rem, 26vw, 30rem);
-    line-height: 1;
-    color: var(--ink);
-    opacity: 0.045;
-    user-select: none;
-    pointer-events: none;
-  }
-
-  :global([data-theme='dark']) .watermark {
-    opacity: 0.07;
-  }
-
-  /* Kickers */
-  .kicker {
-    display: flex;
-    align-items: center;
-    gap: 0.7rem;
-    font-family: var(--sans);
-    font-size: 0.76rem;
-    font-weight: 700;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-    color: var(--ink-soft);
-    margin: 0 0 1.2rem;
-  }
-
-  .kicker .sign {
-    color: var(--accent);
-    font-family: var(--display);
-    font-size: 1rem;
-  }
-
-  .kicker::after {
-    content: '';
-    flex: 1;
-    border-top: 1px solid var(--line-strong);
-  }
-
-  /* Stamps */
-  .stamps-section {
-    padding: 1rem 0 2.6rem;
-  }
-
-  .stamps {
+  .jur-grid {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     gap: 0.9rem;
   }
 
-  .stamp {
-    --tint: var(--ink);
-    display: flex;
-    flex-direction: column;
-    gap: 0.1rem;
-    padding: 0.85rem 0.95rem 0.75rem;
-    border: 1.5px solid var(--tint);
-    border-radius: 3px;
+  .jur-tile {
+    display: grid;
+    gap: 0.8rem;
+    align-content: space-between;
     background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--r);
+    box-shadow: var(--shadow);
+    padding: 0.95rem 1rem;
     color: var(--ink);
+  }
+
+  .jur-tile:hover {
     text-decoration: none;
-  }
-
-  .stamp:nth-child(odd) {
-    transform: rotate(-0.7deg);
-  }
-
-  .stamp:nth-child(even) {
-    transform: rotate(0.6deg);
-  }
-
-  .stamp:hover {
-    transform: rotate(0deg) translateY(-3px);
+    border-color: color-mix(in srgb, var(--accent) 40%, var(--line));
     box-shadow: var(--shadow-lift);
-    text-decoration: none;
+    transform: translateY(-2px);
   }
-
-  .stamp .code {
-    font-family: var(--display);
-    font-size: 1.7rem;
-    font-weight: 600;
-    line-height: 1.1;
-    color: var(--tint);
-  }
-
-  .stamp .name {
-    font-size: 0.68rem;
-    font-weight: 600;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--ink-soft);
-  }
-
-  .stamp .count {
-    font-size: 0.7rem;
-    color: var(--ink-faint);
-  }
-
-  .stamp.jur-SA { --tint: var(--jur-sa); }
-  .stamp.jur-AE { --tint: var(--jur-ae); }
-  .stamp.jur-BH { --tint: var(--jur-bh); }
-  .stamp.jur-QA { --tint: var(--jur-qa); }
-  .stamp.jur-KW { --tint: var(--jur-kw); }
-  .stamp.jur-OM { --tint: var(--jur-om); }
 
   @media (prefers-reduced-motion: no-preference) {
-    .stamp {
-      transition: transform 180ms ease, box-shadow 180ms ease;
+    .jur-tile {
+      transition: border-color 140ms ease, box-shadow 180ms ease, transform 180ms ease;
     }
   }
 
-  /* Register */
-  .register {
-    padding-bottom: 2.4rem;
+  .jur-head {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+
+  .jur-names {
+    display: grid;
+    line-height: 1.3;
+  }
+
+  .jur-code {
+    font-size: 0.85rem;
+    font-weight: 700;
+  }
+
+  .jur-name {
+    font-size: 0.78rem;
+    color: var(--ink-soft);
+  }
+
+  .jur-foot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.76rem;
+    color: var(--ink-faint);
+  }
+
+  .go {
+    color: var(--accent);
+    font-weight: 600;
+  }
+
+  .jur-tile:hover .go {
+    transform: translateX(2px);
+  }
+
+  /* Updates zone */
+  .updates-zone {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 19.5rem;
+    gap: 1.4rem;
+    align-items: start;
+  }
+
+  .updates-card,
+  .contribute-card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--r-lg);
+    box-shadow: var(--shadow);
+    padding: 1.5rem 1.6rem;
+  }
+
+  .updates-head {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.85rem;
+    margin-bottom: 1.3rem;
+  }
+
+  .pulse-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.4rem;
+    height: 2.4rem;
+    flex-shrink: 0;
+    border-radius: 999px;
+    background: var(--accent-soft);
+    color: var(--accent);
+  }
+
+  .pulse-icon svg {
+    width: 1.3rem;
+    height: 1.3rem;
+  }
+
+  .updates-titles {
+    flex: 1;
+  }
+
+  .updates-titles h2 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  .updates-titles p {
+    font-size: 0.85rem;
+    color: var(--ink-faint);
+    margin: 0.15rem 0 0;
+  }
+
+  .dash-link {
+    font-size: 0.85rem;
+    font-weight: 600;
+    white-space: nowrap;
+    padding-top: 0.25rem;
+  }
+
+  /* Timeline */
+  .timeline {
+    position: relative;
+    padding-left: 1.6rem;
+    display: grid;
+    gap: 0.8rem;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 0.36rem;
+    top: 0.6rem;
+    bottom: 0.6rem;
+    width: 2px;
+    background: var(--line);
+  }
+
+  .month-block {
+    position: relative;
+  }
+
+  .month-block::before {
+    content: '';
+    position: absolute;
+    left: -1.6rem;
+    top: 0.45rem;
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 50%;
+    background: var(--surface);
+    border: 2px solid var(--line-strong);
+  }
+
+  .month-block.lead::before {
+    border-color: var(--accent);
+    background: var(--accent-soft);
   }
 
   .month-head {
     display: flex;
     align-items: baseline;
-    justify-content: space-between;
-    gap: 1rem;
-    border-bottom: 2px solid var(--ink);
-    padding-bottom: 0.3rem;
-    margin-bottom: 0.2rem;
+    gap: 0.7rem;
+    margin-bottom: 0.7rem;
   }
 
-  .month {
-    font-family: var(--display);
-    font-weight: 600;
-    font-size: 1.45rem;
+  .month-head h3,
+  .month-block summary h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
     margin: 0;
   }
 
-  .month-block.lead .month {
-    font-size: 2.3rem;
-  }
-
-  .month em {
-    font-style: italic;
+  .newest-tag {
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
     color: var(--accent);
+    background: var(--accent-soft);
+    border-radius: 999px;
+    padding: 0.12rem 0.5rem;
   }
 
-  .entries {
-    list-style: none;
-    margin: 0 0 1.8rem;
-    padding: 0;
+  .month-count {
+    font-size: 0.8rem;
+    color: var(--ink-faint);
   }
 
-  .entries a {
+  /* Update table */
+  .update-table {
+    border: 1px solid var(--line);
+    border-radius: var(--r);
+    overflow: hidden;
+  }
+
+  .update-row {
     display: grid;
-    grid-template-columns: 6.4rem 1fr;
-    gap: 1rem;
-    padding: 0.85rem 0.2rem;
-    border-bottom: 1px solid var(--line);
+    grid-template-columns: 6.2rem 4.6rem 6.2rem minmax(0, 1fr) 6.2rem 1.6rem;
+    gap: 0.8rem;
+    align-items: center;
+    padding: 0.65rem 0.9rem;
     color: var(--ink);
+    font-size: 0.83rem;
+  }
+
+  .update-row + .update-row,
+  .update-row.head + .update-row {
+    border-top: 1px solid var(--line);
+  }
+
+  .update-row.head {
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    background: color-mix(in srgb, var(--paper) 60%, var(--surface));
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  a.update-row:hover {
     text-decoration: none;
+    background: color-mix(in srgb, var(--accent-soft) 45%, transparent);
   }
 
-  .entries a:hover {
-    background: color-mix(in srgb, var(--surface) 70%, transparent);
-  }
-
-  .entries a:hover .entry-title {
+  a.update-row:hover .u-name {
     color: var(--accent);
   }
 
-  .entries .when {
-    font-size: 0.76rem;
+  .u-date {
     color: var(--ink-faint);
-    padding-top: 0.3rem;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
   }
 
-  .entry-meta {
-    display: flex;
+  .u-jur {
+    display: inline-flex;
     align-items: center;
-    gap: 0.5rem;
-    font-size: 0.74rem;
-    color: var(--ink-faint);
-    margin-bottom: 0.2rem;
+    gap: 0.4rem;
+    font-weight: 600;
   }
 
-  .entry-title {
-    display: block;
-    font-family: var(--serif);
+  .u-title {
+    display: grid;
+    gap: 0.05rem;
+    min-width: 0;
+  }
+
+  .u-name {
     font-weight: 600;
-    font-size: 1.08rem;
     line-height: 1.4;
   }
 
-  .month-block.lead .entry-title {
-    font-size: 1.16rem;
-  }
-
-  .entry-line {
-    display: block;
-    font-size: 0.88rem;
+  .u-line {
+    font-size: 0.79rem;
     color: var(--ink-soft);
-    margin-top: 0.2rem;
-    max-width: 46rem;
+    line-height: 1.45;
   }
 
-  .register-rest {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-    gap: 0 2.6rem;
+  .conf {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 0.74rem;
+    font-weight: 600;
+    border-radius: 999px;
+    padding: 0.14rem 0.55rem;
+    justify-self: start;
+    white-space: nowrap;
   }
 
-  .register-rest .month-head {
-    border-bottom-width: 1px;
+  .conf svg {
+    width: 0.85rem;
+    height: 0.85rem;
+    flex-shrink: 0;
   }
 
-  .register-more {
-    margin: 0.4rem 0 0;
-    font-size: 0.95rem;
+  .conf.high {
+    background: var(--ok-bg);
+    color: var(--ok);
+    border: 1px solid var(--ok-line);
   }
 
-  /* Notice */
-  .notice {
-    position: relative;
-    border: 2px solid var(--ink);
+  .conf.medium {
+    background: var(--deadline-bg);
+    color: var(--deadline);
+    border: 1px solid var(--deadline-line);
+  }
+
+  .conf.pending {
+    background: transparent;
+    color: var(--deadline);
+    border: 1px dashed var(--deadline-line);
+  }
+
+  .conf.info {
+    background: transparent;
+    color: var(--ink-faint);
+    border: 0;
+    padding: 0;
+  }
+
+  /* Collapsed months */
+  details.month-block {
+    border: 1px solid var(--line);
+    border-radius: var(--r);
     background: var(--surface);
-    padding: 1.6rem 1.9rem;
-    margin: 1.4rem 0 0.6rem;
   }
 
-  .notice::before {
-    content: '';
-    position: absolute;
-    inset: 5px;
-    border: 1px solid var(--line-strong);
-    pointer-events: none;
+  details.month-block summary {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 0.7rem 1rem;
+    cursor: pointer;
+    list-style: none;
   }
 
-  .notice h2 {
-    font-family: var(--display);
-    font-size: 1.4rem;
-    margin: 0 0 0.7rem;
+  details.month-block summary::-webkit-details-marker {
+    display: none;
   }
 
-  .notice p {
-    color: var(--ink-soft);
-    margin: 0 0 0.7rem;
-    max-width: 50rem;
+  details.month-block::before {
+    top: 0.95rem;
   }
 
-  .notice ol {
-    margin: 0.4rem 0 0;
-    padding-left: 1.3rem;
-    color: var(--ink-soft);
-    font-size: 0.94rem;
-    display: grid;
+  details.month-block .type-chips {
+    margin-left: auto;
+    display: flex;
+    flex-wrap: wrap;
     gap: 0.35rem;
   }
 
-  .notice ol li::marker {
-    font-family: var(--mono);
-    font-size: 0.8rem;
-    color: var(--accent);
+  .type-chip {
+    font-size: 0.72rem;
     font-weight: 600;
+    color: var(--accent);
+    background: var(--accent-soft);
+    border-radius: 999px;
+    padding: 0.1rem 0.55rem;
+    white-space: nowrap;
   }
 
-  .repo-link {
-    margin-top: 1rem;
+  details.month-block .chev {
+    width: 1rem;
+    height: 1rem;
+    color: var(--ink-faint);
+    flex-shrink: 0;
+  }
+
+  details.month-block[open] .chev {
+    transform: rotate(180deg);
+  }
+
+  details.month-block .update-table {
+    border: 0;
+    border-top: 1px solid var(--line);
+    border-radius: 0;
+  }
+
+  /* Legend */
+  .legend {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin: 1.3rem 0 0;
+    padding: 1.1rem 0 0;
+    border-top: 1px solid var(--line);
+  }
+
+  .legend li {
+    display: flex;
+    gap: 0.5rem;
+    align-items: flex-start;
+  }
+
+  .legend .conf {
+    padding: 0.2rem;
+    border-radius: 999px;
+  }
+
+  .legend .conf svg {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  .legend-name {
+    display: block;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--ink);
+    line-height: 1.35;
+  }
+
+  .legend-desc {
+    display: block;
+    font-size: 0.72rem;
+    color: var(--ink-faint);
+    line-height: 1.4;
+  }
+
+  /* Contribute */
+  .contribute-card h2 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: 0 0 0.4rem;
+  }
+
+  .contribute-lede {
+    font-size: 0.86rem;
+    color: var(--ink-soft);
+    line-height: 1.55;
+    margin: 0 0 1.2rem;
+  }
+
+  .steps {
+    list-style: none;
+    margin: 0 0 1.4rem;
+    padding: 0;
+    display: grid;
+    gap: 1rem;
+    position: relative;
+  }
+
+  .steps::before {
+    content: '';
+    position: absolute;
+    left: 0.78rem;
+    top: 1.4rem;
+    bottom: 1rem;
+    width: 2px;
+    background: var(--line);
+  }
+
+  .steps li {
+    display: flex;
+    gap: 0.75rem;
+    position: relative;
+  }
+
+  .step-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.6rem;
+    height: 1.6rem;
+    flex-shrink: 0;
+    border-radius: 999px;
+    background: var(--accent);
+    color: #ffffff;
+    font-size: 0.78rem;
+    font-weight: 700;
+    position: relative;
+    z-index: 1;
+  }
+
+  :root[data-theme='dark'] .step-num {
+    color: #0f0f17;
+  }
+
+  .step-name {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--ink);
+    line-height: 1.4;
+  }
+
+  .step-desc {
+    display: block;
+    font-size: 0.78rem;
+    color: var(--ink-faint);
+    line-height: 1.5;
+  }
+
+  .gh-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+    padding: 0.6rem 1rem;
+    border: 1px solid color-mix(in srgb, var(--accent) 35%, var(--line));
+    border-radius: var(--r-sm);
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--accent);
+  }
+
+  .gh-btn:hover {
+    text-decoration: none;
+    background: var(--accent-soft);
+    border-color: var(--accent);
+  }
+
+  .gh-btn svg {
+    width: 1.1rem;
+    height: 1.1rem;
   }
 
   /* Load choreography */
   @media (prefers-reduced-motion: no-preference) {
     .reveal {
       opacity: 0;
-      animation: rise 0.7s cubic-bezier(0.2, 0.7, 0.3, 1) forwards;
+      animation: rise 0.65s cubic-bezier(0.2, 0.7, 0.3, 1) forwards;
     }
 
-    .d1 { animation-delay: 0.1s; }
-    .d2 { animation-delay: 0.2s; }
-    .d3 { animation-delay: 0.3s; }
-    .d4 { animation-delay: 0.38s; }
-    .d5 { animation-delay: 0.46s; }
-
-    .mast-rule {
-      transform: scaleX(0);
-      transform-origin: left;
-      animation: draw 0.9s 0.25s ease forwards;
-    }
+    .d1 { animation-delay: 0.08s; }
+    .d2 { animation-delay: 0.16s; }
+    .d3 { animation-delay: 0.24s; }
+    .d4 { animation-delay: 0.32s; }
 
     @keyframes rise {
       from {
         opacity: 0;
-        transform: translateY(16px);
+        transform: translateY(14px);
       }
       to {
         opacity: 1;
         transform: none;
       }
     }
-
-    @keyframes draw {
-      to {
-        transform: scaleX(1);
-      }
-    }
   }
 
   /* Responsive */
-  @media (max-width: 64rem) {
-    .watermark {
-      display: none;
+  @media (max-width: 70rem) {
+    .hero {
+      grid-template-columns: 1fr;
+      gap: 2rem;
     }
 
-    .stamps {
+    .jur-grid {
       grid-template-columns: repeat(3, 1fr);
+    }
+
+    .updates-zone {
+      grid-template-columns: 1fr;
+    }
+
+    .legend {
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 
-  @media (max-width: 48rem) {
-    .lede {
-      grid-template-columns: 1fr;
-      gap: 1.8rem;
+  @media (max-width: 46rem) {
+    .hero-copy h1 {
+      font-size: clamp(1.7rem, 8vw, 2.2rem);
     }
 
-    .hide-narrow {
-      display: none;
-    }
-
-    .stamps {
+    .stat-row {
       grid-template-columns: repeat(2, 1fr);
     }
 
-    .entries a {
+    .classify-axes {
       grid-template-columns: 1fr;
-      gap: 0.2rem;
+      gap: 1.1rem;
     }
 
-    .entries .when {
-      padding-top: 0;
+    .axis {
+      padding: 0;
+      justify-items: start;
+      text-align: left;
+    }
+
+    .axis + .axis {
+      border-left: 0;
+      border-top: 1px solid var(--line);
+      padding-top: 1.1rem;
+    }
+
+    .jur-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .update-row,
+    .update-row.head {
+      grid-template-columns: 1fr;
+      gap: 0.3rem;
+    }
+
+    .update-row.head {
+      display: none;
+    }
+
+    .conf-col {
+      justify-self: start;
+    }
+
+    .update-row .go {
+      display: none;
+    }
+
+    .legend {
+      grid-template-columns: 1fr;
+    }
+
+    details.month-block summary {
+      flex-wrap: wrap;
     }
   }
 </style>

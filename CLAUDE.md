@@ -21,10 +21,10 @@ Astro 6 + React 19 islands, vanilla CSS, no backend. Deploys to GitHub Pages on 
 
 ## Site structure
 
-- `src/pages/index.astro` — gazette front page: Fraunces masthead, drop cap, jurisdiction stamps (link to filtered dashboard), monthly register digest, contributor notice. Scoped styles in-file.
+- `src/pages/index.astro` — SaaS-style front page (per docs/superpowers/specs/2026-06-11-site-restyle-design.md): hero with Arabic subline, stat cards, classification panel, jurisdiction tiles with SVG flags (src/components/Flag.astro), month-grouped updates timeline with confidence badges (official=High green, secondary=Medium amber, pending=Pending), contribute panel. Scoped styles in-file.
 - `src/pages/dashboard.astro` + `src/components/Dashboard.tsx` — faceted browser: left rail (country chips, category tree, year chips, authority filtered by country, instrument, binding, lifecycle, all with counts), top bar (search, sort, EN/AR toggle, Export JSON/CSV of filtered set), URL-synced filters, active filter chips, card grid; cards expand inline (RecordCard.tsx + FamilyTree.tsx).
 - `src/pages/developments.astro` — redirect only (old URL).
-- `src/lib/data.ts` loads /data at build; `src/styles/global.css` holds the design system: light/dark via CSS vars on [data-theme], ink navy + terracotta accent, per-country tints (--jur-*), fonts Fraunces (display) / Source Serif 4 / IBM Plex Sans / Plex Mono / Plex Sans Arabic.
+- `src/lib/data.ts` loads /data at build; `src/styles/global.css` holds the design system: light/dark via CSS vars on [data-theme], indigo accent (#5048e5 light, lighter in dark) on white cards over lavender-grey paper, per-country tints (--jur-*), 12 to 16px radii, pill badges, fonts Inter Variable / IBM Plex Mono / Plex Sans Arabic.
 
 ## Dataset pipeline (current plan)
 

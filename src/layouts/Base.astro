@@ -1,10 +1,5 @@
 ---
-import '@fontsource-variable/source-serif-4';
-import '@fontsource-variable/fraunces';
-import '@fontsource-variable/fraunces/wght-italic.css';
-import '@fontsource/ibm-plex-sans/400.css';
-import '@fontsource/ibm-plex-sans/500.css';
-import '@fontsource/ibm-plex-sans/600.css';
+import '@fontsource-variable/inter';
 import '@fontsource/ibm-plex-mono/400.css';
 import '@fontsource/ibm-plex-mono/600.css';
 import '@fontsource/ibm-plex-sans-arabic/400.css';
@@ -41,15 +36,35 @@ const isActive = (path: string) =>
   <body>
     <header class="site-header">
       <div class="container">
-        <a class="wordmark" href={base}>Complyr<span class="tld">.</span></a>
+        <a class="brand" href={base}>
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round">
+              <path d="M17.5 7.5a7 7 0 1 0 0 9" />
+            </svg>
+          </span>
+          <span class="wordmark">Complyr</span>
+        </a>
         <nav class="site-nav" aria-label="Main">
           <a href={base} aria-current={isActive('')}>Home</a>
           <a href={`${base}dashboard/`} aria-current={isActive('dashboard')}>Dashboard</a>
-          <a href="https://github.com/ampedfitness/complyr">GitHub</a>
-          <button type="button" class="theme-btn" id="theme-toggle" aria-label="Switch colour theme">
-            Theme
-          </button>
+          <a href="https://github.com/ampedfitness/complyr">
+            GitHub
+            <svg class="ext-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M6.5 3.5h-3a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-3M9.5 2.5h4v4M13 3 7.5 8.5" />
+            </svg>
+          </a>
         </nav>
+        <div class="header-tools">
+          <button type="button" class="theme-btn" id="theme-toggle" aria-label="Switch colour theme">
+            <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="4" />
+              <path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M19.1 4.9l-1.8 1.8M6.7 17.3l-1.8 1.8" />
+            </svg>
+            <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 14.5A8.5 8.5 0 0 1 9.5 4 8.5 8.5 0 1 0 20 14.5Z" />
+            </svg>
+          </button>
+        </div>
       </div>
     </header>
     <main>
@@ -59,8 +74,20 @@ const isActive = (path: string) =>
     </main>
     <footer class="site-footer">
       <div class="container">
-        <span>Complyr. Open taxonomy and curated dataset for GCC regulation.</span>
-        <span>Code MIT. Data CC BY 4.0. Not legal advice.</span>
+        <a class="brand" href={base}>
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round">
+              <path d="M17.5 7.5a7 7 0 1 0 0 9" />
+            </svg>
+          </span>
+          <span class="wordmark">Complyr</span>
+        </a>
+        <span>Complyr is an open-source register of GCC regulations for policy, compliance, and research.</span>
+        <span class="legal">
+          <span>Code: MIT License</span>
+          <span>Data: CC BY 4.0</span>
+          <span>Not legal advice</span>
+        </span>
       </div>
     </footer>
     <script>
