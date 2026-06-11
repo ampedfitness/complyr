@@ -1,0 +1,26 @@
+{
+  "name": "complyr",
+  "type": "module",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "validate": "node scripts/validate.mjs",
+    "test": "node --test scripts/"
+  },
+  "dependencies": {
+    "@astrojs/react": "^5.0.7",
+    "astro": "^6.4.6",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "ajv": "^8.20.0",
+    "ajv-formats": "^3.0.1",
+    "typescript": "^6.0.3"
+  }
+}
