@@ -2,6 +2,7 @@
 import Base from '../layouts/Base.astro';
 import { dataset, stats } from '../lib/data';
 import { JURISDICTION_NAMES } from '../lib/labels';
+import type { Jurisdiction } from '../lib/types';
 
 const base = import.meta.env.BASE_URL;
 const classLabels = new Map(dataset.instrumentClasses.map((c) => [c.id, c.label]));
@@ -9,124 +10,686 @@ const classLabels = new Map(dataset.instrumentClasses.map((c) => [c.id, c.label]
 const monthLabel = (iso: string) =>
   new Date(`${iso}-15T00:00:00Z`).toLocaleString('en-US', {
     month: 'long',
-    year: 'numeric',
     timeZone: 'UTC',
   });
+const yearOf = (iso: string) => iso.slice(0, 4);
 
 const firstSentence = (text: string) => {
   const idx = text.indexOf('. ');
   return idx === -1 ? text : text.slice(0, idx + 1);
 };
 
-const groups: { month: string; label: string; docs: typeof dataset.documents }[] = [];
+const groups: { month: string; name: string; year: string; docs: typeof dataset.documents }[] = [];
 for (const doc of dataset.documents) {
   const month = doc.date_issued.slice(0, 7);
   const group = groups.find((g) => g.month === month);
   if (group) group.docs.push(doc);
-  else groups.push({ month, label: monthLabel(month), docs: [doc] });
+  else groups.push({ month, name: monthLabel(month), year: yearOf(doc.date_issued), docs: [doc] });
 }
-const shownGroups = groups.slice(0, 4);
+const lead = groups[0];
+const rest = groups.slice(1, 4);
+
+const ALL: Jurisdiction[] = ['SA', 'AE', 'QA', 'BH', 'KW', 'OM'];
+const jurCounts = ALL.map((j) => ({
+  code: j,
+  name: JURISDICTION_NAMES[j],
+  count: dataset.documents.filter((d) => d.jurisdiction === j).length,
+}));
 ---
 
 <Base
   title="Complyr | Open taxonomy and dataset for GCC regulation"
   description="An open source structured dataset and taxonomy of GCC regulation, starting with data protection, AI governance, and digital economy."
 >
-  <section class="hero">
-    <h1>GCC regulation, as structured data</h1>
-    <p>
-      There is no public, structured schema for GCC regulatory instruments. Laws, implementing
-      regulations, regulator decisions, and guidance live in scattered PDFs across six
-      jurisdictions, in two languages, with no machine readable way to say what an instrument is,
-      whether it binds, and what it amends or implements.
-    </p>
-    <p>
-      Complyr answers that with an open taxonomy and a curated dataset. Every instrument is
-      classified on three independent axes, legal form, subject matter, and lifecycle, linked to
-      its family of amendments and implementing measures, and verified against official sources.
-      Launch coverage is digital policy: data protection, AI governance, and digital economy.
-    </p>
-  </section>
+  <div class="front">
+    <header class="mast reveal">
+      <div class="mast-meta">
+        <span>Open dataset &middot; Est. 2026</span>
+        <span class="hide-narrow">An independent register of GCC regulation</span>
+        <span
+          >Entries {stats.entries} &middot; Authorities {stats.authorities} &middot;
+          {stats.dateRange?.from.slice(0, 4)}&ndash;{stats.dateRange?.to.slice(0, 4)}</span
+        >
+      </div>
+      <h1 class="mast-title">GCC regulation,<br />as <em>structured data</em>.</h1>
+      <p class="mast-ar" lang="ar" dir="rtl">قاعدة بيانات مفتوحة ومنظّمة لتشريعات دول الخليج</p>
+      <div class="mast-rule" aria-hidden="true"></div>
+    </header>
 
-  <section class="digest" aria-label="Latest updates">
-    {
-      shownGroups.map((group, i) => (
-        <div class={i === 0 ? 'digest-month lead' : 'digest-month'}>
-          <div class="digest-month-head">
-            <h2>{group.label}</h2>
-            <span class="mono">
-              {group.docs.length} {group.docs.length === 1 ? 'entry' : 'entries'}
+    <section class="lede">
+      <div class="lede-copy reveal d1">
+        <p>
+          There is no public, structured schema for GCC regulatory instruments. Laws, implementing
+          regulations, regulator decisions, and guidance live in scattered PDFs across six
+          jurisdictions, in two languages, with no machine readable way to say what an instrument
+          is, whether it binds, and what it amends or implements.
+        </p>
+        <p>
+          Complyr answers that with an open taxonomy and a curated dataset. Every instrument is
+          verified against official sources, linked to its family of amendments and implementing
+          measures, and classified so that a compliance reader's first questions are the data
+          model's first fields. Launch coverage is digital policy: data protection, AI governance,
+          and digital economy.
+        </p>
+      </div>
+      <aside class="axes reveal d2" aria-label="The three classification axes">
+        <h2>Every instrument, three axes</h2>
+        <ol>
+          <li>
+            <span class="num">01</span>
+            <span class="ax">
+              <span class="ax-name">Instrument class</span>
+              <span class="ax-desc">What it is by legal form, split first by binding force</span>
             </span>
-          </div>
-          <ul class="digest-entries">
-            {group.docs.map((doc) => (
-              <li class="digest-entry">
+          </li>
+          <li>
+            <span class="num">02</span>
+            <span class="ax">
+              <span class="ax-name">Themes</span>
+              <span class="ax-desc">What it regulates, tagged at leaf level of a sixteen branch tree</span>
+            </span>
+          </li>
+          <li>
+            <span class="num">03</span>
+            <span class="ax">
+              <span class="ax-name">Lifecycle</span>
+              <span class="ax-desc">Where it stands now, from consultation to quietly superseded</span>
+            </span>
+          </li>
+        </ol>
+      </aside>
+      <div class="watermark" aria-hidden="true">&sect;</div>
+    </section>
+
+    <section class="stamps-section reveal d3" aria-label="Jurisdictions">
+      <h2 class="kicker"><span class="sign">&sect;</span> Six jurisdictions</h2>
+      <div class="stamps">
+        {
+          jurCounts.map((j) => (
+            <a class={`stamp jur-${j.code}`} href={`${base}dashboard/?c=${j.code}`}>
+              <span class="code">{j.code}</span>
+              <span class="name">{j.name}</span>
+              <span class="count mono">
+                {j.count} {j.count === 1 ? 'entry' : 'entries'}
+              </span>
+            </a>
+          ))
+        }
+      </div>
+    </section>
+
+    <section class="register reveal d4" aria-label="Latest updates">
+      <h2 class="kicker"><span class="sign">&sect;</span> Latest updates</h2>
+
+      <div class="month-block lead">
+        <div class="month-head">
+          <h3 class="month">{lead.name} <em>{lead.year}</em></h3>
+          <span class="mono muted">{lead.docs.length} {lead.docs.length === 1 ? 'entry' : 'entries'}</span>
+        </div>
+        <ul class="entries">
+          {
+            lead.docs.map((doc) => (
+              <li>
                 <a href={`${base}dashboard/?q=${encodeURIComponent(doc.title)}`}>
-                  <span class="top">
-                    <span class={`badge jur-${doc.jurisdiction}`}>{doc.jurisdiction}</span>
-                    <span>{JURISDICTION_NAMES[doc.jurisdiction]}</span>
-                    <span>{classLabels.get(doc.instrument_class) ?? doc.instrument_class}</span>
-                    <span class="mono">{doc.date_issued}</span>
+                  <span class="when mono">{doc.date_issued}</span>
+                  <span class="what">
+                    <span class="entry-meta">
+                      <span class={`badge jur-${doc.jurisdiction}`}>{doc.jurisdiction}</span>
+                      <span>{classLabels.get(doc.instrument_class) ?? doc.instrument_class}</span>
+                    </span>
+                    <span class="entry-title">{doc.title}</span>
+                    <span class="entry-line">{firstSentence(doc.summary)}</span>
                   </span>
-                  <span class="title">{doc.title}</span>
-                  <span class="line">{firstSentence(doc.summary)}</span>
                 </a>
               </li>
-            ))}
-          </ul>
-        </div>
-      ))
-    }
-    <p class="digest-more">
-      <a href={`${base}dashboard/`}>Browse the full dataset in the dashboard</a>
-    </p>
-  </section>
+            ))
+          }
+        </ul>
+      </div>
 
-  <div class="stats-strip">
-    <div class="stat">
-      <span class="value">{stats.entries}</span>
-      <span class="label">Entries</span>
-    </div>
-    <div class="stat">
-      <span class="value">{stats.jurisdictions}</span>
-      <span class="label">Jurisdictions</span>
-    </div>
-    <div class="stat">
-      <span class="value">{stats.authorities}</span>
-      <span class="label">Authorities</span>
-    </div>
-    {
-      stats.dateRange && (
-        <div class="stat">
-          <span class="value mono" style="font-size:1.15rem; line-height:2.1rem;">
-            {stats.dateRange.from.slice(0, 4)}&ndash;{stats.dateRange.to.slice(0, 4)}
-          </span>
-          <span class="label">Coverage window</span>
-        </div>
-      )
-    }
+      <div class="register-rest">
+        {
+          rest.map((group) => (
+            <div class="month-block">
+              <div class="month-head">
+                <h3 class="month">
+                  {group.name} <em>{group.year}</em>
+                </h3>
+                <span class="mono muted">
+                  {group.docs.length} {group.docs.length === 1 ? 'entry' : 'entries'}
+                </span>
+              </div>
+              <ul class="entries">
+                {group.docs.map((doc) => (
+                  <li>
+                    <a href={`${base}dashboard/?q=${encodeURIComponent(doc.title)}`}>
+                      <span class="when mono">{doc.date_issued}</span>
+                      <span class="what">
+                        <span class="entry-meta">
+                          <span class={`badge jur-${doc.jurisdiction}`}>{doc.jurisdiction}</span>
+                          <span>{classLabels.get(doc.instrument_class) ?? doc.instrument_class}</span>
+                        </span>
+                        <span class="entry-title">{doc.title}</span>
+                      </span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))
+        }
+      </div>
+
+      <p class="register-more">
+        <a href={`${base}dashboard/`}>Browse the full dataset in the dashboard &rarr;</a>
+      </p>
+    </section>
+
+    <section class="notice reveal d5">
+      <h2>Notice to contributors</h2>
+      <p>
+        The dataset is built for pull requests. Every record is one JSON file, every classification
+        decision is written down in the taxonomy, and CI validates schema, theme tags, authority
+        references, and relationship targets before anything merges.
+      </p>
+      <ol>
+        <li>Pick an instrument and verify it against the official gazette or regulator source.</li>
+        <li>
+          Copy an existing record from <code class="mono">data/documents/</code> and fill in the
+          fields, tagging themes at leaf level only.
+        </li>
+        <li>
+          Run <code class="mono">npm run validate</code>, then open a pull request. The README
+          walks through every field.
+        </li>
+      </ol>
+      <p class="repo-link">
+        <a href="https://github.com/ampedfitness/complyr">github.com/ampedfitness/complyr</a>
+      </p>
+    </section>
   </div>
-
-  <section class="contribute">
-    <h2 style="margin-top:0">Contribute an entry</h2>
-    <p>
-      The dataset is built for pull requests. Every record is one JSON file, every classification
-      decision is written down in the taxonomy, and CI validates schema, theme tags, authority
-      references, and relationship targets before anything merges.
-    </p>
-    <ol>
-      <li>Pick an instrument and verify it against the official gazette or regulator source.</li>
-      <li>
-        Copy an existing record from <code class="mono">data/documents/</code> and fill in the
-        fields, tagging themes at leaf level only.
-      </li>
-      <li>
-        Run <code class="mono">npm run validate</code>, then open a pull request. The README walks
-        through every field.
-      </li>
-    </ol>
-    <p style="margin-top:0.9rem; margin-bottom:0">
-      <a href="https://github.com/ampedfitness/complyr">github.com/ampedfitness/complyr</a>
-    </p>
-  </section>
 </Base>
+
+<style>
+  .front {
+    position: relative;
+  }
+
+  .front::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: 3;
+    pointer-events: none;
+    opacity: 0.05;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  :global([data-theme='dark']) .front::before {
+    opacity: 0.07;
+  }
+
+  /* Masthead */
+  .mast-meta {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0.3rem 2rem;
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 0.55rem;
+  }
+
+  .mast-title {
+    font-family: var(--display);
+    font-size: clamp(2.7rem, 7vw, 4.6rem);
+    font-weight: 600;
+    line-height: 1.02;
+    letter-spacing: -0.02em;
+    margin: 1.8rem 0 0.7rem;
+  }
+
+  .mast-title em {
+    font-style: italic;
+    color: var(--accent);
+  }
+
+  .mast-ar {
+    font-family: var(--arabic);
+    font-size: 1.02rem;
+    color: var(--ink-faint);
+    margin: 0;
+  }
+
+  .mast-rule {
+    height: 8px;
+    border-top: 3px solid var(--ink);
+    border-bottom: 1px solid var(--ink);
+    margin-top: 1.5rem;
+  }
+
+  /* Lede */
+  .lede {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 1.55fr) minmax(16rem, 1fr);
+    gap: 2.6rem;
+    padding: 2.4rem 0 2.8rem;
+  }
+
+  .lede-copy p {
+    font-size: 1.06rem;
+    line-height: 1.75;
+    color: var(--ink-soft);
+    margin: 0 0 1.1rem;
+    max-width: 42rem;
+  }
+
+  .lede-copy p:first-of-type::first-letter {
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: 3.6em;
+    line-height: 0.78;
+    float: left;
+    padding: 0.06em 0.14em 0 0;
+    color: var(--accent);
+  }
+
+  .axes {
+    align-self: start;
+    background: var(--surface);
+    border: 1px solid var(--line-strong);
+    box-shadow: 7px 7px 0 var(--line);
+    padding: 1.25rem 1.4rem 1.4rem;
+  }
+
+  .axes h2 {
+    font-family: var(--display);
+    font-size: 1.18rem;
+    font-weight: 600;
+    margin: 0 0 0.9rem;
+  }
+
+  .axes ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 0.85rem;
+  }
+
+  .axes li {
+    display: flex;
+    gap: 0.8rem;
+  }
+
+  .axes .num {
+    font-family: var(--mono);
+    font-size: 0.74rem;
+    font-weight: 600;
+    color: var(--accent);
+    padding-top: 0.22rem;
+  }
+
+  .axes .ax-name {
+    display: block;
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: 0.98rem;
+    color: var(--ink);
+  }
+
+  .axes .ax-desc {
+    display: block;
+    font-size: 0.83rem;
+    color: var(--ink-faint);
+    line-height: 1.45;
+  }
+
+  .watermark {
+    position: absolute;
+    top: -7rem;
+    right: -3rem;
+    z-index: -1;
+    font-family: var(--display);
+    font-size: clamp(20rem, 26vw, 30rem);
+    line-height: 1;
+    color: var(--ink);
+    opacity: 0.045;
+    user-select: none;
+    pointer-events: none;
+  }
+
+  :global([data-theme='dark']) .watermark {
+    opacity: 0.07;
+  }
+
+  /* Kickers */
+  .kicker {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    font-family: var(--sans);
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    margin: 0 0 1.2rem;
+  }
+
+  .kicker .sign {
+    color: var(--accent);
+    font-family: var(--display);
+    font-size: 1rem;
+  }
+
+  .kicker::after {
+    content: '';
+    flex: 1;
+    border-top: 1px solid var(--line-strong);
+  }
+
+  /* Stamps */
+  .stamps-section {
+    padding: 1rem 0 2.6rem;
+  }
+
+  .stamps {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 0.9rem;
+  }
+
+  .stamp {
+    --tint: var(--ink);
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+    padding: 0.85rem 0.95rem 0.75rem;
+    border: 1.5px solid var(--tint);
+    border-radius: 3px;
+    background: var(--surface);
+    color: var(--ink);
+    text-decoration: none;
+  }
+
+  .stamp:nth-child(odd) {
+    transform: rotate(-0.7deg);
+  }
+
+  .stamp:nth-child(even) {
+    transform: rotate(0.6deg);
+  }
+
+  .stamp:hover {
+    transform: rotate(0deg) translateY(-3px);
+    box-shadow: var(--shadow-lift);
+    text-decoration: none;
+  }
+
+  .stamp .code {
+    font-family: var(--display);
+    font-size: 1.7rem;
+    font-weight: 600;
+    line-height: 1.1;
+    color: var(--tint);
+  }
+
+  .stamp .name {
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+
+  .stamp .count {
+    font-size: 0.7rem;
+    color: var(--ink-faint);
+  }
+
+  .stamp.jur-SA { --tint: var(--jur-sa); }
+  .stamp.jur-AE { --tint: var(--jur-ae); }
+  .stamp.jur-BH { --tint: var(--jur-bh); }
+  .stamp.jur-QA { --tint: var(--jur-qa); }
+  .stamp.jur-KW { --tint: var(--jur-kw); }
+  .stamp.jur-OM { --tint: var(--jur-om); }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .stamp {
+      transition: transform 180ms ease, box-shadow 180ms ease;
+    }
+  }
+
+  /* Register */
+  .register {
+    padding-bottom: 2.4rem;
+  }
+
+  .month-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+    border-bottom: 2px solid var(--ink);
+    padding-bottom: 0.3rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .month {
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: 1.45rem;
+    margin: 0;
+  }
+
+  .month-block.lead .month {
+    font-size: 2.3rem;
+  }
+
+  .month em {
+    font-style: italic;
+    color: var(--accent);
+  }
+
+  .entries {
+    list-style: none;
+    margin: 0 0 1.8rem;
+    padding: 0;
+  }
+
+  .entries a {
+    display: grid;
+    grid-template-columns: 6.4rem 1fr;
+    gap: 1rem;
+    padding: 0.85rem 0.2rem;
+    border-bottom: 1px solid var(--line);
+    color: var(--ink);
+    text-decoration: none;
+  }
+
+  .entries a:hover {
+    background: color-mix(in srgb, var(--surface) 70%, transparent);
+  }
+
+  .entries a:hover .entry-title {
+    color: var(--accent);
+  }
+
+  .entries .when {
+    font-size: 0.76rem;
+    color: var(--ink-faint);
+    padding-top: 0.3rem;
+  }
+
+  .entry-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.74rem;
+    color: var(--ink-faint);
+    margin-bottom: 0.2rem;
+  }
+
+  .entry-title {
+    display: block;
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: 1.08rem;
+    line-height: 1.4;
+  }
+
+  .month-block.lead .entry-title {
+    font-size: 1.16rem;
+  }
+
+  .entry-line {
+    display: block;
+    font-size: 0.88rem;
+    color: var(--ink-soft);
+    margin-top: 0.2rem;
+    max-width: 46rem;
+  }
+
+  .register-rest {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 0 2.6rem;
+  }
+
+  .register-rest .month-head {
+    border-bottom-width: 1px;
+  }
+
+  .register-more {
+    margin: 0.4rem 0 0;
+    font-size: 0.95rem;
+  }
+
+  /* Notice */
+  .notice {
+    position: relative;
+    border: 2px solid var(--ink);
+    background: var(--surface);
+    padding: 1.6rem 1.9rem;
+    margin: 1.4rem 0 0.6rem;
+  }
+
+  .notice::before {
+    content: '';
+    position: absolute;
+    inset: 5px;
+    border: 1px solid var(--line-strong);
+    pointer-events: none;
+  }
+
+  .notice h2 {
+    font-family: var(--display);
+    font-size: 1.4rem;
+    margin: 0 0 0.7rem;
+  }
+
+  .notice p {
+    color: var(--ink-soft);
+    margin: 0 0 0.7rem;
+    max-width: 50rem;
+  }
+
+  .notice ol {
+    margin: 0.4rem 0 0;
+    padding-left: 1.3rem;
+    color: var(--ink-soft);
+    font-size: 0.94rem;
+    display: grid;
+    gap: 0.35rem;
+  }
+
+  .notice ol li::marker {
+    font-family: var(--mono);
+    font-size: 0.8rem;
+    color: var(--accent);
+    font-weight: 600;
+  }
+
+  .repo-link {
+    margin-top: 1rem;
+  }
+
+  /* Load choreography */
+  @media (prefers-reduced-motion: no-preference) {
+    .reveal {
+      opacity: 0;
+      animation: rise 0.7s cubic-bezier(0.2, 0.7, 0.3, 1) forwards;
+    }
+
+    .d1 { animation-delay: 0.1s; }
+    .d2 { animation-delay: 0.2s; }
+    .d3 { animation-delay: 0.3s; }
+    .d4 { animation-delay: 0.38s; }
+    .d5 { animation-delay: 0.46s; }
+
+    .mast-rule {
+      transform: scaleX(0);
+      transform-origin: left;
+      animation: draw 0.9s 0.25s ease forwards;
+    }
+
+    @keyframes rise {
+      from {
+        opacity: 0;
+        transform: translateY(16px);
+      }
+      to {
+        opacity: 1;
+        transform: none;
+      }
+    }
+
+    @keyframes draw {
+      to {
+        transform: scaleX(1);
+      }
+    }
+  }
+
+  /* Responsive */
+  @media (max-width: 64rem) {
+    .watermark {
+      display: none;
+    }
+
+    .stamps {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @media (max-width: 48rem) {
+    .lede {
+      grid-template-columns: 1fr;
+      gap: 1.8rem;
+    }
+
+    .hide-narrow {
+      display: none;
+    }
+
+    .stamps {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .entries a {
+      grid-template-columns: 1fr;
+      gap: 0.2rem;
+    }
+
+    .entries .when {
+      padding-top: 0;
+    }
+  }
+</style>
