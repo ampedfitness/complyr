@@ -17,6 +17,11 @@ interface Props {
   todayIso: string;
 }
 
+function firstSentence(text: string): string {
+  const idx = text.indexOf('. ');
+  return idx === -1 ? text : text.slice(0, idx + 1);
+}
+
 function ArText({ en, ar, lang }: { en: string; ar: string | null; lang: 'en' | 'ar' }) {
   if (lang === 'ar' && ar) {
     return (
@@ -28,7 +33,7 @@ function ArText({ en, ar, lang }: { en: string; ar: string | null; lang: 'en' | 
   return <>{en}</>;
 }
 
-export default function DocumentCard({
+export default function RecordCard({
   doc,
   lang,
   expanded,
@@ -44,6 +49,8 @@ export default function DocumentCard({
   const [copied, setCopied] = useState(false);
   const deadlineUpcoming = doc.compliance_deadline && doc.compliance_deadline >= todayIso;
   const detailId = `detail-${doc.id}`;
+  const oneLiner =
+    lang === 'ar' && doc.summary_ar ? firstSentence(doc.summary_ar) : firstSentence(doc.summary);
 
   const copyCitation = async () => {
     if (!doc.citation) return;
@@ -52,61 +59,75 @@ export default function DocumentCard({
       setCopied(true);
       setTimeout(() => setCopied(false), 1600);
     } catch {
-      // Clipboard unavailable; leave the citation selectable.
+      // Clipboard unavailable; the citation stays selectable.
     }
   };
 
   return (
-    <li className={expanded ? 'doc-card expanded' : 'doc-card'}>
-      <div className="doc-card-tags">
-        <span className="badge" title={JURISDICTION_NAMES[doc.jurisdiction]}>
-          {doc.jurisdiction}
-        </span>
-        <span className="pill">{instrumentClass?.label ?? doc.instrument_class}</span>
-        <span className={`pill ${doc.binding_status}`}>{bindingStatus?.label ?? doc.binding_status}</span>
-        <span className={`pill lifecycle-${doc.lifecycle}`}>{lifecycle?.label ?? doc.lifecycle}</span>
-        {doc.source_confidence === 'pending_verification' && (
-          <span className="pill confidence-pending_verification">Pending verification</span>
-        )}
-      </div>
-
+    <li className={expanded ? 'record-card expanded' : 'record-card'}>
       <button
         type="button"
-        className="doc-title-btn"
+        className="record-head"
         aria-expanded={expanded}
         aria-controls={detailId}
         onClick={onToggle}
       >
-        <h2 className="doc-title">
-          <ArText en={doc.title} ar={doc.title_ar} lang={lang} />
-        </h2>
-      </button>
-
-      <div className="doc-meta">
-        <span>{authority?.name ?? doc.issuing_authority}</span>
-        <span>
-          Issued <span className="mono">{doc.date_issued}</span>
+        <span className="record-tags">
+          <span className={`badge jur-${doc.jurisdiction}`} title={JURISDICTION_NAMES[doc.jurisdiction]}>
+            {doc.jurisdiction}
+          </span>
+          <span className="pill">{instrumentClass?.label ?? doc.instrument_class}</span>
+          {expanded && (
+            <>
+              <span className={`pill ${doc.binding_status}`}>
+                {bindingStatus?.label ?? doc.binding_status}
+              </span>
+              <span className={`pill lifecycle-${doc.lifecycle}`}>
+                {lifecycle?.label ?? doc.lifecycle}
+              </span>
+            </>
+          )}
+          {doc.source_confidence === 'pending_verification' && (
+            <span className="pill confidence-pending_verification">Pending verification</span>
+          )}
+          <span className="year">{doc.year}</span>
         </span>
-        {doc.date_effective && (
-          <span>
-            Effective <span className="mono">{doc.date_effective}</span>
+        <span className="record-title">
+          <ArText en={doc.title} ar={doc.title_ar} lang={lang} />
+        </span>
+        <span className="record-line" lang={lang === 'ar' && doc.summary_ar ? 'ar' : undefined} dir={lang === 'ar' && doc.summary_ar ? 'rtl' : undefined}>
+          {oneLiner}
+        </span>
+        {expanded && (
+          <span className="record-meta">
+            <span>{authority?.name ?? doc.issuing_authority}</span>
+            <span>
+              Issued <span className="mono">{doc.date_issued}</span>
+            </span>
+            {doc.date_effective && (
+              <span>
+                Effective <span className="mono">{doc.date_effective}</span>
+              </span>
+            )}
+            <span>{doc.themes.map((t) => leafLabels.get(t) ?? t).join(', ')}</span>
           </span>
         )}
-        <span>{doc.themes.map((t) => leafLabels.get(t) ?? t).join(', ')}</span>
-      </div>
-
-      <p className="doc-summary">
-        <ArText en={doc.summary} ar={doc.summary_ar} lang={lang} />
-      </p>
-
-      {deadlineUpcoming && (
-        <p className="deadline-flag">
-          Compliance deadline <span className="mono">{doc.compliance_deadline}</span>
-        </p>
-      )}
+        {deadlineUpcoming && (
+          <span className="deadline-flag">
+            Compliance deadline <span className="mono">{doc.compliance_deadline}</span>
+          </span>
+        )}
+      </button>
 
       {expanded && (
-        <div className="doc-detail" id={detailId}>
+        <div className="record-detail" id={detailId}>
+          <section className="detail-section">
+            <h3>Summary</h3>
+            <p>
+              <ArText en={doc.summary} ar={doc.summary_ar} lang={lang} />
+            </p>
+          </section>
+
           <section className="detail-section">
             <h3>What this means</h3>
             <p>

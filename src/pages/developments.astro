@@ -1,13 +1,16 @@
 ---
-import Base from '../layouts/Base.astro';
-import Explorer from '../components/Explorer';
-import { dataset } from '../lib/data';
+// The developments page became the dashboard; keep the old URL working.
+const target = `${import.meta.env.BASE_URL}dashboard/`;
 ---
 
-<Base
-  title="Latest developments | Complyr"
-  description="GCC regulatory developments in data protection, AI governance, and digital economy, filterable by jurisdiction, theme, instrument class, and lifecycle."
->
-  <h1 class="section-title" style="margin-top:0">Latest developments</h1>
-  <Explorer dataset={dataset} client:load />
-</Base>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="refresh" content={`0; url=${target}`} />
+    <link rel="canonical" href={target} />
+    <title>Complyr dashboard</title>
+  </head>
+  <body>
+    <p>This page moved to the <a href={target}>dashboard</a>.</p>
+  </body>
+</html>

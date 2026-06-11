@@ -1,10 +1,31 @@
 ---
 import Base from '../layouts/Base.astro';
-import { dataset, recentDocuments, stats } from '../lib/data';
+import { dataset, stats } from '../lib/data';
 import { JURISDICTION_NAMES } from '../lib/labels';
 
 const base = import.meta.env.BASE_URL;
 const classLabels = new Map(dataset.instrumentClasses.map((c) => [c.id, c.label]));
+
+const monthLabel = (iso: string) =>
+  new Date(`${iso}-15T00:00:00Z`).toLocaleString('en-US', {
+    month: 'long',
+    year: 'numeric',
+    timeZone: 'UTC',
+  });
+
+const firstSentence = (text: string) => {
+  const idx = text.indexOf('. ');
+  return idx === -1 ? text : text.slice(0, idx + 1);
+};
+
+const groups: { month: string; label: string; docs: typeof dataset.documents }[] = [];
+for (const doc of dataset.documents) {
+  const month = doc.date_issued.slice(0, 7);
+  const group = groups.find((g) => g.month === month);
+  if (group) group.docs.push(doc);
+  else groups.push({ month, label: monthLabel(month), docs: [doc] });
+}
+const shownGroups = groups.slice(0, 4);
 ---
 
 <Base
@@ -24,6 +45,40 @@ const classLabels = new Map(dataset.instrumentClasses.map((c) => [c.id, c.label]
       classified on three independent axes, legal form, subject matter, and lifecycle, linked to
       its family of amendments and implementing measures, and verified against official sources.
       Launch coverage is digital policy: data protection, AI governance, and digital economy.
+    </p>
+  </section>
+
+  <section class="digest" aria-label="Latest updates">
+    {
+      shownGroups.map((group, i) => (
+        <div class={i === 0 ? 'digest-month lead' : 'digest-month'}>
+          <div class="digest-month-head">
+            <h2>{group.label}</h2>
+            <span class="mono">
+              {group.docs.length} {group.docs.length === 1 ? 'entry' : 'entries'}
+            </span>
+          </div>
+          <ul class="digest-entries">
+            {group.docs.map((doc) => (
+              <li class="digest-entry">
+                <a href={`${base}dashboard/?q=${encodeURIComponent(doc.title)}`}>
+                  <span class="top">
+                    <span class={`badge jur-${doc.jurisdiction}`}>{doc.jurisdiction}</span>
+                    <span>{JURISDICTION_NAMES[doc.jurisdiction]}</span>
+                    <span>{classLabels.get(doc.instrument_class) ?? doc.instrument_class}</span>
+                    <span class="mono">{doc.date_issued}</span>
+                  </span>
+                  <span class="title">{doc.title}</span>
+                  <span class="line">{firstSentence(doc.summary)}</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))
+    }
+    <p class="digest-more">
+      <a href={`${base}dashboard/`}>Browse the full dataset in the dashboard</a>
     </p>
   </section>
 
@@ -51,24 +106,6 @@ const classLabels = new Map(dataset.instrumentClasses.map((c) => [c.id, c.label]
       )
     }
   </div>
-
-  <h2 class="section-title">Recently recorded</h2>
-  <ul class="recent-list">
-    {
-      recentDocuments.map((doc) => (
-        <li>
-          <a href={`${base}developments/`}>
-            <span class="title">{doc.title}</span>
-            <div class="meta">
-              {JURISDICTION_NAMES[doc.jurisdiction]} &middot;{' '}
-              {classLabels.get(doc.instrument_class) ?? doc.instrument_class} &middot;{' '}
-              <span class="mono">{doc.date_issued}</span>
-            </div>
-          </a>
-        </li>
-      ))
-    }
-  </ul>
 
   <section class="contribute">
     <h2 style="margin-top:0">Contribute an entry</h2>

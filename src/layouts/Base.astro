@@ -27,6 +27,14 @@ const isActive = (path: string) =>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
     <title>{title}</title>
+    <script is:inline>
+      (() => {
+        const stored = localStorage.getItem('complyr-theme');
+        const theme =
+          stored ?? (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.dataset.theme = theme;
+      })();
+    </script>
   </head>
   <body>
     <header class="site-header">
@@ -34,8 +42,11 @@ const isActive = (path: string) =>
         <a class="wordmark" href={base}>Complyr<span class="tld">.</span></a>
         <nav class="site-nav" aria-label="Main">
           <a href={base} aria-current={isActive('')}>Home</a>
-          <a href={`${base}developments/`} aria-current={isActive('developments')}>Latest developments</a>
+          <a href={`${base}dashboard/`} aria-current={isActive('dashboard')}>Dashboard</a>
           <a href="https://github.com/ampedfitness/complyr">GitHub</a>
+          <button type="button" class="theme-btn" id="theme-toggle" aria-label="Switch colour theme">
+            Theme
+          </button>
         </nav>
       </div>
     </header>
@@ -50,5 +61,14 @@ const isActive = (path: string) =>
         <span>Code MIT. Data CC BY 4.0. Not legal advice.</span>
       </div>
     </footer>
+    <script>
+      const btn = document.getElementById('theme-toggle');
+      btn?.addEventListener('click', () => {
+        const root = document.documentElement;
+        const next = root.dataset.theme === 'dark' ? 'light' : 'dark';
+        root.dataset.theme = next;
+        localStorage.setItem('complyr-theme', next);
+      });
+    </script>
   </body>
 </html>

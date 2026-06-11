@@ -1,0 +1,13 @@
+---
+import Base from '../layouts/Base.astro';
+import Dashboard from '../components/Dashboard';
+import { dataset } from '../lib/data';
+---
+
+<Base
+  title="Dashboard | Complyr"
+  description="Browse GCC regulatory instruments by country, category, year, authority, and instrument type, with export to JSON and CSV."
+>
+  <h1 class="section-title" style="margin-top:0">Dashboard</h1>
+  <Dashboard dataset={dataset} client:load />
+</Base>
