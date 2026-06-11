@@ -48,12 +48,36 @@ Official starting points by country:
 - Kuwait: official gazette Kuwait Al-Youm via e.gov.kw, citra.gov.kw
 - Oman: qanoon.om, mjla.gov.om
 
+Type is a controlled vocabulary. Classify by legal form and issuer, never by the document's own title. Use exactly one of:
+- law: primary legislation passed through the country's lawmaking process. Includes a Saudi nizam, a UAE federal law or federal decree law, and any law promulgated by royal decree.
+- decree: a royal or emiri decree with substantive content of its own, such as establishing an authority or ordering a specific measure. A decree that merely promulgates a law is NOT a row at all.
+- regulation: an executive or implementing regulation issued under a specific law to give it operational effect. Always name that law in Related instruments.
+- resolution: a cabinet or ministerial resolution of general binding effect that is not the executive regulation of a single law.
+- decision: a binding instrument issued by a sectoral regulator or authority within its mandate, such as licensing conditions or technical rules.
+- circular: a binding instruction from a regulator or ministry to the entities it supervises, narrower and more operational than a decision.
+- rulebook module: one module of a regulator's consolidated rulebook, such as a CBB Rulebook module. Record at module level, one row per module.
+- national strategy: a government wide strategy setting direction, targets, and institutional responsibilities.
+- policy: a stated position of a ministry or regulator that guides decisions without creating enforceable duties.
+- guideline: guidance explaining how to interpret or comply with binding rules, or recommending practices, with no duties of its own.
+- framework: a structured reference model of principles, controls, or maturity levels intended for adoption rather than enforcement.
+- handbook: an operational manual consolidating procedures and explanatory material.
+- code of practice: a code of expected conduct for a sector, often operating on a comply or explain basis.
+- standard: a technical or management standard specifying requirements, voluntary unless another instrument makes it mandatory.
+- consultation paper: a document published to gather input on a proposed instrument or policy.
+- white paper: an analytical or position paper signalling regulatory direction without draft rules.
+
+Status is also controlled. Use exactly one of:
+- in consultation: published as a draft, input being sought
+- enacted: formally issued but not yet effective
+- in force: currently effective, or operative for non binding documents
+- amended: in force but changed by later instruments; list the amending instruments in Related instruments
+- repealed: formally abrogated by a later instrument
+- superseded: replaced in practice without formal repeal, common for strategies and guidance
+
 Rules:
-- One row per instrument. A royal or emiri decree that merely promulgates a law is not its own row; fold it into the official name.
-- Amendments are their own rows; say what they amend in Related instruments.
-- Executive and implementing regulations are their own rows; say what they implement in Related instruments.
+- One row per instrument. Amendments and executive regulations are their own rows; say what they amend or implement in Related instruments.
 - Report the official Arabic title exactly as published where available.
-- Distinguish what a document IS (Type) from whether it still applies (Status). A strategy quietly replaced by a newer one is superseded, not repealed.
+- If a document does not clearly fit one Type, pick the closest and append a question mark, for example "decision?", so a human reviews it.
 - Keep every cell free of line breaks and pipe characters.
 
 Output ONE table with EXACTLY these columns and nothing else in the cells:
