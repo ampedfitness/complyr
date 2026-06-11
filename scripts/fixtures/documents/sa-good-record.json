@@ -1,0 +1,44 @@
+{
+  "id": "sa-good-record",
+  "title": "Fixture record that passes validation",
+  "title_ar": null,
+  "official_title": "Fixture Official Title for the Good Record",
+  "official_title_ar": null,
+  "jurisdiction": "SA",
+  "instrument_class": "law",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": ["technology_digital.data_protection_privacy"],
+  "issuing_authority": "sa-test-authority",
+  "language_of_official_text": "ar",
+  "english_text_unofficial": true,
+  "date_issued": "2021-09-16",
+  "date_effective": "2023-09-14",
+  "compliance_deadline": null,
+  "gazette": { "name": "Umm Al Qura", "number": "4906", "issue_date": "2021-09-24" },
+  "citation": "Fixture Law issued by Royal Decree M/00 of 2021",
+  "summary": "A fixture record used by the validator smoke tests to confirm that a complete, well formed document passes every check.",
+  "summary_ar": null,
+  "impact_note": "This record exists only to exercise the validator. It demonstrates the minimum complete shape of a Complyr document record, including gazette metadata, an obligation with a deadline, and applicability details.",
+  "impact_note_ar": null,
+  "obligations": [
+    {
+      "description": "Notify the competent authority of personal data breaches",
+      "obligated_party": "Controllers",
+      "deadline": "within 72 hours"
+    }
+  ],
+  "applicability": {
+    "entity_types": ["private companies", "public entities"],
+    "sectors": ["all sectors"],
+    "extraterritorial": true,
+    "penalties": "Fines up to a fixture amount",
+    "grace_period": null
+  },
+  "relationships": [],
+  "source_url": "https://example.com/fixture",
+  "source_confidence": "pending_verification",
+  "last_verified": "2026-06-11",
+  "tags": ["fixture"],
+  "notes": "Validator fixture, not a real instrument."
+}

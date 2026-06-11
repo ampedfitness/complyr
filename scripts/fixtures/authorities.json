@@ -1,0 +1,11 @@
+[
+  {
+    "id": "sa-test-authority",
+    "name": "Test Authority for Fixtures",
+    "name_ar": null,
+    "jurisdiction": "SA",
+    "type": "sectoral_regulator",
+    "mandate": "Fixture authority used only by the validator smoke tests.",
+    "website": null
+  }
+]

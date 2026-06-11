@@ -1,0 +1,127 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/ampedfitness/complyr/schema/document.schema.json",
+  "title": "Complyr document record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "title",
+    "title_ar",
+    "official_title",
+    "official_title_ar",
+    "jurisdiction",
+    "instrument_class",
+    "binding_status",
+    "lifecycle",
+    "themes",
+    "issuing_authority",
+    "language_of_official_text",
+    "date_issued",
+    "date_effective",
+    "compliance_deadline",
+    "gazette",
+    "citation",
+    "summary",
+    "summary_ar",
+    "impact_note",
+    "impact_note_ar",
+    "obligations",
+    "applicability",
+    "relationships",
+    "source_url",
+    "source_confidence",
+    "last_verified",
+    "tags"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^(bh|sa|ae|qa|kw|om)-[a-z0-9]+(-[a-z0-9]+)*$",
+      "description": "Stable slug starting with the lowercase jurisdiction code"
+    },
+    "title": { "type": "string", "minLength": 5 },
+    "title_ar": { "type": ["string", "null"], "minLength": 3 },
+    "official_title": { "type": "string", "minLength": 5 },
+    "official_title_ar": { "type": ["string", "null"], "minLength": 3 },
+    "jurisdiction": { "enum": ["BH", "SA", "AE", "QA", "KW", "OM"] },
+    "instrument_class": { "type": "string", "description": "Validated against taxonomy instrument class ids by the validator" },
+    "binding_status": { "enum": ["binding", "non_binding", "conditionally_binding"] },
+    "lifecycle": { "enum": ["consultation", "enacted", "in_force", "amended", "repealed", "superseded"] },
+    "themes": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": { "type": "string", "pattern": "^[a-z_]+\\.[a-z_]+$" },
+      "description": "Leaf theme ids only; validated against the taxonomy by the validator"
+    },
+    "issuing_authority": { "type": "string", "description": "Authority id; validated against authorities.json by the validator" },
+    "language_of_official_text": { "enum": ["ar", "en", "both"] },
+    "english_text_unofficial": {
+      "type": "boolean",
+      "description": "True when the English text in circulation is an unofficial translation of an Arabic only instrument"
+    },
+    "date_issued": { "type": "string", "format": "date" },
+    "date_effective": { "type": ["string", "null"], "format": "date" },
+    "compliance_deadline": { "type": ["string", "null"], "format": "date" },
+    "gazette": {
+      "type": ["object", "null"],
+      "additionalProperties": false,
+      "required": ["name"],
+      "properties": {
+        "name": { "type": "string" },
+        "number": { "type": ["string", "null"] },
+        "issue_date": { "type": ["string", "null"], "format": "date" }
+      }
+    },
+    "citation": { "type": ["string", "null"], "minLength": 5 },
+    "summary": { "type": "string", "minLength": 50 },
+    "summary_ar": { "type": ["string", "null"], "minLength": 20 },
+    "impact_note": { "type": "string", "minLength": 100 },
+    "impact_note_ar": { "type": ["string", "null"], "minLength": 50 },
+    "obligations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["description", "obligated_party"],
+        "properties": {
+          "description": { "type": "string", "minLength": 10 },
+          "obligated_party": { "type": "string", "minLength": 3 },
+          "deadline": { "type": ["string", "null"], "description": "Deadline expressed as a date or a period such as within 72 hours" }
+        }
+      }
+    },
+    "applicability": {
+      "type": ["object", "null"],
+      "additionalProperties": false,
+      "properties": {
+        "entity_types": { "type": "array", "items": { "type": "string" } },
+        "sectors": { "type": "array", "items": { "type": "string" } },
+        "extraterritorial": { "type": "boolean" },
+        "penalties": { "type": ["string", "null"] },
+        "grace_period": { "type": ["string", "null"] }
+      }
+    },
+    "relationships": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["type", "target_id"],
+        "properties": {
+          "type": {
+            "enum": ["amends", "repeals", "supersedes", "implements", "consults_on", "enabled_by", "references"],
+            "description": "Forward direction only; inverses are computed at build time"
+          },
+          "target_id": { "type": "string" }
+        }
+      }
+    },
+    "source_url": { "type": "string", "format": "uri" },
+    "source_confidence": { "enum": ["official", "secondary", "pending_verification"] },
+    "last_verified": { "type": "string", "format": "date" },
+    "tags": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+    "notes": { "type": ["string", "null"], "description": "Editorial notes for reviewers, not rendered on the site" }
+  }
+}

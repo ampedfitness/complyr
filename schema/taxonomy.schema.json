@@ -1,0 +1,127 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/ampedfitness/complyr/schema/taxonomy.schema.json",
+  "title": "Complyr taxonomy",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["version", "classification_rules", "instrument_classes", "binding_statuses", "lifecycle", "relationship_types", "themes"],
+  "properties": {
+    "version": { "type": "string" },
+    "classification_rules": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "rule"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z_]+$" },
+          "rule": { "type": "string", "minLength": 30 }
+        }
+      }
+    },
+    "instrument_classes": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "label", "label_ar", "binding", "scope"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z_]+$" },
+          "label": { "type": "string" },
+          "label_ar": { "type": ["string", "null"] },
+          "binding": { "type": "boolean" },
+          "scope": { "type": "string", "minLength": 50 },
+          "jurisdiction_forms": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "BH": { "type": "string" },
+              "SA": { "type": "string" },
+              "AE": { "type": "string" },
+              "QA": { "type": "string" },
+              "KW": { "type": "string" },
+              "OM": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+    "binding_statuses": {
+      "type": "array",
+      "minItems": 3,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "label", "label_ar", "scope"],
+        "properties": {
+          "id": { "enum": ["binding", "non_binding", "conditionally_binding"] },
+          "label": { "type": "string" },
+          "label_ar": { "type": ["string", "null"] },
+          "scope": { "type": "string", "minLength": 20 }
+        }
+      }
+    },
+    "lifecycle": {
+      "type": "array",
+      "minItems": 6,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "label", "label_ar", "scope"],
+        "properties": {
+          "id": { "enum": ["consultation", "enacted", "in_force", "amended", "repealed", "superseded"] },
+          "label": { "type": "string" },
+          "label_ar": { "type": ["string", "null"] },
+          "scope": { "type": "string", "minLength": 20 }
+        }
+      }
+    },
+    "relationship_types": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["forward", "inverse", "scope"],
+        "properties": {
+          "forward": { "type": "string", "pattern": "^[a-z_]+$" },
+          "inverse": { "type": "string", "pattern": "^[a-z_]+$" },
+          "scope": { "type": "string", "minLength": 20 }
+        }
+      }
+    },
+    "themes": {
+      "type": "array",
+      "minItems": 16,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "label", "label_ar", "coverage", "scope", "children"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z_]+$" },
+          "label": { "type": "string" },
+          "label_ar": { "type": ["string", "null"] },
+          "coverage": { "enum": ["full", "partial", "stub"] },
+          "scope": { "type": "string", "minLength": 50 },
+          "children": {
+            "type": "array",
+            "minItems": 2,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["id", "label", "label_ar", "scope"],
+              "properties": {
+                "id": { "type": "string", "pattern": "^[a-z_]+\\.[a-z_]+$" },
+                "label": { "type": "string" },
+                "label_ar": { "type": ["string", "null"] },
+                "scope": { "type": "string", "minLength": 50 }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
