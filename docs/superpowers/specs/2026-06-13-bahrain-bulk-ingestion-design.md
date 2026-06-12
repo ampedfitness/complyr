@@ -14,8 +14,9 @@ The workbook stores one row per regulation and theme pairing. A single regulatio
 
 Two additive changes to `schema/document.schema.json`, both safe for the 13 existing rich records.
 
-- Relax the required set to the fields the workbook honestly provides: `id`, `title`, `jurisdiction`, `instrument_class`, `binding_status`, `lifecycle`, `themes`, `issuing_authority`, `summary`, `source_url`, `source_confidence`, `tags`. Every other property (obligations, applicability, relationships, citation, gazette, date_issued, date_effective, compliance_deadline, title_ar, official_title, official_title_ar, summary_ar, impact_note, impact_note_ar, last_verified, english_text_unofficial, notes) becomes optional. The existing rich records keep all their fields and continue to validate.
-- Add an optional `theme_notes` property: an object keyed by leaf id whose values are the context specific blurbs, for example `{ "digital_health.health_data": "blurb about how this law applies to health data" }`. This carries the per filter bullet text. Records without it (the existing 13) simply fall back to `summary`.
+- Relax the required set to the fields the workbook honestly provides: `id`, `title`, `jurisdiction`, `instrument_class`, `binding_status`, `lifecycle`, `themes`, `issuing_authority`, `summary`, `source_url`, `source_confidence`, `tags`. Every other property (obligations, applicability, relationships, citation, gazette, date_issued, date_effective, compliance_deadline, title_ar, official_title, official_title_ar, summary_ar, impact_note, impact_note_ar, last_verified, language_of_official_text, english_text_unofficial, notes) becomes optional. The existing rich records keep all their fields and continue to validate. Make `date_issued` nullable and lower the `summary` minimum length from 50 to 40 so concise catalogue summaries pass (the workbook has exactly one summary under 50 characters, at 46).
+- Add an optional `theme_notes` property: an object keyed by leaf id whose values are the context specific blurbs, for example `{ "digital_health.health_data": "blurb about how this law applies to health data" }`. This carries the per filter bullet text, fed from each row's One line description. Records without it (the existing 13) simply fall back to `summary`.
+- Add an optional integer `year` property. The workbook records a real calendar year for every regulation even when the exact issue date is unknown, so the loader uses `year` directly when `date_issued` is absent. This keeps year filtering and sorting working without inventing a precise date.
 
 ## 2. Authorities
 
@@ -23,28 +24,31 @@ The sheet names 26 distinct issuing authorities; three already exist (`bh-king`,
 
 ## 3. Ingestion script
 
-A new Node ESM script `scripts/ingest-bahrain.mjs`, consistent with the repo's existing `.mjs` tooling.
+A new Python script `scripts/ingest-bahrain.py`, consistent with the existing `scripts/add-regulation-ids.py`. It reads the workbook with openpyxl, copying to a temp file first because the source is usually open in Excel. Pure mapping helpers live alongside it and are unit tested with a small Python assert script. The authoritative quality gate for the JSON it writes is `npm run validate`.
 
 Behaviour:
 
 - Read the workbook sheet `Bahrain (2)`, group rows by `regulation_id` into 322 regulations.
 - For each regulation, take the `is_primary` row for the core record fields, collect every row's leaf id into `themes`, and collect every row's leaf id and blurb into `theme_notes`.
-- Write one file per regulation to `data/documents/bh-<slug>.json`, where the slug is a readable identifier derived from the instrument name, with a numeric suffix on collision.
+- Write one file per regulation to `data/documents/bh-<slug>.json`, where the slug is a readable identifier derived from the instrument name, with a numeric suffix when two different regulations slugify to the same value.
+- Skip on collision with a curated record. When a generated id matches a file that already exists in `data/documents/`, the script does not overwrite it and logs the skip for manual reconciliation. Today this affects only the Personal Data Protection Law, which already exists as the hand built `bh-pdpl-2018.json`; that curated record stays and the workbook duplicate is skipped.
 
 Field mapping from workbook column to record field:
 
 - Instrument name (EN) to `title`.
 - Type to `instrument_class`, after stripping a trailing question mark and recording the uncertainty in `notes`. Values map to the controlled instrument class vocabulary (for example rulebook module to `rulebook_module`).
-- Status to `lifecycle`: in force to `in_force`, draft or bill or proposal to `consultation`, and other statuses to their matching lifecycle value.
-- Verified to `source_confidence`: official to `official`, secondary to `secondary`, official index to `pending_verification` (these came from listing pages, not the instrument itself).
+- Status to `lifecycle`: the four workbook values map directly, in force to `in_force`, amended to `amended`, superseded to `superseded`, in consultation to `consultation`.
+- Verified to `source_confidence`: any value beginning with "official index" to `pending_verification` (these came from listing pages, not the instrument itself); any value beginning with "secondary" to `secondary`; any other value containing "official" to `official`.
 - Category and Subcategory to `themes` (leaf ids).
-- Summary to `summary`; the per row Summary values also feed `theme_notes`.
-- One line description to `impact_note`.
+- Summary (primary row) to `summary`.
+- One line description (each row) to `theme_notes`, keyed by that row's leaf id. The short one line descriptions are the per filter bullets. `impact_note` is left absent because the workbook has no executive briefing text and the schema floor for it is 100 characters.
 - Source URL to `source_url`.
 - Issuing authority to `issuing_authority`, resolved to an authority id.
 - Related instruments parked in `notes` as free text; typed forward only relationships are deferred to the detail pass.
-- `binding_status` derived from instrument class (laws, decrees, regulations, resolutions, decisions and rulebook modules are binding; strategies, policies, guidelines, frameworks, consultation papers and white papers are non binding), with the basis noted.
-- `jurisdiction` set to BH; `tags` seeded from theme branch labels.
+- `binding_status` derived from the instrument class binding flag already declared in `data/taxonomy.json` (`instrument_classes[].binding`), so the source of truth stays single. The mapping basis is noted.
+- Year (each regulation) to the integer `year` property; `date_issued` set to null when the workbook leaves the exact date unverified.
+- `jurisdiction` set to BH; `tags` seeded from the labels of the branches the regulation's leaves belong to.
+- Type uncertainty: a trailing question mark on the workbook Type is stripped to map to the controlled instrument class, and the uncertainty is recorded in `notes`.
 
 Honesty rules, per CLAUDE.md: the script never invents legal facts. Any record missing verified facts is written with `source_confidence: pending_verification` and a `notes` line stating what to confirm. Dates are left absent rather than guessed. Arabic fields are left absent for this pass.
 
@@ -52,7 +56,9 @@ The script is idempotent: rerunning it regenerates the same files. It prints a s
 
 ## 4. Dashboard change
 
-`src/components/Dashboard.tsx` and `src/components/RecordCard.tsx`: when at least one theme filter is active, a card renders the matching `theme_notes` blurbs as bullets, capped at the first three active theme filters. When no theme filter is active, the card shows `summary` only. Records without `theme_notes` always show `summary`. This is the only behavioural change; filtering, counts, search, sort, URL sync, and export stay as they are.
+The dashboard category filter is single select: one branch, then optionally one leaf under it. The bullets follow from that. `Dashboard.tsx` computes the active leaf set for each card: the single selected leaf if one is chosen, otherwise the regulation's own leaves that fall under the selected branch, otherwise empty. It passes that set to `RecordCard.tsx`. When the set is non empty and the record has `theme_notes`, the card renders the matching blurbs as bullets, capped at three. When the set is empty, or the record has no `theme_notes`, the card shows the `summary` one liner as it does today. Selecting a branch is therefore how a regulation shows several bullets at once; selecting a single leaf shows that leaf's bullet. Records made of the existing rich data have no `theme_notes` and are unaffected.
+
+Because lean records omit fields the card and family tree currently read directly (`obligations`, `relationships`, `date_issued`, `impact_note`, and others), `src/lib/data.ts` normalises every loaded record to safe defaults (empty arrays, null, empty string) so no component crashes, and `src/lib/types.ts` marks the deferred fields optional. The card guards the expanded sections that depend on absent fields so they simply do not render for lean records. Filtering, counts, search, sort, URL sync, and export stay as they are.
 
 ## 5. Out of scope (deferred to the detail pass)
 
