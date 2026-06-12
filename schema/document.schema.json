@@ -7,31 +7,15 @@
   "required": [
     "id",
     "title",
-    "title_ar",
-    "official_title",
-    "official_title_ar",
     "jurisdiction",
     "instrument_class",
     "binding_status",
     "lifecycle",
     "themes",
     "issuing_authority",
-    "language_of_official_text",
-    "date_issued",
-    "date_effective",
-    "compliance_deadline",
-    "gazette",
-    "citation",
     "summary",
-    "summary_ar",
-    "impact_note",
-    "impact_note_ar",
-    "obligations",
-    "applicability",
-    "relationships",
     "source_url",
     "source_confidence",
-    "last_verified",
     "tags"
   ],
   "properties": {
@@ -61,7 +45,7 @@
       "type": "boolean",
       "description": "True when the English text in circulation is an unofficial translation of an Arabic only instrument"
     },
-    "date_issued": { "type": "string", "format": "date" },
+    "date_issued": { "type": ["string", "null"], "format": "date" },
     "date_effective": { "type": ["string", "null"], "format": "date" },
     "compliance_deadline": { "type": ["string", "null"], "format": "date" },
     "gazette": {
@@ -75,7 +59,7 @@
       }
     },
     "citation": { "type": ["string", "null"], "minLength": 5 },
-    "summary": { "type": "string", "minLength": 50 },
+    "summary": { "type": "string", "minLength": 40 },
     "summary_ar": { "type": ["string", "null"], "minLength": 20 },
     "impact_note": { "type": "string", "minLength": 100 },
     "impact_note_ar": { "type": ["string", "null"], "minLength": 50 },
@@ -122,6 +106,17 @@
     "source_confidence": { "enum": ["official", "secondary", "pending_verification"] },
     "last_verified": { "type": "string", "format": "date" },
     "tags": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+    "theme_notes": {
+      "type": "object",
+      "additionalProperties": { "type": "string" },
+      "description": "Per leaf contextual blurbs keyed by leaf theme id; rendered as bullets when a category filter is active"
+    },
+    "year": {
+      "type": "integer",
+      "minimum": 1900,
+      "maximum": 2100,
+      "description": "Calendar year of the instrument; used when date_issued is unknown"
+    },
     "notes": { "type": ["string", "null"], "description": "Editorial notes for reviewers, not rendered on the site" }
   }
 }
