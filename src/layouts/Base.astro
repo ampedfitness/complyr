@@ -90,6 +90,56 @@ const isActive = (path: string) =>
         </span>
       </div>
     </footer>
+    <div id="cursor-ring" aria-hidden="true"></div>
+    <script>
+      const ring = document.getElementById('cursor-ring');
+      if (
+        ring &&
+        matchMedia('(hover: hover) and (pointer: fine)').matches &&
+        !matchMedia('(prefers-reduced-motion: reduce)').matches
+      ) {
+        let x = -100;
+        let y = -100;
+        let rx = -100;
+        let ry = -100;
+        let scale = 1;
+        let raf = 0;
+        const tick = () => {
+          rx += (x - rx) * 0.16;
+          ry += (y - ry) * 0.16;
+          ring.style.transform = `translate3d(${rx - 19}px, ${ry - 19}px, 0) scale(${scale})`;
+          raf = Math.abs(x - rx) + Math.abs(y - ry) > 0.2 ? requestAnimationFrame(tick) : 0;
+        };
+        const wake = () => {
+          if (!raf) raf = requestAnimationFrame(tick);
+        };
+        window.addEventListener(
+          'pointermove',
+          (e) => {
+            x = e.clientX;
+            y = e.clientY;
+            ring.classList.add('on');
+            wake();
+          },
+          { passive: true }
+        );
+        window.addEventListener(
+          'pointerover',
+          (e) => {
+            const t = e.target;
+            scale =
+              t instanceof Element && t.closest('a, button, input, select, summary, [role="button"]')
+                ? 1.55
+                : 1;
+            wake();
+          },
+          { passive: true }
+        );
+        document.documentElement.addEventListener('pointerleave', () => {
+          ring.classList.remove('on');
+        });
+      }
+    </script>
     <script>
       const btn = document.getElementById('theme-toggle');
       btn?.addEventListener('click', () => {

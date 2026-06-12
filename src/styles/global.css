@@ -939,3 +939,40 @@ main {
     margin-left: auto;
   }
 }
+
+/* Desktop cursor ring, never replaces the native cursor */
+#cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1.5px solid color-mix(in srgb, var(--accent) 55%, transparent);
+  background: radial-gradient(
+    circle,
+    color-mix(in srgb, var(--accent) 14%, transparent),
+    transparent 72%
+  );
+  pointer-events: none;
+  z-index: 2000;
+  opacity: 0;
+  transition: opacity 200ms ease;
+  will-change: transform;
+}
+
+#cursor-ring.on {
+  opacity: 1;
+}
+
+@media (hover: none), (pointer: coarse), (prefers-reduced-motion: reduce) {
+  #cursor-ring {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
