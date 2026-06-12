@@ -91,13 +91,17 @@ const isActive = (path: string) =>
       </div>
     </footer>
     <div id="cursor-ring" aria-hidden="true"></div>
+    <div id="cursor-dot" aria-hidden="true"></div>
     <script>
       const ring = document.getElementById('cursor-ring');
+      const dot = document.getElementById('cursor-dot');
       if (
         ring &&
+        dot &&
         matchMedia('(hover: hover) and (pointer: fine)').matches &&
         !matchMedia('(prefers-reduced-motion: reduce)').matches
       ) {
+        document.documentElement.classList.add('cursor-custom');
         let x = -100;
         let y = -100;
         let rx = -100;
@@ -105,8 +109,8 @@ const isActive = (path: string) =>
         let scale = 1;
         let raf = 0;
         const tick = () => {
-          rx += (x - rx) * 0.16;
-          ry += (y - ry) * 0.16;
+          rx += (x - rx) * 0.28;
+          ry += (y - ry) * 0.28;
           ring.style.transform = `translate3d(${rx - 19}px, ${ry - 19}px, 0) scale(${scale})`;
           raf = Math.abs(x - rx) + Math.abs(y - ry) > 0.2 ? requestAnimationFrame(tick) : 0;
         };
@@ -118,7 +122,9 @@ const isActive = (path: string) =>
           (e) => {
             x = e.clientX;
             y = e.clientY;
+            dot.style.transform = `translate3d(${x - 3}px, ${y - 3}px, 0)`;
             ring.classList.add('on');
+            dot.classList.add('on');
             wake();
           },
           { passive: true }
@@ -137,6 +143,7 @@ const isActive = (path: string) =>
         );
         document.documentElement.addEventListener('pointerleave', () => {
           ring.classList.remove('on');
+          dot.classList.remove('on');
         });
       }
     </script>

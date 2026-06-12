@@ -940,7 +940,33 @@ main {
   }
 }
 
-/* Desktop cursor ring, never replaces the native cursor */
+/* Desktop custom cursor: dot tracks the pointer 1:1, ring trails it.
+   The native cursor is hidden only while .cursor-custom is set, which the
+   script applies on fine pointers without reduced motion. */
+:root.cursor-custom,
+:root.cursor-custom * {
+  cursor: none !important;
+}
+
+#cursor-dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  pointer-events: none;
+  z-index: 2001;
+  opacity: 0;
+  transition: opacity 200ms ease;
+  will-change: transform;
+}
+
+#cursor-dot.on {
+  opacity: 1;
+}
+
 #cursor-ring {
   position: fixed;
   top: 0;
@@ -966,7 +992,8 @@ main {
 }
 
 @media (hover: none), (pointer: coarse), (prefers-reduced-motion: reduce) {
-  #cursor-ring {
+  #cursor-ring,
+  #cursor-dot {
     display: none;
   }
 }
