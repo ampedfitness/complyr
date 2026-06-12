@@ -119,6 +119,13 @@ const legend = [
   { cls: 'pending', name: 'Pending verification', desc: 'Source confirmation in progress' },
   { cls: 'info', name: 'All entries are source linked', desc: 'Transparency by design' },
 ];
+
+const chips = [
+  { label: 'AI governance', href: `${base}dashboard/?l=ai_emerging_tech.ai_governance_ethics` },
+  { label: 'Personal data protection', href: `${base}dashboard/?l=data_privacy.personal_data_protection` },
+  { label: 'Cybersecurity', href: `${base}dashboard/?b=cybersecurity` },
+  { label: 'Digital finance', href: `${base}dashboard/?b=digital_finance` },
+];
 ---
 
 <Base
@@ -126,56 +133,78 @@ const legend = [
   description="An open source structured dataset and taxonomy of GCC digital regulation: data, AI, cybersecurity, telecom, digital government, platforms, digital finance, online content, and digital health."
 >
   <div class="home">
+    <script is:inline>
+      if (
+        'IntersectionObserver' in window &&
+        !matchMedia('(prefers-reduced-motion: reduce)').matches
+      ) {
+        document.documentElement.classList.add('js-reveal');
+      }
+    </script>
     <section class="hero">
-      <div class="hero-copy reveal">
-        <h1>GCC Digital Regulation. Verified. Structured.&nbsp;Open.</h1>
-        <p class="hero-ar" lang="ar" dir="rtl">
-          التنظيمات الرقمية في دول مجلس التعاون الخليجي. موثقة. منظمة. ومفتوحة.
-        </p>
-        <p class="hero-lede">
-          GCC digital regulation lives in scattered PDFs across six jurisdictions and two
-          languages, with no machine readable way to say what an instrument is, whether it binds,
-          and what it amends.
-        </p>
-        <p class="hero-lede">
-          Complyr solves this by providing a structured, source-verified register of digital
-          regulatory instruments across Bahrain, Saudi Arabia, UAE, Qatar, Kuwait, and Oman.
-        </p>
-      </div>
-      <div class="hero-side">
-        <div class="stat-row reveal d1">
-          {
-            statCards.map((s) => (
-              <div class="stat-card">
-                <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <path d={s.icon} />
-                </svg>
-                <span class="stat-label">{s.label}</span>
-                <span class="stat-value">{s.value}</span>
-              </div>
-            ))
-          }
-        </div>
-        <div class="classify reveal d2">
-          <h2>How Complyr classifies regulation</h2>
-          <div class="classify-axes">
-            {
-              axes.map((a) => (
-                <div class="axis">
-                  <svg class="axis-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <path d={a.icon} />
-                  </svg>
-                  <span class="axis-name">{a.name}</span>
-                  <span class="axis-desc">{a.desc}</span>
-                </div>
-              ))
-            }
-          </div>
-        </div>
+      <h1 class="reveal">GCC Digital Regulation. Verified. Structured.&nbsp;Open.</h1>
+      <p class="hero-lede reveal d1">
+        A structured, source-verified register of digital regulatory instruments across Bahrain,
+        Saudi Arabia, UAE, Qatar, Kuwait, and Oman.
+      </p>
+      <form class="search reveal d2" role="search" action={`${base}dashboard/`} method="get">
+        <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <circle cx="11" cy="11" r="7" />
+          <path d="m20 20-3.5-3.5" />
+        </svg>
+        <input
+          id="home-search"
+          type="search"
+          name="q"
+          placeholder="Search laws, regulations, strategies across the GCC…"
+          aria-label="Search the register"
+          enterkeyhint="search"
+          autocomplete="off"
+        />
+        <span class="kbd" aria-hidden="true">/</span>
+        <button class="search-go" type="submit" aria-label="Search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M5 12h14M13 6l6 6-6 6" />
+          </svg>
+        </button>
+      </form>
+      <div class="chips reveal d3">
+        {chips.map((c) => <a class="chip" href={c.href}>{c.label}</a>)}
       </div>
     </section>
 
-    <section class="jurisdictions reveal d2" aria-label="Jurisdictions">
+    <div class="stat-row reveal d4">
+      {
+        statCards.map((s) => (
+          <div class="stat-card">
+            <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d={s.icon} />
+            </svg>
+            <span class="stat-label">{s.label}</span>
+            <span class="stat-value">{s.value}</span>
+          </div>
+        ))
+      }
+    </div>
+
+    <div class="classify reveal d5">
+      <h2>How Complyr classifies regulation</h2>
+      <div class="classify-axes">
+        {
+          axes.map((a) => (
+            <div class="axis">
+              <svg class="axis-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d={a.icon} />
+              </svg>
+              <span class="axis-name">{a.name}</span>
+              <span class="axis-desc">{a.desc}</span>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+
+    <section class="jurisdictions" data-reveal aria-label="Jurisdictions">
       <h2 class="zone-title">Browse by jurisdiction</h2>
       <div class="jur-grid">
         {
@@ -200,8 +229,8 @@ const legend = [
       </div>
     </section>
 
-    <section class="updates-zone">
-      <div class="updates-card reveal d3">
+    <section class="updates-zone" data-reveal>
+      <div class="updates-card">
         <div class="updates-head">
           <span class="pulse-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
@@ -342,45 +371,36 @@ const legend = [
         </ul>
       </div>
 
-      <aside class="contribute-card reveal d4">
-        <h2>Contribute to Complyr</h2>
-        <p class="contribute-lede">
-          Open by design. Better together. Help us keep the register accurate and complete.
-        </p>
-        <ol class="steps">
-          <li>
-            <span class="step-num" aria-hidden="true">1</span>
-            <span class="step-body">
-              <span class="step-name">Find an issue or instrument to improve</span>
-              <span class="step-desc">Browse open issues or propose a new instrument.</span>
-            </span>
-          </li>
-          <li>
-            <span class="step-num" aria-hidden="true">2</span>
-            <span class="step-body">
-              <span class="step-name">Make a change</span>
-              <span class="step-desc">Fork the repo, add your changes, and open a pull request.</span>
-            </span>
-          </li>
-          <li>
-            <span class="step-num" aria-hidden="true">3</span>
-            <span class="step-body">
-              <span class="step-name">Review and publish</span>
-              <span class="step-desc">Maintainers review, verify sources, and publish.</span>
-            </span>
-          </li>
-        </ol>
-        <a class="gh-btn" href="https://github.com/ampedfitness/complyr">
-          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-            <path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.58 9.58 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.93.36.31.68.92.68 1.85v2.75c0 .27.18.58.69.48A10 10 0 0 0 12 2Z" />
-          </svg>
-          Contribute on GitHub
-          <span aria-hidden="true">&nearr;</span>
-        </a>
-      </aside>
     </section>
   </div>
 </Base>
+
+<script>
+  const search = document.getElementById('home-search');
+  window.addEventListener('keydown', (e) => {
+    if (e.key !== '/' || e.ctrlKey || e.metaKey || e.altKey) return;
+    const t = e.target as HTMLElement | null;
+    if (t && (t.tagName === 'INPUT' || t.tagName === 'TEXTAREA' || t.isContentEditable)) return;
+    e.preventDefault();
+    search?.focus();
+  });
+
+  const targets = document.querySelectorAll('[data-reveal]');
+  if (document.documentElement.classList.contains('js-reveal')) {
+    const io = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('shown');
+            io.unobserve(entry.target);
+          }
+        }
+      },
+      { rootMargin: '0px 0px -8% 0px' }
+    );
+    targets.forEach((el) => io.observe(el));
+  }
+</script>
 
 <style>
   .home {
@@ -390,34 +410,158 @@ const legend = [
 
   /* Hero */
   .hero {
+    position: relative;
+    max-width: 46rem;
+    margin: 1.4rem auto 0;
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
-    gap: 2.6rem;
-    align-items: start;
+    gap: 1.15rem;
+    justify-items: center;
+    text-align: center;
   }
 
-  .hero-copy h1 {
-    font-size: clamp(2.2rem, 4.4vw, 3.2rem);
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: -30% -20% auto;
+    height: 150%;
+    background: radial-gradient(
+      40rem 20rem at 50% 32%,
+      color-mix(in srgb, var(--accent) 9%, transparent),
+      transparent 70%
+    );
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.2rem, 5vw, 3.3rem);
     font-weight: 800;
     letter-spacing: -0.035em;
-    line-height: 1.08;
-    margin: 0.4rem 0 0.9rem;
-  }
-
-  .hero-ar {
-    font-family: var(--arabic);
-    font-size: 1.18rem;
-    font-weight: 600;
-    color: var(--accent);
-    margin: 0 0 1.4rem;
+    line-height: 1.06;
+    margin: 0;
   }
 
   .hero-lede {
-    font-size: 0.98rem;
+    font-size: 1rem;
     line-height: 1.7;
     color: var(--ink-soft);
-    margin: 0 0 0.9rem;
-    max-width: 34rem;
+    margin: 0;
+    max-width: 36rem;
+  }
+
+  /* Search */
+  .search {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    width: 100%;
+    max-width: 38rem;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    box-shadow: var(--shadow);
+    padding: 0.3rem 0.3rem 0.3rem 1.15rem;
+    transition: border-color 160ms ease, box-shadow 200ms ease;
+  }
+
+  .search:focus-within {
+    border-color: color-mix(in srgb, var(--accent) 55%, var(--line));
+    box-shadow: 0 0 0 4px var(--accent-soft), var(--shadow-lift);
+  }
+
+  .search-icon {
+    width: 1.1rem;
+    height: 1.1rem;
+    color: var(--accent);
+    flex-shrink: 0;
+  }
+
+  .search input {
+    flex: 1;
+    min-width: 0;
+    border: 0;
+    background: transparent;
+    font: inherit;
+    font-size: 0.95rem;
+    color: var(--ink);
+    padding: 0.55rem 0;
+  }
+
+  .search input::placeholder {
+    color: var(--ink-faint);
+  }
+
+  .search input:focus {
+    outline: none;
+  }
+
+  .kbd {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    color: var(--ink-faint);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 0.1rem 0.45rem;
+    background: var(--paper);
+    flex-shrink: 0;
+  }
+
+  .search-go {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.75rem;
+    height: 2.75rem;
+    flex-shrink: 0;
+    border: 0;
+    border-radius: 999px;
+    background: var(--accent);
+    color: #ffffff;
+    cursor: pointer;
+  }
+
+  .search-go:hover {
+    background: var(--accent-strong);
+  }
+
+  .search-go svg {
+    width: 1.1rem;
+    height: 1.1rem;
+  }
+
+  :root[data-theme='dark'] .search-go {
+    color: #0f0f17;
+  }
+
+  .chips {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    min-height: 2.75rem;
+    padding: 0.3rem 1.05rem;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--accent);
+    background: var(--accent-soft);
+    border-radius: 999px;
+  }
+
+  .chip:hover {
+    text-decoration: none;
+    background: color-mix(in srgb, var(--accent) 14%, var(--accent-soft));
+    transform: translateY(-1px);
+  }
+
+  @media (hover: none) {
+    .kbd {
+      display: none;
+    }
   }
 
   /* Stat cards */
@@ -425,6 +569,8 @@ const legend = [
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 0.9rem;
+    max-width: 54rem;
+    margin: 2.4rem auto 0;
   }
 
   .stat-card {
@@ -466,7 +612,8 @@ const legend = [
     border-radius: var(--r);
     box-shadow: var(--shadow);
     padding: 1.2rem 1.4rem 1.35rem;
-    margin-top: 0.9rem;
+    max-width: 54rem;
+    margin: 0.9rem auto 0;
   }
 
   .classify h2 {
@@ -593,14 +740,10 @@ const legend = [
 
   /* Updates zone */
   .updates-zone {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) 19.5rem;
-    gap: 1.4rem;
-    align-items: start;
+    display: block;
   }
 
-  .updates-card,
-  .contribute-card {
+  .updates-card {
     background: var(--surface);
     border: 1px solid var(--line);
     border-radius: var(--r-lg);
@@ -939,116 +1082,18 @@ const legend = [
     line-height: 1.4;
   }
 
-  /* Contribute */
-  .contribute-card h2 {
-    font-size: 1.1rem;
-    font-weight: 700;
-    margin: 0 0 0.4rem;
-  }
-
-  .contribute-lede {
-    font-size: 0.86rem;
-    color: var(--ink-soft);
-    line-height: 1.55;
-    margin: 0 0 1.2rem;
-  }
-
-  .steps {
-    list-style: none;
-    margin: 0 0 1.4rem;
-    padding: 0;
-    display: grid;
-    gap: 1rem;
-    position: relative;
-  }
-
-  .steps::before {
-    content: '';
-    position: absolute;
-    left: 0.78rem;
-    top: 1.4rem;
-    bottom: 1rem;
-    width: 2px;
-    background: var(--line);
-  }
-
-  .steps li {
-    display: flex;
-    gap: 0.75rem;
-    position: relative;
-  }
-
-  .step-num {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 1.6rem;
-    height: 1.6rem;
-    flex-shrink: 0;
-    border-radius: 999px;
-    background: var(--accent);
-    color: #ffffff;
-    font-size: 0.78rem;
-    font-weight: 700;
-    position: relative;
-    z-index: 1;
-  }
-
-  :root[data-theme='dark'] .step-num {
-    color: #0f0f17;
-  }
-
-  .step-name {
-    display: block;
-    font-size: 0.85rem;
-    font-weight: 600;
-    color: var(--ink);
-    line-height: 1.4;
-  }
-
-  .step-desc {
-    display: block;
-    font-size: 0.78rem;
-    color: var(--ink-faint);
-    line-height: 1.5;
-  }
-
-  .gh-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    width: 100%;
-    padding: 0.6rem 1rem;
-    border: 1px solid color-mix(in srgb, var(--accent) 35%, var(--line));
-    border-radius: var(--r-sm);
-    font-size: 0.88rem;
-    font-weight: 600;
-    color: var(--accent);
-  }
-
-  .gh-btn:hover {
-    text-decoration: none;
-    background: var(--accent-soft);
-    border-color: var(--accent);
-  }
-
-  .gh-btn svg {
-    width: 1.1rem;
-    height: 1.1rem;
-  }
-
-  /* Load choreography */
+  /* Load choreography and motion */
   @media (prefers-reduced-motion: no-preference) {
     .reveal {
       opacity: 0;
-      animation: rise 0.65s cubic-bezier(0.2, 0.7, 0.3, 1) forwards;
+      animation: rise 0.55s cubic-bezier(0.2, 0.7, 0.3, 1) forwards;
     }
 
-    .d1 { animation-delay: 0.08s; }
-    .d2 { animation-delay: 0.16s; }
-    .d3 { animation-delay: 0.24s; }
-    .d4 { animation-delay: 0.32s; }
+    .d1 { animation-delay: 0.07s; }
+    .d2 { animation-delay: 0.14s; }
+    .d3 { animation-delay: 0.21s; }
+    .d4 { animation-delay: 0.3s; }
+    .d5 { animation-delay: 0.38s; }
 
     @keyframes rise {
       from {
@@ -1060,21 +1105,44 @@ const legend = [
         transform: none;
       }
     }
+
+    .hero::before {
+      animation: glow-drift 36s ease-in-out infinite alternate;
+    }
+
+    @keyframes glow-drift {
+      from {
+        transform: translate3d(-4%, 0, 0);
+      }
+      to {
+        transform: translate3d(4%, 2.5%, 0);
+      }
+    }
+
+    :root.js-reveal [data-reveal] {
+      opacity: 0;
+      transform: translateY(18px);
+      transition:
+        opacity 480ms cubic-bezier(0.2, 0.7, 0.3, 1),
+        transform 480ms cubic-bezier(0.2, 0.7, 0.3, 1);
+    }
+
+    :root.js-reveal [data-reveal].shown {
+      opacity: 1;
+      transform: none;
+    }
+
+    .jur-tile:active,
+    .chip:active,
+    a.update-row:active {
+      transform: scale(0.985);
+    }
   }
 
   /* Responsive */
   @media (max-width: 70rem) {
-    .hero {
-      grid-template-columns: 1fr;
-      gap: 2rem;
-    }
-
     .jur-grid {
       grid-template-columns: repeat(3, 1fr);
-    }
-
-    .updates-zone {
-      grid-template-columns: 1fr;
     }
 
     .legend {
@@ -1083,10 +1151,6 @@ const legend = [
   }
 
   @media (max-width: 46rem) {
-    .hero-copy h1 {
-      font-size: clamp(1.7rem, 8vw, 2.2rem);
-    }
-
     .stat-row {
       grid-template-columns: repeat(2, 1fr);
     }
