@@ -519,8 +519,8 @@ export default function Dashboard({ dataset }: Props) {
 
         {results.length === 0 ? (
           <p className="empty-state">
-            No instruments match the current filters. Clear a filter or two, or contribute the
-            missing instrument on GitHub.
+            No instruments match the current filters. Clear a filter or two, or try a different
+            search.
           </p>
         ) : (
           <ol className="record-grid">

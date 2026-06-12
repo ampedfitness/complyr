@@ -93,14 +93,14 @@ Field notes that matter:
 - `impact_note` is the analytical core: one paragraph on who is affected, what changes, and what action is needed, written like an analyst briefing an executive.
 - `source_confidence` is honest about verification: `official` for gazette or regulator sources, `secondary` for reputable analyses, `pending_verification` when a fact still needs checking. Pending records are visibly flagged on the site.
 
-## Contributing an entry
+## Adding an entry
 
 1. Pick an instrument and verify it against the official gazette or the issuing regulator. `docs/research/deep-research-prompts.md` has ready made deep research prompts that emit records in this exact format.
 2. If the issuing body is new, add it to `data/authorities.json` first.
 3. Create `data/documents/<id>.json`. The id starts with the lowercase jurisdiction code and the file name must equal the id.
 4. Tag themes at leaf level only and against the scope statements in `data/taxonomy.json`, not the labels.
 5. Enter relationships in the forward direction only; the site computes the rest.
-6. Run `npm run validate` and fix what it reports, then open a pull request.
+6. Run `npm run validate` and fix what it reports, then commit.
 
 Validation enforces: schema shape for every file, theme ids that exist and are leaves, authority ids that resolve, relationship targets that exist and use forward types, unique ids matching file names, and an `enabled_by` link on every conditionally binding instrument. CI runs the same checks plus a full site build on every pull request.
 
