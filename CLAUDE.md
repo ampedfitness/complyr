@@ -49,6 +49,7 @@ No em dashes or dash punctuation. Plain professional tone, active voice, sentenc
 
 ## Open items
 
+- NEXT UP, approved but not built: refocus the dataset to digital regulation only with a new 9 category, 32 subcategory taxonomy v2. Full design, retagging map for all 13 records, and implementation checklist live in `docs/superpowers/specs/2026-06-12-digital-refocus-design.md`. Start there.
 - Per-document detail pages: cards currently expand inline; owner wants dedicated pages designed later (cards are "clickable, we'll make that page later").
 - Author attribution placeholders `[Author name]` in README, LICENSE, LICENSE-DATA.
 - Records flagged in notes: SDAIA AI Ethics v1 2022 record + supersedes link, 2024 amendments to SA implementing regulation and transfer regulation, parallel public GenAI guidelines, Bahrain 2022 ministerial resolutions, QFC DP Regulations 2021, official source links for BH/QA/KW/OM records.
