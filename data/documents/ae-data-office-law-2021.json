@@ -8,7 +8,7 @@
   "instrument_class": "law",
   "binding_status": "binding",
   "lifecycle": "in_force",
-  "themes": ["technology_digital.data_protection_privacy", "technology_digital.digital_government"],
+  "themes": ["data_privacy.personal_data_protection", "data_privacy.data_governance_open_data"],
   "issuing_authority": "ae-president",
   "language_of_official_text": "ar",
   "english_text_unofficial": true,

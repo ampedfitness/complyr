@@ -8,7 +8,7 @@
   "instrument_class": "law",
   "binding_status": "conditionally_binding",
   "lifecycle": "in_force",
-  "themes": ["technology_digital", "technology_digital.nonexistent_leaf"],
+  "themes": ["data_privacy", "data_privacy.nonexistent_leaf"],
   "issuing_authority": "sa-missing-authority",
   "language_of_official_text": "ar",
   "date_issued": "2022-01-01",

@@ -1,6 +1,6 @@
-# Digital-only refocus: approved design, not yet implemented
+# Digital-only refocus: approved design, implemented
 
-Date: 2026-06-12. Owner approved the taxonomy below in conversation. Nothing in this spec has been built yet. A fresh session should implement it end to end.
+Date: 2026-06-12. Owner approved the taxonomy below in conversation. Implemented end to end on 2026-06-12: taxonomy v2.0.0, record retagging, research prompts, website copy, README, and CLAUDE.md.
 
 ## Decision
 

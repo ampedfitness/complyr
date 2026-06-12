@@ -8,7 +8,7 @@
   "instrument_class": "guideline",
   "binding_status": "non_binding",
   "lifecycle": "in_force",
-  "themes": ["technology_digital.ai_emerging_tech", "technology_digital.digital_government"],
+  "themes": ["ai_emerging_tech.generative_ai", "digital_government.egovernment_services"],
   "issuing_authority": "sa-sdaia",
   "language_of_official_text": "both",
   "date_issued": "2024-01-01",

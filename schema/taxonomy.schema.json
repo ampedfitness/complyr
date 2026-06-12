@@ -94,7 +94,7 @@
     },
     "themes": {
       "type": "array",
-      "minItems": 16,
+      "minItems": 1,
       "items": {
         "type": "object",
         "additionalProperties": false,
@@ -113,7 +113,7 @@
               "additionalProperties": false,
               "required": ["id", "label", "label_ar", "scope"],
               "properties": {
-                "id": { "type": "string", "pattern": "^[a-z_]+\\.[a-z_]+$" },
+                "id": { "type": "string", "pattern": "^[a-z_]+\\.[a-z][a-z0-9_]*$" },
                 "label": { "type": "string" },
                 "label_ar": { "type": ["string", "null"] },
                 "scope": { "type": "string", "minLength": 50 }

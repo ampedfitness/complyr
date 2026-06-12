@@ -2,14 +2,16 @@
 
 Two workflows. Workflow A is the primary pipeline: research lands in an Excel workbook, one tab per country, then gets converted into validated JSON records in bulk. Workflow B emits finished JSON records directly, for contributors filing single PRs.
 
+The dataset covers digital regulation only: instruments whose primary subject is digital technology, data, networks, online activity, or digitally delivered services. Non digital instruments are out of scope even when issued by a digital authority. Instruments in traditional domains enter only when they specifically regulate the digital channel or technology.
+
 ## Workflow A: Excel register, one prompt per subcategory
 
 One workbook. One tab per country (BH, SA, AE, QA, KW, OM). Every tab has exactly these columns, in this order:
 
 | Column | Content |
 | --- | --- |
-| Category | Theme branch, e.g. Technology & Digital |
-| Subcategory | Theme leaf, e.g. Data protection & privacy |
+| Category | Theme branch, e.g. Data & privacy |
+| Subcategory | Theme leaf, e.g. Personal data protection |
 | Instrument name (EN) | Plain English name |
 | Official name (AR) | Official Arabic title exactly as published, or blank |
 | Type | One of: law, decree, regulation, resolution, decision, circular, rulebook module, national strategy, policy, guideline, framework, handbook, code of practice, standard, consultation paper, white paper |
@@ -23,10 +25,49 @@ One workbook. One tab per country (BH, SA, AE, QA, KW, OM). Every tab has exactl
 | Source URL | Best URL actually opened, official preferred |
 | Verified | official, secondary, or unverified, plus any caveat |
 
-Run the prompt below once per subcategory per country chat, filling in the placeholders. Paste each returned table into the country tab.
+### Run matrix
+
+One prompt run per Category and Subcategory pair per country chat. Every run picks from this approved list, exactly as written. The Arabic topic terms column feeds the Arabic search instruction in the prompt.
+
+| Category | Subcategory | Arabic topic terms |
+| --- | --- | --- |
+| Data & privacy | Personal data protection | حماية البيانات الشخصية |
+| Data & privacy | Cross-border data flows | نقل البيانات عبر الحدود، توطين البيانات |
+| Data & privacy | Data governance & open data | حوكمة البيانات، البيانات المفتوحة، مكتب البيانات |
+| AI & emerging technologies | AI governance & ethics | الذكاء الاصطناعي، أخلاقيات الذكاء الاصطناعي |
+| AI & emerging technologies | Generative AI | الذكاء الاصطناعي التوليدي |
+| AI & emerging technologies | Autonomous & smart systems | المركبات ذاتية القيادة، الأنظمة ذاتية التشغيل، المدن الذكية، الروبوتات |
+| AI & emerging technologies | IoT & connected devices | إنترنت الأشياء، الأجهزة المتصلة |
+| AI & emerging technologies | Blockchain & Web3 | البلوك تشين، سلاسل الكتل، العقود الذكية |
+| Cybersecurity | Security controls & frameworks | الأمن السيبراني، الضوابط الأساسية للأمن السيبراني، التشفير |
+| Cybersecurity | Critical infrastructure | البنية التحتية الحرجة، البنى التحتية الحساسة |
+| Cybersecurity | Incident reporting | الإبلاغ عن الحوادث السيبرانية |
+| Cybersecurity | Cybercrime | جرائم تقنية المعلومات، الجرائم الإلكترونية |
+| Telecommunications & digital infrastructure | Licensing & markets | تراخيص الاتصالات، تنظيم قطاع الاتصالات |
+| Telecommunications & digital infrastructure | Spectrum | الطيف الترددي |
+| Telecommunications & digital infrastructure | OTT & digital communication services | خدمات الاتصال عبر الإنترنت، الاتصال الصوتي عبر الإنترنت |
+| Telecommunications & digital infrastructure | Cloud & data centres | الحوسبة السحابية، مراكز البيانات |
+| Telecommunications & digital infrastructure | Internet governance & domain names | أسماء النطاقات، النطاق الوطني، حوكمة الإنترنت |
+| Digital government & identity | E-government services | الحكومة الإلكترونية، التحول الرقمي الحكومي |
+| Digital government & identity | Digital identity & trust services | الهوية الرقمية، التوقيع الإلكتروني، المعاملات الإلكترونية |
+| Digital economy & platforms | E-commerce | التجارة الإلكترونية |
+| Digital economy & platforms | Online platforms | المنصات الإلكترونية، المنصات الرقمية، الاقتصاد التشاركي |
+| Digital economy & platforms | E-invoicing & digital tax administration | الفوترة الإلكترونية، الفاتورة الإلكترونية |
+| Digital finance | Payments & e-money | خدمات الدفع، النقود الإلكترونية، المدفوعات الرقمية |
+| Digital finance | Open banking | الخدمات المصرفية المفتوحة، التمويل المفتوح |
+| Digital finance | Virtual assets | الأصول الافتراضية، الأصول الرقمية، العملات المشفرة |
+| Digital finance | Fintech sandboxes | البيئة التجريبية التشريعية، التقنية المالية |
+| Online content & media | Online media licensing | الإعلام الإلكتروني، الإعلام الرقمي، الصحافة الإلكترونية |
+| Online content & media | Content standards & moderation | المحتوى الإلكتروني، معايير المحتوى الرقمي |
+| Online content & media | Online advertising & influencers | الإعلان الإلكتروني، المؤثرين، الإعلانات عبر وسائل التواصل |
+| Online content & media | Gaming & esports | الألعاب الإلكترونية، الرياضات الإلكترونية |
+| Digital health | Telehealth & digital health services | الصحة الرقمية، الرعاية الصحية عن بعد، التطبيب عن بعد |
+| Digital health | Health data | البيانات الصحية، السجلات الصحية الإلكترونية |
+
+Run the prompt below once per subcategory per country chat, filling in the placeholders from the run matrix. Paste each returned table into the country tab.
 
 ```text
-You are a senior regulatory research analyst building a verified register of {COUNTRY} regulation. Accuracy beats completeness: never invent a fact, a date, an instrument number, or a URL. Everything you report must trace to a source you actually opened. If you cannot verify something, write UNVERIFIED in that cell instead of guessing.
+You are a senior regulatory research analyst building a verified register of {COUNTRY} digital regulation: the rules governing digital technology, data, networks, online activity, and digitally delivered services. Accuracy beats completeness: never invent a fact, a date, an instrument number, or a URL. Everything you report must trace to a source you actually opened. If you cannot verify something, write UNVERIFIED in that cell instead of guessing.
 
 Research ONLY this area in this run:
 
@@ -34,6 +75,8 @@ Category: {CATEGORY}
 Subcategory: {SUBCATEGORY}
 
 Find every instrument with real compliance significance in this subcategory, from roughly 2000 to today, prioritising 2015 onward: laws, amendments, executive or implementing regulations, cabinet and ministerial resolutions, regulator decisions and circulars, plus significant non-binding items (national strategies, official guidelines, frameworks, codes of practice, standards, consultations that are open or produced an instrument). For financial free zones (DIFC, ADGM, QFC), include their instruments with the free zone authority as the issuer.
+
+Scope discipline: the register covers digital regulation only. An instrument qualifies when its primary subject is digital technology, data, networks, online activity, or a digitally delivered service. An instrument from a traditional domain qualifies only when it specifically regulates the digital channel or technology. Do not include non digital instruments even when the issuer is a digital authority.
 
 Source hierarchy, in order of preference:
 1. Official gazette or official legislation portal
@@ -48,7 +91,7 @@ Official starting points by country:
 - Kuwait: official gazette Kuwait Al-Youm via e.gov.kw, citra.gov.kw
 - Oman: qanoon.om, mjla.gov.om
 
-Search in BOTH languages. Run every search in English AND in Arabic; many instruments, especially ministerial resolutions and gazette publications, are only findable in Arabic. Build Arabic queries from the instrument form plus the topic, for example: قانون (law), مرسوم or مرسوم ملكي or مرسوم سلطاني or مرسوم بقانون اتحادي (decree forms), لائحة تنفيذية (executive regulation), قرار وزاري (ministerial resolution), تعميم (circular), استراتيجية وطنية (national strategy), دليل or إرشادات (guideline). Combine with the Arabic topic terms for this subcategory. Browse the Arabic versions of the official portals, since they list more than their English versions. Translate findings into English for the table, but copy the official Arabic title verbatim into the Official name (AR) column.
+Search in BOTH languages. Run every search in English AND in Arabic; many instruments, especially ministerial resolutions and gazette publications, are only findable in Arabic. Build Arabic queries from the instrument form plus the topic, for example: قانون (law), مرسوم or مرسوم ملكي or مرسوم سلطاني or مرسوم بقانون اتحادي (decree forms), لائحة تنفيذية (executive regulation), قرار وزاري (ministerial resolution), تعميم (circular), استراتيجية وطنية (national strategy), دليل or إرشادات (guideline). Combine these forms with the Arabic topic terms for this subcategory: {ARABIC_TOPIC_TERMS}. Browse the Arabic versions of the official portals, since they list more than their English versions. Translate findings into English for the table, but copy the official Arabic title verbatim into the Official name (AR) column.
 
 Type is a controlled vocabulary. Classify by legal form and issuer, never by the document's own title. Use exactly one of:
 - law: primary legislation passed through the country's lawmaking process. Includes a Saudi nizam, a UAE federal law or federal decree law, and any law promulgated by royal decree.

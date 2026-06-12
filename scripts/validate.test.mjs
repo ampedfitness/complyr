@@ -21,8 +21,8 @@ test('fixture documents trigger every referential integrity check', () => {
       `expected an error containing "${pattern}", got:\n${errors.join('\n')}`
     );
 
-  expect('theme technology_digital is a branch');
-  expect('theme technology_digital.nonexistent_leaf does not exist');
+  expect('theme data_privacy is a branch');
+  expect('theme data_privacy.nonexistent_leaf does not exist');
   expect('issuing_authority sa-missing-authority does not exist');
   expect('relationship target sa-does-not-exist does not exist');
   expect('amended_by is an inverse; record the forward form amends');

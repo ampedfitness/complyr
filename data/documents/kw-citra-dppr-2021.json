@@ -8,7 +8,7 @@
   "instrument_class": "decision",
   "binding_status": "binding",
   "lifecycle": "in_force",
-  "themes": ["technology_digital.data_protection_privacy", "technology_digital.telecommunications"],
+  "themes": ["data_privacy.personal_data_protection", "telecom_digital_infrastructure.licensing_markets"],
   "issuing_authority": "kw-citra",
   "language_of_official_text": "both",
   "date_issued": "2021-07-01",

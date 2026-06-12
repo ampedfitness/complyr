@@ -52,7 +52,7 @@
       "type": "array",
       "minItems": 1,
       "uniqueItems": true,
-      "items": { "type": "string", "pattern": "^[a-z_]+\\.[a-z_]+$" },
+      "items": { "type": "string", "pattern": "^[a-z_]+\\.[a-z][a-z0-9_]*$" },
       "description": "Leaf theme ids only; validated against the taxonomy by the validator"
     },
     "issuing_authority": { "type": "string", "description": "Authority id; validated against authorities.json by the validator" },

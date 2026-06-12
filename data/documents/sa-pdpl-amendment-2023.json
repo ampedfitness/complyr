@@ -8,7 +8,7 @@
   "instrument_class": "decree",
   "binding_status": "binding",
   "lifecycle": "in_force",
-  "themes": ["technology_digital.data_protection_privacy"],
+  "themes": ["data_privacy.personal_data_protection"],
   "issuing_authority": "sa-king",
   "language_of_official_text": "ar",
   "english_text_unofficial": true,

@@ -1,6 +1,6 @@
 # Complyr handoff
 
-Open source taxonomy + curated dataset of GCC regulation with a static dashboard. Live: https://ampedfitness.github.io/complyr/ Repo: github.com/ampedfitness/complyr. Owner reviews everything; he is a digital policy analyst.
+Open source taxonomy + curated dataset of GCC digital regulation with a static dashboard. Live: https://ampedfitness.github.io/complyr/ Repo: github.com/ampedfitness/complyr. Owner reviews everything; he is a digital policy analyst.
 
 ## Stack and commands
 
@@ -17,7 +17,8 @@ Astro 6 + React 19 islands, vanilla CSS, no backend. Deploys to GitHub Pages on 
 - Relationships forward-only (amends, repeals, supersedes, implements, consults_on, enabled_by, references); inverses computed at build; conditionally_binding requires enabled_by.
 - issuing_authority must exist in `data/authorities.json`.
 - Never invent legal facts. Unverified = source_confidence pending_verification + a notes field saying what to check. Promulgating decrees fold into the law's citation, never separate records.
-- Taxonomy v1.1: 17 branches, 63 leaves, every node has a scope statement; no other/misc buckets, gaps are fixed by new leaves. Constitutional/electoral law explicitly out of scope.
+- Taxonomy v2.0.0: 9 branches, 32 leaves, digital regulation only; every node has a scope statement; no other/misc buckets, gaps are fixed by new leaves.
+- Dataset scope: digital regulation only. An instrument qualifies when its primary subject is digital technology, data, networks, online activity, or digitally delivered services. Non digital instruments are out of scope even when issued by a digital authority; traditional domain instruments enter only when they specifically regulate the digital channel or technology.
 
 ## Site structure
 
@@ -49,7 +50,6 @@ No em dashes or dash punctuation. Plain professional tone, active voice, sentenc
 
 ## Open items
 
-- NEXT UP, approved but not built: refocus the dataset to digital regulation only with a new 9 category, 32 subcategory taxonomy v2. Full design, retagging map for all 13 records, and implementation checklist live in `docs/superpowers/specs/2026-06-12-digital-refocus-design.md`. Start there.
 - Per-document detail pages: cards currently expand inline; owner wants dedicated pages designed later (cards are "clickable, we'll make that page later").
 - Author attribution placeholders `[Author name]` in README, LICENSE, LICENSE-DATA.
 - Records flagged in notes: SDAIA AI Ethics v1 2022 record + supersedes link, 2024 amendments to SA implementing regulation and transfer regulation, parallel public GenAI guidelines, Bahrain 2022 ministerial resolutions, QFC DP Regulations 2021, official source links for BH/QA/KW/OM records.

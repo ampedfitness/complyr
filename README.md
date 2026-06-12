@@ -1,6 +1,6 @@
 # Complyr
 
-There is no public, structured schema for GCC regulatory instruments: what an instrument is by legal form, whether and how it binds, what it regulates, and what it amends or implements. Complyr answers that with an open taxonomy, a JSON data model with referential integrity enforced in CI, and a curated dataset verified against official sources. Launch coverage is digital policy across Bahrain, Saudi Arabia, the UAE, Qatar, Kuwait, and Oman: data protection, AI governance, and digital economy.
+There is no public, structured schema for GCC digital regulation: what an instrument is by legal form, whether and how it binds, what it regulates, and what it amends or implements. Complyr answers that with an open taxonomy, a JSON data model with referential integrity enforced in CI, and a curated dataset verified against official sources. Coverage is digital regulation across Bahrain, Saudi Arabia, the UAE, Qatar, Kuwait, and Oman: data and privacy, AI and emerging technologies, cybersecurity, telecom and digital infrastructure, digital government, digital economy, digital finance, online content, and digital health.
 
 Live site: https://ampedfitness.github.io/complyr/
 
@@ -29,7 +29,7 @@ The same legal form carries different names across the six jurisdictions. The ta
 
 A royal or emiri decree that merely promulgates a law is not a separate record; it lives in the law's citation string. This keeps the dataset from filling up with decree stubs.
 
-The theme tree has seventeen top level branches covering the whole regulatory space, each with leaf subcategories and a written scope statement. Documents tag leaves only; parents are computed. There are no general or miscellaneous categories anywhere: if nothing fits, the tree has a gap and the fix is a new leaf with a scope statement, not a junk drawer. Boundary calls are written into the scope statements, for example personal data breach duties sit under data protection rather than cybersecurity, and AML sits under finance regardless of which regulator issued it.
+The theme tree has nine top level categories covering the digital regulatory space, each with leaf subcategories and a written scope statement. Documents tag leaves only; parents are computed. There are no general or miscellaneous categories anywhere: if nothing fits, the tree has a gap and the fix is a new leaf with a scope statement, not a junk drawer. Boundary calls are written into the scope statements, for example personal data breach duties sit under data privacy rather than cybersecurity, and crypto as a financial activity sits under digital finance while blockchain as a technology sits under AI and emerging technologies.
 
 Lifecycle distinguishes `superseded` from `repealed`. Strategies and guidance get quietly replaced without formal repeal, and the data does not pretend otherwise.
 
@@ -50,7 +50,7 @@ One JSON file per instrument in `data/documents/`, named by its id. A full recor
   "instrument_class": "regulation",
   "binding_status": "binding",
   "lifecycle": "in_force",
-  "themes": ["technology_digital.data_protection_privacy"],
+  "themes": ["data_privacy.personal_data_protection"],
   "issuing_authority": "om-mtcit",
   "language_of_official_text": "ar",
   "english_text_unofficial": true,
@@ -120,7 +120,7 @@ Deployment is GitHub Pages via the workflow in `.github/workflows/deploy.yml`, t
 
 Complyr is a curated dataset, not a live monitoring service. Records are added and verified by hand, and each carries its own `last_verified` date. The dataset currently holds an initial demonstration set centred on data protection law across all six jurisdictions, with build out underway; entries marked `pending_verification` await confirmation against official sources before they should be relied on.
 
-Coverage status by theme branch: Technology & Digital is the launch focus (full), Finance is partial, and the remaining fifteen branches (Energy & Environment, Trade & Commerce, Labour & Workforce, Health, Education & Research, Media & Content, Transport & Logistics, Real Estate & Construction, Tourism, Culture & Sport, Agriculture & Food, Taxation & Public Finance, Justice & Public Administration, Defence & National Security, Social Affairs & Civil Society, Industry & Manufacturing) exist as classified stubs so the tree stays collectively exhaustive while entries accumulate. Constitutional and electoral law are deliberately out of scope.
+The dataset covers digital regulation only: instruments whose primary subject is digital technology, data, networks, online activity, or digitally delivered services. Non digital instruments are out of scope even when issued by a digital authority, and instruments in traditional domains enter only when they specifically regulate the digital channel or technology. The taxonomy has nine categories (Data & privacy, AI & emerging technologies, Cybersecurity, Telecommunications & digital infrastructure, Digital government & identity, Digital economy & platforms, Digital finance, Online content & media, Digital health) and thirty two subcategories, each with a written scope statement so the tree stays collectively exhaustive while entries accumulate.
 
 ## Roadmap
 
