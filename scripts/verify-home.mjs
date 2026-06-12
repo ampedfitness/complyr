@@ -33,24 +33,28 @@ for (const theme of ['light', 'dark']) {
     const checks = await page.evaluate(() => {
       const r = {};
       r.searchForm = !!document.querySelector('form.search input[name="q"]');
-      r.arabicGone = !document.querySelector('.hero-ar');
+      r.arabic = !!document.querySelector('.hero-ar');
       r.contributeGone = !document.querySelector('.contribute-card');
-      r.chips = document.querySelectorAll('.chip').length;
+      r.filters =
+        !!document.querySelector('#f-all') &&
+        !!document.querySelector('#f-jur') &&
+        !!document.querySelector('#f-cls');
+      r.legendCard = !!document.querySelector('.legend-card .legend');
+      r.statBand = document.querySelectorAll('.stat-band .stat-cell').length;
       r.jurTiles = document.querySelectorAll('.jur-tile').length;
       r.updatesCard = !!document.querySelector('.updates-card');
-      const chip = document.querySelector('.chip');
-      r.chipHeight = chip ? Math.round(chip.getBoundingClientRect().height) : 0;
       const go = document.querySelector('.search-go');
       r.goSize = go ? Math.round(go.getBoundingClientRect().width) : 0;
       return r;
     });
     if (!checks.searchForm) issues.push(`${theme} ${width}px: search form missing`);
-    if (!checks.arabicGone) issues.push(`${theme} ${width}px: Arabic subline still present`);
+    if (!checks.arabic) issues.push(`${theme} ${width}px: Arabic subline missing`);
     if (!checks.contributeGone) issues.push(`${theme} ${width}px: contribute card still present`);
-    if (checks.chips !== 4) issues.push(`${theme} ${width}px: expected 4 chips, got ${checks.chips}`);
+    if (!checks.filters) issues.push(`${theme} ${width}px: update filters missing`);
+    if (!checks.legendCard) issues.push(`${theme} ${width}px: legend sidebar missing`);
+    if (checks.statBand !== 4) issues.push(`${theme} ${width}px: expected 4 stat cells, got ${checks.statBand}`);
     if (checks.jurTiles !== 6) issues.push(`${theme} ${width}px: expected 6 tiles, got ${checks.jurTiles}`);
     if (!checks.updatesCard) issues.push(`${theme} ${width}px: updates card missing`);
-    if (checks.chipHeight < 43) issues.push(`${theme} ${width}px: chip height ${checks.chipHeight}px under 44`);
     if (checks.goSize < 43) issues.push(`${theme} ${width}px: search button ${checks.goSize}px under 44`);
 
     await page.screenshot({ path: `${OUT}/home-${theme}-${width}.png`, fullPage: true });

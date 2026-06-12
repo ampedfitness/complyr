@@ -76,21 +76,25 @@ const statCards = [
   {
     label: 'Est. year',
     value: '2026',
+    sub: 'Project established',
     icon: 'M7 3v3M17 3v3M4 7.5h16M5.5 5h13A1.5 1.5 0 0 1 20 6.5v12a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 18.5v-12A1.5 1.5 0 0 1 5.5 5Z',
   },
   {
     label: 'Total instruments',
     value: String(stats.entries),
+    sub: 'Across all jurisdictions',
     icon: 'M14 3H7a1.5 1.5 0 0 0-1.5 1.5v15A1.5 1.5 0 0 0 7 21h10a1.5 1.5 0 0 0 1.5-1.5V7.5L14 3ZM14 3v4.5h4.5M9 12h6M9 15.5h6',
   },
   {
     label: 'Authorities',
     value: String(stats.authorities),
+    sub: 'Issuing authorities',
     icon: 'M3 21h18M5 21v-9M19 21v-9M9 21v-9M15 21v-9M3 9l9-6 9 6M3 9h18',
   },
   {
     label: 'Coverage',
     value: coverage,
+    sub: 'Years covered',
     icon: 'M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18ZM3 12h18M12 3a13.5 13.5 0 0 1 0 18M12 3a13.5 13.5 0 0 0 0 18',
   },
 ];
@@ -98,20 +102,24 @@ const statCards = [
 const axes = [
   {
     name: 'Instrument class',
-    desc: 'What it is by legal form, split first by binding force.',
+    desc: 'What kind of instrument it is: law, regulation, guideline, policy, and more.',
     icon: 'M12 4v16M8 20h8M12 6 6 7.5M12 6l6 1.5M6 7.5l-2.5 6a3 3 0 0 0 5 0l-2.5-6ZM18 7.5l-2.5 6a3 3 0 0 0 5 0l-2.5-6Z',
   },
   {
     name: 'Themes',
-    desc: `What it covers: ${categoryCount} categories and ${subcategoryCount} subcategories.`,
+    desc: `What it covers: ${categoryCount} categories and ${subcategoryCount} subcategories across digital regulation.`,
     icon: 'M5 5h5v5H5zM14 5h5v5h-5zM5 14h5v5H5zM14 14h5v5h-5z',
   },
   {
     name: 'Lifecycle',
-    desc: 'Where it is in its lifecycle, from consultation to force and beyond.',
+    desc: 'Where it is in its lifecycle, from consultation to in force and beyond.',
     icon: 'M20 12a8 8 0 1 1-2.3-5.6M20 4v4h-4',
   },
 ];
+
+const presentClasses = [...new Set(dataset.documents.map((d) => d.instrument_class))]
+  .map((id) => ({ id, label: classLabels.get(id) ?? id }))
+  .sort((a, b) => a.label.localeCompare(b.label));
 
 const legend = [
   { cls: 'high', name: 'High confidence', desc: 'Verified against an authoritative source' },
@@ -120,12 +128,6 @@ const legend = [
   { cls: 'info', name: 'All entries are source linked', desc: 'Transparency by design' },
 ];
 
-const chips = [
-  { label: 'AI governance', href: `${base}dashboard/?l=ai_emerging_tech.ai_governance_ethics` },
-  { label: 'Personal data protection', href: `${base}dashboard/?l=data_privacy.personal_data_protection` },
-  { label: 'Cybersecurity', href: `${base}dashboard/?b=cybersecurity` },
-  { label: 'Digital finance', href: `${base}dashboard/?b=digital_finance` },
-];
 ---
 
 <Base
@@ -142,71 +144,84 @@ const chips = [
       }
     </script>
     <section class="hero">
-      <h1 class="reveal">GCC Digital Regulation. Verified. Structured.&nbsp;Open.</h1>
-      <p class="hero-lede reveal d1">
-        A structured, source-verified register of digital regulatory instruments across Bahrain,
-        Saudi Arabia, UAE, Qatar, Kuwait, and Oman.
-      </p>
-      <form class="search reveal d2" role="search" action={`${base}dashboard/`} method="get">
-        <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
-          <circle cx="11" cy="11" r="7" />
-          <path d="m20 20-3.5-3.5" />
-        </svg>
-        <input
-          id="home-search"
-          type="search"
-          name="q"
-          placeholder="Search laws, regulations, strategies across the GCC…"
-          aria-label="Search the register"
-          enterkeyhint="search"
-          autocomplete="off"
-        />
-        <span class="kbd" aria-hidden="true">/</span>
-        <button class="search-go" type="submit" aria-label="Search">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M5 12h14M13 6l6 6-6 6" />
+      <div class="hero-copy">
+        <h1 class="reveal">
+          GCC Digital Regulation.<br />
+          <span class="h1-accent">Verified.</span>
+          <span class="h1-soft">Structured. Open.</span>
+        </h1>
+        <p class="hero-ar reveal d1" lang="ar" dir="rtl">تنظيم رقمي موثق. منظم. مفتوح.</p>
+        <p class="hero-lede reveal d1">
+          Digital regulation in the GCC is complex and evolving. Complyr closes the gap with a
+          structured, source-verified register of regulatory instruments.
+        </p>
+        <p class="hero-lede reveal d2">
+          Built for policy analysts, compliance and privacy professionals, lawyers, and
+          researchers.
+        </p>
+        <form class="search reveal d2" role="search" action={`${base}dashboard/`} method="get">
+          <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <circle cx="11" cy="11" r="7" />
+            <path d="m20 20-3.5-3.5" />
           </svg>
-        </button>
-      </form>
-      <div class="chips reveal d3">
-        {chips.map((c) => <a class="chip" href={c.href}>{c.label}</a>)}
+          <input
+            id="home-search"
+            type="search"
+            name="q"
+            placeholder="Search laws, regulations, strategies across the GCC…"
+            aria-label="Search the register"
+            enterkeyhint="search"
+            autocomplete="off"
+          />
+          <span class="kbd" aria-hidden="true">/</span>
+          <button class="search-go" type="submit" aria-label="Search">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M5 12h14M13 6l6 6-6 6" />
+            </svg>
+          </button>
+        </form>
       </div>
-    </section>
-
-    <div class="facts reveal d4">
-      <div class="stat-row">
-        {
-          statCards.map((s) => (
-            <div class="stat-card">
-              <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d={s.icon} />
-              </svg>
-              <span class="stat-label">{s.label}</span>
-              <span class="stat-value">{s.value}</span>
-            </div>
-          ))
-        }
-      </div>
-      <div class="classify">
-        <h2>How Complyr classifies regulation</h2>
-        <div class="classify-axes">
+      <div class="hero-side">
+        <div class="stat-band reveal d1">
           {
-            axes.map((a) => (
-              <div class="axis">
-                <svg class="axis-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <path d={a.icon} />
-                </svg>
-                <span class="axis-name">{a.name}</span>
-                <span class="axis-desc">{a.desc}</span>
+            statCards.map((s) => (
+              <div class="stat-cell">
+                <span class="stat-head">
+                  <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d={s.icon} />
+                  </svg>
+                  <span class="stat-label">{s.label}</span>
+                </span>
+                <span class="stat-value">{s.value}</span>
+                <span class="stat-sub">{s.sub}</span>
               </div>
             ))
           }
         </div>
+        <div class="classify reveal d2">
+          <h2>How Complyr classifies regulation</h2>
+          <div class="classify-axes">
+            {
+              axes.map((a) => (
+                <div class="axis">
+                  <svg class="axis-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d={a.icon} />
+                  </svg>
+                  <span class="axis-name">{a.name}</span>
+                  <span class="axis-desc">{a.desc}</span>
+                </div>
+              ))
+            }
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
 
     <section class="jurisdictions" data-reveal aria-label="Jurisdictions">
-      <h2 class="zone-title">Browse by jurisdiction</h2>
+      <div class="zone-head">
+        <h2 class="zone-title">Browse by jurisdiction</h2>
+        <a class="zone-link" href={`${base}dashboard/`}>View all on dashboard &rarr;</a>
+      </div>
       <div class="jur-grid">
         {
           jurCounts.map((j) => (
@@ -242,7 +257,20 @@ const chips = [
             <h2>Latest updates</h2>
             <p>Track the most recent regulatory developments across the GCC.</p>
           </div>
-          <a class="dash-link" href={`${base}dashboard/`}>View full dashboard &rarr;</a>
+          <div class="updates-tools">
+            <div class="up-filters">
+              <button type="button" class="filter-chip active" id="f-all">All updates</button>
+              <select class="filter-select" id="f-jur" aria-label="Filter updates by jurisdiction">
+                <option value="">All jurisdictions</option>
+                {jurCounts.map((j) => <option value={j.code}>{j.name}</option>)}
+              </select>
+              <select class="filter-select" id="f-cls" aria-label="Filter updates by instrument type">
+                <option value="">All instruments</option>
+                {presentClasses.map((c) => <option value={c.id}>{c.label}</option>)}
+              </select>
+            </div>
+            <a class="dash-link" href={`${base}dashboard/`}>View full dashboard &rarr;</a>
+          </div>
         </div>
 
         <div class="timeline">
@@ -267,7 +295,7 @@ const chips = [
                 lead.docs.map((doc) => {
                   const conf = confidence(doc);
                   return (
-                    <a class="update-row" href={`${base}dashboard/?q=${encodeURIComponent(doc.title)}`}>
+                    <a class="update-row" data-jur={doc.jurisdiction} data-cls={doc.instrument_class} href={`${base}dashboard/?q=${encodeURIComponent(doc.title)}`}>
                       <span class="u-date">{dayLabel(doc.date_issued)}</span>
                       <span class="u-jur">
                         <Flag code={doc.jurisdiction} />
@@ -316,7 +344,7 @@ const chips = [
                   {group.docs.map((doc) => {
                     const conf = confidence(doc);
                     return (
-                      <a class="update-row" href={`${base}dashboard/?q=${encodeURIComponent(doc.title)}`}>
+                      <a class="update-row" data-jur={doc.jurisdiction} data-cls={doc.instrument_class} href={`${base}dashboard/?q=${encodeURIComponent(doc.title)}`}>
                         <span class="u-date">{dayLabel(doc.date_issued)}</span>
                         <span class="u-jur">
                           <Flag code={doc.jurisdiction} />
@@ -345,6 +373,9 @@ const chips = [
           }
         </div>
 
+      </div>
+
+      <aside class="legend-card" aria-label="Source confidence legend">
         <ul class="legend">
           {
             legend.map((l) => (
@@ -370,8 +401,7 @@ const chips = [
             ))
           }
         </ul>
-      </div>
-
+      </aside>
     </section>
   </div>
 </Base>
@@ -384,6 +414,39 @@ const chips = [
     if (t && (t.tagName === 'INPUT' || t.tagName === 'TEXTAREA' || t.isContentEditable)) return;
     e.preventDefault();
     search?.focus();
+  });
+
+  const jurSel = document.getElementById('f-jur') as HTMLSelectElement | null;
+  const clsSel = document.getElementById('f-cls') as HTMLSelectElement | null;
+  const allBtn = document.getElementById('f-all');
+  const rows = document.querySelectorAll<HTMLElement>('.update-row[data-jur]');
+  const blocks = document.querySelectorAll<HTMLElement>('.month-block');
+  const applyFilters = () => {
+    const j = jurSel?.value ?? '';
+    const c = clsSel?.value ?? '';
+    const filtered = Boolean(j || c);
+    rows.forEach((r) => {
+      const show = (!j || r.dataset.jur === j) && (!c || r.dataset.cls === c);
+      r.style.display = show ? '' : 'none';
+    });
+    blocks.forEach((b) => {
+      const any = [...b.querySelectorAll<HTMLElement>('.update-row[data-jur]')].some(
+        (r) => r.style.display !== 'none'
+      );
+      b.style.display = any ? '' : 'none';
+      b.querySelectorAll<HTMLElement>('.type-chips').forEach((t) => {
+        t.style.display = filtered ? 'none' : '';
+      });
+      if (filtered && any && b instanceof HTMLDetailsElement) b.open = true;
+    });
+    allBtn?.classList.toggle('active', !filtered);
+  };
+  jurSel?.addEventListener('change', applyFilters);
+  clsSel?.addEventListener('change', applyFilters);
+  allBtn?.addEventListener('click', () => {
+    if (jurSel) jurSel.value = '';
+    if (clsSel) clsSel.value = '';
+    applyFilters();
   });
 
   const targets = document.querySelectorAll('[data-reveal]');
@@ -412,43 +475,48 @@ const chips = [
 
   /* Hero */
   .hero {
-    position: relative;
-    max-width: 58rem;
-    margin: 0.8rem auto 0;
     display: grid;
-    gap: 1.25rem;
-    justify-items: center;
-    text-align: center;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+    gap: 2.6rem;
+    align-items: center;
+    margin-top: 0.8rem;
   }
 
-  .hero::before {
-    content: '';
-    position: absolute;
-    inset: -30% -20% auto;
-    height: 150%;
-    background: radial-gradient(
-      40rem 20rem at 50% 32%,
-      color-mix(in srgb, var(--accent) 9%, transparent),
-      transparent 70%
-    );
-    pointer-events: none;
-    z-index: -1;
-  }
-
-  .hero h1 {
-    font-size: clamp(2.2rem, 4.6vw, 3.6rem);
+  .hero-copy h1 {
+    font-size: clamp(2.1rem, 3.6vw, 2.9rem);
     font-weight: 800;
     letter-spacing: -0.035em;
-    line-height: 1.06;
-    margin: 0;
+    line-height: 1.12;
+    margin: 0.2rem 0 0.7rem;
+  }
+
+  .h1-accent {
+    color: var(--accent);
+  }
+
+  .h1-soft {
+    color: var(--ink-soft);
+  }
+
+  .hero-ar {
+    font-family: var(--arabic);
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--accent);
+    margin: 0 0 1.1rem;
   }
 
   .hero-lede {
-    font-size: 1rem;
+    font-size: 0.95rem;
     line-height: 1.7;
     color: var(--ink-soft);
-    margin: 0;
-    max-width: 36rem;
+    margin: 0 0 0.8rem;
+    max-width: 34rem;
+  }
+
+  .hero-side {
+    display: grid;
+    gap: 0.9rem;
   }
 
   /* Search */
@@ -457,12 +525,13 @@ const chips = [
     align-items: center;
     gap: 0.65rem;
     width: 100%;
-    max-width: 48rem;
+    max-width: 34rem;
+    margin-top: 0.5rem;
     background: var(--surface);
     border: 1px solid var(--line);
     border-radius: 999px;
     box-shadow: var(--shadow);
-    padding: 0.4rem 0.4rem 0.4rem 1.3rem;
+    padding: 0.3rem 0.3rem 0.3rem 1.15rem;
     transition: border-color 160ms ease, box-shadow 200ms ease;
   }
 
@@ -484,9 +553,9 @@ const chips = [
     border: 0;
     background: transparent;
     font: inherit;
-    font-size: 1rem;
+    font-size: 0.95rem;
     color: var(--ink);
-    padding: 0.65rem 0;
+    padding: 0.55rem 0;
   }
 
   .search input::placeholder {
@@ -512,8 +581,8 @@ const chips = [
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 3rem;
-    height: 3rem;
+    width: 2.75rem;
+    height: 2.75rem;
     flex-shrink: 0;
     border: 0;
     border-radius: 999px;
@@ -535,81 +604,52 @@ const chips = [
     color: #0f0f17;
   }
 
-  .chips {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.5rem;
-  }
-
-  .chip {
-    display: inline-flex;
-    align-items: center;
-    min-height: 2.75rem;
-    padding: 0.3rem 1.05rem;
-    font-size: 0.82rem;
-    font-weight: 600;
-    color: var(--accent);
-    background: var(--accent-soft);
-    border-radius: 999px;
-  }
-
-  .chip:hover {
-    text-decoration: none;
-    background: color-mix(in srgb, var(--accent) 14%, var(--accent-soft));
-    transform: translateY(-1px);
-  }
-
   @media (hover: none) {
     .kbd {
       display: none;
     }
   }
 
-  /* Facts band: stats and classification on one level */
-  .facts {
+  /* Stat band */
+  .stat-band {
     display: grid;
-    grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
-    gap: 0.9rem;
-    align-items: stretch;
-    margin-top: 1.6rem;
-  }
-
-  .stat-row {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0.9rem;
-  }
-
-  .stat-card {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    grid-template-rows: auto auto;
-    column-gap: 0.8rem;
-    row-gap: 0.05rem;
-    align-items: center;
-    align-content: center;
+    grid-template-columns: repeat(4, 1fr);
     background: var(--surface);
     border: 1px solid var(--line);
     border-radius: var(--r);
     box-shadow: var(--shadow);
-    padding: 0.9rem 1.05rem;
+    padding: 1.05rem 0;
+  }
+
+  .stat-cell {
+    display: grid;
+    gap: 0.15rem;
+    align-content: start;
+    padding: 0 1.1rem;
+  }
+
+  .stat-cell + .stat-cell {
+    border-left: 1px solid var(--line);
+  }
+
+  .stat-head {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
   }
 
   .stat-icon {
-    grid-row: 1 / 3;
-    width: 2.5rem;
-    height: 2.5rem;
-    padding: 0.55rem;
-    box-sizing: border-box;
+    width: 1.2rem;
+    height: 1.2rem;
     color: var(--accent);
-    background: var(--accent-soft);
-    border-radius: 999px;
+    flex-shrink: 0;
   }
 
   .stat-label {
-    font-size: 0.74rem;
-    font-weight: 500;
+    font-size: 0.64rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
     color: var(--ink-faint);
   }
 
@@ -617,15 +657,18 @@ const chips = [
     font-size: 1.45rem;
     font-weight: 700;
     letter-spacing: -0.02em;
-    line-height: 1.2;
+    line-height: 1.25;
     color: var(--ink);
     font-variant-numeric: tabular-nums;
   }
 
+  .stat-sub {
+    font-size: 0.72rem;
+    color: var(--ink-faint);
+  }
+
   /* Classification panel */
   .classify {
-    display: grid;
-    align-content: center;
     background: var(--surface);
     border: 1px solid var(--line);
     border-radius: var(--r);
@@ -657,19 +700,14 @@ const chips = [
   }
 
   .axis-icon {
-    width: 2.5rem;
-    height: 2.5rem;
-    padding: 0.55rem;
-    box-sizing: border-box;
+    width: 1.6rem;
+    height: 1.6rem;
     color: var(--accent);
-    background: var(--accent-soft);
-    border-radius: 999px;
     margin-bottom: 0.4rem;
   }
 
   .axis:nth-child(3) .axis-icon {
     color: var(--ok);
-    background: var(--ok-bg);
   }
 
   .axis-name {
@@ -685,10 +723,24 @@ const chips = [
   }
 
   /* Jurisdiction tiles */
+  .zone-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 0.9rem;
+  }
+
   .zone-title {
     font-size: 1.15rem;
     font-weight: 700;
-    margin: 0 0 0.9rem;
+    margin: 0;
+  }
+
+  .zone-link {
+    font-size: 0.85rem;
+    font-weight: 600;
+    white-space: nowrap;
   }
 
   .jur-grid {
@@ -762,10 +814,14 @@ const chips = [
 
   /* Updates zone */
   .updates-zone {
-    display: block;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 16.5rem;
+    gap: 1.4rem;
+    align-items: start;
   }
 
-  .updates-card {
+  .updates-card,
+  .legend-card {
     background: var(--surface);
     border: 1px solid var(--line);
     border-radius: var(--r-lg);
@@ -813,11 +869,48 @@ const chips = [
     margin: 0.15rem 0 0;
   }
 
+  .updates-tools {
+    display: grid;
+    gap: 0.55rem;
+    justify-items: end;
+  }
+
+  .up-filters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 0.45rem;
+  }
+
+  .filter-chip,
+  .filter-select {
+    font: inherit;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--ink-soft);
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 0.32rem 0.85rem;
+    cursor: pointer;
+    transition: border-color 140ms ease, background-color 140ms ease, color 140ms ease;
+  }
+
+  .filter-chip.active {
+    color: var(--accent);
+    background: var(--accent-soft);
+    border-color: color-mix(in srgb, var(--accent) 35%, var(--line));
+  }
+
+  .filter-chip:hover,
+  .filter-select:hover {
+    border-color: color-mix(in srgb, var(--accent) 40%, var(--line));
+  }
+
   .dash-link {
     font-size: 0.85rem;
     font-weight: 600;
     white-space: nowrap;
-    padding-top: 0.25rem;
   }
 
   /* Timeline */
@@ -1066,11 +1159,10 @@ const chips = [
   .legend {
     list-style: none;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1rem;
-    margin: 1.3rem 0 0;
-    padding: 1.1rem 0 0;
-    border-top: 1px solid var(--line);
+    grid-template-columns: 1fr;
+    gap: 1.15rem;
+    margin: 0;
+    padding: 0;
   }
 
   .legend li {
@@ -1127,19 +1219,6 @@ const chips = [
       }
     }
 
-    .hero::before {
-      animation: glow-drift 36s ease-in-out infinite alternate;
-    }
-
-    @keyframes glow-drift {
-      from {
-        transform: translate3d(-4%, 0, 0);
-      }
-      to {
-        transform: translate3d(4%, 2.5%, 0);
-      }
-    }
-
     :root.js-reveal [data-reveal] {
       opacity: 0;
       transform: translateY(18px);
@@ -1154,7 +1233,6 @@ const chips = [
     }
 
     .jur-tile:active,
-    .chip:active,
     a.update-row:active {
       transform: scale(0.985);
     }
@@ -1162,22 +1240,36 @@ const chips = [
 
   /* Responsive */
   @media (max-width: 70rem) {
-    .facts {
+    .hero {
       grid-template-columns: 1fr;
+      gap: 2rem;
     }
 
     .jur-grid {
       grid-template-columns: repeat(3, 1fr);
     }
 
+    .updates-zone {
+      grid-template-columns: 1fr;
+    }
+
     .legend {
       grid-template-columns: repeat(2, 1fr);
+    }
+
+    .updates-tools {
+      justify-items: start;
     }
   }
 
   @media (max-width: 46rem) {
-    .stat-row {
+    .stat-band {
       grid-template-columns: repeat(2, 1fr);
+      row-gap: 1rem;
+    }
+
+    .stat-cell:nth-child(3) {
+      border-left: 0;
     }
 
     .classify-axes {
