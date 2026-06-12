@@ -39,6 +39,7 @@ export interface DocRecord {
   binding_status: 'binding' | 'non_binding' | 'conditionally_binding';
   lifecycle: 'consultation' | 'enacted' | 'in_force' | 'amended' | 'repealed' | 'superseded';
   themes: string[];
+  theme_notes?: Record<string, string>;
   issuing_authority: string;
   language_of_official_text: 'ar' | 'en' | 'both';
   english_text_unofficial?: boolean;
@@ -59,9 +60,27 @@ export interface DocRecord {
   last_verified: string;
   tags: string[];
   notes?: string | null;
-  /** Derived at build time from date_issued. */
+  /** Derived at build time from date_issued, falling back to the workbook year. */
   year: number;
 }
+
+/** Shape of a record as stored on disk: the twelve core fields, everything else optional. */
+export type RawDoc = Partial<DocRecord> &
+  Pick<
+    DocRecord,
+    | 'id'
+    | 'title'
+    | 'jurisdiction'
+    | 'instrument_class'
+    | 'binding_status'
+    | 'lifecycle'
+    | 'themes'
+    | 'issuing_authority'
+    | 'summary'
+    | 'source_url'
+    | 'source_confidence'
+    | 'tags'
+  >;
 
 export interface ThemeLeaf {
   id: string;
