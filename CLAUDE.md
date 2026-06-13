@@ -42,7 +42,7 @@ Astro 6 + React 19 islands, vanilla CSS, no backend. Deploys to GitHub Pages on 
 
 Owner researches via GPT chats using `docs/research/deep-research-prompts.md` (Workflow A): one Excel workbook, one tab per country, fixed 14 columns, one prompt run per Category+Subcategory pair; prompt embeds the Type/Status controlled vocabulary and Arabic search instructions. When a workbook arrives: convert rows to JSON records (map labels to taxonomy ids, build relationships from the Related instruments column, write impact_note as analyst-to-executive briefing, obligations itemised), add missing authorities first, run validate, commit per country.
 
-Current dataset: 13 demo records (SA 5, AE 3, BH/QA/KW 1 each, OM 2), several pending_verification with notes saying exactly what to confirm.
+Current dataset: 13 curated records plus 321 Bahrain catalogue records ingested from the research workbook by scripts/ingest-bahrain.py (overview tier: filtering and summaries, with per leaf theme_notes bullets; detailed legal fields deferred). Other five countries pending.
 
 ## Writing rules (all prose, code copy, dataset, README)
 
