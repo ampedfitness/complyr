@@ -17,7 +17,7 @@
       "name_ar": { "type": ["string", "null"], "minLength": 3 },
       "jurisdiction": { "enum": ["BH", "SA", "AE", "QA", "KW", "OM"] },
       "type": {
-        "enum": ["ministry", "sectoral_regulator", "central_bank", "cabinet", "head_of_state", "free_zone_authority"]
+        "enum": ["ministry", "sectoral_regulator", "central_bank", "cabinet", "head_of_state", "free_zone_authority", "government_agency", "head_of_government", "legislature", "council", "government"]
       },
       "mandate": { "type": "string", "minLength": 20, "description": "One sentence describing what the body regulates" },
       "website": { "type": ["string", "null"], "format": "uri" }

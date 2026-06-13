@@ -39,10 +39,10 @@ CURATED_OVERLAP = {"BH-R001": "bh-pdpl-2018"}
 
 # Authorities the script ensures exist in authorities.json. Ids match AUTHORITY_ALIASES.
 AUTHORITY_ENTRIES = {
-    "bh-tra": {"name": "Telecommunications Regulatory Authority", "type": "regulator",
+    "bh-tra": {"name": "Telecommunications Regulatory Authority", "type": "sectoral_regulator",
                "mandate": "Regulates the telecommunications sector, spectrum, and related digital infrastructure in Bahrain.",
                "website": "https://www.tra.org.bh"},
-    "bh-ncsc": {"name": "National Cyber Security Center", "type": "regulator",
+    "bh-ncsc": {"name": "National Cyber Security Center", "type": "sectoral_regulator",
                 "mandate": "Leads national cybersecurity strategy, controls, and incident response.",
                 "website": "https://www.ncsc.gov.bh"},
     "bh-moj": {"name": "Ministry of Justice, Islamic Affairs and Waqf", "type": "ministry",
@@ -51,7 +51,7 @@ AUTHORITY_ENTRIES = {
     "bh-iga": {"name": "Information and eGovernment Authority", "type": "government_agency",
                "mandate": "Runs national e-government services, digital identity, open data, and information policy.",
                "website": "https://www.iga.gov.bh"},
-    "bh-nhra": {"name": "National Health Regulatory Authority", "type": "regulator",
+    "bh-nhra": {"name": "National Health Regulatory Authority", "type": "sectoral_regulator",
                 "mandate": "Regulates healthcare providers and services, including digital and tele-health.",
                 "website": "https://www.nhra.bh"},
     "bh-moic": {"name": "Ministry of Industry and Commerce", "type": "ministry",
@@ -66,7 +66,7 @@ AUTHORITY_ENTRIES = {
     "bh-shura": {"name": "Shura Council", "type": "legislature",
                  "mandate": "Upper chamber of the National Assembly; participates in enacting legislation.",
                  "website": "https://www.shura.bh"},
-    "bh-caa": {"name": "Civil Aviation Affairs", "type": "regulator",
+    "bh-caa": {"name": "Civil Aviation Affairs", "type": "sectoral_regulator",
                "mandate": "Regulates civil aviation, including drones and unmanned systems.",
                "website": "https://www.caa.gov.bh"},
     "bh-scict": {"name": "Supreme Council for Information and Communication Technology", "type": "council",

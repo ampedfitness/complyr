@@ -160,8 +160,9 @@ def build_record(rows, *, doc_id, leaf_lookup, branch_label, binding_by_class):
         "source_url": str(primary.get("Source URL") or "").strip(),
         "source_confidence": confidence,
         "tags": branch_labels,
-        "year": year,
     }
+    if year is not None:
+        record["year"] = year
     if theme_notes:
         record["theme_notes"] = theme_notes
     if notes_parts:
