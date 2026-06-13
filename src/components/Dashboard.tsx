@@ -207,10 +207,12 @@ export default function Dashboard({ dataset }: Props) {
     return true;
   };
 
+  const sortVal = (d: DocRecord) =>
+    d.date_issued && d.date_issued.length >= 4 ? d.date_issued : d.year ? `${d.year}-00-00` : '0000-00-00';
   const results = dataset.documents.filter(matches).sort((a, b) => {
-    if (sort === 'oldest') return a.date_issued.localeCompare(b.date_issued);
+    if (sort === 'oldest') return sortVal(a).localeCompare(sortVal(b));
     if (sort === 'title') return a.title.localeCompare(b.title);
-    return b.date_issued.localeCompare(a.date_issued);
+    return sortVal(b).localeCompare(sortVal(a));
   });
 
   const todayIso = new Date().toISOString().slice(0, 10);
@@ -448,6 +450,12 @@ export default function Dashboard({ dataset }: Props) {
     </aside>
   );
 
+  const activeLeavesFor = (doc: DocRecord): string[] => {
+    if (leaf) return [leaf];
+    if (branch) return doc.themes.filter((t) => t.startsWith(branch + '.'));
+    return [];
+  };
+
   return (
     <div className="dash">
       {rail}
@@ -538,6 +546,7 @@ export default function Dashboard({ dataset }: Props) {
                 leafLabels={leafLabels}
                 docsById={docsById}
                 todayIso={todayIso}
+                activeThemes={activeLeavesFor(doc)}
               />
             ))}
           </ol>

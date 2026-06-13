@@ -1003,3 +1003,31 @@ main {
     scroll-behavior: smooth;
   }
 }
+
+.record-bullets {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+  display: grid;
+  gap: 4px;
+  color: var(--ink-soft, #52525b);
+  font-size: 0.92rem;
+}
+.record-bullets li {
+  position: relative;
+  padding-left: 14px;
+}
+.record-bullets li::before {
+  content: '';
+  position: absolute;
+  left: 2px;
+  top: 0.55em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--accent, #5048e5);
+}
+.record-bullets .bullet-leaf {
+  font-weight: 600;
+  color: var(--ink, #18181b);
+}

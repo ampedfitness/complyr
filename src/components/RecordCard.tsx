@@ -15,6 +15,7 @@ interface Props {
   leafLabels: Map<string, string>;
   docsById: Map<string, DocRecord>;
   todayIso: string;
+  activeThemes: string[];
 }
 
 function firstSentence(text: string): string {
@@ -45,12 +46,16 @@ export default function RecordCard({
   leafLabels,
   docsById,
   todayIso,
+  activeThemes,
 }: Props) {
   const [copied, setCopied] = useState(false);
   const deadlineUpcoming = doc.compliance_deadline && doc.compliance_deadline >= todayIso;
   const detailId = `detail-${doc.id}`;
   const oneLiner =
     lang === 'ar' && doc.summary_ar ? firstSentence(doc.summary_ar) : firstSentence(doc.summary);
+  const bulletLeaves = doc.theme_notes
+    ? activeThemes.filter((t) => doc.theme_notes && doc.theme_notes[t]).slice(0, 3)
+    : [];
 
   const copyCitation = async () => {
     if (!doc.citation) return;
@@ -95,15 +100,32 @@ export default function RecordCard({
         <span className="record-title">
           <ArText en={doc.title} ar={doc.title_ar} lang={lang} />
         </span>
-        <span className="record-line" lang={lang === 'ar' && doc.summary_ar ? 'ar' : undefined} dir={lang === 'ar' && doc.summary_ar ? 'rtl' : undefined}>
-          {oneLiner}
-        </span>
+        {bulletLeaves.length > 0 ? (
+          <ul className="record-bullets">
+            {bulletLeaves.map((t) => (
+              <li key={t}>
+                <span className="bullet-leaf">{leafLabels.get(t) ?? t}</span>{' '}
+                {doc.theme_notes![t]}
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <span
+            className="record-line"
+            lang={lang === 'ar' && doc.summary_ar ? 'ar' : undefined}
+            dir={lang === 'ar' && doc.summary_ar ? 'rtl' : undefined}
+          >
+            {oneLiner}
+          </span>
+        )}
         {expanded && (
           <span className="record-meta">
             <span>{authority?.name ?? doc.issuing_authority}</span>
-            <span>
-              Issued <span className="mono">{doc.date_issued}</span>
-            </span>
+            {doc.date_issued && (
+              <span>
+                Issued <span className="mono">{doc.date_issued}</span>
+              </span>
+            )}
             {doc.date_effective && (
               <span>
                 Effective <span className="mono">{doc.date_effective}</span>
@@ -128,12 +150,14 @@ export default function RecordCard({
             </p>
           </section>
 
-          <section className="detail-section">
-            <h3>What this means</h3>
-            <p>
-              <ArText en={doc.impact_note} ar={doc.impact_note_ar} lang={lang} />
-            </p>
-          </section>
+          {doc.impact_note && (
+            <section className="detail-section">
+              <h3>What this means</h3>
+              <p>
+                <ArText en={doc.impact_note} ar={doc.impact_note_ar} lang={lang} />
+              </p>
+            </section>
+          )}
 
           {doc.obligations.length > 0 && (
             <section className="detail-section">
@@ -226,9 +250,11 @@ export default function RecordCard({
                 Official text
               </a>
               <span className="muted">{CONFIDENCE_LABELS[doc.source_confidence]}</span>
-              <span className="muted">
-                Last verified <span className="mono">{doc.last_verified}</span>
-              </span>
+              {doc.last_verified && (
+                <span className="muted">
+                  Last verified <span className="mono">{doc.last_verified}</span>
+                </span>
+              )}
               {doc.language_of_official_text === 'ar' && doc.english_text_unofficial && (
                 <span className="muted">Binding text is Arabic; English is an unofficial translation</span>
               )}
