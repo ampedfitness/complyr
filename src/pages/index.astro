@@ -482,6 +482,7 @@ const legend = [
 <style>
   .home {
     display: grid;
+    grid-template-columns: minmax(0, 1fr);
     gap: 2.2rem;
     overflow-x: clip;
   }
@@ -529,6 +530,7 @@ const legend = [
 
   .hero-side {
     display: grid;
+    grid-template-columns: minmax(0, 1fr);
     gap: 0.9rem;
   }
 
@@ -1254,30 +1256,48 @@ const legend = [
   /* Responsive */
   @media (max-width: 70rem) {
     .hero {
-      grid-template-columns: 1fr;
+      grid-template-columns: minmax(0, 1fr);
       gap: 2rem;
     }
 
     .jur-grid {
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 
     .updates-zone {
-      grid-template-columns: 1fr;
+      grid-template-columns: minmax(0, 1fr);
     }
 
     .legend {
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .updates-head {
+      flex-wrap: wrap;
+    }
+
+    .updates-titles {
+      min-width: 0;
     }
 
     .updates-tools {
       justify-items: start;
+      width: 100%;
+    }
+
+    .up-filters {
+      justify-content: flex-start;
+    }
+
+    .filter-select {
+      flex: 1 1 8rem;
+      min-width: 0;
     }
   }
 
   @media (max-width: 46rem) {
     .stat-band {
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       row-gap: 1rem;
     }
 
@@ -1303,7 +1323,7 @@ const legend = [
     }
 
     .jur-grid {
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
     /* Stacked update rows read as a clean entry: meta line, title, then
