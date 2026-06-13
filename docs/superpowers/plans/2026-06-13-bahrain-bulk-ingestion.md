@@ -534,8 +534,9 @@ def build_record(rows, *, doc_id, leaf_lookup, branch_label, binding_by_class):
         "source_url": str(primary.get("Source URL") or "").strip(),
         "source_confidence": confidence,
         "tags": branch_labels,
-        "year": year,
     }
+    if year is not None:
+        record["year"] = year
     if theme_notes:
         record["theme_notes"] = theme_notes
     if notes_parts:
@@ -608,10 +609,10 @@ CURATED_OVERLAP = {"BH-R001": "bh-pdpl-2018"}
 
 # Authorities the script ensures exist in authorities.json. Ids match AUTHORITY_ALIASES.
 AUTHORITY_ENTRIES = {
-    "bh-tra": {"name": "Telecommunications Regulatory Authority", "type": "regulator",
+    "bh-tra": {"name": "Telecommunications Regulatory Authority", "type": "sectoral_regulator",
                "mandate": "Regulates the telecommunications sector, spectrum, and related digital infrastructure in Bahrain.",
                "website": "https://www.tra.org.bh"},
-    "bh-ncsc": {"name": "National Cyber Security Center", "type": "regulator",
+    "bh-ncsc": {"name": "National Cyber Security Center", "type": "sectoral_regulator",
                 "mandate": "Leads national cybersecurity strategy, controls, and incident response.",
                 "website": "https://www.ncsc.gov.bh"},
     "bh-moj": {"name": "Ministry of Justice, Islamic Affairs and Waqf", "type": "ministry",
@@ -620,7 +621,7 @@ AUTHORITY_ENTRIES = {
     "bh-iga": {"name": "Information and eGovernment Authority", "type": "government_agency",
                "mandate": "Runs national e-government services, digital identity, open data, and information policy.",
                "website": "https://www.iga.gov.bh"},
-    "bh-nhra": {"name": "National Health Regulatory Authority", "type": "regulator",
+    "bh-nhra": {"name": "National Health Regulatory Authority", "type": "sectoral_regulator",
                 "mandate": "Regulates healthcare providers and services, including digital and tele-health.",
                 "website": "https://www.nhra.bh"},
     "bh-moic": {"name": "Ministry of Industry and Commerce", "type": "ministry",
@@ -635,7 +636,7 @@ AUTHORITY_ENTRIES = {
     "bh-shura": {"name": "Shura Council", "type": "legislature",
                  "mandate": "Upper chamber of the National Assembly; participates in enacting legislation.",
                  "website": "https://www.shura.bh"},
-    "bh-caa": {"name": "Civil Aviation Affairs", "type": "regulator",
+    "bh-caa": {"name": "Civil Aviation Affairs", "type": "sectoral_regulator",
                "mandate": "Regulates civil aviation, including drones and unmanned systems.",
                "website": "https://www.caa.gov.bh"},
     "bh-scict": {"name": "Supreme Council for Information and Communication Technology", "type": "council",
@@ -821,7 +822,20 @@ git commit -m "feat: Bahrain workbook ingest driver"
 ## Task 5: Run ingestion and validate the dataset
 
 **Files:**
+- Modify: `schema/authorities.schema.json`, `scripts/bahrain_ingest_lib.py`
 - Modify (generated): `data/authorities.json`, `data/documents/bh-*.json`
+
+- [ ] **Step 0a: Extend the authority type enum**
+
+The new Bahrain bodies use types the authorities schema does not yet allow. In `schema/authorities.schema.json`, find the `type` property enum (currently `["ministry", "sectoral_regulator", "central_bank", "cabinet", "head_of_state", "free_zone_authority"]`) and add these five values: `"government_agency"`, `"head_of_government"`, `"legislature"`, `"council"`, `"government"`. Keep the existing values.
+
+- [ ] **Step 0b: Confirm the year fix is in build_record**
+
+In `scripts/bahrain_ingest_lib.py`, `build_record` must omit `year` when it is `None` (the workbook has a few unparseable Year cells). The record dict must NOT contain a literal `"year": year` entry; instead, after the dict is built, add `if year is not None: record["year"] = year` alongside the `theme_notes` and `notes` conditionals. Verify the unit tests still pass: `(cd scripts && python test_bahrain_ingest.py)` prints `0 failures`.
+
+- [ ] **Step 0c: Reset authorities.json before regenerating**
+
+The driver's authority upsert only adds missing ids; it does not rewrite existing entries, so any already-written entries with the old types must be dropped first. Restore the committed file: `git checkout data/authorities.json`.
 
 - [ ] **Step 1: Run the ingest for real**
 
@@ -841,9 +855,11 @@ To clear generated records for a clean rerun (PowerShell):
 Run: `npm test`
 Expected: existing validator tests pass (unchanged).
 
-- [ ] **Step 4: Commit the data**
+- [ ] **Step 4: Commit the fixes, then the data**
 
 ```bash
+git add schema/authorities.schema.json scripts/bahrain_ingest_lib.py
+git commit -m "fix: omit null year and widen authority type enum for catalogue records"
 git add data/authorities.json data/documents
 git commit -m "data: ingest 321 Bahrain regulations as catalogue records"
 ```
