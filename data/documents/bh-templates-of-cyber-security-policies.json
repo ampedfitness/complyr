@@ -1,0 +1,23 @@
+{
+  "id": "bh-templates-of-cyber-security-policies",
+  "title": "Templates of Cyber Security Policies",
+  "jurisdiction": "BH",
+  "instrument_class": "guideline",
+  "binding_status": "non_binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "cybersecurity.security_controls_frameworks"
+  ],
+  "issuing_authority": "bh-ncsc",
+  "date_issued": null,
+  "summary": "Provides illustrative templates for acceptable use, access control, backup, desktop security, email security, encryption, incident response, mobile device, operations security, remote access, risk management, and wireless security policies.",
+  "source_url": "https://www.ncsc.gov.bh/en/policies-controls/policies-template.html",
+  "source_confidence": "official",
+  "tags": [
+    "Cybersecurity"
+  ],
+  "theme_notes": {
+    "cybersecurity.security_controls_frameworks": "Cybersecurity policy templates supporting implementation of baseline controls."
+  },
+  "notes": "Related instruments: Supports Baseline Cyber Security Controls"
+}

@@ -1,0 +1,24 @@
+{
+  "id": "bh-final-order-on-the-reference-offer-of-batelco-2016",
+  "title": "Final Order on the Reference Offer of Batelco 2016",
+  "jurisdiction": "BH",
+  "instrument_class": "decision",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "telecom_digital_infrastructure.licensing_markets"
+  ],
+  "issuing_authority": "bh-tra",
+  "date_issued": null,
+  "summary": "Sets price and non-price terms of regulated products and services in Batelco’s reference offer.",
+  "source_url": "https://www.tra.org.bh/en/category/orders",
+  "source_confidence": "pending_verification",
+  "tags": [
+    "Telecommunications & digital infrastructure"
+  ],
+  "year": 2016,
+  "theme_notes": {
+    "telecom_digital_infrastructure.licensing_markets": "Final order setting Batelco reference offer terms."
+  },
+  "notes": "Related instruments: Telecommunications Law and TRA orders archive Sourced from an official index listing; confirm against the instrument text."
+}

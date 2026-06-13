@@ -1,0 +1,24 @@
+{
+  "id": "bh-the-2006-spectrum-policy",
+  "title": "The 2006 Spectrum Policy",
+  "jurisdiction": "BH",
+  "instrument_class": "policy",
+  "binding_status": "non_binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "telecom_digital_infrastructure.spectrum"
+  ],
+  "issuing_authority": "bh-tra",
+  "date_issued": null,
+  "summary": "Provides spectrum policy principles for allocation, assignment and management of radio frequencies.",
+  "source_url": "https://www.tra.org.bh/en/category/useful-documents",
+  "source_confidence": "pending_verification",
+  "tags": [
+    "Telecommunications & digital infrastructure"
+  ],
+  "year": 2006,
+  "theme_notes": {
+    "telecom_digital_infrastructure.spectrum": "Policy for spectrum regulation in Bahrain."
+  },
+  "notes": "Related instruments: Telecommunications Law, National Frequency Plan and TRA spectrum instruments Sourced from an official index listing; confirm against the instrument text."
+}

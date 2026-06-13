@@ -1,0 +1,24 @@
+{
+  "id": "bh-telecommunications-security-strategy-2019-2021",
+  "title": "Telecommunications Security Strategy 2019-2021",
+  "jurisdiction": "BH",
+  "instrument_class": "national_strategy",
+  "binding_status": "non_binding",
+  "lifecycle": "superseded",
+  "themes": [
+    "cybersecurity.security_controls_frameworks"
+  ],
+  "issuing_authority": "bh-tra",
+  "date_issued": null,
+  "summary": "Set TRA’s sector security priorities for telecommunications infrastructure, content and communications, devices and SIM cards, and operator cyber maturity before later resilience and control instruments.",
+  "source_url": "https://www.tra.org.bh/Media/Interactive_Annual_Reports/2019/en/",
+  "source_confidence": "official",
+  "tags": [
+    "Cybersecurity"
+  ],
+  "year": 2019,
+  "theme_notes": {
+    "cybersecurity.security_controls_frameworks": "Previous telecom-sector security strategy."
+  },
+  "notes": "Related instruments: Related to Critical Telecommunications Infrastructure Risk Management Regulation and Telecom Emergency Response Plan"
+}

@@ -1,0 +1,24 @@
+{
+  "id": "bh-decision-no-31-of-2022-amending-the-executive-regulations-of",
+  "title": "Decision No. 31 of 2022 Amending the Executive Regulations of the Excise Tax Law",
+  "jurisdiction": "BH",
+  "instrument_class": "decision",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "digital_economy.einvoicing_digital_tax"
+  ],
+  "issuing_authority": "bh-mofne",
+  "date_issued": null,
+  "summary": "Amends Bahrain excise-tax executive regulations and is relevant to digital tax administration because the opened official reference identifies an electronic system approved by the National Bureau for Revenue.",
+  "source_url": "https://lloc.gov.bh/FullEn/RNBR0222.docx",
+  "source_confidence": "official",
+  "tags": [
+    "Digital economy & platforms"
+  ],
+  "year": 2022,
+  "theme_notes": {
+    "digital_economy.einvoicing_digital_tax": "Introduces or amends electronic system requirements for excise-tax administration."
+  },
+  "notes": "Related instruments: Amends Executive Regulations of the Excise Tax Law"
+}

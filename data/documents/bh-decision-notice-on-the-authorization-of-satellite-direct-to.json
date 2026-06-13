@@ -1,0 +1,27 @@
+{
+  "id": "bh-decision-notice-on-the-authorization-of-satellite-direct-to",
+  "title": "Decision Notice on the Authorization of Satellite Direct-to-Device Services",
+  "jurisdiction": "BH",
+  "instrument_class": "decision",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "ai_emerging_tech.iot_connected_devices",
+    "telecom_digital_infrastructure.spectrum"
+  ],
+  "issuing_authority": "bh-tra",
+  "date_issued": null,
+  "summary": "Establishes the regulatory and spectrum framework for D2D services, allowing licensed mobile network operators to provide satellite direct-to-device services with TRA-approved satellite operators under licensing, spectrum, coordination, non-interference, record-keeping, and operator cooperation conditions.",
+  "source_url": "https://ir-tra-website-prod-01.s3-eu-west-1.amazonaws.com/Media/Documents/Determinations_%26_Decisions/20251214132048246_ozfglvsa_egb.pdf",
+  "source_confidence": "official",
+  "tags": [
+    "AI & emerging technologies",
+    "Telecommunications & digital infrastructure"
+  ],
+  "year": 2025,
+  "theme_notes": {
+    "ai_emerging_tech.iot_connected_devices": "Authorises satellite direct-to-device services in Bahrain.",
+    "telecom_digital_infrastructure.spectrum": "Authorises satellite direct-to-device services in Bahrain."
+  },
+  "notes": "Related instruments: Consultation Paper on the authorisation of Satellite Direct-to-Device services, National Frequency Plan 2024, Individual Mobile Telecommunications Licence"
+}

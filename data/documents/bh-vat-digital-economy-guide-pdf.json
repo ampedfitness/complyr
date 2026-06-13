@@ -1,0 +1,24 @@
+{
+  "id": "bh-vat-digital-economy-guide-pdf",
+  "title": "VAT Digital Economy Guide PDF",
+  "jurisdiction": "BH",
+  "instrument_class": "guideline",
+  "binding_status": "non_binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "digital_economy.einvoicing_digital_tax"
+  ],
+  "issuing_authority": "bh-nbr",
+  "date_issued": null,
+  "summary": "Provides practical guidance on VAT treatment of digital economy supplies and states that it contains the current views of the NBR, while not being legally binding.",
+  "source_url": "https://www.gspubahrain.com/wp-content/uploads/2025/06/VAT-Digital-Economy-Guide.pdf",
+  "source_confidence": "secondary",
+  "tags": [
+    "Digital economy & platforms"
+  ],
+  "year": 2022,
+  "theme_notes": {
+    "digital_economy.einvoicing_digital_tax": "Digital economy VAT guide reflecting NBR positions."
+  },
+  "notes": "Related instruments: Related to VAT Digital Economy Guide and Value Added Tax Law"
+}

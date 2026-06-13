@@ -1,0 +1,24 @@
+{
+  "id": "bh-consultation-on-proposed-payment-service-requirements-module",
+  "title": "Consultation on Proposed Payment Service Requirements Module",
+  "jurisdiction": "BH",
+  "instrument_class": "consultation_paper",
+  "binding_status": "non_binding",
+  "lifecycle": "consultation",
+  "themes": [
+    "digital_finance.payments_emoney"
+  ],
+  "issuing_authority": "bh-cbb",
+  "date_issued": null,
+  "summary": "Consults on a dedicated payment services module for PSPs, PISPs and AISPs under Volume 5.",
+  "source_url": "https://www.cbb.gov.bh/consultations/",
+  "source_confidence": "pending_verification",
+  "tags": [
+    "Digital finance"
+  ],
+  "year": 2026,
+  "theme_notes": {
+    "digital_finance.payments_emoney": "Closed consultation on proposed payment service requirements."
+  },
+  "notes": "Related instruments: CBB consultations archive and related rulebook modules Sourced from an official index listing; confirm against the instrument text."
+}

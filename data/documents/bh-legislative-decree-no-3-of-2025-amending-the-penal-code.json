@@ -1,0 +1,24 @@
+{
+  "id": "bh-legislative-decree-no-3-of-2025-amending-the-penal-code",
+  "title": "Legislative Decree No. 3 of 2025 Amending the Penal Code",
+  "jurisdiction": "BH",
+  "instrument_class": "decree",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "cybersecurity.cybercrime"
+  ],
+  "issuing_authority": "bh-king",
+  "date_issued": null,
+  "summary": "Reported to expand theft-related offences to cover mobile phones, laptops, tablets and other devices capable of storing or processing data, including theft intended to access stored information.",
+  "source_url": "https://www.legal500.com/developments/thought-leadership/bahrains-penal-code-a-new-era-in-combating-cybercrime-and-device-theft/",
+  "source_confidence": "secondary",
+  "tags": [
+    "Cybersecurity"
+  ],
+  "year": 2025,
+  "theme_notes": {
+    "cybersecurity.cybercrime": "Amends the Penal Code for modern electronic-device theft."
+  },
+  "notes": "Related instruments: Complements Law No. 60 of 2014 on Information Technology Crimes"
+}

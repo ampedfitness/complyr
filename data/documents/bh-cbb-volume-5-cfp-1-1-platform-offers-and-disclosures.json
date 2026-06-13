@@ -1,0 +1,24 @@
+{
+  "id": "bh-cbb-volume-5-cfp-1-1-platform-offers-and-disclosures",
+  "title": "CBB Volume 5 CFP-1.1 Platform Offers and Disclosures",
+  "jurisdiction": "BH",
+  "instrument_class": "rulebook_module",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "digital_finance.fintech_sandboxes"
+  ],
+  "issuing_authority": "bh-cbb",
+  "date_issued": null,
+  "summary": "Requires crowdfunding platforms to provide offer and platform disclosures to users and investors.",
+  "source_url": "https://cbben.thomsonreuters.com/rulebook/cfp-crowdfunding-platform-operators-module",
+  "source_confidence": "official",
+  "tags": [
+    "Digital finance"
+  ],
+  "year": 2022,
+  "theme_notes": {
+    "digital_finance.fintech_sandboxes": "Crowdfunding platform offer and disclosure rules."
+  },
+  "notes": "Related instruments: CBB Rulebook and CBB consultations"
+}

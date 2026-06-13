@@ -1,0 +1,24 @@
+{
+  "id": "bh-cbb-volume-5-cfp-2-obligations-of-the-borrower-and-issuer",
+  "title": "CBB Volume 5 CFP-2 Obligations of the Borrower and Issuer",
+  "jurisdiction": "BH",
+  "instrument_class": "rulebook_module",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "digital_finance.fintech_sandboxes"
+  ],
+  "issuing_authority": "bh-cbb",
+  "date_issued": null,
+  "summary": "Sets obligations on borrowers or issuers raising funds through crowdfunding platforms.",
+  "source_url": "https://cbben.thomsonreuters.com/rulebook/cfp-crowdfunding-platform-operators-module",
+  "source_confidence": "official",
+  "tags": [
+    "Digital finance"
+  ],
+  "year": 2022,
+  "theme_notes": {
+    "digital_finance.fintech_sandboxes": "Crowdfunding borrower and issuer obligations."
+  },
+  "notes": "Related instruments: CBB Rulebook and CBB consultations"
+}

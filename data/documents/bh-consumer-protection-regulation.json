@@ -1,0 +1,24 @@
+{
+  "id": "bh-consumer-protection-regulation",
+  "title": "Consumer Protection Regulation",
+  "jurisdiction": "BH",
+  "instrument_class": "regulation",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "telecom_digital_infrastructure.ott_digital_comms"
+  ],
+  "issuing_authority": "bh-tra",
+  "date_issued": null,
+  "summary": "Applies consumer disclosure, contracts, billing, complaint-handling and service obligations to telecommunications licensees, including digitally delivered voice, messaging, internet access and related communications services.",
+  "source_url": "https://www.tra.org.bh/en/article/Consumer-Protection-Regulation-Public-Consultations",
+  "source_confidence": "official",
+  "tags": [
+    "Telecommunications & digital infrastructure"
+  ],
+  "year": 2016,
+  "theme_notes": {
+    "telecom_digital_infrastructure.ott_digital_comms": "Telecom consumer protection rules for services supplied to end users."
+  },
+  "notes": "Related instruments: Telecommunications Law"
+}

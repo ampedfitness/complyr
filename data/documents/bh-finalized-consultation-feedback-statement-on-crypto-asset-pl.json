@@ -1,0 +1,23 @@
+{
+  "id": "bh-finalized-consultation-feedback-statement-on-crypto-asset-pl",
+  "title": "Finalized Consultation Feedback Statement on Crypto-Asset Platform Operators Module",
+  "jurisdiction": "BH",
+  "instrument_class": "consultation_paper",
+  "binding_status": "non_binding",
+  "lifecycle": "superseded",
+  "themes": [
+    "digital_finance.virtual_assets"
+  ],
+  "issuing_authority": "bh-cbb",
+  "date_issued": null,
+  "summary": "Records finalized CBB feedback on crypto-asset platform operator rules.",
+  "source_url": "https://www.cbb.gov.bh/consultations/",
+  "source_confidence": "pending_verification",
+  "tags": [
+    "Digital finance"
+  ],
+  "theme_notes": {
+    "digital_finance.virtual_assets": "Feedback statement on CPO module."
+  },
+  "notes": "Related instruments: CBB consultations archive and related rulebook modules Sourced from an official index listing; confirm against the instrument text."
+}

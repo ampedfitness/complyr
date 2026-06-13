@@ -1,0 +1,24 @@
+{
+  "id": "bh-order-no-10-of-2015-against-2connect-article-53-breach",
+  "title": "Order No. 10 of 2015 against 2Connect Article 53 Breach",
+  "jurisdiction": "BH",
+  "instrument_class": "decision",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "telecom_digital_infrastructure.licensing_markets"
+  ],
+  "issuing_authority": "bh-tra",
+  "date_issued": null,
+  "summary": "Enforces Article 53 of the Telecommunications Law and licence terms.",
+  "source_url": "https://www.tra.org.bh/en/category/orders",
+  "source_confidence": "pending_verification",
+  "tags": [
+    "Telecommunications & digital infrastructure"
+  ],
+  "year": 2015,
+  "theme_notes": {
+    "telecom_digital_infrastructure.licensing_markets": "Order against 2Connect for Telecommunications Law breach."
+  },
+  "notes": "Related instruments: Telecommunications Law and TRA orders archive Sourced from an official index listing; confirm against the instrument text."
+}

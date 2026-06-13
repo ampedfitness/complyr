@@ -1,0 +1,24 @@
+{
+  "id": "bh-cbb-volume-5-cfp-1-3-due-diligence-of-crowdfunding-borrowers",
+  "title": "CBB Volume 5 CFP-1.3 Due Diligence of Crowdfunding Borrowers and Issuers",
+  "jurisdiction": "BH",
+  "instrument_class": "rulebook_module",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "digital_finance.fintech_sandboxes"
+  ],
+  "issuing_authority": "bh-cbb",
+  "date_issued": null,
+  "summary": "Requires due diligence on crowdfunding borrowers and issuers hosted on the platform.",
+  "source_url": "https://cbben.thomsonreuters.com/rulebook/cfp-crowdfunding-platform-operators-module",
+  "source_confidence": "official",
+  "tags": [
+    "Digital finance"
+  ],
+  "year": 2022,
+  "theme_notes": {
+    "digital_finance.fintech_sandboxes": "Crowdfunding borrower and issuer due diligence rules."
+  },
+  "notes": "Related instruments: CBB Rulebook and CBB consultations"
+}

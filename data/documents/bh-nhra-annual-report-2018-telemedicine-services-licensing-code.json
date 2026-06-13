@@ -1,0 +1,24 @@
+{
+  "id": "bh-nhra-annual-report-2018-telemedicine-services-licensing-code",
+  "title": "NHRA Annual Report 2018 Telemedicine Services Licensing Code",
+  "jurisdiction": "BH",
+  "instrument_class": "framework",
+  "binding_status": "non_binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "digital_health.telehealth_digital_services"
+  ],
+  "issuing_authority": "bh-nhra",
+  "date_issued": null,
+  "summary": "Official NHRA annual report states that a licensing code for regulation of telemedicine services was issued and outlines rules and guidelines for online medical consultation.",
+  "source_url": "https://www.nhra.bh/About/AnnualReport/MediaHandler/ImageHandler/documents/About/Annual%20Report/AR2018.pdf",
+  "source_confidence": "official",
+  "tags": [
+    "Digital health"
+  ],
+  "year": 2018,
+  "theme_notes": {
+    "digital_health.telehealth_digital_services": "Telemedicine services licensing category in NHRA reporting."
+  },
+  "notes": "Related instruments: Related to NHRA health facility licensing standards"
+}

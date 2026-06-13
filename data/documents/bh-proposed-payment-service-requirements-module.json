@@ -1,0 +1,24 @@
+{
+  "id": "bh-proposed-payment-service-requirements-module",
+  "title": "Proposed Payment Service Requirements Module",
+  "jurisdiction": "BH",
+  "instrument_class": "consultation_paper",
+  "binding_status": "non_binding",
+  "lifecycle": "consultation",
+  "themes": [
+    "digital_economy.einvoicing_digital_tax"
+  ],
+  "issuing_authority": "bh-cbb",
+  "date_issued": null,
+  "summary": "Consults on CBB payment service provider requirements for digital payment services, which support the broader tax administration ecosystem where taxes and government fees are paid electronically.",
+  "source_url": "https://www.cbb.gov.bh/consultations/",
+  "source_confidence": "official",
+  "tags": [
+    "Digital economy & platforms"
+  ],
+  "year": 2026,
+  "theme_notes": {
+    "digital_economy.einvoicing_digital_tax": "Consultation on payment-service requirements relevant to digital tax payment infrastructure."
+  },
+  "notes": "Related instruments: Related to CBB Payment Service Provider Module"
+}

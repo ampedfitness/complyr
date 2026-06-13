@@ -1,0 +1,27 @@
+{
+  "id": "bh-decision-no-67-of-2021-designating-foreign-states-under-legi",
+  "title": "Decision No. 67 of 2021 Designating Foreign States under Legislative Decree No. 56 of 2018",
+  "jurisdiction": "BH",
+  "instrument_class": "decision",
+  "binding_status": "binding",
+  "lifecycle": "amended",
+  "themes": [
+    "data_privacy.crossborder_data_flows",
+    "telecom_digital_infrastructure.cloud_data_centres"
+  ],
+  "issuing_authority": "bh-pm",
+  "date_issued": null,
+  "summary": "Operationalises the cloud law by identifying foreign states for which the special customer-content jurisdiction framework applies.",
+  "source_url": "https://www.eastlaws.com/legislation-full-text/en/bahrain/prime-minister/02-12-2021/no-67?id=4865363&type=1",
+  "source_confidence": "secondary",
+  "tags": [
+    "Data & privacy",
+    "Telecommunications & digital infrastructure"
+  ],
+  "year": 2021,
+  "theme_notes": {
+    "data_privacy.crossborder_data_flows": "Designates foreign states for Bahrain’s foreign-party cloud services regime.",
+    "telecom_digital_infrastructure.cloud_data_centres": "Designates foreign states for the foreign-party cloud services regime."
+  },
+  "notes": "Related instruments: Legislative Decree No. 56 of 2018 and later amendments including Decisions No. 6 of 2025, No. 58 of 2025, and No. 10 of 2026"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "bh-cbb-rulebook-volume-6-crypto-asset-platform-operators-module",
+  "title": "CBB Rulebook Volume 6 Crypto-Asset Platform Operators Module",
+  "jurisdiction": "BH",
+  "instrument_class": "rulebook_module",
+  "binding_status": "binding",
+  "lifecycle": "superseded",
+  "themes": [
+    "ai_emerging_tech.blockchain_web3",
+    "digital_finance.virtual_assets"
+  ],
+  "issuing_authority": "bh-cbb",
+  "date_issued": null,
+  "summary": "Required licensing for crypto-asset platform operators carrying on activities within or from Bahrain and covered client safeguards, accepted crypto-assets, technology standards, cyber security, cryptographic keys, wallet storage, AML, custody, reporting, notifications, approvals and CBB inspection powers.",
+  "source_url": "https://www.cbb.gov.bh/wp-content/uploads/2018/12/Crypto-Currency-Regulation-Version-7.pdf",
+  "source_confidence": "official",
+  "tags": [
+    "AI & emerging technologies",
+    "Digital finance"
+  ],
+  "year": 2018,
+  "theme_notes": {
+    "ai_emerging_tech.blockchain_web3": "Early CBB module for crypto-asset platform operators.",
+    "digital_finance.virtual_assets": "Early CBB framework for crypto-asset platform operators."
+  },
+  "notes": "Related instruments: Superseded by the broader Crypto-Asset Module"
+}

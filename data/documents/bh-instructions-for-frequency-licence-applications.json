@@ -1,0 +1,24 @@
+{
+  "id": "bh-instructions-for-frequency-licence-applications",
+  "title": "Instructions for Frequency Licence Applications",
+  "jurisdiction": "BH",
+  "instrument_class": "guideline",
+  "binding_status": "non_binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "telecom_digital_infrastructure.spectrum"
+  ],
+  "issuing_authority": "bh-tra",
+  "date_issued": null,
+  "summary": "Explains application requirements for individual and class licensees requiring fixed point-to-point radiocommunication links for telecommunications infrastructure or backhaul networks.",
+  "source_url": "https://www.tra.org.bh/Media/Licenses/Instructions_for_frequency_license_Final-2013_en.pdf",
+  "source_confidence": "official",
+  "tags": [
+    "Telecommunications & digital infrastructure"
+  ],
+  "year": 2013,
+  "theme_notes": {
+    "telecom_digital_infrastructure.spectrum": "Instructions for applying for fixed point-to-point frequency licences."
+  },
+  "notes": "Related instruments: Related to Fixed Point-to-Point Links licensing framework"
+}

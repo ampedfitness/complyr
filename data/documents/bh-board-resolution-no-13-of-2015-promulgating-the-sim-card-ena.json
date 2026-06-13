@@ -1,0 +1,27 @@
+{
+  "id": "bh-board-resolution-no-13-of-2015-promulgating-the-sim-card-ena",
+  "title": "Board Resolution No. 13 of 2015 Promulgating the SIM-Card Enabled Telecommunications Services Registration Regulation",
+  "jurisdiction": "BH",
+  "instrument_class": "resolution",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "ai_emerging_tech.iot_connected_devices",
+    "telecom_digital_infrastructure.ott_digital_comms"
+  ],
+  "issuing_authority": "bh-tra",
+  "date_issued": null,
+  "summary": "Requires affected licensees to collect and verify SIM-related subscriber information, with TRA’s IoT paper confirming that IoT local SIMs and eSIMs must comply with SIM registration requirements and that embedded SIMs require prior TRA approval for automated device communication only.",
+  "source_url": "https://cyrilla.org/api/files/1588674131757ed4ffyms71o.pdf",
+  "source_confidence": "secondary",
+  "tags": [
+    "AI & emerging technologies",
+    "Telecommunications & digital infrastructure"
+  ],
+  "year": 2015,
+  "theme_notes": {
+    "ai_emerging_tech.iot_connected_devices": "Regulates registration of SIM-enabled telecommunications services.",
+    "telecom_digital_infrastructure.ott_digital_comms": "SIM registration regulation for SIM-enabled services."
+  },
+  "notes": "Related instruments: Position Paper on the Internet of Things and Telecommunications Law"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "bh-cbb-appendix-om-2-cloud-outsourcing-control-guidelines",
+  "title": "CBB Appendix OM-2 Cloud Outsourcing Control Guidelines",
+  "jurisdiction": "BH",
+  "instrument_class": "guideline",
+  "binding_status": "non_binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "data_privacy.crossborder_data_flows",
+    "telecom_digital_infrastructure.cloud_data_centres"
+  ],
+  "issuing_authority": "bh-cbb",
+  "date_issued": null,
+  "summary": "Requires controls over where data is stored, changes to data location, subcontractor arrangements, transfer or deletion of data, and customer or licensee awareness of cloud outsourcing risks.",
+  "source_url": "https://www.cbb.gov.bh/wp-content/uploads/2021/07/Appendix-OM-2-Cloud-Outsourcing-Control-Guidelines-Volume-1.pdf",
+  "source_confidence": "official",
+  "tags": [
+    "Data & privacy",
+    "Telecommunications & digital infrastructure"
+  ],
+  "year": 2021,
+  "theme_notes": {
+    "data_privacy.crossborder_data_flows": "Provides data-location and transfer controls for cloud outsourcing.",
+    "telecom_digital_infrastructure.cloud_data_centres": "Detailed cloud outsourcing control guidelines for CBB licensees."
+  },
+  "notes": "Related instruments: CBB OM-2A Cloud Outsourcing Arrangements"
+}

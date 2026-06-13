@@ -1,0 +1,24 @@
+{
+  "id": "bh-position-paper-on-internet-and-online-applications",
+  "title": "Position Paper on Internet and Online Applications",
+  "jurisdiction": "BH",
+  "instrument_class": "white_paper",
+  "binding_status": "non_binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "telecom_digital_infrastructure.ott_digital_comms"
+  ],
+  "issuing_authority": "bh-tra",
+  "date_issued": null,
+  "summary": "Clarifies regulatory treatment of online applications and internet services in Bahrain’s telecom sector.",
+  "source_url": "https://www.tra.org.bh/en/category/position-papers-and-guidelines",
+  "source_confidence": "pending_verification",
+  "tags": [
+    "Telecommunications & digital infrastructure"
+  ],
+  "year": 2016,
+  "theme_notes": {
+    "telecom_digital_infrastructure.ott_digital_comms": "TRA position on internet and online applications."
+  },
+  "notes": "Related instruments: Telecommunications Law and TRA legal instruments archive Sourced from an official index listing; confirm against the instrument text."
+}

@@ -1,0 +1,24 @@
+{
+  "id": "bh-civil-aviation-affairs-drone-regulatory-framework-and-permit",
+  "title": "Civil Aviation Affairs Drone Regulatory Framework and Permit Process",
+  "jurisdiction": "BH",
+  "instrument_class": "framework",
+  "binding_status": "non_binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "ai_emerging_tech.autonomous_smart_systems"
+  ],
+  "issuing_authority": "bh-caa",
+  "date_issued": null,
+  "summary": "Requires drone operators to obtain Civil Aviation Affairs approval, submit applications at least seven working days before operation, provide operator details, insurance, operation scope, and no-objection letters from relevant authorities.",
+  "source_url": "https://www.bahrain.bh/wps/portal/en/BNP/HomeNationalPortal/ContentDetailsPage/",
+  "source_confidence": "official",
+  "tags": [
+    "AI & emerging technologies"
+  ],
+  "year": 2025,
+  "theme_notes": {
+    "ai_emerging_tech.autonomous_smart_systems": "Sets the public permit process for drone operations in Bahrain."
+  },
+  "notes": "Related instruments: Civil Aviation Law No. 14 of 2013 and Law No. 4 of 2022"
+}

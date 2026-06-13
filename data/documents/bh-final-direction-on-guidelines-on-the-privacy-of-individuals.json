@@ -1,0 +1,24 @@
+{
+  "id": "bh-final-direction-on-guidelines-on-the-privacy-of-individuals",
+  "title": "Final Direction on Guidelines on the Privacy of Individuals and Data Protection in the Telecommunications Sector",
+  "jurisdiction": "BH",
+  "instrument_class": "guideline",
+  "binding_status": "non_binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "data_privacy.personal_data_protection"
+  ],
+  "issuing_authority": "bh-tra",
+  "date_issued": null,
+  "summary": "Applies privacy and personal data protection guidance to telecommunications operators, creating adjacent sector obligations that complement the PDPL for subscriber, traffic, communications, and service-related data handling.",
+  "source_url": "https://www.tra.org.bh/en/category/position-papers",
+  "source_confidence": "official",
+  "tags": [
+    "Data & privacy"
+  ],
+  "year": 2024,
+  "theme_notes": {
+    "data_privacy.personal_data_protection": "Sets sector-specific privacy and data protection expectations for telecommunications."
+  },
+  "notes": "Related instruments: 2023 TRA consultation paper"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "bh-stablecoin-issuance-and-offering-module",
+  "title": "Stablecoin Issuance and Offering Module",
+  "jurisdiction": "BH",
+  "instrument_class": "rulebook_module",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "ai_emerging_tech.blockchain_web3",
+    "digital_finance.virtual_assets"
+  ],
+  "issuing_authority": "bh-cbb",
+  "date_issued": null,
+  "summary": "Regulates issuance and offering of single-currency stablecoins in or from Bahrain, including licensing, permitted currencies, financial resources, governance, compliance, AML, outsourcing, reserve assets, redemption rights, whitepaper requirements, reporting, technology governance, cyber security, cryptographic keys, custody, recovery and redemption planning, enforcement and CBB information-gathering powers.",
+  "source_url": "https://cbben.thomsonreuters.com/rulebook/sio-stablecoin-issuance-offering",
+  "source_confidence": "official",
+  "tags": [
+    "AI & emerging technologies",
+    "Digital finance"
+  ],
+  "year": 2025,
+  "theme_notes": {
+    "ai_emerging_tech.blockchain_web3": "Licensing and regulatory framework for stablecoin issuers.",
+    "digital_finance.virtual_assets": "Regulatory framework for single-currency stablecoin issuers."
+  },
+  "notes": "Related instruments: Related to the Crypto-Asset Module and produced after the 2024 SIO consultation"
+}

@@ -1,0 +1,24 @@
+{
+  "id": "bh-decree-no-78-of-2019-determining-the-administrative-entity-t",
+  "title": "Decree No. 78 of 2019 Determining the Administrative Entity to Assume the Duties and Powers of the Personal Data Protection Authority",
+  "jurisdiction": "BH",
+  "instrument_class": "decree",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "data_privacy.personal_data_protection"
+  ],
+  "issuing_authority": "bh-king",
+  "date_issued": null,
+  "summary": "Gives operational effect to the PDPL supervisory authority model by designating the administrative entity that performs the powers and tasks assigned to the Personal Data Protection Authority.",
+  "source_url": "https://www.pdp.gov.bh/royal-decree.html",
+  "source_confidence": "official",
+  "tags": [
+    "Data & privacy"
+  ],
+  "year": 2019,
+  "theme_notes": {
+    "data_privacy.personal_data_protection": "Assigns the Ministry of Justice, Islamic Affairs and Waqf to exercise the PDPA’s statutory functions."
+  },
+  "notes": "Related instruments: Law No. 30 of 2018"
+}

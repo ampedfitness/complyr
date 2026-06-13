@@ -1,0 +1,24 @@
+{
+  "id": "bh-cbb-rulebook-volume-1-om-2a-cloud-outsourcing-arrangements",
+  "title": "CBB Rulebook Volume 1 OM-2A Cloud Outsourcing Arrangements",
+  "jurisdiction": "BH",
+  "instrument_class": "rulebook_module",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "telecom_digital_infrastructure.cloud_data_centres"
+  ],
+  "issuing_authority": "bh-cbb",
+  "date_issued": null,
+  "summary": "Requires conventional bank licensees to manage material cloud outsourcing risk including due diligence, data protection, confidentiality, information security, audit access, data location, business continuity, incident management and regulatory access.",
+  "source_url": "https://www.cbb.gov.bh/wp-content/uploads/2021/07/Cloud-Outsourcing-Arrangements-Volume-1.pdf",
+  "source_confidence": "official",
+  "tags": [
+    "Telecommunications & digital infrastructure"
+  ],
+  "year": 2021,
+  "theme_notes": {
+    "telecom_digital_infrastructure.cloud_data_centres": "Cloud outsourcing controls for conventional bank licensees."
+  },
+  "notes": "Related instruments: Related to CBB Appendix OM-2 Cloud Outsourcing Control Guidelines"
+}

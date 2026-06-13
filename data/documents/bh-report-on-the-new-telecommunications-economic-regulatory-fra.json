@@ -1,0 +1,24 @@
+{
+  "id": "bh-report-on-the-new-telecommunications-economic-regulatory-fra",
+  "title": "Report on the New Telecommunications Economic Regulatory Framework for the Kingdom of Bahrain",
+  "jurisdiction": "BH",
+  "instrument_class": "framework",
+  "binding_status": "non_binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "telecom_digital_infrastructure.licensing_markets"
+  ],
+  "issuing_authority": "bh-tra",
+  "date_issued": null,
+  "summary": "Sets the economic regulatory approach for the sector, including market development, wholesale access, competition, regulatory obligations and transition to new telecom market structure.",
+  "source_url": "https://www.tra.org.bh/en/category/position-papers-and-guidelines",
+  "source_confidence": "official",
+  "tags": [
+    "Telecommunications & digital infrastructure"
+  ],
+  "year": 2018,
+  "theme_notes": {
+    "telecom_digital_infrastructure.licensing_markets": "Economic regulatory framework for Bahrain telecommunications."
+  },
+  "notes": "Related instruments: Related to Separation of Batelco Guidelines and National Broadband Network framework"
+}

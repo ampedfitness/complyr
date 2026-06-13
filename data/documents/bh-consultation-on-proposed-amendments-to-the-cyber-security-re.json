@@ -1,0 +1,24 @@
+{
+  "id": "bh-consultation-on-proposed-amendments-to-the-cyber-security-re",
+  "title": "Consultation on Proposed Amendments to the Cyber Security Requirements",
+  "jurisdiction": "BH",
+  "instrument_class": "consultation_paper",
+  "binding_status": "non_binding",
+  "lifecycle": "consultation",
+  "themes": [
+    "cybersecurity.security_controls_frameworks"
+  ],
+  "issuing_authority": "bh-cbb",
+  "date_issued": null,
+  "summary": "Consults on cyber amendments for conventional banks, Islamic banks, ancillary service providers and crypto-asset licensees.",
+  "source_url": "https://www.cbb.gov.bh/consultations/",
+  "source_confidence": "pending_verification",
+  "tags": [
+    "Cybersecurity"
+  ],
+  "year": 2024,
+  "theme_notes": {
+    "cybersecurity.security_controls_frameworks": "Consultation on CBB cyber security requirements."
+  },
+  "notes": "Related instruments: CBB consultations archive and related rulebook modules Sourced from an official index listing; confirm against the instrument text."
+}

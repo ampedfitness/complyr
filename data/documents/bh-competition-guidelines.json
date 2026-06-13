@@ -1,0 +1,24 @@
+{
+  "id": "bh-competition-guidelines",
+  "title": "Competition Guidelines",
+  "jurisdiction": "BH",
+  "instrument_class": "guideline",
+  "binding_status": "non_binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "telecom_digital_infrastructure.licensing_markets"
+  ],
+  "issuing_authority": "bh-tra",
+  "date_issued": null,
+  "summary": "Provides guidance on defining relevant telecommunications markets, assessing competition and anti-competitive conduct, and lodging complaints for anti-competitive conduct.",
+  "source_url": "https://www.tra.org.bh/en/category/position-papers-and-guidelines",
+  "source_confidence": "official",
+  "tags": [
+    "Telecommunications & digital infrastructure"
+  ],
+  "year": 2010,
+  "theme_notes": {
+    "telecom_digital_infrastructure.licensing_markets": "Guidelines for telecom competition analysis and complaints."
+  },
+  "notes": "Related instruments: Related to Telecommunications Law and Strategic Market Review"
+}

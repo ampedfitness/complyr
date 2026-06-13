@@ -1,0 +1,26 @@
+{
+  "id": "bh-cbb-rulebook-volume-1-digital-financial-advice-module",
+  "title": "CBB Rulebook Volume 1 Digital Financial Advice Module",
+  "jurisdiction": "BH",
+  "instrument_class": "rulebook_module",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "ai_emerging_tech.ai_governance_ethics",
+    "ai_emerging_tech.autonomous_smart_systems"
+  ],
+  "issuing_authority": "bh-cbb",
+  "date_issued": null,
+  "summary": "Requires governance, documentation, testing, bias and error controls, cybersecurity, privacy safeguards, client disclosures and institutional responsibility for algorithms used to generate digital financial advice.",
+  "source_url": "https://cbben.thomsonreuters.com/entiresection/115155",
+  "source_confidence": "official",
+  "tags": [
+    "AI & emerging technologies"
+  ],
+  "year": 2019,
+  "theme_notes": {
+    "ai_emerging_tech.ai_governance_ethics": "Algorithm governance rules for robo-advice by CBB licensees.",
+    "ai_emerging_tech.autonomous_smart_systems": "Regulates algorithmic robo-advice by conventional bank licensees."
+  },
+  "notes": "Related instruments: Personal Data Protection Law No. 30 of 2018 and CBB Rulebook Volumes 1, 2 and 4"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "bh-guidelines-on-the-privacy-of-individuals-and-data-protection",
+  "title": "Guidelines on the Privacy of Individuals and Data Protection in the Telecommunications Sector",
+  "jurisdiction": "BH",
+  "instrument_class": "guideline",
+  "binding_status": "non_binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "telecom_digital_infrastructure.ott_digital_comms",
+    "data_privacy.personal_data_protection"
+  ],
+  "issuing_authority": "bh-tra",
+  "date_issued": null,
+  "summary": "Creates telecom-sector expectations for handling subscriber, traffic, communications and service data and complements the Personal Data Protection Law for digital communications and OTT-adjacent services delivered by licensees.",
+  "source_url": "https://www.tra.org.bh/en/category/position-papers-and-guidelines",
+  "source_confidence": "official",
+  "tags": [
+    "Telecommunications & digital infrastructure",
+    "Data & privacy"
+  ],
+  "year": 2024,
+  "theme_notes": {
+    "telecom_digital_infrastructure.ott_digital_comms": "Sector privacy and data protection guidance for telecommunications operators.",
+    "data_privacy.personal_data_protection": "Telecom-sector privacy and data protection guideline."
+  },
+  "notes": "Related instruments: Produced after TRA 2023 privacy consultation and relates to Personal Data Protection Law No. 30 of 2018"
+}

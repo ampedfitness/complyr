@@ -1,0 +1,24 @@
+{
+  "id": "bh-resolution-no-6-of-2021-regarding-settlement-of-disputes-rel",
+  "title": "Resolution No. 6 of 2021 Regarding Settlement of Disputes Related to Domain Name Registration",
+  "jurisdiction": "BH",
+  "instrument_class": "resolution",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "telecom_digital_infrastructure.internet_governance_domains"
+  ],
+  "issuing_authority": "bh-tra",
+  "date_issued": null,
+  "summary": "Establishes the process for settlement of disputes connected with domain name registration under Bahrain’s domain registry framework.",
+  "source_url": "https://register.bh/dispute-resolution-regulation/",
+  "source_confidence": "official",
+  "tags": [
+    "Telecommunications & digital infrastructure"
+  ],
+  "year": 2021,
+  "theme_notes": {
+    "telecom_digital_infrastructure.internet_governance_domains": "Domain-name dispute resolution regulation for Bahrain domains."
+  },
+  "notes": "Related instruments: Related to .bh and البحرين domain-name registration framework"
+}

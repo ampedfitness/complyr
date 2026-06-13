@@ -1,0 +1,24 @@
+{
+  "id": "bh-ecommerce-national-strategy",
+  "title": "eCommerce National Strategy",
+  "jurisdiction": "BH",
+  "instrument_class": "national_strategy",
+  "binding_status": "non_binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "digital_economy.ecommerce"
+  ],
+  "issuing_authority": "bh-moic",
+  "date_issued": null,
+  "summary": "Aims to make Bahrain an e-commerce preferred centre by developing and streamlining regulatory policies and frameworks, improving consumer confidence, supporting SMEs and attracting international e-commerce businesses.",
+  "source_url": "https://www.moic.gov.bh/en/node/2854",
+  "source_confidence": "official",
+  "tags": [
+    "Digital economy & platforms"
+  ],
+  "year": 2019,
+  "theme_notes": {
+    "digital_economy.ecommerce": "National strategy to develop and regulate Bahrain’s e-commerce ecosystem."
+  },
+  "notes": "Related instruments: Related to retail sale via internet requirements and virtual commercial registration initiatives"
+}

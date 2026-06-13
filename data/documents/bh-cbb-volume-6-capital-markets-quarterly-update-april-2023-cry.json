@@ -1,0 +1,24 @@
+{
+  "id": "bh-cbb-volume-6-capital-markets-quarterly-update-april-2023-cry",
+  "title": "CBB Volume 6 Capital Markets Quarterly Update April 2023 Crypto-Asset Amendments",
+  "jurisdiction": "BH",
+  "instrument_class": "rulebook_module",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "digital_finance.virtual_assets"
+  ],
+  "issuing_authority": "bh-cbb",
+  "date_issued": null,
+  "summary": "CBB Volume 6 quarterly updates include April 2023 amendments relevant to crypto-assets and digital tokens.",
+  "source_url": "https://cbben.thomsonreuters.com/rulebook/central-bank-bahrain-volume-6-capital-markets",
+  "source_confidence": "official",
+  "tags": [
+    "Digital finance"
+  ],
+  "year": 2023,
+  "theme_notes": {
+    "digital_finance.virtual_assets": "Quarterly update containing capital markets digital asset amendments."
+  },
+  "notes": "Related instruments: CBB Rulebook and CBB consultations"
+}

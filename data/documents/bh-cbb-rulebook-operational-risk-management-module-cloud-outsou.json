@@ -1,0 +1,24 @@
+{
+  "id": "bh-cbb-rulebook-operational-risk-management-module-cloud-outsou",
+  "title": "CBB Rulebook Operational Risk Management Module Cloud Outsourcing Arrangements",
+  "jurisdiction": "BH",
+  "instrument_class": "rulebook_module",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "data_privacy.personal_data_protection"
+  ],
+  "issuing_authority": "bh-cbb",
+  "date_issued": null,
+  "summary": "Adjacent cloud outsourcing rules require licensees to conduct due diligence on cloud service providers, including information security and personal data protection controls.",
+  "source_url": "https://www.cbb.gov.bh/wp-content/uploads/2021/07/Cloud-Outsourcing-Arrangements-Volume-2.pdf",
+  "source_confidence": "official",
+  "tags": [
+    "Data & privacy"
+  ],
+  "year": 2021,
+  "theme_notes": {
+    "data_privacy.personal_data_protection": "Sets cloud outsourcing controls for CBB licensees."
+  },
+  "notes": "Related instruments: Law No. 30 of 2018"
+}

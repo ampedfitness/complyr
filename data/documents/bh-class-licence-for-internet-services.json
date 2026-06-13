@@ -1,0 +1,23 @@
+{
+  "id": "bh-class-licence-for-internet-services",
+  "title": "Class Licence for Internet Services",
+  "jurisdiction": "BH",
+  "instrument_class": "regulation",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "telecom_digital_infrastructure.licensing_markets"
+  ],
+  "issuing_authority": "bh-tra",
+  "date_issued": null,
+  "summary": "Sets the standard terms under which class licensees may provide internet services in Bahrain, including scope, compliance, consumer, technical and regulatory obligations.",
+  "source_url": "https://www.tra.org.bh/en/category/generic-form-of-licences",
+  "source_confidence": "official",
+  "tags": [
+    "Telecommunications & digital infrastructure"
+  ],
+  "theme_notes": {
+    "telecom_digital_infrastructure.licensing_markets": "Class licence template for internet service provision."
+  },
+  "notes": "Instrument type recorded as uncertain in the source (regulation?). Related instruments: Part of TRA Generic Forms of Telecommunications Licences"
+}

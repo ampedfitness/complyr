@@ -1,0 +1,24 @@
+{
+  "id": "bh-guidelines-on-calculation-of-frequency-licence-fees",
+  "title": "Guidelines on Calculation of Frequency Licence Fees",
+  "jurisdiction": "BH",
+  "instrument_class": "guideline",
+  "binding_status": "non_binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "telecom_digital_infrastructure.spectrum"
+  ],
+  "issuing_authority": "bh-tra",
+  "date_issued": null,
+  "summary": "Provides TRA methodology for frequency licence fees, directly affecting spectrum users and radio-linked digital services.",
+  "source_url": "https://www.tra.org.bh/en/category/position-papers-and-guidelines",
+  "source_confidence": "pending_verification",
+  "tags": [
+    "Telecommunications & digital infrastructure"
+  ],
+  "year": 2024,
+  "theme_notes": {
+    "telecom_digital_infrastructure.spectrum": "Guidelines for calculating Bahrain spectrum licence fees."
+  },
+  "notes": "Related instruments: Telecommunications Law and TRA legal instruments archive Sourced from an official index listing; confirm against the instrument text."
+}

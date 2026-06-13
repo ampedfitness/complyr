@@ -1,0 +1,24 @@
+{
+  "id": "bh-consultation-on-cyber-security-risk-management",
+  "title": "Consultation on Cyber Security Risk Management",
+  "jurisdiction": "BH",
+  "instrument_class": "consultation_paper",
+  "binding_status": "non_binding",
+  "lifecycle": "consultation",
+  "themes": [
+    "cybersecurity.security_controls_frameworks"
+  ],
+  "issuing_authority": "bh-cbb",
+  "date_issued": null,
+  "summary": "Consults on operational risk module enhancements for cyber security risk management.",
+  "source_url": "https://www.cbb.gov.bh/consultations/",
+  "source_confidence": "pending_verification",
+  "tags": [
+    "Cybersecurity"
+  ],
+  "year": 2020,
+  "theme_notes": {
+    "cybersecurity.security_controls_frameworks": "Consultation on cyber security risk management for banks."
+  },
+  "notes": "Related instruments: CBB consultations archive and related rulebook modules Sourced from an official index listing; confirm against the instrument text."
+}

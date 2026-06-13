@@ -1,0 +1,26 @@
+{
+  "id": "bh-type-approval-regulation-for-telecommunications-equipment-co",
+  "title": "Type Approval Regulation for Telecommunications Equipment Connected to Public Telecommunications Networks",
+  "jurisdiction": "BH",
+  "instrument_class": "regulation",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "ai_emerging_tech.iot_connected_devices",
+    "telecom_digital_infrastructure.spectrum"
+  ],
+  "issuing_authority": "bh-tra",
+  "date_issued": null,
+  "summary": "Requires telecommunications equipment and radiocommunications equipment, including connected devices and short-range radio devices, to meet technical requirements and obtain type approval before import, supply, sale, distribution, or connection to a public telecommunications network.",
+  "source_url": "https://www.tra.org.bh/Media/images/Type%20Approval%20Regulation%20-%20English.pdf",
+  "source_confidence": "official",
+  "tags": [
+    "AI & emerging technologies",
+    "Telecommunications & digital infrastructure"
+  ],
+  "theme_notes": {
+    "ai_emerging_tech.iot_connected_devices": "Requires type approval before telecom equipment is imported or connected in Bahrain.",
+    "telecom_digital_infrastructure.spectrum": "Requires type approval before telecom equipment is imported or connected."
+  },
+  "notes": "Related instruments: Telecommunications Law, National Frequency Plan 2024, Short Range Devices Regulation"
+}

@@ -1,0 +1,24 @@
+{
+  "id": "bh-moic-virtual-commercial-registration-initiative-including-re",
+  "title": "MOIC Virtual Commercial Registration Initiative Including Retail Sale via Internet",
+  "jurisdiction": "BH",
+  "instrument_class": "policy",
+  "binding_status": "non_binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "digital_economy.ecommerce"
+  ],
+  "issuing_authority": "bh-moic",
+  "date_issued": null,
+  "summary": "Organises legal and flexible procedures for practising e-commerce by including retail sale via internet within virtual commercial registration, subject to sector requirements and permitted activities.",
+  "source_url": "https://moic.gov.bh/en/node/1341",
+  "source_confidence": "official",
+  "tags": [
+    "Digital economy & platforms"
+  ],
+  "year": 2021,
+  "theme_notes": {
+    "digital_economy.ecommerce": "Allows online retail activity under Bahrain’s virtual commercial registration model."
+  },
+  "notes": "Related instruments: Related to eCommerce National Strategy and Sijilat commercial registration services"
+}

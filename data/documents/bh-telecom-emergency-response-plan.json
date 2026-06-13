@@ -1,0 +1,28 @@
+{
+  "id": "bh-telecom-emergency-response-plan",
+  "title": "Telecom Emergency Response Plan",
+  "jurisdiction": "BH",
+  "instrument_class": "framework",
+  "binding_status": "non_binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "cybersecurity.security_controls_frameworks",
+    "cybersecurity.critical_infrastructure",
+    "cybersecurity.incident_reporting"
+  ],
+  "issuing_authority": "bh-tra",
+  "date_issued": null,
+  "summary": "Sets expectations for coordinated telecommunications emergency response, including crisis management teams, emergency response coordination, continuity, recovery, drills, temporary resources, operator responsibilities and annual exercise expectations.",
+  "source_url": "https://ir-tra-website-prod-01.s3-eu-west-1.amazonaws.com/Media/Documents/Position_Papers_%26_Guidelines/20220522131029385_jofgk5im_5a3.pdf",
+  "source_confidence": "official",
+  "tags": [
+    "Cybersecurity"
+  ],
+  "year": 2022,
+  "theme_notes": {
+    "cybersecurity.security_controls_frameworks": "Telecom-sector emergency and resilience framework.",
+    "cybersecurity.critical_infrastructure": "Telecom-sector emergency and resilience framework.",
+    "cybersecurity.incident_reporting": "Telecom-sector emergency response and incident coordination framework."
+  },
+  "notes": "Related instruments: Related to Critical Telecommunications Infrastructure Risk Management Regulation"
+}

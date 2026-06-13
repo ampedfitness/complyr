@@ -1,0 +1,23 @@
+{
+  "id": "bh-cbb-volume-5-ob-2-1-framework-contracts",
+  "title": "CBB Volume 5 OB-2.1 Framework Contracts",
+  "jurisdiction": "BH",
+  "instrument_class": "rulebook_module",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "digital_finance.open_banking"
+  ],
+  "issuing_authority": "bh-cbb",
+  "date_issued": null,
+  "summary": "Requires AISPs and PISPs to establish framework contracts with customers before providing services.",
+  "source_url": "https://cbben.thomsonreuters.com/rulebook/ob-open-banking-module",
+  "source_confidence": "official",
+  "tags": [
+    "Digital finance"
+  ],
+  "theme_notes": {
+    "digital_finance.open_banking": "Open banking framework contract rules."
+  },
+  "notes": "Related instruments: CBB Rulebook and CBB consultations"
+}

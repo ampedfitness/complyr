@@ -1,0 +1,24 @@
+{
+  "id": "bh-finhub973-digital-fintech-lab",
+  "title": "FinHub973 Digital FinTech Lab",
+  "jurisdiction": "BH",
+  "instrument_class": "framework",
+  "binding_status": "non_binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "digital_finance.fintech_sandboxes"
+  ],
+  "issuing_authority": "bh-cbb",
+  "date_issued": null,
+  "summary": "Provides a digital fintech lab environment supporting experimentation and collaboration for financial institutions, fintech firms and regulators, complementing the CBB regulatory sandbox.",
+  "source_url": "https://www.cbb.gov.bh/fintech/",
+  "source_confidence": "official",
+  "tags": [
+    "Digital finance"
+  ],
+  "year": 2020,
+  "theme_notes": {
+    "digital_finance.fintech_sandboxes": "Digital fintech marketplace and innovation testing environment."
+  },
+  "notes": "Related instruments: Related to CBB Regulatory Sandbox Framework"
+}

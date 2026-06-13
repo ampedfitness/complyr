@@ -1,0 +1,24 @@
+{
+  "id": "bh-order-no-2-of-2013-to-viva-bahrain",
+  "title": "Order No. 2 of 2013 to VIVA Bahrain",
+  "jurisdiction": "BH",
+  "instrument_class": "decision",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "telecom_digital_infrastructure.licensing_markets"
+  ],
+  "issuing_authority": "bh-tra",
+  "date_issued": null,
+  "summary": "TRA order issued under Article 35 of the Telecommunications Law to VIVA Bahrain.",
+  "source_url": "https://www.tra.org.bh/en/category/orders",
+  "source_confidence": "pending_verification",
+  "tags": [
+    "Telecommunications & digital infrastructure"
+  ],
+  "year": 2013,
+  "theme_notes": {
+    "telecom_digital_infrastructure.licensing_markets": "Order to VIVA Bahrain under Telecommunications Law."
+  },
+  "notes": "Related instruments: Telecommunications Law and TRA orders archive Sourced from an official index listing; confirm against the instrument text."
+}

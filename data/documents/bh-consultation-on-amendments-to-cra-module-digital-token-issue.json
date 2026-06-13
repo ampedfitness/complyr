@@ -1,0 +1,24 @@
+{
+  "id": "bh-consultation-on-amendments-to-cra-module-digital-token-issue",
+  "title": "Consultation on Amendments to CRA Module Digital Token Issuer Appendices",
+  "jurisdiction": "BH",
+  "instrument_class": "consultation_paper",
+  "binding_status": "non_binding",
+  "lifecycle": "consultation",
+  "themes": [
+    "digital_finance.virtual_assets"
+  ],
+  "issuing_authority": "bh-cbb",
+  "date_issued": null,
+  "summary": "Consults on whitepaper, advisor declarations, cyber incident report and legal advisor declaration for digital token regulation.",
+  "source_url": "https://www.cbb.gov.bh/consultations/",
+  "source_confidence": "pending_verification",
+  "tags": [
+    "Digital finance"
+  ],
+  "year": 2022,
+  "theme_notes": {
+    "digital_finance.virtual_assets": "Consultation on CRA module amendments and digital token appendices."
+  },
+  "notes": "Related instruments: CBB consultations archive and related rulebook modules Sourced from an official index listing; confirm against the instrument text."
+}

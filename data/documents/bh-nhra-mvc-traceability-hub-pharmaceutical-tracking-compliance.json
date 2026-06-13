@@ -1,0 +1,24 @@
+{
+  "id": "bh-nhra-mvc-traceability-hub-pharmaceutical-tracking-compliance",
+  "title": "NHRA-MVC Traceability Hub Pharmaceutical Tracking Compliance Circular",
+  "jurisdiction": "BH",
+  "instrument_class": "circular",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "digital_health.health_data"
+  ],
+  "issuing_authority": "bh-nhra",
+  "date_issued": null,
+  "summary": "Requires agents and invoicers to comply with the NHRA-MVC Traceability Hub for Pharmaceutical Tracking, creating digital product data and traceability obligations in the health sector.",
+  "source_url": "https://nhra-mvc.bh/legislation-and-circulars/",
+  "source_confidence": "official",
+  "tags": [
+    "Digital health"
+  ],
+  "year": 2024,
+  "theme_notes": {
+    "digital_health.health_data": "Digital pharmaceutical traceability hub compliance circular."
+  },
+  "notes": "Related instruments: Related to NHRA pharmaceutical tracking and health data governance"
+}

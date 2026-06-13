@@ -1,0 +1,23 @@
+{
+  "id": "bh-cbb-volume-5-au-1-2-account-information-service-provider-act",
+  "title": "CBB Volume 5 AU-1.2 Account Information Service Provider Activity",
+  "jurisdiction": "BH",
+  "instrument_class": "rulebook_module",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "digital_finance.open_banking"
+  ],
+  "issuing_authority": "bh-cbb",
+  "date_issued": null,
+  "summary": "Regulates online services providing consolidated account information from payment accounts held with account servicing providers.",
+  "source_url": "https://cbben.thomsonreuters.com/rulebook/payment-service-provider-psp",
+  "source_confidence": "official",
+  "tags": [
+    "Digital finance"
+  ],
+  "theme_notes": {
+    "digital_finance.open_banking": "Defines account information service provider activity."
+  },
+  "notes": "Related instruments: CBB Rulebook and CBB consultations"
+}

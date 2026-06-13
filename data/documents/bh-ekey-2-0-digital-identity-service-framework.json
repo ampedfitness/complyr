@@ -1,0 +1,24 @@
+{
+  "id": "bh-ekey-2-0-digital-identity-service-framework",
+  "title": "eKey 2.0 Digital Identity Service Framework",
+  "jurisdiction": "BH",
+  "instrument_class": "framework",
+  "binding_status": "non_binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "digital_government.digital_identity_trust"
+  ],
+  "issuing_authority": "bh-iga",
+  "date_issued": null,
+  "summary": "Provides secure single sign-on for public and private eServices using AI-enabled eKYC, biometric verification, encrypted device-based data and user-controlled authentication for digital service access.",
+  "source_url": "https://services.bahrain.bh/wps/portal/en/BSP/GSX-UI-AllApps/GSX-UI-AppDetails?appID=24",
+  "source_confidence": "official",
+  "tags": [
+    "Digital government & identity"
+  ],
+  "year": 2025,
+  "theme_notes": {
+    "digital_government.digital_identity_trust": "National digital identity and single sign-on service framework."
+  },
+  "notes": "Related instruments: Related to Digital Government Strategy 2022 and Electronic Communications and Transactions Law"
+}

@@ -1,0 +1,24 @@
+{
+  "id": "bh-cbb-volume-5-cfp-1-2-managing-conflicts-of-interest",
+  "title": "CBB Volume 5 CFP-1.2 Managing Conflicts of Interest",
+  "jurisdiction": "BH",
+  "instrument_class": "rulebook_module",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "digital_finance.fintech_sandboxes"
+  ],
+  "issuing_authority": "bh-cbb",
+  "date_issued": null,
+  "summary": "Requires crowdfunding platform operators to manage conflicts of interest in platform operations.",
+  "source_url": "https://cbben.thomsonreuters.com/rulebook/cfp-crowdfunding-platform-operators-module",
+  "source_confidence": "official",
+  "tags": [
+    "Digital finance"
+  ],
+  "year": 2022,
+  "theme_notes": {
+    "digital_finance.fintech_sandboxes": "Crowdfunding conflict-of-interest rules."
+  },
+  "notes": "Related instruments: CBB Rulebook and CBB consultations"
+}

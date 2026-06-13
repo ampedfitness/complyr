@@ -1,0 +1,32 @@
+{
+  "id": "bh-prime-minister-decision-no-36-of-2018-regulating-technical-r",
+  "title": "Prime Minister Decision No. 36 of 2018 Regulating Technical Requirements for Public-Entity Electronic Records and Signatures",
+  "jurisdiction": "BH",
+  "instrument_class": "decision",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "data_privacy.data_governance_open_data",
+    "cybersecurity.cybercrime",
+    "digital_government.egovernment_services",
+    "digital_government.digital_identity_trust"
+  ],
+  "issuing_authority": "bh-pm",
+  "date_issued": null,
+  "summary": "Requires government agencies to observe technical requirements when sending, receiving, and updating electronic records and signatures in electronic transactions inside or outside Bahrain, making it a direct public-sector records governance instrument.",
+  "source_url": "https://www.bahrain.bh/wps/portal/en/BNP/HomeNationalPortal/ContentDetailsPage/",
+  "source_confidence": "official",
+  "tags": [
+    "Data & privacy",
+    "Cybersecurity",
+    "Digital government & identity"
+  ],
+  "year": 2018,
+  "theme_notes": {
+    "data_privacy.data_governance_open_data": "Sets technical requirements for public entities’ electronic records and signatures.",
+    "cybersecurity.cybercrime": "Sets technical requirements for public-sector electronic records and signatures.",
+    "digital_government.egovernment_services": "Technical rules for public-sector electronic records and signatures.",
+    "digital_government.digital_identity_trust": "Technical rules for public-sector electronic signatures."
+  },
+  "notes": "Related instruments: Legislative Decree No. 54 of 2018"
+}

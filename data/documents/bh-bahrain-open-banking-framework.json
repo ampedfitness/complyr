@@ -1,0 +1,29 @@
+{
+  "id": "bh-bahrain-open-banking-framework",
+  "title": "Bahrain Open Banking Framework",
+  "jurisdiction": "BH",
+  "instrument_class": "framework",
+  "binding_status": "non_binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "data_privacy.data_governance_open_data",
+    "digital_finance.open_banking",
+    "digital_finance.fintech_sandboxes"
+  ],
+  "issuing_authority": "bh-cbb",
+  "date_issued": null,
+  "summary": "Sets the technical and governance framework for open banking implementation, including operational guidelines, security standards, customer experience rules, open API specifications, and safeguards to protect customer data.",
+  "source_url": "https://www.cbb.gov.bh/media-center/cbb-launches-the-bahrain-open-banking-framework/",
+  "source_confidence": "official",
+  "tags": [
+    "Data & privacy",
+    "Digital finance"
+  ],
+  "year": 2020,
+  "theme_notes": {
+    "data_privacy.data_governance_open_data": "Provides operational, security, API, and governance standards for open banking data sharing.",
+    "digital_finance.open_banking": "National open banking framework for Bahrain.",
+    "digital_finance.fintech_sandboxes": "Framework supporting fintech innovation in open banking."
+  },
+  "notes": "Related instruments: Supports CBB Rulebook GR-6 Open Banking and Volume 5 Module OB"
+}

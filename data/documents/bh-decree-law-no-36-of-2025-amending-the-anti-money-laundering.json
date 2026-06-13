@@ -1,0 +1,27 @@
+{
+  "id": "bh-decree-law-no-36-of-2025-amending-the-anti-money-laundering",
+  "title": "Decree-Law No. 36 of 2025 Amending the Anti-Money Laundering and Counter-Terrorist Financing Law",
+  "jurisdiction": "BH",
+  "instrument_class": "decree",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "ai_emerging_tech.blockchain_web3",
+    "digital_finance.virtual_assets"
+  ],
+  "issuing_authority": "bh-king",
+  "date_issued": null,
+  "summary": "Amends Bahrain’s AML and CFT framework and is relevant to virtual asset service providers because parliamentary and secondary reporting indicate the amended covered-activity schedule includes VASPs, although the VASP-specific schedule text was not fully verified from the opened official text.",
+  "source_url": "https://www.lloc.gov.bh/Legislation/HTM/L3625",
+  "source_confidence": "official",
+  "tags": [
+    "AI & emerging technologies",
+    "Digital finance"
+  ],
+  "year": 2025,
+  "theme_notes": {
+    "ai_emerging_tech.blockchain_web3": "Updates Bahrain’s AML and counter-terrorist financing law.",
+    "digital_finance.virtual_assets": "Amends Bahrain AML and CFT framework relevant to virtual assets."
+  },
+  "notes": "Related instruments: Amends Decree-Law No. 4 of 2001 and interacts with CBB crypto-asset AML obligations"
+}

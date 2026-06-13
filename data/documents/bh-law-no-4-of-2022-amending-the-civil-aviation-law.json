@@ -1,0 +1,24 @@
+{
+  "id": "bh-law-no-4-of-2022-amending-the-civil-aviation-law",
+  "title": "Law No. 4 of 2022 Amending the Civil Aviation Law",
+  "jurisdiction": "BH",
+  "instrument_class": "law",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "ai_emerging_tech.autonomous_smart_systems"
+  ],
+  "issuing_authority": "bh-king",
+  "date_issued": null,
+  "summary": "Adds or updates offences and enforcement provisions for operating unmanned aircraft without Civil Aviation Affairs authorisation or licence, strengthening the legal control of drone operations.",
+  "source_url": "https://www.lloc.gov.bh/Legislation/HTM/K0422",
+  "source_confidence": "official",
+  "tags": [
+    "AI & emerging technologies"
+  ],
+  "year": 2022,
+  "theme_notes": {
+    "ai_emerging_tech.autonomous_smart_systems": "Amends civil aviation law provisions relevant to unmanned aircraft."
+  },
+  "notes": "Related instruments: Amends Law No. 14 of 2013"
+}

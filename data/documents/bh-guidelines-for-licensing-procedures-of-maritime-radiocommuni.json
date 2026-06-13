@@ -1,0 +1,24 @@
+{
+  "id": "bh-guidelines-for-licensing-procedures-of-maritime-radiocommuni",
+  "title": "Guidelines for Licensing Procedures of Maritime Radiocommunications Stations",
+  "jurisdiction": "BH",
+  "instrument_class": "guideline",
+  "binding_status": "non_binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "telecom_digital_infrastructure.spectrum"
+  ],
+  "issuing_authority": "bh-tra",
+  "date_issued": null,
+  "summary": "Sets procedural guidance for licensing maritime radiocommunications stations in Bahrain, supporting spectrum compliance for maritime wireless communications.",
+  "source_url": "https://www.tra.org.bh/en/category/position-papers-and-guidelines",
+  "source_confidence": "official",
+  "tags": [
+    "Telecommunications & digital infrastructure"
+  ],
+  "year": 2023,
+  "theme_notes": {
+    "telecom_digital_infrastructure.spectrum": "Licensing procedure guidance for maritime radiocommunications stations."
+  },
+  "notes": "Related instruments: Related to Telecommunications Law and National Frequency Plan 2024"
+}

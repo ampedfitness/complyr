@@ -1,0 +1,24 @@
+{
+  "id": "bh-cbb-rulebook-volume-1-om-5-2-payment-and-atm-cards-wallets-a",
+  "title": "CBB Rulebook Volume 1 OM-5.2 Payment and ATM Cards, Wallets and Point of Sale Infrastructure",
+  "jurisdiction": "BH",
+  "instrument_class": "rulebook_module",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "digital_finance.payments_emoney"
+  ],
+  "issuing_authority": "bh-cbb",
+  "date_issued": null,
+  "summary": "Regulates digital and card-based payment channels including contactless, cardless, QR code, e-wallet and biometric payment services subject to customer consent, registration and authentication requirements.",
+  "source_url": "https://cbben.thomsonreuters.com/entiresection/115945",
+  "source_confidence": "official",
+  "tags": [
+    "Digital finance"
+  ],
+  "year": 2019,
+  "theme_notes": {
+    "digital_finance.payments_emoney": "Banking requirements for payment cards, wallets and point-of-sale infrastructure."
+  },
+  "notes": "Related instruments: Related to CBB retail bank operational risk modules"
+}

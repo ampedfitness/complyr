@@ -1,0 +1,24 @@
+{
+  "id": "bh-open-government-data-policy-version-1-3",
+  "title": "Open Government Data Policy Version 1.3",
+  "jurisdiction": "BH",
+  "instrument_class": "policy",
+  "binding_status": "non_binding",
+  "lifecycle": "superseded",
+  "themes": [
+    "data_privacy.data_governance_open_data"
+  ],
+  "issuing_authority": "bh-iga",
+  "date_issued": null,
+  "summary": "Established prior requirements for managing, publishing, sharing, and reusing public-sector datasets before the 2025 open data policy update.",
+  "source_url": "https://www.sce.gov.bh/Media/Documents/Startegy/OpenDataPolicy.pdf",
+  "source_confidence": "official",
+  "tags": [
+    "Data & privacy"
+  ],
+  "year": 2023,
+  "theme_notes": {
+    "data_privacy.data_governance_open_data": "Earlier national open government data policy."
+  },
+  "notes": "Related instruments: Superseded by Open Data Policy Version 2.0"
+}

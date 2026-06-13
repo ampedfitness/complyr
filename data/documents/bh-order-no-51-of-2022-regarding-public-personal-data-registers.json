@@ -1,0 +1,24 @@
+{
+  "id": "bh-order-no-51-of-2022-regarding-public-personal-data-registers",
+  "title": "Order No. 51 of 2022 Regarding Public Personal Data Registers",
+  "jurisdiction": "BH",
+  "instrument_class": "decision",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "data_privacy.personal_data_protection"
+  ],
+  "issuing_authority": "bh-moj",
+  "date_issued": null,
+  "summary": "Regulates creation and maintenance of public personal data registers, including update duties and safeguards to preserve the security and integrity of personal data made publicly accessible.",
+  "source_url": "https://www.pdp.gov.bh/assets/pdf/executive-decisions/eng/trans-order-public-info-en.pdf",
+  "source_confidence": "official",
+  "tags": [
+    "Data & privacy"
+  ],
+  "year": 2022,
+  "theme_notes": {
+    "data_privacy.personal_data_protection": "Sets conditions for publicly accessible personal data registers."
+  },
+  "notes": "Related instruments: Law No. 30 of 2018"
+}

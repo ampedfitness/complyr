@@ -1,0 +1,27 @@
+{
+  "id": "bh-resolution-no-17-of-2020-promulgating-the-fifth-national-tel",
+  "title": "Resolution No. 17 of 2020 Promulgating the Fifth National Telecommunications Plan",
+  "jurisdiction": "BH",
+  "instrument_class": "resolution",
+  "binding_status": "binding",
+  "lifecycle": "superseded",
+  "themes": [
+    "ai_emerging_tech.iot_connected_devices",
+    "telecom_digital_infrastructure.licensing_markets"
+  ],
+  "issuing_authority": "bh-mtt",
+  "date_issued": null,
+  "summary": "Set the prior national roadmap for 5G-enabled IoT and machine-to-machine services, including spectrum release, innovation use cases, and possible M2M or IoT-specific MVNO licensing models before the Sixth National Telecommunications Plan.",
+  "source_url": "https://www.bahrain.bh/wps/wcm/connect/9df14a98-c060-434c-82c2-b8b47b976c61/Fifth%2BNational%2BTelecommunication%2BPlan.pdf?CVID=obesBDg&MOD=AJPERES",
+  "source_confidence": "official",
+  "tags": [
+    "AI & emerging technologies",
+    "Telecommunications & digital infrastructure"
+  ],
+  "year": 2020,
+  "theme_notes": {
+    "ai_emerging_tech.iot_connected_devices": "Previous national telecommunications plan supporting 5G, IoT and M2M development.",
+    "telecom_digital_infrastructure.licensing_markets": "Previous national telecommunications plan."
+  },
+  "notes": "Related instruments: Superseded by Sixth National Telecommunications Plan 2023 to 2026"
+}

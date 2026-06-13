@@ -1,0 +1,24 @@
+{
+  "id": "bh-guidance-paper-on-tra-treatment-of-confidential-and-non-conf",
+  "title": "Guidance Paper on TRA Treatment of Confidential and Non-Confidential Information",
+  "jurisdiction": "BH",
+  "instrument_class": "guideline",
+  "binding_status": "non_binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "data_privacy.data_governance_open_data"
+  ],
+  "issuing_authority": "bh-tra",
+  "date_issued": null,
+  "summary": "Sets how TRA treats information submitted by stakeholders as confidential or non-confidential in regulatory proceedings.",
+  "source_url": "https://www.tra.org.bh/en/category/position-papers-and-guidelines",
+  "source_confidence": "pending_verification",
+  "tags": [
+    "Data & privacy"
+  ],
+  "year": 2007,
+  "theme_notes": {
+    "data_privacy.data_governance_open_data": "TRA guidance on confidential and non-confidential information."
+  },
+  "notes": "Related instruments: Telecommunications Law and TRA legal instruments archive Sourced from an official index listing; confirm against the instrument text."
+}

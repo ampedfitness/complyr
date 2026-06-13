@@ -1,0 +1,24 @@
+{
+  "id": "bh-consultation-on-outsourcing-requirements",
+  "title": "Consultation on Outsourcing Requirements",
+  "jurisdiction": "BH",
+  "instrument_class": "consultation_paper",
+  "binding_status": "non_binding",
+  "lifecycle": "consultation",
+  "themes": [
+    "telecom_digital_infrastructure.cloud_data_centres"
+  ],
+  "issuing_authority": "bh-cbb",
+  "date_issued": null,
+  "summary": "Consults on outsourcing controls relevant to cloud, third-party service providers and cross-border data processing in financial services.",
+  "source_url": "https://www.cbb.gov.bh/consultations/",
+  "source_confidence": "pending_verification",
+  "tags": [
+    "Telecommunications & digital infrastructure"
+  ],
+  "year": 2022,
+  "theme_notes": {
+    "telecom_digital_infrastructure.cloud_data_centres": "Consultation on outsourcing requirements."
+  },
+  "notes": "Related instruments: CBB consultations archive and related rulebook modules Sourced from an official index listing; confirm against the instrument text."
+}

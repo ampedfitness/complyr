@@ -1,0 +1,29 @@
+{
+  "id": "bh-cbb-rulebook-volume-1-general-requirements-module-chapter-gr",
+  "title": "CBB Rulebook Volume 1 General Requirements Module Chapter GR-6 Open Banking",
+  "jurisdiction": "BH",
+  "instrument_class": "rulebook_module",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "data_privacy.personal_data_protection",
+    "data_privacy.data_governance_open_data",
+    "digital_finance.open_banking"
+  ],
+  "issuing_authority": "bh-cbb",
+  "date_issued": null,
+  "summary": "Requires retail banks to support account access for authorised open banking providers while ensuring customer consent and compliance with the Personal Data Protection Law.",
+  "source_url": "https://www.cbb.gov.bh/wp-content/uploads/2023/03/Vol-1_GR.pdf",
+  "source_confidence": "official",
+  "tags": [
+    "Data & privacy",
+    "Digital finance"
+  ],
+  "year": 2022,
+  "theme_notes": {
+    "data_privacy.personal_data_protection": "Regulates customer-consented data access under open banking.",
+    "data_privacy.data_governance_open_data": "Requires retail banks to share customer account data through open banking channels.",
+    "digital_finance.open_banking": "Open banking obligations for conventional retail banks."
+  },
+  "notes": "Related instruments: Law No. 30 of 2018"
+}

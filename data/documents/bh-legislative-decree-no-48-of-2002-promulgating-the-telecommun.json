@@ -1,0 +1,31 @@
+{
+  "id": "bh-legislative-decree-no-48-of-2002-promulgating-the-telecommun",
+  "title": "Legislative Decree No. 48 of 2002 Promulgating the Telecommunications Law",
+  "jurisdiction": "BH",
+  "instrument_class": "decree",
+  "binding_status": "binding",
+  "lifecycle": "amended",
+  "themes": [
+    "ai_emerging_tech.iot_connected_devices",
+    "telecom_digital_infrastructure.licensing_markets",
+    "telecom_digital_infrastructure.ott_digital_comms",
+    "telecom_digital_infrastructure.internet_governance_domains"
+  ],
+  "issuing_authority": "bh-king",
+  "date_issued": null,
+  "summary": "Provides the legal basis for licensing telecommunications networks and services, use of radio spectrum, radiocommunications equipment controls, TRA regulatory powers, and connected-device obligations where IoT services rely on public networks or spectrum.",
+  "source_url": "https://www.tra.org.bh/en/category/telecommunications-laws",
+  "source_confidence": "official",
+  "tags": [
+    "AI & emerging technologies",
+    "Telecommunications & digital infrastructure"
+  ],
+  "year": 2002,
+  "theme_notes": {
+    "ai_emerging_tech.iot_connected_devices": "Core telecom law governing networks, radiocommunications, spectrum and licensing.",
+    "telecom_digital_infrastructure.licensing_markets": "Core law governing Bahrain telecommunications markets and licensing.",
+    "telecom_digital_infrastructure.ott_digital_comms": "Core law governing telecommunications networks and services including internet-enabled communications.",
+    "telecom_digital_infrastructure.internet_governance_domains": "Telecommunications law supporting domain-name and numbering-resource governance."
+  },
+  "notes": "Related instruments: Implemented through TRA licensing, spectrum, type approval, numbering and regulatory instruments"
+}

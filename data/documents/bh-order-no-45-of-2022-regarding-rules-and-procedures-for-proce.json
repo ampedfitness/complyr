@@ -1,0 +1,24 @@
+{
+  "id": "bh-order-no-45-of-2022-regarding-rules-and-procedures-for-proce",
+  "title": "Order No. 45 of 2022 Regarding Rules and Procedures for Processing Sensitive Personal Data",
+  "jurisdiction": "BH",
+  "instrument_class": "decision",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "data_privacy.personal_data_protection"
+  ],
+  "issuing_authority": "bh-moj",
+  "date_issued": null,
+  "summary": "Sets the specific procedures and safeguards for sensitive personal data processing, including cases requiring prior PDPA authorisation and controller obligations for higher-risk data categories.",
+  "source_url": "https://www.pdp.gov.bh/en/assets/pdf/executive-decisions/eng/trans-order-sensitive-data-processing-procedures-en.pdf",
+  "source_confidence": "official",
+  "tags": [
+    "Data & privacy"
+  ],
+  "year": 2022,
+  "theme_notes": {
+    "data_privacy.personal_data_protection": "Regulates processing of sensitive personal data."
+  },
+  "notes": "Related instruments: Law No. 30 of 2018"
+}

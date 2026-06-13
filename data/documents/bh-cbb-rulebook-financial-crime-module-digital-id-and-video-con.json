@@ -1,0 +1,24 @@
+{
+  "id": "bh-cbb-rulebook-financial-crime-module-digital-id-and-video-con",
+  "title": "CBB Rulebook Financial Crime Module Digital ID and Video Conference Onboarding Safeguards",
+  "jurisdiction": "BH",
+  "instrument_class": "rulebook_module",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "data_privacy.personal_data_protection"
+  ],
+  "issuing_authority": "bh-cbb",
+  "date_issued": null,
+  "summary": "Adjacent financial-sector digital onboarding rules require licensees using video conferencing and digital identity processes to safeguard customer information and have regard to the PDPL.",
+  "source_url": "https://www.cbb.gov.bh/wp-content/uploads/2021/09/Vol_6_AML.pdf",
+  "source_confidence": "official",
+  "tags": [
+    "Data & privacy"
+  ],
+  "year": 2021,
+  "theme_notes": {
+    "data_privacy.personal_data_protection": "Sets safeguards for customer data collected during digital onboarding."
+  },
+  "notes": "Related instruments: Law No. 30 of 2018"
+}

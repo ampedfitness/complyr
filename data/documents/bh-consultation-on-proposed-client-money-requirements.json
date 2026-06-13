@@ -1,0 +1,24 @@
+{
+  "id": "bh-consultation-on-proposed-client-money-requirements",
+  "title": "Consultation on Proposed Client Money Requirements",
+  "jurisdiction": "BH",
+  "instrument_class": "consultation_paper",
+  "binding_status": "non_binding",
+  "lifecycle": "consultation",
+  "themes": [
+    "digital_finance.payments_emoney"
+  ],
+  "issuing_authority": "bh-cbb",
+  "date_issued": null,
+  "summary": "Consults on client money rules affecting crowdfunding and payment service regulation.",
+  "source_url": "https://www.cbb.gov.bh/consultations/",
+  "source_confidence": "pending_verification",
+  "tags": [
+    "Digital finance"
+  ],
+  "year": 2025,
+  "theme_notes": {
+    "digital_finance.payments_emoney": "Consultation on client money requirements."
+  },
+  "notes": "Related instruments: CBB consultations archive and related rulebook modules Sourced from an official index listing; confirm against the instrument text."
+}

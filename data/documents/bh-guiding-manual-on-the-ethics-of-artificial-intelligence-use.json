@@ -1,0 +1,28 @@
+{
+  "id": "bh-guiding-manual-on-the-ethics-of-artificial-intelligence-use",
+  "title": "Guiding Manual on the Ethics of Artificial Intelligence Use in GCC Member States",
+  "jurisdiction": "BH",
+  "instrument_class": "guideline",
+  "binding_status": "non_binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "ai_emerging_tech.ai_governance_ethics",
+    "ai_emerging_tech.generative_ai",
+    "ai_emerging_tech.autonomous_smart_systems"
+  ],
+  "issuing_authority": "bh-iga",
+  "date_issued": null,
+  "summary": "Sets values and principles for AI use including dignity, legal and Sharia compliance, sustainability, peaceful use, human oversight, rights impact assessment, safety, fairness, privacy, transparency, explainability and accountability for responsible AI development and deployment.",
+  "source_url": "https://www.bahrain.bh/wps/wcm/connect/f863157d-2753-4ef7-a4dd-21f8f7c01cdb/The%2BGuiding%2BManual%2Bon%2Bthe%2BEthics%2Bof%2BArtificial%2BIntelligenc%2Bfor%2BGCC%2BMember%2BStates.pdf?CVID=psWZnfZ&MOD=AJPERES",
+  "source_confidence": "official",
+  "tags": [
+    "AI & emerging technologies"
+  ],
+  "year": 2023,
+  "theme_notes": {
+    "ai_emerging_tech.ai_governance_ethics": "GCC ethical AI manual adopted by Bahrain.",
+    "ai_emerging_tech.generative_ai": "GCC ethical AI manual adopted by Bahrain’s AI policy.",
+    "ai_emerging_tech.autonomous_smart_systems": "GCC AI ethics manual adopted into Bahrain’s AI policy framework."
+  },
+  "notes": "Related instruments: Adopted by Bahrain through the General Policy for the Use of Artificial Intelligence"
+}

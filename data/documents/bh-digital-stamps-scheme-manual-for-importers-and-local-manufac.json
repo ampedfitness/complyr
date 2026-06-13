@@ -1,0 +1,24 @@
+{
+  "id": "bh-digital-stamps-scheme-manual-for-importers-and-local-manufac",
+  "title": "Digital Stamps Scheme Manual for Importers and Local Manufacturers",
+  "jurisdiction": "BH",
+  "instrument_class": "handbook",
+  "binding_status": "non_binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "digital_economy.einvoicing_digital_tax"
+  ],
+  "issuing_authority": "bh-nbr",
+  "date_issued": null,
+  "summary": "Provides digital-stamp compliance procedures for importers and local manufacturers, supporting electronic traceability, tracking and tax administration for excisable goods.",
+  "source_url": "https://www.gspubahrain.com/wp-content/uploads/2025/06/Digital-Stamps-Scheme-Manual-for-Importers-and-Local-Manufacturers.pdf",
+  "source_confidence": "secondary",
+  "tags": [
+    "Digital economy & platforms"
+  ],
+  "year": 2025,
+  "theme_notes": {
+    "digital_economy.einvoicing_digital_tax": "Manual for digital-stamp traceability in excise administration."
+  },
+  "notes": "Related instruments: Related to Excise Tax Law and Decision No. 31 of 2022"
+}

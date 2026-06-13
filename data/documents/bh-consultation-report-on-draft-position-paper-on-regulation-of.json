@@ -1,0 +1,24 @@
+{
+  "id": "bh-consultation-report-on-draft-position-paper-on-regulation-of",
+  "title": "Consultation Report on Draft Position Paper on Regulation of Fixed Point-to-Point Links",
+  "jurisdiction": "BH",
+  "instrument_class": "consultation_paper",
+  "binding_status": "non_binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "telecom_digital_infrastructure.spectrum"
+  ],
+  "issuing_authority": "bh-tra",
+  "date_issued": null,
+  "summary": "Summarises consultation outcomes leading to TRA position on fixed link regulation.",
+  "source_url": "https://www.tra.org.bh/en/category/position-papers-and-guidelines",
+  "source_confidence": "pending_verification",
+  "tags": [
+    "Telecommunications & digital infrastructure"
+  ],
+  "year": 2017,
+  "theme_notes": {
+    "telecom_digital_infrastructure.spectrum": "Consultation report for fixed link regulation."
+  },
+  "notes": "Related instruments: Telecommunications Law and TRA legal instruments archive Sourced from an official index listing; confirm against the instrument text."
+}

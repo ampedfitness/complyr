@@ -1,0 +1,24 @@
+{
+  "id": "bh-cbb-rulebook-volume-5-ancillary-service-providers-authorisat",
+  "title": "CBB Rulebook Volume 5 Ancillary Service Providers Authorisation Requirements for Payment Service Providers",
+  "jurisdiction": "BH",
+  "instrument_class": "rulebook_module",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "digital_finance.payments_emoney"
+  ],
+  "issuing_authority": "bh-cbb",
+  "date_issued": null,
+  "summary": "Requires payment service providers to obtain prior CBB approval for CDMs or kiosk terminals and maintain robust technological infrastructure and 24/7 electronic funds transfer system access.",
+  "source_url": "https://cbben.thomsonreuters.com/sites/default/files/net_file_store/Vol_5_Ancillary_AU_July_2022.pdf",
+  "source_confidence": "official",
+  "tags": [
+    "Digital finance"
+  ],
+  "year": 2022,
+  "theme_notes": {
+    "digital_finance.payments_emoney": "Authorisation requirements for payment service provider licensees."
+  },
+  "notes": "Related instruments: Related to CBB Payment Service Provider Rulebook Requirements"
+}

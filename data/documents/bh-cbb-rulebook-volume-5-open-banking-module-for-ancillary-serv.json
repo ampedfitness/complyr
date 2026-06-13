@@ -1,0 +1,24 @@
+{
+  "id": "bh-cbb-rulebook-volume-5-open-banking-module-for-ancillary-serv",
+  "title": "CBB Rulebook Volume 5 Open Banking Module for Ancillary Service Providers",
+  "jurisdiction": "BH",
+  "instrument_class": "rulebook_module",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "digital_finance.open_banking"
+  ],
+  "issuing_authority": "bh-cbb",
+  "date_issued": null,
+  "summary": "Requires open banking providers to obtain access to customer accounts only within the regulated account information service and payment initiation service framework and comply with conduct, consent and operational rules.",
+  "source_url": "https://www.cbb.gov.bh/wp-content/uploads/2023/03/Vol-5_Ancillary_OB.pdf",
+  "source_confidence": "official",
+  "tags": [
+    "Digital finance"
+  ],
+  "year": 2022,
+  "theme_notes": {
+    "digital_finance.open_banking": "Rulebook module for account information and payment initiation service providers."
+  },
+  "notes": "Related instruments: Related to Bahrain Open Banking Framework"
+}

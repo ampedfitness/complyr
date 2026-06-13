@@ -1,0 +1,29 @@
+{
+  "id": "bh-critical-telecommunications-infrastructure-risk-management-r",
+  "title": "Critical Telecommunications Infrastructure Risk Management Regulation",
+  "jurisdiction": "BH",
+  "instrument_class": "regulation",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "ai_emerging_tech.iot_connected_devices",
+    "cybersecurity.security_controls_frameworks",
+    "cybersecurity.critical_infrastructure"
+  ],
+  "issuing_authority": "bh-tra",
+  "date_issued": null,
+  "summary": "Applies to licensees operating critical telecommunications infrastructure, with official TRA references indicating ISO 27001 certification and annual documentation duties, and TRA’s IoT paper linking additional obligations to licensees whose networks deliver IoT services or use centralised systems storing or processing personal data.",
+  "source_url": "https://ir-tra-website-prod-01.s3-eu-west-1.amazonaws.com/Media/Documents/Position_Papers_%26_Guidelines/20220522131030021_pmhypy3s_v0h.pdf",
+  "source_confidence": "official",
+  "tags": [
+    "AI & emerging technologies",
+    "Cybersecurity"
+  ],
+  "year": 2017,
+  "theme_notes": {
+    "ai_emerging_tech.iot_connected_devices": "Requires risk management controls for critical telecommunications infrastructure.",
+    "cybersecurity.security_controls_frameworks": "Cyber risk regulation for critical telecommunications infrastructure.",
+    "cybersecurity.critical_infrastructure": "Telecom-sector regulation for critical telecommunications infrastructure risk."
+  },
+  "notes": "Related instruments: Telecommunications Law, Telecommunications Emergency Response Plan, Position Paper on the Internet of Things"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "bh-ai-procurement-in-a-box-challenges-and-opportunities-during",
+  "title": "AI Procurement in a Box: Challenges and Opportunities During Implementation",
+  "jurisdiction": "BH",
+  "instrument_class": "guideline",
+  "binding_status": "non_binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "ai_emerging_tech.generative_ai",
+    "ai_emerging_tech.autonomous_smart_systems"
+  ],
+  "issuing_authority": "bh-edb",
+  "date_issued": null,
+  "summary": "Applies to government procurement of AI solutions that may include generative AI tools and sets procurement considerations for data sharing with vendors, third-party data, data integrity, personally identifiable information, skills and leadership, ethics, accountability, liability, transparency, and AI procurement process readiness.",
+  "source_url": "https://www.bahrain.bh/wps/wcm/connect/50050309-efa0-4302-9a5f-6549a6c1fe38/Bahrain%2BAI%2BProcurement%2Bguidelines.pdf?CVID=o8QbKtN&MOD=AJPERES",
+  "source_confidence": "official",
+  "tags": [
+    "AI & emerging technologies"
+  ],
+  "year": 2020,
+  "theme_notes": {
+    "ai_emerging_tech.generative_ai": "Guidance for public-sector procurement of AI solutions.",
+    "ai_emerging_tech.autonomous_smart_systems": "Guidance for procuring AI-enabled systems in government."
+  },
+  "notes": "Related instruments: Related to the General Policy for the Use of Artificial Intelligence"
+}

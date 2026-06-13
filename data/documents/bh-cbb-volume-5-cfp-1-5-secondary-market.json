@@ -1,0 +1,24 @@
+{
+  "id": "bh-cbb-volume-5-cfp-1-5-secondary-market",
+  "title": "CBB Volume 5 CFP-1.5 Secondary Market",
+  "jurisdiction": "BH",
+  "instrument_class": "rulebook_module",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "digital_finance.fintech_sandboxes"
+  ],
+  "issuing_authority": "bh-cbb",
+  "date_issued": null,
+  "summary": "Sets conditions for any secondary market facilities offered by crowdfunding platforms.",
+  "source_url": "https://cbben.thomsonreuters.com/rulebook/cfp-crowdfunding-platform-operators-module",
+  "source_confidence": "official",
+  "tags": [
+    "Digital finance"
+  ],
+  "year": 2022,
+  "theme_notes": {
+    "digital_finance.fintech_sandboxes": "Crowdfunding secondary market rules."
+  },
+  "notes": "Related instruments: CBB Rulebook and CBB consultations"
+}

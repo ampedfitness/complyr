@@ -1,0 +1,24 @@
+{
+  "id": "bh-bahrain-domain-registry-rules-and-faqs",
+  "title": "Bahrain Domain Registry Rules and FAQs",
+  "jurisdiction": "BH",
+  "instrument_class": "guideline",
+  "binding_status": "non_binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "telecom_digital_infrastructure.internet_governance_domains"
+  ],
+  "issuing_authority": "bh-tra",
+  "date_issued": null,
+  "summary": "Explains registration, registrar selection, eligibility, domain lifecycle, renewal, registrar transfer, registrant transfer, contact accuracy and auth-code processes for .bh domain names.",
+  "source_url": "https://register.bh/faqs/",
+  "source_confidence": "official",
+  "tags": [
+    "Telecommunications & digital infrastructure"
+  ],
+  "year": 2026,
+  "theme_notes": {
+    "telecom_digital_infrastructure.internet_governance_domains": "Operational rules for registering and managing .bh domain names."
+  },
+  "notes": "Related instruments: Related to Resolution No. 3 of 2008 and Resolution No. 6 of 2021"
+}

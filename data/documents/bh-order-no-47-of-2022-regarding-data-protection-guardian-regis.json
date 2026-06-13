@@ -1,0 +1,24 @@
+{
+  "id": "bh-order-no-47-of-2022-regarding-data-protection-guardian-regis",
+  "title": "Order No. 47 of 2022 Regarding Data Protection Guardian Registration and Renewal Fees",
+  "jurisdiction": "BH",
+  "instrument_class": "decision",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "data_privacy.personal_data_protection"
+  ],
+  "issuing_authority": "bh-moj",
+  "date_issued": null,
+  "summary": "Establishes the fee framework for enrolment and renewal in the data protection guardian register and specifies circumstances for exemption or refund.",
+  "source_url": "https://www.pdp.gov.bh/assets/pdf/executive-decisions/eng/auditor-fees-en.pdf",
+  "source_confidence": "official",
+  "tags": [
+    "Data & privacy"
+  ],
+  "year": 2022,
+  "theme_notes": {
+    "data_privacy.personal_data_protection": "Sets registration and renewal fees for data protection guardians."
+  },
+  "notes": "Related instruments: Decision No. 46 of 2022"
+}

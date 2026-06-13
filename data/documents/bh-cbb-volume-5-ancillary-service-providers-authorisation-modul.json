@@ -1,0 +1,23 @@
+{
+  "id": "bh-cbb-volume-5-ancillary-service-providers-authorisation-modul",
+  "title": "CBB Volume 5 Ancillary Service Providers Authorisation Module AU-1.2 Definition of Regulated Ancillary Services",
+  "jurisdiction": "BH",
+  "instrument_class": "rulebook_module",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "digital_finance.payments_emoney"
+  ],
+  "issuing_authority": "bh-cbb",
+  "date_issued": null,
+  "summary": "Establishes the regulated perimeter for digital financial ancillary services under CBB Volume 5.",
+  "source_url": "https://cbben.thomsonreuters.com/rulebook/au-ancillary-service-providers-authorisation-module",
+  "source_confidence": "official",
+  "tags": [
+    "Digital finance"
+  ],
+  "theme_notes": {
+    "digital_finance.payments_emoney": "Defines regulated ancillary services including payment services, AISP, PISP, card processing and crowdfunding."
+  },
+  "notes": "Related instruments: CBB Rulebook and CBB consultations"
+}

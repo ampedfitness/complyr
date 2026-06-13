@@ -1,0 +1,24 @@
+{
+  "id": "bh-bahrain-domain-registry-terms-and-conditions",
+  "title": "Bahrain Domain Registry Terms and Conditions",
+  "jurisdiction": "BH",
+  "instrument_class": "policy",
+  "binding_status": "non_binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "telecom_digital_infrastructure.internet_governance_domains"
+  ],
+  "issuing_authority": "bh-tra",
+  "date_issued": null,
+  "summary": "Sets user-account, prohibited-use, security, intellectual property, reliance, jurisdiction and privacy terms for the Bahrain Domain Registry website and its services.",
+  "source_url": "https://register.bh/terms-and-conditions/",
+  "source_confidence": "official",
+  "tags": [
+    "Telecommunications & digital infrastructure"
+  ],
+  "year": 2026,
+  "theme_notes": {
+    "telecom_digital_infrastructure.internet_governance_domains": "Terms for use of the Bahrain Domain Registry website and services."
+  },
+  "notes": "Related instruments: Related to .bh domain registry rules and privacy policy"
+}

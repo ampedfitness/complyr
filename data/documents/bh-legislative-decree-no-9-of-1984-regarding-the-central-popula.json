@@ -1,0 +1,27 @@
+{
+  "id": "bh-legislative-decree-no-9-of-1984-regarding-the-central-popula",
+  "title": "Legislative Decree No. 9 of 1984 Regarding the Central Population Registry",
+  "jurisdiction": "BH",
+  "instrument_class": "decree",
+  "binding_status": "binding",
+  "lifecycle": "amended",
+  "themes": [
+    "data_privacy.data_governance_open_data",
+    "digital_government.digital_identity_trust"
+  ],
+  "issuing_authority": "bh-king",
+  "date_issued": null,
+  "summary": "Creates the legal basis for a central population registry and its specialisations, making it foundational for population data governance and national identity data management.",
+  "source_url": "https://bahrain.bh/wps/portal/en/BNP/HomeNationalPortal/ContentDetailsPage/",
+  "source_confidence": "official",
+  "tags": [
+    "Data & privacy",
+    "Digital government & identity"
+  ],
+  "year": 1984,
+  "theme_notes": {
+    "data_privacy.data_governance_open_data": "Establishes Bahrain’s Central Population Registry.",
+    "digital_government.digital_identity_trust": "Legal basis for Bahrain’s Central Population Registry."
+  },
+  "notes": "Related instruments: Amended by Law No. 45 of 2006"
+}

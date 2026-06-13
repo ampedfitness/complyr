@@ -1,0 +1,26 @@
+{
+  "id": "bh-cbb-rulebook-volume-2-operational-risk-management-module-om",
+  "title": "CBB Rulebook Volume 2 Operational Risk Management Module OM-5.5 Cyber Security Risk Management",
+  "jurisdiction": "BH",
+  "instrument_class": "rulebook_module",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "cybersecurity.security_controls_frameworks",
+    "cybersecurity.incident_reporting"
+  ],
+  "issuing_authority": "bh-cbb",
+  "date_issued": null,
+  "summary": "Applies the banking cybersecurity framework to Islamic bank licensees, including governance, senior management responsibility, data classification, cyber strategy and policy, controls, incident detection, recovery, training and regulatory reporting.",
+  "source_url": "https://cbben.thomsonreuters.com/rulebook/om-55-cyber-security-risk-management-0",
+  "source_confidence": "official",
+  "tags": [
+    "Cybersecurity"
+  ],
+  "year": 2021,
+  "theme_notes": {
+    "cybersecurity.security_controls_frameworks": "Cybersecurity risk management rules for Islamic bank licensees.",
+    "cybersecurity.incident_reporting": "Cyber incident reporting rules for Islamic bank licensees."
+  },
+  "notes": "Related instruments: Related to CBB Appendix A Cyber Security Control Guidelines and CBB Cyber Security Requirements Letter 2025"
+}

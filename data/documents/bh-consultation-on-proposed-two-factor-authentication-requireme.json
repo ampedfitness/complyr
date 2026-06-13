@@ -1,0 +1,24 @@
+{
+  "id": "bh-consultation-on-proposed-two-factor-authentication-requireme",
+  "title": "Consultation on Proposed Two-Factor Authentication Requirements for Volume 5 Specialised Licensees",
+  "jurisdiction": "BH",
+  "instrument_class": "consultation_paper",
+  "binding_status": "non_binding",
+  "lifecycle": "consultation",
+  "themes": [
+    "cybersecurity.security_controls_frameworks"
+  ],
+  "issuing_authority": "bh-cbb",
+  "date_issued": null,
+  "summary": "Consults on 2FA requirements affecting PSPs, AISPs, PISPs, crowdfunding platforms and other specialised licensees.",
+  "source_url": "https://www.cbb.gov.bh/consultations/",
+  "source_confidence": "pending_verification",
+  "tags": [
+    "Cybersecurity"
+  ],
+  "year": 2023,
+  "theme_notes": {
+    "cybersecurity.security_controls_frameworks": "Consultation on two-factor authentication for specialised licensees."
+  },
+  "notes": "Related instruments: CBB consultations archive and related rulebook modules Sourced from an official index listing; confirm against the instrument text."
+}

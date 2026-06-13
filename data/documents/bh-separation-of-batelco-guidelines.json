@@ -1,0 +1,24 @@
+{
+  "id": "bh-separation-of-batelco-guidelines",
+  "title": "Separation of Batelco Guidelines",
+  "jurisdiction": "BH",
+  "instrument_class": "guideline",
+  "binding_status": "non_binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "telecom_digital_infrastructure.licensing_markets"
+  ],
+  "issuing_authority": "bh-tra",
+  "date_issued": null,
+  "summary": "Guides implementation and monitoring of Batelco separation and wholesale broadband infrastructure obligations.",
+  "source_url": "https://www.tra.org.bh/en/category/position-papers-and-guidelines",
+  "source_confidence": "pending_verification",
+  "tags": [
+    "Telecommunications & digital infrastructure"
+  ],
+  "year": 2018,
+  "theme_notes": {
+    "telecom_digital_infrastructure.licensing_markets": "Guidelines for Batelco structural separation."
+  },
+  "notes": "Related instruments: Telecommunications Law and TRA legal instruments archive Sourced from an official index listing; confirm against the instrument text."
+}

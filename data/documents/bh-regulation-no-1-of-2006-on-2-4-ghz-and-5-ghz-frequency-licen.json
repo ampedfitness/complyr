@@ -1,0 +1,27 @@
+{
+  "id": "bh-regulation-no-1-of-2006-on-2-4-ghz-and-5-ghz-frequency-licen",
+  "title": "Regulation No. 1 of 2006 on 2.4 GHz and 5 GHz Frequency Licensing",
+  "jurisdiction": "BH",
+  "instrument_class": "regulation",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "ai_emerging_tech.iot_connected_devices",
+    "telecom_digital_infrastructure.spectrum"
+  ],
+  "issuing_authority": "bh-tra",
+  "date_issued": null,
+  "summary": "Requires persons using 2.4 GHz or 5 GHz spectrum in Bahrain to obtain a frequency licence, with additional telecommunications licensing where the system is used to provide a public telecommunications network or service, making it relevant to Wi-Fi, sensor, and connected-device networks.",
+  "source_url": "https://www.tra.org.bh/en/lightlicense/Applicants/Create",
+  "source_confidence": "official",
+  "tags": [
+    "AI & emerging technologies",
+    "Telecommunications & digital infrastructure"
+  ],
+  "year": 2006,
+  "theme_notes": {
+    "ai_emerging_tech.iot_connected_devices": "Regulates licensed use of 2.4 GHz and 5 GHz spectrum.",
+    "telecom_digital_infrastructure.spectrum": "Regulates use of 2.4 GHz and 5 GHz spectrum."
+  },
+  "notes": "Related instruments: Telecommunications Law and National Frequency Plan 2024"
+}

@@ -1,0 +1,24 @@
+{
+  "id": "bh-order-no-50-of-2022-regarding-confidentiality-of-data-relati",
+  "title": "Order No. 50 of 2022 Regarding Confidentiality of Data Relating to Criminal Proceedings and Judgments",
+  "jurisdiction": "BH",
+  "instrument_class": "decision",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "data_privacy.personal_data_protection"
+  ],
+  "issuing_authority": "bh-moj",
+  "date_issued": null,
+  "summary": "Sets safeguards restricting disclosure, publication, transmission, broadcasting, trading, or provision of data relating to criminal cases, proceedings, and judgments, including requirements for protective technical systems.",
+  "source_url": "https://www.pdp.gov.bh/assets/pdf/executive-decisions/eng/trans-order-criminal-cases-en.pdf",
+  "source_confidence": "official",
+  "tags": [
+    "Data & privacy"
+  ],
+  "year": 2022,
+  "theme_notes": {
+    "data_privacy.personal_data_protection": "Protects confidentiality of criminal proceedings data."
+  },
+  "notes": "Related instruments: Law No. 30 of 2018"
+}

@@ -1,0 +1,24 @@
+{
+  "id": "bh-telemedicine-dispensing-procedure-2023-update",
+  "title": "Telemedicine Dispensing Procedure 2023 Update",
+  "jurisdiction": "BH",
+  "instrument_class": "guideline",
+  "binding_status": "non_binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "digital_health.telehealth_digital_services"
+  ],
+  "issuing_authority": "bh-nhra",
+  "date_issued": null,
+  "summary": "Secondary sources report an updated NHRA telemedicine dispensing procedure encouraging licensed medical practitioners in public and private pharmacies to incorporate telemedicine in regular practice, but the official updated PDF was not opened.",
+  "source_url": "https://zubipartners.com/2024/01/11/regulating-telemedicine-in-bahrain/",
+  "source_confidence": "secondary",
+  "tags": [
+    "Digital health"
+  ],
+  "year": 2023,
+  "theme_notes": {
+    "digital_health.telehealth_digital_services": "Updated NHRA guidance for telemedicine dispensing."
+  },
+  "notes": "Related instruments: Updates Telemedicine Dispensing Procedure Version 1.0"
+}

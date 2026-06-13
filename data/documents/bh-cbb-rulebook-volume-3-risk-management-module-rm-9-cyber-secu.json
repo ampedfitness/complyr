@@ -1,0 +1,26 @@
+{
+  "id": "bh-cbb-rulebook-volume-3-risk-management-module-rm-9-cyber-secu",
+  "title": "CBB Rulebook Volume 3 Risk Management Module RM-9 Cyber Security Risk Measures",
+  "jurisdiction": "BH",
+  "instrument_class": "rulebook_module",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "cybersecurity.security_controls_frameworks",
+    "cybersecurity.incident_reporting"
+  ],
+  "issuing_authority": "bh-cbb",
+  "date_issued": null,
+  "summary": "Requires insurance licensees to establish cyberattack risk ownership, board and senior management accountability, risk frameworks, policies, controls, reporting, training, incident handling and review of cybersecurity arrangements.",
+  "source_url": "https://www.cbb.gov.bh/wp-content/uploads/2019/04/Vol-3_RM-Chapter-on-Cyber-Security.pdf",
+  "source_confidence": "official",
+  "tags": [
+    "Cybersecurity"
+  ],
+  "year": 2019,
+  "theme_notes": {
+    "cybersecurity.security_controls_frameworks": "Cybersecurity risk measures for insurance licensees.",
+    "cybersecurity.incident_reporting": "Cyber incident management and reporting rules for insurance licensees."
+  },
+  "notes": "Related instruments: Related to CBB Appendix A Cyber Security Control Guidelines"
+}

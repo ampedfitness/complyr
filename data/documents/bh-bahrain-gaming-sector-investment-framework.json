@@ -1,0 +1,24 @@
+{
+  "id": "bh-bahrain-gaming-sector-investment-framework",
+  "title": "Bahrain Gaming Sector Investment Framework",
+  "jurisdiction": "BH",
+  "instrument_class": "policy",
+  "binding_status": "non_binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "online_content.gaming_esports"
+  ],
+  "issuing_authority": "bh-edb",
+  "date_issued": null,
+  "summary": "Official investment promotion material identifies Bahrain’s flexible regulatory system and data-protection and data-jurisdiction laws as supporting the gaming sector, but it is not a dedicated gaming regulation.",
+  "source_url": "https://www.bahrainedb.com/gaming",
+  "source_confidence": "official",
+  "tags": [
+    "Online content & media"
+  ],
+  "year": 2025,
+  "theme_notes": {
+    "online_content.gaming_esports": "Economic development policy material for Bahrain gaming sector."
+  },
+  "notes": "Instrument type recorded as uncertain in the source (policy?). Related instruments: Related to PDPL and cloud/data jurisdiction laws"
+}

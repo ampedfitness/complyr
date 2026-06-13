@@ -1,0 +1,24 @@
+{
+  "id": "bh-position-paper-on-ip-based-voice-and-messaging-services",
+  "title": "Position Paper on IP-Based Voice and Messaging Services",
+  "jurisdiction": "BH",
+  "instrument_class": "white_paper",
+  "binding_status": "non_binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "telecom_digital_infrastructure.ott_digital_comms"
+  ],
+  "issuing_authority": "bh-tra",
+  "date_issued": null,
+  "summary": "Sets TRA policy treatment for IP-based voice and messaging services, clarifying how OTT-style communication services interact with Bahrain telecommunications licensing and regulatory obligations.",
+  "source_url": "https://www.tra.org.bh/en/category/position-papers-and-guidelines",
+  "source_confidence": "official",
+  "tags": [
+    "Telecommunications & digital infrastructure"
+  ],
+  "year": 2019,
+  "theme_notes": {
+    "telecom_digital_infrastructure.ott_digital_comms": "TRA position on internet-based voice and messaging services."
+  },
+  "notes": "Related instruments: Telecommunications Law and TRA licensing framework"
+}

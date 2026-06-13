@@ -1,0 +1,27 @@
+{
+  "id": "bh-nhra-circular-no-33-of-2020-on-online-cpd-activity-regulatio",
+  "title": "NHRA Circular No. 33 of 2020 on Online CPD Activity Regulations",
+  "jurisdiction": "BH",
+  "instrument_class": "circular",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "data_privacy.personal_data_protection",
+    "digital_health.health_data"
+  ],
+  "issuing_authority": "bh-nhra",
+  "date_issued": null,
+  "summary": "Applies PDPL-linked confidentiality and personal data protection duties to online continuing professional development platforms and providers using digital meeting tools.",
+  "source_url": "https://www.nhra.bh/MediaHandler/ImageHandler/documents/Announcements/Announcement2020_Circular%20No.%20%2833%29%202020_To%20All%20Online%20CPD%20Activity%20Providers_Online%20CPD%20Activity%20Regulations_20200728.pdf",
+  "source_confidence": "official",
+  "tags": [
+    "Data & privacy",
+    "Digital health"
+  ],
+  "year": 2020,
+  "theme_notes": {
+    "data_privacy.personal_data_protection": "Requires online CPD providers to protect participant data.",
+    "digital_health.health_data": "Online CPD provider rules including data protection obligations."
+  },
+  "notes": "Related instruments: Law No. 30 of 2018"
+}

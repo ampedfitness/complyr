@@ -1,0 +1,24 @@
+{
+  "id": "bh-consultation-report-on-the-position-paper-on-connectivity-to",
+  "title": "Consultation Report on the Position Paper on Connectivity to Cable Landing Stations",
+  "jurisdiction": "BH",
+  "instrument_class": "consultation_paper",
+  "binding_status": "non_binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "telecom_digital_infrastructure.cloud_data_centres"
+  ],
+  "issuing_authority": "bh-tra",
+  "date_issued": null,
+  "summary": "Records stakeholder feedback and TRA position on cable landing station connectivity, relevant to international digital infrastructure.",
+  "source_url": "https://www.tra.org.bh/en/category/position-papers-and-guidelines",
+  "source_confidence": "pending_verification",
+  "tags": [
+    "Telecommunications & digital infrastructure"
+  ],
+  "year": 2025,
+  "theme_notes": {
+    "telecom_digital_infrastructure.cloud_data_centres": "Consultation report preceding TRA cable landing station position paper."
+  },
+  "notes": "Related instruments: Telecommunications Law and TRA legal instruments archive Sourced from an official index listing; confirm against the instrument text."
+}

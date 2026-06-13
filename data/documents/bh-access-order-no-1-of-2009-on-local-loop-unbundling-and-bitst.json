@@ -1,0 +1,24 @@
+{
+  "id": "bh-access-order-no-1-of-2009-on-local-loop-unbundling-and-bitst",
+  "title": "Access Order No. 1 of 2009 on Local Loop Unbundling and Bitstream DSL",
+  "jurisdiction": "BH",
+  "instrument_class": "decision",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "telecom_digital_infrastructure.licensing_markets"
+  ],
+  "issuing_authority": "bh-tra",
+  "date_issued": null,
+  "summary": "Sets access obligations and charges for local loop unbundling, bitstream and wholesale DSL services.",
+  "source_url": "https://www.tra.org.bh/en/category/orders",
+  "source_confidence": "pending_verification",
+  "tags": [
+    "Telecommunications & digital infrastructure"
+  ],
+  "year": 2009,
+  "theme_notes": {
+    "telecom_digital_infrastructure.licensing_markets": "Access order on LLU, bitstream and wholesale DSL services."
+  },
+  "notes": "Related instruments: Telecommunications Law and TRA orders archive Sourced from an official index listing; confirm against the instrument text."
+}

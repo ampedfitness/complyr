@@ -1,0 +1,24 @@
+{
+  "id": "bh-law-no-14-of-2013-issuing-the-civil-aviation-law",
+  "title": "Law No. 14 of 2013 Issuing the Civil Aviation Law",
+  "jurisdiction": "BH",
+  "instrument_class": "law",
+  "binding_status": "binding",
+  "lifecycle": "amended",
+  "themes": [
+    "ai_emerging_tech.autonomous_smart_systems"
+  ],
+  "issuing_authority": "bh-king",
+  "date_issued": null,
+  "summary": "Requires unmanned aircraft to operate in Bahrain only with authorisation from Civil Aviation Affairs and provides the legal basis for regulating drone operations and related approvals.",
+  "source_url": "https://www.legalaffairs.gov.bh/Legislation/HTM/K1413",
+  "source_confidence": "official",
+  "tags": [
+    "AI & emerging technologies"
+  ],
+  "year": 2013,
+  "theme_notes": {
+    "ai_emerging_tech.autonomous_smart_systems": "Bahrain’s civil aviation law includes authorisation requirements for unmanned aircraft."
+  },
+  "notes": "Related instruments: Amended by Law No. 4 of 2022 and supported by Civil Aviation Affairs drone permit framework"
+}

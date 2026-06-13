@@ -142,5 +142,149 @@
     "type": "ministry",
     "mandate": "Ministry responsible for transport, communications, and information technology policy in Oman, including implementation of the personal data protection law.",
     "website": "https://www.mtcit.gov.om"
+  },
+  {
+    "id": "bh-caa",
+    "name": "Civil Aviation Affairs",
+    "name_ar": null,
+    "jurisdiction": "BH",
+    "type": "sectoral_regulator",
+    "mandate": "Regulates civil aviation, including drones and unmanned systems.",
+    "website": "https://www.caa.gov.bh"
+  },
+  {
+    "id": "bh-edb",
+    "name": "Bahrain Economic Development Board",
+    "name_ar": null,
+    "jurisdiction": "BH",
+    "type": "government_agency",
+    "mandate": "Promotes investment and economic development, including digital and emerging technology initiatives.",
+    "website": "https://www.bahrainedb.com"
+  },
+  {
+    "id": "bh-gov",
+    "name": "Government of Bahrain",
+    "name_ar": null,
+    "jurisdiction": "BH",
+    "type": "government",
+    "mandate": "General government of the Kingdom of Bahrain; used where the specific issuing body is unconfirmed.",
+    "website": "https://www.bahrain.bh"
+  },
+  {
+    "id": "bh-iga",
+    "name": "Information and eGovernment Authority",
+    "name_ar": null,
+    "jurisdiction": "BH",
+    "type": "government_agency",
+    "mandate": "Runs national e-government services, digital identity, open data, and information policy.",
+    "website": "https://www.iga.gov.bh"
+  },
+  {
+    "id": "bh-mofne",
+    "name": "Ministry of Finance and National Economy",
+    "name_ar": null,
+    "jurisdiction": "BH",
+    "type": "ministry",
+    "mandate": "Oversees public finance and national economic policy.",
+    "website": "https://www.mof.gov.bh"
+  },
+  {
+    "id": "bh-moh",
+    "name": "Ministry of Health",
+    "name_ar": null,
+    "jurisdiction": "BH",
+    "type": "ministry",
+    "mandate": "Oversees public health policy and health services.",
+    "website": "https://www.moh.gov.bh"
+  },
+  {
+    "id": "bh-moic",
+    "name": "Ministry of Industry and Commerce",
+    "name_ar": null,
+    "jurisdiction": "BH",
+    "type": "ministry",
+    "mandate": "Oversees commerce, e-commerce, and consumer protection.",
+    "website": "https://www.moic.gov.bh"
+  },
+  {
+    "id": "bh-moj",
+    "name": "Ministry of Justice, Islamic Affairs and Waqf",
+    "name_ar": null,
+    "jurisdiction": "BH",
+    "type": "ministry",
+    "mandate": "Administers justice and, for the data protection law, the supervisory authority function.",
+    "website": "https://www.moj.gov.bh"
+  },
+  {
+    "id": "bh-mtt",
+    "name": "Ministry of Transportation and Telecommunications",
+    "name_ar": null,
+    "jurisdiction": "BH",
+    "type": "ministry",
+    "mandate": "Oversees transportation and telecommunications policy and ministerial decisions.",
+    "website": "https://www.mtt.gov.bh"
+  },
+  {
+    "id": "bh-nbr",
+    "name": "National Bureau for Revenue",
+    "name_ar": null,
+    "jurisdiction": "BH",
+    "type": "government_agency",
+    "mandate": "Administers VAT and excise, including e-invoicing and digital tax administration.",
+    "website": "https://www.nbr.gov.bh"
+  },
+  {
+    "id": "bh-ncsc",
+    "name": "National Cyber Security Center",
+    "name_ar": null,
+    "jurisdiction": "BH",
+    "type": "sectoral_regulator",
+    "mandate": "Leads national cybersecurity strategy, controls, and incident response.",
+    "website": "https://www.ncsc.gov.bh"
+  },
+  {
+    "id": "bh-nhra",
+    "name": "National Health Regulatory Authority",
+    "name_ar": null,
+    "jurisdiction": "BH",
+    "type": "sectoral_regulator",
+    "mandate": "Regulates healthcare providers and services, including digital and tele-health.",
+    "website": "https://www.nhra.bh"
+  },
+  {
+    "id": "bh-pm",
+    "name": "Prime Minister",
+    "name_ar": null,
+    "jurisdiction": "BH",
+    "type": "head_of_government",
+    "mandate": "Issues edicts and decisions of the Council of Ministers.",
+    "website": null
+  },
+  {
+    "id": "bh-scict",
+    "name": "Supreme Council for Information and Communication Technology",
+    "name_ar": null,
+    "jurisdiction": "BH",
+    "type": "council",
+    "mandate": "Sets national information and communication technology policy direction.",
+    "website": null
+  },
+  {
+    "id": "bh-shura",
+    "name": "Shura Council",
+    "name_ar": null,
+    "jurisdiction": "BH",
+    "type": "legislature",
+    "mandate": "Upper chamber of the National Assembly; participates in enacting legislation.",
+    "website": "https://www.shura.bh"
+  },
+  {
+    "id": "bh-tra",
+    "name": "Telecommunications Regulatory Authority",
+    "name_ar": null,
+    "jurisdiction": "BH",
+    "type": "sectoral_regulator",
+    "mandate": "Regulates the telecommunications sector, spectrum, and related digital infrastructure in Bahrain.",
+    "website": "https://www.tra.org.bh"
   }
 ]

@@ -1,0 +1,27 @@
+{
+  "id": "bh-law-no-16-of-2014-regarding-the-protection-of-state-informat",
+  "title": "Law No. 16 of 2014 Regarding the Protection of State Information and Documents",
+  "jurisdiction": "BH",
+  "instrument_class": "law",
+  "binding_status": "binding",
+  "lifecycle": "amended",
+  "themes": [
+    "data_privacy.data_governance_open_data",
+    "cybersecurity.cybercrime"
+  ],
+  "issuing_authority": "bh-king",
+  "date_issued": null,
+  "summary": "Directly qualifies Bahrain’s open data regime by excluding protected state information and documents from disclosure or open publication and extending protection to participating public and certain private entities.",
+  "source_url": "https://www.legalaffairs.gov.bh/Legislation/HTM/K1614",
+  "source_confidence": "official",
+  "tags": [
+    "Data & privacy",
+    "Cybersecurity"
+  ],
+  "year": 2014,
+  "theme_notes": {
+    "data_privacy.data_governance_open_data": "Protects state information and documents from unauthorised disclosure.",
+    "cybersecurity.cybercrime": "Protects state information and documents from unauthorised disclosure."
+  },
+  "notes": "Related instruments: Amended by Legislative Decree No. 14 of 2023"
+}

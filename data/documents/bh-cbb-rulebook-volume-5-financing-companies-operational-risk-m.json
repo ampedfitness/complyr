@@ -1,0 +1,24 @@
+{
+  "id": "bh-cbb-rulebook-volume-5-financing-companies-operational-risk-m",
+  "title": "CBB Rulebook Volume 5 Financing Companies Operational Risk Management Module OM-4.9 Cyber Security Risk Management",
+  "jurisdiction": "BH",
+  "instrument_class": "rulebook_module",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "cybersecurity.security_controls_frameworks"
+  ],
+  "issuing_authority": "bh-cbb",
+  "date_issued": null,
+  "summary": "Applies cybersecurity risk management obligations to financing companies within operational risk and business continuity controls, including governance and cybersecurity framework requirements.",
+  "source_url": "https://cbben.thomsonreuters.com/rulebook/om-49-cyber-security-risk-management",
+  "source_confidence": "official",
+  "tags": [
+    "Cybersecurity"
+  ],
+  "year": 2021,
+  "theme_notes": {
+    "cybersecurity.security_controls_frameworks": "Cybersecurity risk management rules for financing company licensees."
+  },
+  "notes": "Related instruments: Related to CBB Appendix A Cyber Security Control Guidelines"
+}

@@ -1,0 +1,24 @@
+{
+  "id": "bh-cbb-rulebook-volume-5-crowdfunding-platform-operators-module",
+  "title": "CBB Rulebook Volume 5 Crowdfunding Platform Operators Module",
+  "jurisdiction": "BH",
+  "instrument_class": "rulebook_module",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "digital_economy.online_platforms"
+  ],
+  "issuing_authority": "bh-cbb",
+  "date_issued": null,
+  "summary": "Requires crowdfunding platform operators to be authorised by the CBB and comply with platform governance, disclosure, risk, client money, AML, technology and conduct obligations for digitally delivered finance platforms.",
+  "source_url": "https://cbben.thomsonreuters.com/entiresection/506821",
+  "source_confidence": "official",
+  "tags": [
+    "Digital economy & platforms"
+  ],
+  "year": 2017,
+  "theme_notes": {
+    "digital_economy.online_platforms": "Regulates loan-based and equity-based crowdfunding platforms."
+  },
+  "notes": "Related instruments: Related to CBB Regulatory Sandbox Framework and Digital Finance rules"
+}

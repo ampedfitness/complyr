@@ -1,0 +1,27 @@
+{
+  "id": "bh-cra-15-digital-tokens-under-the-crypto-asset-module",
+  "title": "CRA-15 Digital Tokens under the Crypto-Asset Module",
+  "jurisdiction": "BH",
+  "instrument_class": "rulebook_module",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "ai_emerging_tech.blockchain_web3",
+    "digital_finance.virtual_assets"
+  ],
+  "issuing_authority": "bh-cbb",
+  "date_issued": null,
+  "summary": "Expands the CBB crypto-asset framework to cover digital-token offerings that exhibit security characteristics, including initial assessment, CBB refusal or restriction powers, offering approvals, whitepaper registration, issuer obligations, digital token advisor duties, custody, investor money safeguards, trading and settlement.",
+  "source_url": "https://cbben.thomsonreuters.com/rulebook/cra-15-digital-tokens",
+  "source_confidence": "official",
+  "tags": [
+    "AI & emerging technologies",
+    "Digital finance"
+  ],
+  "year": 2023,
+  "theme_notes": {
+    "ai_emerging_tech.blockchain_web3": "Adds regulated digital-token offerings to Bahrain’s crypto framework.",
+    "digital_finance.virtual_assets": "Regulatory requirements for digital-token offerings."
+  },
+  "notes": "Related instruments: Amends the CBB Crypto-Asset Module"
+}

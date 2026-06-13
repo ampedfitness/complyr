@@ -1,0 +1,24 @@
+{
+  "id": "bh-decision-no-45-of-2022-regarding-rules-and-procedures-for-pr",
+  "title": "Decision No. 45 of 2022 Regarding Rules and Procedures for Processing Sensitive Personal Data",
+  "jurisdiction": "BH",
+  "instrument_class": "decision",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "digital_health.health_data"
+  ],
+  "issuing_authority": "bh-moj",
+  "date_issued": null,
+  "summary": "Sets specific procedures and safeguards for processing sensitive personal data, including health data, and identifies circumstances requiring prior PDPA authorisation.",
+  "source_url": "https://www.pdp.gov.bh/en/assets/pdf/executive-decisions/eng/trans-order-sensitive-data-processing-procedures-en.pdf",
+  "source_confidence": "official",
+  "tags": [
+    "Digital health"
+  ],
+  "year": 2022,
+  "theme_notes": {
+    "digital_health.health_data": "Sensitive personal data processing rules relevant to health data."
+  },
+  "notes": "Related instruments: Implements Law No. 30 of 2018"
+}

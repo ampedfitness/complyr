@@ -1,0 +1,26 @@
+{
+  "id": "bh-decision-no-48-of-2022-regarding-the-rights-of-data-subjects",
+  "title": "Decision No. 48 of 2022 Regarding the Rights of Data Subjects",
+  "jurisdiction": "BH",
+  "instrument_class": "decision",
+  "binding_status": "binding",
+  "lifecycle": "amended",
+  "themes": [
+    "ai_emerging_tech.ai_governance_ethics",
+    "ai_emerging_tech.autonomous_smart_systems"
+  ],
+  "issuing_authority": "bh-moj",
+  "date_issued": null,
+  "summary": "Clarifies procedures and controller obligations for exercising rights under the Personal Data Protection Law, including objections or requests relating to automated processing decisions that may be produced by AI systems.",
+  "source_url": "https://www.pdp.gov.bh/assets/pdf/executive-decisions/eng/Data-Subjects-Rights-REVIEWED.pdf",
+  "source_confidence": "official",
+  "tags": [
+    "AI & emerging technologies"
+  ],
+  "year": 2022,
+  "theme_notes": {
+    "ai_emerging_tech.ai_governance_ethics": "Implements data subject rights including automated-processing decision rights.",
+    "ai_emerging_tech.autonomous_smart_systems": "Implements data subject rights including automated-processing rights."
+  },
+  "notes": "Related instruments: Amended by Decision No. 80 of 2025 and implements Law No. 30 of 2018"
+}

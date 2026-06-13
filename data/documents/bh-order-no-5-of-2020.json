@@ -1,0 +1,24 @@
+{
+  "id": "bh-order-no-5-of-2020",
+  "title": "Order No. 5 of 2020",
+  "jurisdiction": "BH",
+  "instrument_class": "decision",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "telecom_digital_infrastructure.licensing_markets"
+  ],
+  "issuing_authority": "bh-tra",
+  "date_issued": null,
+  "summary": "Regulatory order under the Telecommunications Law relevant to operator compliance obligations.",
+  "source_url": "https://www.tra.org.bh/en/category/orders",
+  "source_confidence": "pending_verification",
+  "tags": [
+    "Telecommunications & digital infrastructure"
+  ],
+  "year": 2020,
+  "theme_notes": {
+    "telecom_digital_infrastructure.licensing_markets": "TRA order issued in 2020."
+  },
+  "notes": "Related instruments: Telecommunications Law and TRA orders archive Sourced from an official index listing; confirm against the instrument text."
+}

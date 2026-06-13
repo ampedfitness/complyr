@@ -1,0 +1,24 @@
+{
+  "id": "bh-cbb-rulebook-volume-5-money-changers-risk-management-module",
+  "title": "CBB Rulebook Volume 5 Money Changers Risk Management Module RM-3 Cyber Security Risk Management",
+  "jurisdiction": "BH",
+  "instrument_class": "rulebook_module",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "cybersecurity.security_controls_frameworks"
+  ],
+  "issuing_authority": "bh-cbb",
+  "date_issued": null,
+  "summary": "Requires money changers to maintain cybersecurity risk policies, frameworks, board approval, independent cyber functions, CISO oversight, cyber committees, prevention controls, risk assessments, incident management, recovery, insurance, training and reporting.",
+  "source_url": "https://www.cbb.gov.bh/wp-content/uploads/2021/07/Vol-5_Money-Changers_RM.pdf",
+  "source_confidence": "official",
+  "tags": [
+    "Cybersecurity"
+  ],
+  "year": 2021,
+  "theme_notes": {
+    "cybersecurity.security_controls_frameworks": "Cybersecurity risk management rules for money changer licensees."
+  },
+  "notes": "Related instruments: Related to CBB Appendix A Cyber Security Control Guidelines"
+}

@@ -1,0 +1,23 @@
+{
+  "id": "bh-class-licence-for-value-added-services",
+  "title": "Class Licence for Value Added Services",
+  "jurisdiction": "BH",
+  "instrument_class": "regulation",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "telecom_digital_infrastructure.licensing_markets"
+  ],
+  "issuing_authority": "bh-tra",
+  "date_issued": null,
+  "summary": "Sets standard class licence terms for value-added telecommunications services, including compliance with Telecommunications Law, TRA instruments and applicable licence conditions.",
+  "source_url": "https://www.tra.org.bh/en/category/generic-form-of-licences",
+  "source_confidence": "official",
+  "tags": [
+    "Telecommunications & digital infrastructure"
+  ],
+  "theme_notes": {
+    "telecom_digital_infrastructure.licensing_markets": "Class licence template for value-added telecommunications services."
+  },
+  "notes": "Instrument type recorded as uncertain in the source (regulation?). Related instruments: Part of TRA Generic Forms of Telecommunications Licences"
+}

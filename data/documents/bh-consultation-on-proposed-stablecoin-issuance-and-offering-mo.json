@@ -1,0 +1,27 @@
+{
+  "id": "bh-consultation-on-proposed-stablecoin-issuance-and-offering-mo",
+  "title": "Consultation on Proposed Stablecoin Issuance and Offering Module",
+  "jurisdiction": "BH",
+  "instrument_class": "consultation_paper",
+  "binding_status": "non_binding",
+  "lifecycle": "superseded",
+  "themes": [
+    "ai_emerging_tech.blockchain_web3",
+    "digital_finance.virtual_assets"
+  ],
+  "issuing_authority": "bh-cbb",
+  "date_issued": null,
+  "summary": "Consulted on the proposed SIO module and related appendices covering cyber security controls, incident reporting, whitepaper requirements, recovery plan indicators, financial penalties and definitions for stablecoin issuance and offering.",
+  "source_url": "https://www.cbb.gov.bh/consultations/",
+  "source_confidence": "official",
+  "tags": [
+    "AI & emerging technologies",
+    "Digital finance"
+  ],
+  "year": 2024,
+  "theme_notes": {
+    "ai_emerging_tech.blockchain_web3": "Consultation that preceded Bahrain’s stablecoin framework.",
+    "digital_finance.virtual_assets": "Consultation preceding Bahrain’s stablecoin framework."
+  },
+  "notes": "Related instruments: Produced the Stablecoin Issuance and Offering Module"
+}

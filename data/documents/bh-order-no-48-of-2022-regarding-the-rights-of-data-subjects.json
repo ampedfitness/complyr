@@ -1,0 +1,24 @@
+{
+  "id": "bh-order-no-48-of-2022-regarding-the-rights-of-data-subjects",
+  "title": "Order No. 48 of 2022 Regarding the Rights of Data Subjects",
+  "jurisdiction": "BH",
+  "instrument_class": "decision",
+  "binding_status": "binding",
+  "lifecycle": "amended",
+  "themes": [
+    "data_privacy.personal_data_protection"
+  ],
+  "issuing_authority": "bh-moj",
+  "date_issued": null,
+  "summary": "Defines operational rules for access, objection, consent withdrawal, automated decision-making protections, controller responses, and the practical handling of requests by data subjects.",
+  "source_url": "https://www.pdp.gov.bh/assets/pdf/executive-decisions/eng/Data-Subjects-Rights-REVIEWED.pdf",
+  "source_confidence": "official",
+  "tags": [
+    "Data & privacy"
+  ],
+  "year": 2022,
+  "theme_notes": {
+    "data_privacy.personal_data_protection": "Details procedures for exercising data subject rights."
+  },
+  "notes": "Related instruments: Amended by Decision No. 80 of 2025"
+}

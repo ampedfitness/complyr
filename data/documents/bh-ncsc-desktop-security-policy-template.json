@@ -1,0 +1,23 @@
+{
+  "id": "bh-ncsc-desktop-security-policy-template",
+  "title": "NCSC Desktop Security Policy Template",
+  "jurisdiction": "BH",
+  "instrument_class": "policy",
+  "binding_status": "non_binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "cybersecurity.security_controls_frameworks"
+  ],
+  "issuing_authority": "bh-ncsc",
+  "date_issued": null,
+  "summary": "Template supporting implementation of Bahrain baseline cybersecurity controls and entity-level security governance.",
+  "source_url": "https://www.ncsc.gov.bh/en/policies-controls.html",
+  "source_confidence": "pending_verification",
+  "tags": [
+    "Cybersecurity"
+  ],
+  "theme_notes": {
+    "cybersecurity.security_controls_frameworks": "Desktop Security Policy template for organisations."
+  },
+  "notes": "Related instruments: Supports Baseline Cyber Security Controls and NCSC policy templates Sourced from an official index listing; confirm against the instrument text."
+}

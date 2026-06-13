@@ -1,0 +1,24 @@
+{
+  "id": "bh-public-notice-on-assignment-of-frequencies-to-fixed-wireless",
+  "title": "Public Notice on Assignment of Frequencies to Fixed Wireless Access Systems in the 28 GHz Band",
+  "jurisdiction": "BH",
+  "instrument_class": "decision",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "telecom_digital_infrastructure.spectrum"
+  ],
+  "issuing_authority": "bh-tra",
+  "date_issued": null,
+  "summary": "Provides spectrum assignment treatment for fixed wireless access systems in the 28 GHz band, relevant to high-capacity wireless broadband deployment and spectrum compliance.",
+  "source_url": "https://www.tra.org.bh/en/category/position-papers-and-guidelines",
+  "source_confidence": "official",
+  "tags": [
+    "Telecommunications & digital infrastructure"
+  ],
+  "year": 2018,
+  "theme_notes": {
+    "telecom_digital_infrastructure.spectrum": "Public notice assigning 28 GHz spectrum for fixed wireless access."
+  },
+  "notes": "Instrument type recorded as uncertain in the source (decision?). Related instruments: Related to National Frequency Plan and fixed wireless access spectrum policy"
+}

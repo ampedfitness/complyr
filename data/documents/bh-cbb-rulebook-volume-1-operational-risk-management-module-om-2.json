@@ -1,0 +1,24 @@
+{
+  "id": "bh-cbb-rulebook-volume-1-operational-risk-management-module-om-2",
+  "title": "CBB Rulebook Volume 1 Operational Risk Management Module OM-2A Cloud Outsourcing Arrangements",
+  "jurisdiction": "BH",
+  "instrument_class": "rulebook_module",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "data_privacy.crossborder_data_flows"
+  ],
+  "issuing_authority": "bh-cbb",
+  "date_issued": null,
+  "summary": "Requires licensees to manage data protection, information security, confidentiality, data-location, and foreign authority access risks when customer or licensee data is hosted or processed through cloud service providers.",
+  "source_url": "https://www.cbb.gov.bh/wp-content/uploads/2021/07/Cloud-Outsourcing-Arrangements-Volume-1.pdf",
+  "source_confidence": "official",
+  "tags": [
+    "Data & privacy"
+  ],
+  "year": 2021,
+  "theme_notes": {
+    "data_privacy.crossborder_data_flows": "Regulates material cloud outsourcing by CBB licensees."
+  },
+  "notes": "Related instruments: CBB OM-2 Outsourcing Requirements and Appendix OM-2 Cloud Outsourcing Control Guidelines"
+}

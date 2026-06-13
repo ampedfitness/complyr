@@ -1,0 +1,24 @@
+{
+  "id": "bh-decision-no-53-of-2025-reconstituting-the-appeals-committee",
+  "title": "Decision No. 53 of 2025 Reconstituting the Appeals Committee at the Personal Data Protection Authority",
+  "jurisdiction": "BH",
+  "instrument_class": "decision",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "data_privacy.personal_data_protection"
+  ],
+  "issuing_authority": "bh-moj",
+  "date_issued": null,
+  "summary": "Updates the composition of the appeals committee relevant to PDPA enforcement and appeal procedures.",
+  "source_url": "https://www.legalaffairs.gov.bh/OG/3817.pdf",
+  "source_confidence": "official",
+  "tags": [
+    "Data & privacy"
+  ],
+  "year": 2025,
+  "theme_notes": {
+    "data_privacy.personal_data_protection": "Reconstitutes the PDPA appeals committee."
+  },
+  "notes": "Related instruments: Decision No. 56 of 2022"
+}

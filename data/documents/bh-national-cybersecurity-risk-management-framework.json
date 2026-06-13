@@ -1,0 +1,25 @@
+{
+  "id": "bh-national-cybersecurity-risk-management-framework",
+  "title": "National Cybersecurity Risk Management Framework",
+  "jurisdiction": "BH",
+  "instrument_class": "framework",
+  "binding_status": "non_binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "cybersecurity.security_controls_frameworks",
+    "cybersecurity.critical_infrastructure"
+  ],
+  "issuing_authority": "bh-ncsc",
+  "date_issued": null,
+  "summary": "Provides Bahrain’s authoritative approach to information-security risk management, including risk identification, assessment, mitigation and monitoring, and integrates CIS controls as a common framework for public, private and CNI entities.",
+  "source_url": "https://www.ncsc.gov.bh/en/policies-controls/cybersecurity-risk-management.html",
+  "source_confidence": "official",
+  "tags": [
+    "Cybersecurity"
+  ],
+  "theme_notes": {
+    "cybersecurity.security_controls_frameworks": "National reference framework for managing cybersecurity risk.",
+    "cybersecurity.critical_infrastructure": "National reference framework for cybersecurity risk management."
+  },
+  "notes": "Related instruments: Related to Baseline Cyber Security Controls and CNI Cybersecurity Controls"
+}

@@ -1,0 +1,30 @@
+{
+  "id": "bh-cloud-first-policy-version-1-0",
+  "title": "Cloud First Policy Version 1.0",
+  "jurisdiction": "BH",
+  "instrument_class": "policy",
+  "binding_status": "non_binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "data_privacy.data_governance_open_data",
+    "telecom_digital_infrastructure.cloud_data_centres",
+    "digital_government.egovernment_services"
+  ],
+  "issuing_authority": "bh-scict",
+  "date_issued": null,
+  "summary": "Creates direct public-sector data governance duties for cloud migration, including data ownership, data classification, backup, audit, security, data sovereignty, and open data publication of non-restricted government data.",
+  "source_url": "https://www.bahrain.bh/wps/wcm/connect/35ddc582-b843-4bf0-90c9-09dbeaddfc16/CloudFirstPolicy.pdf?CVID=o.32EOw&MOD=AJPERES",
+  "source_confidence": "official",
+  "tags": [
+    "Data & privacy",
+    "Telecommunications & digital infrastructure",
+    "Digital government & identity"
+  ],
+  "year": 2017,
+  "theme_notes": {
+    "data_privacy.data_governance_open_data": "Requires Bahrain government entities to evaluate and use cloud services for government data and systems.",
+    "telecom_digital_infrastructure.cloud_data_centres": "Government policy requiring cloud-first assessment and adoption.",
+    "digital_government.egovernment_services": "Cloud-first policy for government digital services."
+  },
+  "notes": "Related instruments: Refers to Government Data Classification Guidelines and State Secret Law"
+}

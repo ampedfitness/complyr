@@ -1,0 +1,24 @@
+{
+  "id": "bh-consultation-on-notarisation-law",
+  "title": "Consultation on Notarisation Law",
+  "jurisdiction": "BH",
+  "instrument_class": "consultation_paper",
+  "binding_status": "non_binding",
+  "lifecycle": "consultation",
+  "themes": [
+    "digital_government.digital_identity_trust"
+  ],
+  "issuing_authority": "bh-cbb",
+  "date_issued": null,
+  "summary": "Relevant to digital notarisation, authenticated records and electronic legal processes.",
+  "source_url": "https://www.cbb.gov.bh/consultations/",
+  "source_confidence": "pending_verification",
+  "tags": [
+    "Digital government & identity"
+  ],
+  "year": 2017,
+  "theme_notes": {
+    "digital_government.digital_identity_trust": "Consultation on notarisation law."
+  },
+  "notes": "Related instruments: CBB consultations archive and related rulebook modules Sourced from an official index listing; confirm against the instrument text."
+}

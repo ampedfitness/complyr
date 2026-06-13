@@ -1,0 +1,24 @@
+{
+  "id": "bh-cbb-stablecoin-issuance-framework-press-release",
+  "title": "CBB Stablecoin Issuance Framework Press Release",
+  "jurisdiction": "BH",
+  "instrument_class": "framework",
+  "binding_status": "non_binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "digital_finance.virtual_assets"
+  ],
+  "issuing_authority": "bh-cbb",
+  "date_issued": null,
+  "summary": "Confirms launch of stablecoin regulatory framework aimed at safe integration of stablecoins into the financial system.",
+  "source_url": "https://www.cbb.gov.bh/media-center/central-bank-of-bahrain-issues-framework-for-regulating-stablecoin-issuance/",
+  "source_confidence": "official",
+  "tags": [
+    "Digital finance"
+  ],
+  "year": 2025,
+  "theme_notes": {
+    "digital_finance.virtual_assets": "CBB announced framework for licensing and regulating stablecoin issuers."
+  },
+  "notes": "Related instruments: CBB Rulebook and CBB consultations"
+}

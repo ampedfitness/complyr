@@ -1,0 +1,24 @@
+{
+  "id": "bh-suspension-of-drone-activities-and-related-approvals",
+  "title": "Suspension of Drone Activities and Related Approvals",
+  "jurisdiction": "BH",
+  "instrument_class": "decision",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "ai_emerging_tech.autonomous_smart_systems"
+  ],
+  "issuing_authority": "bh-caa",
+  "date_issued": null,
+  "summary": "Temporarily overrides the normal drone permit process by suspending all drone activities and related approvals in Bahrain until further notice.",
+  "source_url": "https://www.mtt.gov.bh/caa-laws-and-regulations",
+  "source_confidence": "official",
+  "tags": [
+    "AI & emerging technologies"
+  ],
+  "year": 2026,
+  "theme_notes": {
+    "ai_emerging_tech.autonomous_smart_systems": "Suspends drone activities and related approvals until further notice."
+  },
+  "notes": "Instrument type recorded as uncertain in the source (decision?). Related instruments: Civil Aviation Affairs Drone Regulatory Framework and Permit Process"
+}

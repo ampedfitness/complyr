@@ -1,0 +1,29 @@
+{
+  "id": "bh-legislative-decree-no-56-of-2018-in-respect-of-providing-clo",
+  "title": "Legislative Decree No. 56 of 2018 in Respect of Providing Cloud Computing Services to Foreign Parties",
+  "jurisdiction": "BH",
+  "instrument_class": "decree",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "data_privacy.personal_data_protection",
+    "data_privacy.crossborder_data_flows",
+    "telecom_digital_infrastructure.cloud_data_centres"
+  ],
+  "issuing_authority": "bh-king",
+  "date_issued": null,
+  "summary": "Adjacent cloud and data infrastructure instrument that affects handling of customer data hosted in Bahrain and is relevant where hosted customer data includes personal data subject to PDPL or foreign-party data protection requirements.",
+  "source_url": "https://www.legalaffairs.gov.bh/Legislation/HTM/L5618",
+  "source_confidence": "official",
+  "tags": [
+    "Data & privacy",
+    "Telecommunications & digital infrastructure"
+  ],
+  "year": 2018,
+  "theme_notes": {
+    "data_privacy.personal_data_protection": "Regulates cloud services supplied from Bahrain to foreign parties.",
+    "data_privacy.crossborder_data_flows": "Creates a legal framework for hosting foreign-party cloud data in Bahrain.",
+    "telecom_digital_infrastructure.cloud_data_centres": "Legal framework for cloud services supplied from Bahrain to foreign customers."
+  },
+  "notes": "Related instruments: Law No. 30 of 2018"
+}

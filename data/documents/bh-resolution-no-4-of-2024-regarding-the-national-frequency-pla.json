@@ -1,0 +1,27 @@
+{
+  "id": "bh-resolution-no-4-of-2024-regarding-the-national-frequency-pla",
+  "title": "Resolution No. 4 of 2024 Regarding the National Frequency Plan 2024",
+  "jurisdiction": "BH",
+  "instrument_class": "resolution",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "ai_emerging_tech.iot_connected_devices",
+    "telecom_digital_infrastructure.spectrum"
+  ],
+  "issuing_authority": "bh-tra",
+  "date_issued": null,
+  "summary": "Provides the national spectrum allocation framework for radiocommunications equipment and services, including IoT and short-range devices, and identifies requirements for spectrum users, importers, manufacturers, and users of radiocommunications equipment.",
+  "source_url": "https://ir-tra-website-prod-01.s3-eu-west-1.amazonaws.com/Media/Documents/Frequency_Plans/20250810101507714_wjhpqp0d_vs5.pdf",
+  "source_confidence": "official",
+  "tags": [
+    "AI & emerging technologies",
+    "Telecommunications & digital infrastructure"
+  ],
+  "year": 2024,
+  "theme_notes": {
+    "ai_emerging_tech.iot_connected_devices": "Approves Bahrain’s current national radio spectrum allocation plan.",
+    "telecom_digital_infrastructure.spectrum": "Approves Bahrain’s current National Frequency Plan."
+  },
+  "notes": "Related instruments: Telecommunications Law, Type Approval Regulation, Short Range Devices Regulation"
+}

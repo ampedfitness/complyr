@@ -1,0 +1,24 @@
+{
+  "id": "bh-open-data-policy-version-2-0",
+  "title": "Open Data Policy Version 2.0",
+  "jurisdiction": "BH",
+  "instrument_class": "policy",
+  "binding_status": "non_binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "data_privacy.data_governance_open_data"
+  ],
+  "issuing_authority": "bh-iga",
+  "date_issued": null,
+  "summary": "Sets the government’s open data strategy and policy framework, including public access, reuse, publication formats, and exclusions for restricted, sensitive, private, or protected data.",
+  "source_url": "https://www.data.gov.bh/pages/open-data-policy/",
+  "source_confidence": "official",
+  "tags": [
+    "Data & privacy"
+  ],
+  "year": 2025,
+  "theme_notes": {
+    "data_privacy.data_governance_open_data": "Current national policy for publishing and reusing Bahrain government open data."
+  },
+  "notes": "Related instruments: Supersedes earlier Open Government Data Policy versions and is supported by the Bahrain Government Open Data License"
+}

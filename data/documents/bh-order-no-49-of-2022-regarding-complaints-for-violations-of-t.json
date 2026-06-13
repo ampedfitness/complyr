@@ -1,0 +1,24 @@
+{
+  "id": "bh-order-no-49-of-2022-regarding-complaints-for-violations-of-t",
+  "title": "Order No. 49 of 2022 Regarding Complaints for Violations of the Personal Data Protection Law",
+  "jurisdiction": "BH",
+  "instrument_class": "decision",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "data_privacy.personal_data_protection"
+  ],
+  "issuing_authority": "bh-moj",
+  "date_issued": null,
+  "summary": "Allows persons with legitimate interest to file complaints, sets complaint content requirements, defendant response periods, PDPA investigation procedures, decision-making, and complaint-register obligations.",
+  "source_url": "https://www.pdp.gov.bh/assets/pdf/executive-decisions/eng/trans-order-complaints-en.pdf",
+  "source_confidence": "official",
+  "tags": [
+    "Data & privacy"
+  ],
+  "year": 2022,
+  "theme_notes": {
+    "data_privacy.personal_data_protection": "Establishes PDPL complaint procedures."
+  },
+  "notes": "Related instruments: Law No. 30 of 2018"
+}

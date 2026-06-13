@@ -1,0 +1,23 @@
+{
+  "id": "bh-individual-licence-for-mobile-telecommunications",
+  "title": "Individual Licence for Mobile Telecommunications",
+  "jurisdiction": "BH",
+  "instrument_class": "regulation",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "telecom_digital_infrastructure.licensing_markets"
+  ],
+  "issuing_authority": "bh-tra",
+  "date_issued": null,
+  "summary": "Sets standard licence terms for mobile telecommunications operators, including network and service obligations, compliance duties, consumer obligations, numbering, interconnection, fees and spectrum-related conditions.",
+  "source_url": "https://www.tra.org.bh/en/category/generic-form-of-licences",
+  "source_confidence": "official",
+  "tags": [
+    "Telecommunications & digital infrastructure"
+  ],
+  "theme_notes": {
+    "telecom_digital_infrastructure.licensing_markets": "Individual licence template for mobile telecommunications operators."
+  },
+  "notes": "Instrument type recorded as uncertain in the source (regulation?). Related instruments: Part of TRA Generic Forms of Telecommunications Licences"
+}

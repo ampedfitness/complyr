@@ -1,0 +1,24 @@
+{
+  "id": "bh-cbb-rulebook-volume-5-open-banking-ekyc-and-consent-requirem",
+  "title": "CBB Rulebook Volume 5 Open Banking eKYC and Consent Requirements",
+  "jurisdiction": "BH",
+  "instrument_class": "rulebook_module",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "digital_government.digital_identity_trust"
+  ],
+  "issuing_authority": "bh-cbb",
+  "date_issued": null,
+  "summary": "Requires authorised open banking providers to obtain customer consent and access account data through regulated digital interfaces, supporting trusted digital identity and authorisation flows in finance.",
+  "source_url": "https://www.cbb.gov.bh/wp-content/uploads/2023/03/Vol-5_Ancillary_OB.pdf",
+  "source_confidence": "official",
+  "tags": [
+    "Digital government & identity"
+  ],
+  "year": 2022,
+  "theme_notes": {
+    "digital_government.digital_identity_trust": "Financial-sector identity, consent and account-access controls for open banking."
+  },
+  "notes": "Related instruments: Related to Bahrain Open Banking Framework and CBB Open Banking modules"
+}

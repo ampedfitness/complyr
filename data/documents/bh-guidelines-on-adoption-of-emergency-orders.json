@@ -1,0 +1,24 @@
+{
+  "id": "bh-guidelines-on-adoption-of-emergency-orders",
+  "title": "Guidelines on Adoption of Emergency Orders",
+  "jurisdiction": "BH",
+  "instrument_class": "guideline",
+  "binding_status": "non_binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "cybersecurity.incident_reporting"
+  ],
+  "issuing_authority": "bh-tra",
+  "date_issued": null,
+  "summary": "Explains circumstances and process for urgent TRA emergency orders in telecommunications markets.",
+  "source_url": "https://www.tra.org.bh/en/category/position-papers-and-guidelines",
+  "source_confidence": "pending_verification",
+  "tags": [
+    "Cybersecurity"
+  ],
+  "year": 2014,
+  "theme_notes": {
+    "cybersecurity.incident_reporting": "Guidance on TRA emergency orders."
+  },
+  "notes": "Related instruments: Telecommunications Law and TRA legal instruments archive Sourced from an official index listing; confirm against the instrument text."
+}

@@ -1,0 +1,24 @@
+{
+  "id": "bh-ministry-of-health-telemedicine-service-requirements",
+  "title": "Ministry of Health Telemedicine Service Requirements",
+  "jurisdiction": "BH",
+  "instrument_class": "guideline",
+  "binding_status": "non_binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "digital_health.telehealth_digital_services"
+  ],
+  "issuing_authority": "bh-moh",
+  "date_issued": null,
+  "summary": "States that doctors and healthcare practitioners providing telemedicine services must be licensed by NHRA and links telemedicine service delivery to NHRA telemedicine dispensing procedures.",
+  "source_url": "https://www.moh.gov.bh/Services/TelemedicineService?lang=en",
+  "source_confidence": "official",
+  "tags": [
+    "Digital health"
+  ],
+  "year": 2025,
+  "theme_notes": {
+    "digital_health.telehealth_digital_services": "Public-facing telemedicine service requirements."
+  },
+  "notes": "Related instruments: Related to NHRA Telemedicine Dispensing Procedure"
+}

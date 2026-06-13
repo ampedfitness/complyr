@@ -1,0 +1,23 @@
+{
+  "id": "bh-schedule-of-fees-regulation",
+  "title": "Schedule of Fees Regulation",
+  "jurisdiction": "BH",
+  "instrument_class": "regulation",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "telecom_digital_infrastructure.spectrum"
+  ],
+  "issuing_authority": "bh-tra",
+  "date_issued": null,
+  "summary": "Specifies application, annual, temporary and frequency licence fees for telecommunications and radiocommunications activities, including parameters for calculating annual and temporary frequency licence fees.",
+  "source_url": "https://www.tra.org.bh/Media/Pdf-Section/SOF%20Regulation%20%28English%29-%20v12.pdf",
+  "source_confidence": "official",
+  "tags": [
+    "Telecommunications & digital infrastructure"
+  ],
+  "theme_notes": {
+    "telecom_digital_infrastructure.spectrum": "Sets TRA fees including frequency licence fees."
+  },
+  "notes": "Related instruments: Related to Guidelines on Calculation of Frequency License Fees"
+}

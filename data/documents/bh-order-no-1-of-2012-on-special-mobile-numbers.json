@@ -1,0 +1,24 @@
+{
+  "id": "bh-order-no-1-of-2012-on-special-mobile-numbers",
+  "title": "Order No. 1 of 2012 on Special Mobile Numbers",
+  "jurisdiction": "BH",
+  "instrument_class": "decision",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "telecom_digital_infrastructure.licensing_markets"
+  ],
+  "issuing_authority": "bh-tra",
+  "date_issued": null,
+  "summary": "Requires VIVA Bahrain to stop using unapproved term for special mobile numbers.",
+  "source_url": "https://www.tra.org.bh/en/category/orders",
+  "source_confidence": "pending_verification",
+  "tags": [
+    "Telecommunications & digital infrastructure"
+  ],
+  "year": 2012,
+  "theme_notes": {
+    "telecom_digital_infrastructure.licensing_markets": "Order against use of unapproved special mobile number term."
+  },
+  "notes": "Related instruments: Telecommunications Law and TRA orders archive Sourced from an official index listing; confirm against the instrument text."
+}

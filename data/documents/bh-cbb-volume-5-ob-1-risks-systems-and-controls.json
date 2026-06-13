@@ -1,0 +1,23 @@
+{
+  "id": "bh-cbb-volume-5-ob-1-risks-systems-and-controls",
+  "title": "CBB Volume 5 OB-1 Risks, Systems and Controls",
+  "jurisdiction": "BH",
+  "instrument_class": "rulebook_module",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "digital_finance.open_banking"
+  ],
+  "issuing_authority": "bh-cbb",
+  "date_issued": null,
+  "summary": "Sets risk-management, systems and control expectations for AIS and PIS services under CBB Open Banking Module.",
+  "source_url": "https://cbben.thomsonreuters.com/rulebook/ob-open-banking-module",
+  "source_confidence": "official",
+  "tags": [
+    "Digital finance"
+  ],
+  "theme_notes": {
+    "digital_finance.open_banking": "Open banking risk, systems and controls chapter."
+  },
+  "notes": "Related instruments: CBB Rulebook and CBB consultations"
+}

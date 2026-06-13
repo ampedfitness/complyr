@@ -1,0 +1,24 @@
+{
+  "id": "bh-guidelines-on-calculation-of-frequency-license-fees",
+  "title": "Guidelines on Calculation of Frequency License Fees",
+  "jurisdiction": "BH",
+  "instrument_class": "guideline",
+  "binding_status": "non_binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "telecom_digital_infrastructure.spectrum"
+  ],
+  "issuing_authority": "bh-tra",
+  "date_issued": null,
+  "summary": "Provides guidance on calculating frequency licence fees for spectrum users, supporting compliance with TRA fee requirements for licensed spectrum use.",
+  "source_url": "https://www.tra.org.bh/en/category/position-papers-and-guidelines",
+  "source_confidence": "official",
+  "tags": [
+    "Telecommunications & digital infrastructure"
+  ],
+  "year": 2024,
+  "theme_notes": {
+    "telecom_digital_infrastructure.spectrum": "Guidelines for calculating frequency licence fees."
+  },
+  "notes": "Related instruments: Related to Schedule of Fees Regulation and National Frequency Plan 2024"
+}

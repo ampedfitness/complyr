@@ -1,0 +1,23 @@
+{
+  "id": "bh-cbb-volume-5-au-4-7-additional-requirements-for-payment-serv",
+  "title": "CBB Volume 5 AU-4.7 Additional Requirements for Payment Service Providers, PISPs and AISPs",
+  "jurisdiction": "BH",
+  "instrument_class": "rulebook_module",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "digital_finance.payments_emoney"
+  ],
+  "issuing_authority": "bh-cbb",
+  "date_issued": null,
+  "summary": "Requires additional information and process requirements for licensing payment service providers and open banking service providers.",
+  "source_url": "https://cbben.thomsonreuters.com/rulebook/au-ancillary-service-providers-authorisation-module",
+  "source_confidence": "official",
+  "tags": [
+    "Digital finance"
+  ],
+  "theme_notes": {
+    "digital_finance.payments_emoney": "Additional licensing requirements for PSPs, PISPs and AISPs."
+  },
+  "notes": "Related instruments: CBB Rulebook and CBB consultations"
+}

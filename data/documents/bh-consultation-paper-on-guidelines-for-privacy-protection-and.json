@@ -1,0 +1,27 @@
+{
+  "id": "bh-consultation-paper-on-guidelines-for-privacy-protection-and",
+  "title": "Consultation Paper on Guidelines for Privacy Protection and Data Protection in the Telecommunications Sector",
+  "jurisdiction": "BH",
+  "instrument_class": "consultation_paper",
+  "binding_status": "non_binding",
+  "lifecycle": "superseded",
+  "themes": [
+    "data_privacy.personal_data_protection",
+    "telecom_digital_infrastructure.ott_digital_comms"
+  ],
+  "issuing_authority": "bh-tra",
+  "date_issued": null,
+  "summary": "Proposed sector-specific privacy and data protection rules for licensed telecommunications operators and led to the 2024 final direction and guidelines.",
+  "source_url": "https://www.tra.org.bh/en/article/consultation-on-guidelines-for-privacy-protection-and-data-protection-in-the-telecommunications-sector",
+  "source_confidence": "official",
+  "tags": [
+    "Data & privacy",
+    "Telecommunications & digital infrastructure"
+  ],
+  "year": 2023,
+  "theme_notes": {
+    "data_privacy.personal_data_protection": "Consulted on telecom-sector privacy and data protection guidelines.",
+    "telecom_digital_infrastructure.ott_digital_comms": "Consultation on telecom privacy and data protection guidance."
+  },
+  "notes": "Related instruments: Final Direction on Guidelines on the Privacy of Individuals and Data Protection in the Telecommunications Sector"
+}

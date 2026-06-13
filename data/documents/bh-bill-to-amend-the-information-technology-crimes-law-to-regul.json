@@ -1,0 +1,27 @@
+{
+  "id": "bh-bill-to-amend-the-information-technology-crimes-law-to-regul",
+  "title": "Bill to Amend the Information Technology Crimes Law to Regulate AI-Generated Deepfakes and Fabricated Videos",
+  "jurisdiction": "BH",
+  "instrument_class": "law",
+  "binding_status": "binding",
+  "lifecycle": "consultation",
+  "themes": [
+    "ai_emerging_tech.generative_ai",
+    "cybersecurity.cybercrime"
+  ],
+  "issuing_authority": "bh-shura",
+  "date_issued": null,
+  "summary": "Reported as a bill to prohibit and penalise use of artificial intelligence or digital technologies to create false audiovisual material that harms reputation or is used for unlawful objectives, but the official draft text and final enactment status were not verified.",
+  "source_url": "https://www.ipu.org/impact/democracy-and-strong-parliaments/artificial-intelligence/parliamentary-actions-ai-policy",
+  "source_confidence": "secondary",
+  "tags": [
+    "AI & emerging technologies",
+    "Cybersecurity"
+  ],
+  "year": 2025,
+  "theme_notes": {
+    "ai_emerging_tech.generative_ai": "Proposed cybercrime amendment targeting AI-generated false audiovisual content.",
+    "cybersecurity.cybercrime": "Proposed cybercrime amendment targeting AI-generated false content."
+  },
+  "notes": "Instrument type recorded as uncertain in the source (law?). Related instruments: Would amend Law No. 60 of 2014 on Information Technology Crimes"
+}

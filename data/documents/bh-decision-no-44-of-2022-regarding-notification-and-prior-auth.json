@@ -1,0 +1,24 @@
+{
+  "id": "bh-decision-no-44-of-2022-regarding-notification-and-prior-auth",
+  "title": "Decision No. 44 of 2022 Regarding Notification and Prior Authorisation Procedures",
+  "jurisdiction": "BH",
+  "instrument_class": "decision",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "data_privacy.crossborder_data_flows"
+  ],
+  "issuing_authority": "bh-moj",
+  "date_issued": null,
+  "summary": "Provides the procedural channel for processing notifications and authorisation requests, including processing records that identify proposed transfers of personal data outside Bahrain.",
+  "source_url": "https://www.pdp.gov.bh/assets/pdf/executive-decisions/eng/trans-order-submission-of-notifications-en.pdf",
+  "source_confidence": "official",
+  "tags": [
+    "Data & privacy"
+  ],
+  "year": 2022,
+  "theme_notes": {
+    "data_privacy.crossborder_data_flows": "Sets PDPA filing procedures for notification and prior authorisation."
+  },
+  "notes": "Related instruments: Law No. 30 of 2018 and Decision No. 42 of 2022"
+}

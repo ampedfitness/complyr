@@ -1,0 +1,28 @@
+{
+  "id": "bh-general-policy-for-the-use-of-artificial-intelligence",
+  "title": "General Policy for the Use of Artificial Intelligence",
+  "jurisdiction": "BH",
+  "instrument_class": "policy",
+  "binding_status": "non_binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "ai_emerging_tech.ai_governance_ethics",
+    "ai_emerging_tech.generative_ai",
+    "ai_emerging_tech.autonomous_smart_systems"
+  ],
+  "issuing_authority": "bh-iga",
+  "date_issued": null,
+  "summary": "Applies to all government entities and sets principles on human decision-making, safety, fairness, transparency, accountability, integrity, privacy and data protection, while requiring compliance with the Personal Data Protection Law, state information protection rules, open data rules, and GCC AI ethics guidance.",
+  "source_url": "https://www.bahrain.bh/wps/wcm/connect/57fd391d-3cb9-42d4-bfbf-a42325bf41ce/General%2BPolicy%2Bfor%2Bthe%2BUse%2Bof%2BAI%2B-%2B%2BFinal%2B30%2BJul%2B2025.pdf?CVID=pxw7Wps&MOD=AJPERES",
+  "source_confidence": "official",
+  "tags": [
+    "AI & emerging technologies"
+  ],
+  "year": 2025,
+  "theme_notes": {
+    "ai_emerging_tech.ai_governance_ethics": "National policy for safe and ethical AI use by Bahraini government entities.",
+    "ai_emerging_tech.generative_ai": "National AI policy governing safe and ethical AI use by Bahraini government entities.",
+    "ai_emerging_tech.autonomous_smart_systems": "National policy governing responsible AI use by Bahraini government entities."
+  },
+  "notes": "Related instruments: GCC Guiding Manual on AI Ethics, Personal Data Protection Law No. 30 of 2018, State Information and Documents Law No. 16 of 2014, Open Data Policy"
+}

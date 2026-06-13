@@ -1,0 +1,24 @@
+{
+  "id": "bh-national-digital-economy-strategy",
+  "title": "National Digital Economy Strategy",
+  "jurisdiction": "BH",
+  "instrument_class": "national_strategy",
+  "binding_status": "non_binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "ai_emerging_tech.autonomous_smart_systems"
+  ],
+  "issuing_authority": "bh-iga",
+  "date_issued": null,
+  "summary": "Supports public and private digital transformation and is relevant to smart systems where it frames Bahrain’s development of digital infrastructure, emerging technology adoption, data-driven services, and digital economy capabilities.",
+  "source_url": "https://www.iga.gov.bh/en/category/national-digital-policies",
+  "source_confidence": "official",
+  "tags": [
+    "AI & emerging technologies"
+  ],
+  "year": 2025,
+  "theme_notes": {
+    "ai_emerging_tech.autonomous_smart_systems": "Current national strategy for Bahrain’s digital economy."
+  },
+  "notes": "Related instruments: Digital Government Strategy 2022 and General Policy for the Use of Artificial Intelligence"
+}

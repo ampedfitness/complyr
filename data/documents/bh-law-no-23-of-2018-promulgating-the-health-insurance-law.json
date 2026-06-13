@@ -1,0 +1,29 @@
+{
+  "id": "bh-law-no-23-of-2018-promulgating-the-health-insurance-law",
+  "title": "Law No. 23 of 2018 Promulgating the Health Insurance Law",
+  "jurisdiction": "BH",
+  "instrument_class": "law",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "data_privacy.personal_data_protection",
+    "data_privacy.data_governance_open_data",
+    "digital_health.health_data"
+  ],
+  "issuing_authority": "bh-king",
+  "date_issued": null,
+  "summary": "Adjacent digital health instrument creating specific health-data governance duties through health information processing, electronic interconnection, electronic medical records, and safeguards for beneficiaries’ health and personal data.",
+  "source_url": "https://www.legalaffairs.gov.bh/Legislation/HTM/K2318",
+  "source_confidence": "official",
+  "tags": [
+    "Data & privacy",
+    "Digital health"
+  ],
+  "year": 2018,
+  "theme_notes": {
+    "data_privacy.personal_data_protection": "Establishes health data processing and electronic medical record obligations.",
+    "data_privacy.data_governance_open_data": "Establishes health-sector data collection and information-system obligations.",
+    "digital_health.health_data": "Establishes unified electronic medical record and health information obligations."
+  },
+  "notes": "Related instruments: Law No. 30 of 2018"
+}

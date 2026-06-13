@@ -1,0 +1,24 @@
+{
+  "id": "bh-telecommunications-law-and-consumer-protection-regulation-on",
+  "title": "Telecommunications Law and Consumer Protection Regulation Online Safety Obligations",
+  "jurisdiction": "BH",
+  "instrument_class": "regulation",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "online_content.content_standards_moderation"
+  ],
+  "issuing_authority": "bh-tra",
+  "date_issued": null,
+  "summary": "Supports content and messaging standards by regulating licensee consumer protection, complaint-handling and service conduct for internet access, messaging and communications services.",
+  "source_url": "https://www.tra.org.bh/en/article/Consumer-Protection-Regulation-Public-Consultations",
+  "source_confidence": "official",
+  "tags": [
+    "Online content & media"
+  ],
+  "year": 2016,
+  "theme_notes": {
+    "online_content.content_standards_moderation": "Consumer protection rules for telecommunications services and communications channels."
+  },
+  "notes": "Related instruments: Related to Consumer Protection Regulation and Guidelines on Reducing Fraudulent SMS Messages"
+}

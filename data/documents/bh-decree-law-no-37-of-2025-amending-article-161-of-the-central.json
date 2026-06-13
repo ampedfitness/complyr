@@ -1,0 +1,27 @@
+{
+  "id": "bh-decree-law-no-37-of-2025-amending-article-161-of-the-central",
+  "title": "Decree-Law No. 37 of 2025 Amending Article 161 of the Central Bank of Bahrain and Financial Institutions Law",
+  "jurisdiction": "BH",
+  "instrument_class": "decree",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "ai_emerging_tech.blockchain_web3",
+    "digital_finance.virtual_assets"
+  ],
+  "issuing_authority": "bh-king",
+  "date_issued": null,
+  "summary": "Increases enforcement risk for unlicensed regulated financial services, including crypto-asset and virtual-asset services where they fall within CBB-regulated activities, by amending penalty provisions under the CBB law.",
+  "source_url": "https://www.lloc.gov.bh/Legislation/HTM/L3725",
+  "source_confidence": "official",
+  "tags": [
+    "AI & emerging technologies",
+    "Digital finance"
+  ],
+  "year": 2025,
+  "theme_notes": {
+    "ai_emerging_tech.blockchain_web3": "Strengthens sanctions for unlicensed regulated financial services.",
+    "digital_finance.virtual_assets": "Strengthens sanctions for unlicensed regulated financial services."
+  },
+  "notes": "Related instruments: Amends Law No. 64 of 2006 and supports enforcement of the Crypto-Asset Module and Stablecoin Issuance and Offering Module"
+}

@@ -1,0 +1,23 @@
+{
+  "id": "bh-cbb-volume-5-au-1-2-payment-service-provider-activity-defini",
+  "title": "CBB Volume 5 AU-1.2 Payment Service Provider Activity Definitions",
+  "jurisdiction": "BH",
+  "instrument_class": "rulebook_module",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "digital_finance.payments_emoney"
+  ],
+  "issuing_authority": "bh-cbb",
+  "date_issued": null,
+  "summary": "Covers payment service activities, payment transactions, issuing payment instruments, payment accounts and associated PSP requirements.",
+  "source_url": "https://cbben.thomsonreuters.com/rulebook/payment-service-provider-psp",
+  "source_confidence": "official",
+  "tags": [
+    "Digital finance"
+  ],
+  "theme_notes": {
+    "digital_finance.payments_emoney": "Defines payment service provider activity under the ancillary services framework."
+  },
+  "notes": "Related instruments: CBB Rulebook and CBB consultations"
+}

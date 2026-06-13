@@ -1,0 +1,27 @@
+{
+  "id": "bh-cni-cybersecurity-controls",
+  "title": "CNI Cybersecurity Controls",
+  "jurisdiction": "BH",
+  "instrument_class": "standard",
+  "binding_status": "non_binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "cybersecurity.security_controls_frameworks",
+    "cybersecurity.critical_infrastructure",
+    "cybersecurity.incident_reporting"
+  ],
+  "issuing_authority": "bh-ncsc",
+  "date_issued": null,
+  "summary": "Provides NIST-based controls and training paths for CNI sectors including government, financial services, healthcare, ICT, energy, critical industry, telecommunications, and transportation, with sector domains for governance, defence, cloud, third-party risk, incident management and audit.",
+  "source_url": "https://www.ncsc.gov.bh/en/policies-controls/CNI-cybersecurity-controls.html",
+  "source_confidence": "official",
+  "tags": [
+    "Cybersecurity"
+  ],
+  "theme_notes": {
+    "cybersecurity.security_controls_frameworks": "Sector-specific cybersecurity controls for Bahrain’s critical national infrastructure.",
+    "cybersecurity.critical_infrastructure": "Sector-specific cybersecurity controls for Bahrain CNI entities.",
+    "cybersecurity.incident_reporting": "CNI controls include incident management expectations."
+  },
+  "notes": "Related instruments: Related to Baseline Cyber Security Controls and National Cybersecurity Risk Management Framework"
+}

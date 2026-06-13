@@ -1,0 +1,32 @@
+{
+  "id": "bh-decision-no-43-of-2022-determining-technical-and-organisatio",
+  "title": "Decision No. 43 of 2022 Determining Technical and Organisational Measures for Personal Data Protection",
+  "jurisdiction": "BH",
+  "instrument_class": "decision",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "data_privacy.crossborder_data_flows",
+    "cybersecurity.security_controls_frameworks",
+    "cybersecurity.incident_reporting",
+    "digital_health.health_data"
+  ],
+  "issuing_authority": "bh-moj",
+  "date_issued": null,
+  "summary": "Requires technical and organisational controls, including processor and third-party contractual safeguards, and directs controllers to align external processor or third-party arrangements with the cross-border transfer decision.",
+  "source_url": "https://www.pdp.gov.bh/assets/pdf/executive-decisions/eng/the_be_met_in_the_technical.pdf",
+  "source_confidence": "official",
+  "tags": [
+    "Data & privacy",
+    "Cybersecurity",
+    "Digital health"
+  ],
+  "year": 2022,
+  "theme_notes": {
+    "data_privacy.crossborder_data_flows": "Requires safeguards relevant to transfers and third-party processing.",
+    "cybersecurity.security_controls_frameworks": "Personal-data security measures decision under Bahrain’s PDPL.",
+    "cybersecurity.incident_reporting": "Requires breach handling and PDPA notification for personal data incidents.",
+    "digital_health.health_data": "Technical and organisational security measures for personal data including health data."
+  },
+  "notes": "Related instruments: Law No. 30 of 2018 and Decision No. 42 of 2022"
+}

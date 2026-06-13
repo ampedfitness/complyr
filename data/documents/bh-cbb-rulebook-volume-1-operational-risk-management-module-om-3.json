@@ -1,0 +1,26 @@
+{
+  "id": "bh-cbb-rulebook-volume-1-operational-risk-management-module-om-3",
+  "title": "CBB Rulebook Volume 1 Operational Risk Management Module OM-5.5 Cyber Security Risk Management",
+  "jurisdiction": "BH",
+  "instrument_class": "rulebook_module",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "cybersecurity.security_controls_frameworks",
+    "cybersecurity.incident_reporting"
+  ],
+  "issuing_authority": "bh-cbb",
+  "date_issued": null,
+  "summary": "Requires conventional banks to implement board-approved cybersecurity risk frameworks, independent cyber functions, CISO roles, cyber strategy and policy, data classification, controls, training, recovery and CBB incident reporting.",
+  "source_url": "https://www.cbb.gov.bh/wp-content/uploads/2024/01/Vol-1_OM_2024.pdf",
+  "source_confidence": "official",
+  "tags": [
+    "Cybersecurity"
+  ],
+  "year": 2021,
+  "theme_notes": {
+    "cybersecurity.security_controls_frameworks": "Cybersecurity risk management rules for conventional bank licensees.",
+    "cybersecurity.incident_reporting": "Cyber incident reporting rules for conventional bank licensees."
+  },
+  "notes": "Related instruments: Related to CBB Appendix A Cyber Security Control Guidelines and CBB Cyber Security Requirements Letter 2025"
+}

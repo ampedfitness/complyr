@@ -1,0 +1,24 @@
+{
+  "id": "bh-bahrain-domain-registry-privacy-policy",
+  "title": "Bahrain Domain Registry Privacy Policy",
+  "jurisdiction": "BH",
+  "instrument_class": "policy",
+  "binding_status": "non_binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "telecom_digital_infrastructure.internet_governance_domains"
+  ],
+  "issuing_authority": "bh-tra",
+  "date_issued": null,
+  "summary": "Applies the Personal Data Protection Law to registry user information and describes collection, device and network data, location data, use, retention, security and user update practices for registry digital services.",
+  "source_url": "https://register.bh/privacy-policy/",
+  "source_confidence": "official",
+  "tags": [
+    "Telecommunications & digital infrastructure"
+  ],
+  "year": 2026,
+  "theme_notes": {
+    "telecom_digital_infrastructure.internet_governance_domains": "Privacy policy for Bahrain Domain Registry services."
+  },
+  "notes": "Related instruments: Related to Law No. 30 of 2018 with Respect to Personal Data Protection Law"
+}

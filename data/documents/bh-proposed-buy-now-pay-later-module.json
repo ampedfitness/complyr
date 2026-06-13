@@ -1,0 +1,24 @@
+{
+  "id": "bh-proposed-buy-now-pay-later-module",
+  "title": "Proposed Buy Now Pay Later Module",
+  "jurisdiction": "BH",
+  "instrument_class": "consultation_paper",
+  "binding_status": "non_binding",
+  "lifecycle": "consultation",
+  "themes": [
+    "digital_finance.payments_emoney"
+  ],
+  "issuing_authority": "bh-cbb",
+  "date_issued": null,
+  "summary": "Consults on a dedicated rulebook module for Buy Now Pay Later services, which are digitally delivered consumer credit and payment products.",
+  "source_url": "https://www.cbb.gov.bh/consultations/",
+  "source_confidence": "official",
+  "tags": [
+    "Digital finance"
+  ],
+  "year": 2025,
+  "theme_notes": {
+    "digital_finance.payments_emoney": "Consultation on a proposed BNPL regulatory module."
+  },
+  "notes": "Related instruments: Related to CBB payment and financing company regulatory frameworks"
+}

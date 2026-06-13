@@ -1,0 +1,24 @@
+{
+  "id": "bh-cbb-rulebook-volume-2-general-requirements-open-banking-requ",
+  "title": "CBB Rulebook Volume 2 General Requirements Open Banking Requirements",
+  "jurisdiction": "BH",
+  "instrument_class": "rulebook_module",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "digital_finance.open_banking"
+  ],
+  "issuing_authority": "bh-cbb",
+  "date_issued": null,
+  "summary": "Applies open banking customer-account access, consent, data protection and API connectivity obligations to Islamic bank licensees.",
+  "source_url": "https://www.cbb.gov.bh/wp-content/uploads/2023/03/Vol-2_GR.pdf",
+  "source_confidence": "official",
+  "tags": [
+    "Digital finance"
+  ],
+  "year": 2019,
+  "theme_notes": {
+    "digital_finance.open_banking": "Open banking obligations for Islamic retail banks."
+  },
+  "notes": "Related instruments: Related to Bahrain Open Banking Framework"
+}

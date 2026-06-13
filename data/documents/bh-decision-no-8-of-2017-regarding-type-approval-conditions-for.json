@@ -1,0 +1,24 @@
+{
+  "id": "bh-decision-no-8-of-2017-regarding-type-approval-conditions-for",
+  "title": "Decision No. 8 of 2017 Regarding Type Approval Conditions for Short Range Radio Devices",
+  "jurisdiction": "BH",
+  "instrument_class": "decision",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "ai_emerging_tech.iot_connected_devices"
+  ],
+  "issuing_authority": "bh-iga",
+  "date_issued": null,
+  "summary": "Governs short-range radio devices used in many IoT deployments, with TRA’s IoT paper confirming that IoT short-range device import and use must comply with Annex 1 to the SRD Regulation and obtain a type approval certificate.",
+  "source_url": "https://www.iga.gov.bh/Media/Publications/pdf/SRD_ar.pdf",
+  "source_confidence": "official",
+  "tags": [
+    "AI & emerging technologies"
+  ],
+  "year": 2017,
+  "theme_notes": {
+    "ai_emerging_tech.iot_connected_devices": "Sets type approval conditions for short-range radio devices."
+  },
+  "notes": "Related instruments: Type Approval Regulation, National Frequency Plan 2024, Position Paper on the Internet of Things"
+}

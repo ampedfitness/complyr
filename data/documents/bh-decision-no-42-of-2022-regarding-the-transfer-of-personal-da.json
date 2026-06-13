@@ -1,0 +1,24 @@
+{
+  "id": "bh-decision-no-42-of-2022-regarding-the-transfer-of-personal-da",
+  "title": "Decision No. 42 of 2022 Regarding the Transfer of Personal Data Outside the Kingdom of Bahrain",
+  "jurisdiction": "BH",
+  "instrument_class": "decision",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "data_privacy.crossborder_data_flows"
+  ],
+  "issuing_authority": "bh-moj",
+  "date_issued": null,
+  "summary": "Allows direct transfers to listed adequate jurisdictions and sets authorisation, contract, and corporate-rules pathways for transfers to other countries or territories.",
+  "source_url": "https://www.pdp.gov.bh/assets/pdf/executive-decisions/eng/trans-order-countries-and-territories-with-adequate-protection-en.pdf",
+  "source_confidence": "official",
+  "tags": [
+    "Data & privacy"
+  ],
+  "year": 2022,
+  "theme_notes": {
+    "data_privacy.crossborder_data_flows": "Main implementing decision for international personal data transfers."
+  },
+  "notes": "Related instruments: Law No. 30 of 2018"
+}

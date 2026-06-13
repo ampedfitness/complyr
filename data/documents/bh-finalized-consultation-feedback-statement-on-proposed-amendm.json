@@ -1,0 +1,23 @@
+{
+  "id": "bh-finalized-consultation-feedback-statement-on-proposed-amendm",
+  "title": "Finalized Consultation Feedback Statement on Proposed Amendments to Open Banking Regulations",
+  "jurisdiction": "BH",
+  "instrument_class": "consultation_paper",
+  "binding_status": "non_binding",
+  "lifecycle": "superseded",
+  "themes": [
+    "digital_finance.open_banking"
+  ],
+  "issuing_authority": "bh-cbb",
+  "date_issued": null,
+  "summary": "Records CBB feedback on proposed amendments to open banking regulations.",
+  "source_url": "https://www.cbb.gov.bh/consultations/",
+  "source_confidence": "pending_verification",
+  "tags": [
+    "Digital finance"
+  ],
+  "theme_notes": {
+    "digital_finance.open_banking": "Feedback statement on open banking regulation amendments."
+  },
+  "notes": "Related instruments: CBB consultations archive and related rulebook modules Sourced from an official index listing; confirm against the instrument text."
+}

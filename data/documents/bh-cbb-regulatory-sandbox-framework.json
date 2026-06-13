@@ -1,0 +1,27 @@
+{
+  "id": "bh-cbb-regulatory-sandbox-framework",
+  "title": "CBB Regulatory Sandbox Framework",
+  "jurisdiction": "BH",
+  "instrument_class": "framework",
+  "binding_status": "non_binding",
+  "lifecycle": "amended",
+  "themes": [
+    "ai_emerging_tech.blockchain_web3",
+    "digital_finance.fintech_sandboxes"
+  ],
+  "issuing_authority": "bh-cbb",
+  "date_issued": null,
+  "summary": "Allows CBB licensees, startups and FinTech firms to test technology-based financial solutions, including crypto, blockchain, tokenisation and other Web3 models, while preserving core AML, customer confidentiality, client money, risk disclosure, reporting, onboarding and exit obligations.",
+  "source_url": "https://www.cbb.gov.bh/fintech/",
+  "source_confidence": "official",
+  "tags": [
+    "AI & emerging technologies",
+    "Digital finance"
+  ],
+  "year": 2017,
+  "theme_notes": {
+    "ai_emerging_tech.blockchain_web3": "Controlled testing framework for innovative financial services.",
+    "digital_finance.fintech_sandboxes": "Controlled testing framework for innovative financial services."
+  },
+  "notes": "Related instruments: Updated by later CBB sandbox framework material and related FinHub973 initiatives"
+}

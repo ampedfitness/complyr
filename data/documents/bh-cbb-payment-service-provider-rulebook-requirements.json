@@ -1,0 +1,24 @@
+{
+  "id": "bh-cbb-payment-service-provider-rulebook-requirements",
+  "title": "CBB Payment Service Provider Rulebook Requirements",
+  "jurisdiction": "BH",
+  "instrument_class": "rulebook_module",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "digital_finance.payments_emoney"
+  ],
+  "issuing_authority": "bh-cbb",
+  "date_issued": null,
+  "summary": "Defines payment service providers as ancillary service providers subject to CBB authorisation and regulated-services requirements for digital and physical payment infrastructure.",
+  "source_url": "https://cbben.thomsonreuters.com/rulebook/payment-service-provider-psp",
+  "source_confidence": "official",
+  "tags": [
+    "Digital finance"
+  ],
+  "year": 2022,
+  "theme_notes": {
+    "digital_finance.payments_emoney": "Rulebook requirements for licensed payment service providers."
+  },
+  "notes": "Related instruments: Related to Proposed Payment Service Requirements Module"
+}

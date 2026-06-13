@@ -1,0 +1,27 @@
+{
+  "id": "bh-consultation-paper-on-the-authorisation-of-satellite-direct",
+  "title": "Consultation Paper on the Authorisation of Satellite Direct-to-Device Services in the Kingdom of Bahrain",
+  "jurisdiction": "BH",
+  "instrument_class": "consultation_paper",
+  "binding_status": "non_binding",
+  "lifecycle": "superseded",
+  "themes": [
+    "ai_emerging_tech.iot_connected_devices",
+    "telecom_digital_infrastructure.spectrum"
+  ],
+  "issuing_authority": "bh-tra",
+  "date_issued": null,
+  "summary": "Proposed authorisation conditions for D2D services, including the licensing model, MSS and IMT spectrum use, technical conditions, interference management, licence variation approach, and safeguards for satellite and terrestrial network coexistence.",
+  "source_url": "https://www.tra.org.bh/en/article/consultation-paper-on-the-authorisation-of-satellite-direct-to-device-d2d-services-in-the-kingdom-of-bahrain23",
+  "source_confidence": "official",
+  "tags": [
+    "AI & emerging technologies",
+    "Telecommunications & digital infrastructure"
+  ],
+  "year": 2025,
+  "theme_notes": {
+    "ai_emerging_tech.iot_connected_devices": "Consulted on the regulatory model for satellite direct-to-device services.",
+    "telecom_digital_infrastructure.spectrum": "Consultation on satellite direct-to-device authorisation."
+  },
+  "notes": "Related instruments: Produced the 2025 D2D Decision Notice"
+}

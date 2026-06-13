@@ -1,0 +1,27 @@
+{
+  "id": "bh-law-no-45-of-2006-amending-legislative-decree-no-9-of-1984-r",
+  "title": "Law No. 45 of 2006 Amending Legislative Decree No. 9 of 1984 Regarding the Central Population Registry",
+  "jurisdiction": "BH",
+  "instrument_class": "law",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "data_privacy.data_governance_open_data",
+    "digital_government.digital_identity_trust"
+  ],
+  "issuing_authority": "bh-king",
+  "date_issued": null,
+  "summary": "Updates the competent authority framework for executive regulation of the Central Population Registry and remains relevant to national population and identity-data governance.",
+  "source_url": "https://www.legalaffairs.gov.bh/Legislation/HTM/K4506",
+  "source_confidence": "official",
+  "tags": [
+    "Data & privacy",
+    "Digital government & identity"
+  ],
+  "year": 2006,
+  "theme_notes": {
+    "data_privacy.data_governance_open_data": "Amends Bahrain’s Central Population Registry legal framework.",
+    "digital_government.digital_identity_trust": "Amends the Central Population Registry framework."
+  },
+  "notes": "Related instruments: Amends Legislative Decree No. 9 of 1984"
+}

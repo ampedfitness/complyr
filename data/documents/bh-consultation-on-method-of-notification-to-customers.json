@@ -1,0 +1,24 @@
+{
+  "id": "bh-consultation-on-method-of-notification-to-customers",
+  "title": "Consultation on Method of Notification to Customers",
+  "jurisdiction": "BH",
+  "instrument_class": "consultation_paper",
+  "binding_status": "non_binding",
+  "lifecycle": "consultation",
+  "themes": [
+    "digital_finance.open_banking"
+  ],
+  "issuing_authority": "bh-cbb",
+  "date_issued": null,
+  "summary": "Relevant to digital financial services notifications and customer communications.",
+  "source_url": "https://www.cbb.gov.bh/consultations/",
+  "source_confidence": "pending_verification",
+  "tags": [
+    "Digital finance"
+  ],
+  "year": 2024,
+  "theme_notes": {
+    "digital_finance.open_banking": "Consultation on methods for customer notification."
+  },
+  "notes": "Related instruments: CBB consultations archive and related rulebook modules Sourced from an official index listing; confirm against the instrument text."
+}

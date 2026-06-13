@@ -1,0 +1,24 @@
+{
+  "id": "bh-proposed-advertising-regulation-amendments",
+  "title": "Proposed Advertising Regulation Amendments",
+  "jurisdiction": "BH",
+  "instrument_class": "law",
+  "binding_status": "binding",
+  "lifecycle": "consultation",
+  "themes": [
+    "online_content.online_advertising_influencers"
+  ],
+  "issuing_authority": "bh-gov",
+  "date_issued": null,
+  "summary": "Secondary sources report proposed tighter advertising regulation and penalties, but no enacted Bahrain official instrument or influencer-specific licence rule was verified from an opened source.",
+  "source_url": "https://www.lexis.ae/2025/02/28/bahrain-tightens-advertising-regulations/",
+  "source_confidence": "secondary",
+  "tags": [
+    "Online content & media"
+  ],
+  "year": 2025,
+  "theme_notes": {
+    "online_content.online_advertising_influencers": "Reported proposed amendments tightening advertising rules."
+  },
+  "notes": "Instrument type recorded as uncertain in the source (law?). Related instruments: Related to consumer protection and online advertising rules Issuing authority unverified in the source; assigned to the Government of Bahrain pending confirmation."
+}

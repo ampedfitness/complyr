@@ -1,0 +1,24 @@
+{
+  "id": "bh-order-no-4-of-2010-blocking-illegal-voice-services",
+  "title": "Order No. 4 of 2010 Blocking Illegal Voice Services",
+  "jurisdiction": "BH",
+  "instrument_class": "decision",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "telecom_digital_infrastructure.ott_digital_comms"
+  ],
+  "issuing_authority": "bh-tra",
+  "date_issued": null,
+  "summary": "Requires all ISPs to block illegal voice services.",
+  "source_url": "https://www.tra.org.bh/en/category/orders",
+  "source_confidence": "pending_verification",
+  "tags": [
+    "Telecommunications & digital infrastructure"
+  ],
+  "year": 2010,
+  "theme_notes": {
+    "telecom_digital_infrastructure.ott_digital_comms": "Order to ISPs to block illegal voice services."
+  },
+  "notes": "Related instruments: Telecommunications Law and TRA orders archive Sourced from an official index listing; confirm against the instrument text."
+}

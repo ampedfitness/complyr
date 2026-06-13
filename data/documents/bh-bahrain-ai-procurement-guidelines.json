@@ -1,0 +1,24 @@
+{
+  "id": "bh-bahrain-ai-procurement-guidelines",
+  "title": "Bahrain AI Procurement Guidelines",
+  "jurisdiction": "BH",
+  "instrument_class": "guideline",
+  "binding_status": "non_binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "ai_emerging_tech.ai_governance_ethics"
+  ],
+  "issuing_authority": "bh-edb",
+  "date_issued": null,
+  "summary": "Guides government-sector procurement of AI solutions and sets standards for efficient, ethical and responsible AI acquisition across government entities.",
+  "source_url": "https://business.bahrain.bh/wps/portal/en/BNP/HomeNationalPortal/ContentDetailsPage/",
+  "source_confidence": "official",
+  "tags": [
+    "AI & emerging technologies"
+  ],
+  "year": 2020,
+  "theme_notes": {
+    "ai_emerging_tech.ai_governance_ethics": "Public-sector guidance for procuring AI solutions."
+  },
+  "notes": "Related instruments: Related to the General Policy for the Use of Artificial Intelligence and World Economic Forum AI Procurement in a Box"
+}

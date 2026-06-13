@@ -1,0 +1,24 @@
+{
+  "id": "bh-bahrain-national-cyber-security-strategy-2020-2024",
+  "title": "Bahrain National Cyber Security Strategy 2020-2024",
+  "jurisdiction": "BH",
+  "instrument_class": "national_strategy",
+  "binding_status": "non_binding",
+  "lifecycle": "superseded",
+  "themes": [
+    "cybersecurity.security_controls_frameworks"
+  ],
+  "issuing_authority": "bh-ncsc",
+  "date_issued": null,
+  "summary": "Established Bahrain’s first strategy-level governance framework for cybersecurity standards, controls, procedures, risk management, CNI compliance, collective defence, and sector strategies for critical infrastructure.",
+  "source_url": "https://www.ncsc.gov.bh/en/national-strategy/bahrain-national-cyber-security-strategy-2020-2024.html",
+  "source_confidence": "official",
+  "tags": [
+    "Cybersecurity"
+  ],
+  "year": 2020,
+  "theme_notes": {
+    "cybersecurity.security_controls_frameworks": "Previous national cybersecurity strategy."
+  },
+  "notes": "Related instruments: Superseded by Bahrain National Cyber Security Strategy 2025-2028"
+}

@@ -1,0 +1,24 @@
+{
+  "id": "bh-bahrain-e-invoicing-public-consultation",
+  "title": "Bahrain E-Invoicing Public Consultation",
+  "jurisdiction": "BH",
+  "instrument_class": "consultation_paper",
+  "binding_status": "non_binding",
+  "lifecycle": "consultation",
+  "themes": [
+    "digital_economy.einvoicing_digital_tax"
+  ],
+  "issuing_authority": "bh-nbr",
+  "date_issued": null,
+  "summary": "Secondary sources report that NBR launched consultation on introducing electronic invoicing to improve tax collection efficiency, combat fraud, simplify business obligations and provide accurate data for economic planning, but no official consultation document was opened.",
+  "source_url": "https://edicomgroup.com/electronic-invoicing/bahrain",
+  "source_confidence": "secondary",
+  "tags": [
+    "Digital economy & platforms"
+  ],
+  "year": 2022,
+  "theme_notes": {
+    "digital_economy.einvoicing_digital_tax": "Reported public consultation on Bahrain electronic invoicing regime."
+  },
+  "notes": "Related instruments: Related to VAT Law and VAT Digital Economy Guide"
+}

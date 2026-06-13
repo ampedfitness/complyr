@@ -1,0 +1,25 @@
+{
+  "id": "bh-cyber-trust-program",
+  "title": "Cyber Trust Program",
+  "jurisdiction": "BH",
+  "instrument_class": "framework",
+  "binding_status": "non_binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "cybersecurity.security_controls_frameworks",
+    "cybersecurity.critical_infrastructure"
+  ],
+  "issuing_authority": "bh-ncsc",
+  "date_issued": null,
+  "summary": "Provides a unified maturity-assessment approach for information security assurance, especially for CNI entities, with maturity levels designed to help entities evaluate and improve cybersecurity practices.",
+  "source_url": "https://www.ncsc.gov.bh/en/policies-controls/cyber-trust-program.html",
+  "source_confidence": "official",
+  "tags": [
+    "Cybersecurity"
+  ],
+  "theme_notes": {
+    "cybersecurity.security_controls_frameworks": "Cybersecurity maturity and assurance framework for entities in Bahrain.",
+    "cybersecurity.critical_infrastructure": "Cybersecurity maturity and assurance framework for Bahrain entities."
+  },
+  "notes": "Related instruments: Related to Baseline Cyber Security Controls and National Cybersecurity Risk Management Framework"
+}

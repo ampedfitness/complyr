@@ -1,0 +1,24 @@
+{
+  "id": "bh-guidelines-for-in-building-telecommunications-access-facilit",
+  "title": "Guidelines for In-Building Telecommunications Access Facilities",
+  "jurisdiction": "BH",
+  "instrument_class": "guideline",
+  "binding_status": "non_binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "telecom_digital_infrastructure.cloud_data_centres"
+  ],
+  "issuing_authority": "bh-tra",
+  "date_issued": null,
+  "summary": "Sets requirements and expectations for in-building telecom access infrastructure used for broadband and digital connectivity.",
+  "source_url": "https://www.tra.org.bh/en/category/position-papers-and-guidelines",
+  "source_confidence": "pending_verification",
+  "tags": [
+    "Telecommunications & digital infrastructure"
+  ],
+  "year": 2020,
+  "theme_notes": {
+    "telecom_digital_infrastructure.cloud_data_centres": "Guidelines for telecom access facilities in buildings."
+  },
+  "notes": "Related instruments: Telecommunications Law and TRA legal instruments archive Sourced from an official index listing; confirm against the instrument text."
+}

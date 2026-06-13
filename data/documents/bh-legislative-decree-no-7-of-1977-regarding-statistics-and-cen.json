@@ -1,0 +1,24 @@
+{
+  "id": "bh-legislative-decree-no-7-of-1977-regarding-statistics-and-cen",
+  "title": "Legislative Decree No. 7 of 1977 Regarding Statistics and Censuses",
+  "jurisdiction": "BH",
+  "instrument_class": "decree",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "data_privacy.data_governance_open_data"
+  ],
+  "issuing_authority": "bh-king",
+  "date_issued": null,
+  "summary": "Specifies the competent authority for statistics, its powers, data confidentiality duties, and penalties for breach, making it a foundational government data governance instrument despite predating the main research period.",
+  "source_url": "https://bahrain.bh/wps/portal/en/BNP/HomeNationalPortal/ContentDetailsPage/",
+  "source_confidence": "official",
+  "tags": [
+    "Data & privacy"
+  ],
+  "year": 1977,
+  "theme_notes": {
+    "data_privacy.data_governance_open_data": "Establishes the statutory framework for official statistics and censuses."
+  },
+  "notes": "Related instruments: Related to Information and eGovernment Authority statistical functions"
+}

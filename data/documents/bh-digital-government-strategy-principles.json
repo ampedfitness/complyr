@@ -1,0 +1,24 @@
+{
+  "id": "bh-digital-government-strategy-principles",
+  "title": "Digital Government Strategy Principles",
+  "jurisdiction": "BH",
+  "instrument_class": "policy",
+  "binding_status": "non_binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "digital_government.egovernment_services"
+  ],
+  "issuing_authority": "bh-iga",
+  "date_issued": null,
+  "summary": "Sets principles including digital services for everyone, digital channels, digital first, once-only data, predictive analytics, public open data, digital identity and privacy-respecting public data use.",
+  "source_url": "https://bahrain.bh/wps/portal/en/BNP/HomeNationalPortal/ContentDetailsPage/%21ut/p/z1/vVTLVtswEP0Vd8HSRyNLke1lgDwIpUkDocQbjmzLjqgjGVsE6NdXppz2xM6DdlGvZOlezYzmzkURukOR4huZcyO14oX9X0bsHl_0YBycAczOqQdfb8M5O73CcDUi6Ns2AN8swAIu-vPp8BwDxSj6CB_2fH34GP83YPxldg5sOg58zz8l09Db5rfSu4Qj-V-24w-GfWD9YDiY9bBHL3Gb3wUc4p_BEf7ZwfoBKLpFEYrKRKZoGYaEesIP3YBkgUszn7g8yGLX9xPGvIylGYcGnShTmhVaxqq8F-oEeKyfjGNWwvkuVZ7q9Qmk3HCnXvHKbjhcpU6uN6JSXCXiBCpRcCNSx-hSJrUFy1waXrxj1kIZpzaVheSvTmlvSGRZiLpTaaeUrUrDBQNgowXGeGJbEnhtfhewzb8JGTDP61PvekRg2nnpLuDvlNYFRIeFPNkO0FLqjDSzJh8eH6O-bZFWRrwYdNf0iFc7exTzVcWlkk4hclkXbxNbd7tjO5FlMjkS3g7Kv4V3dnT_QT9VSrx2c-GFzH9BnqVZOfVTbewVPC6Ek4qNKHT5dphrXjR6iQ6mPCZtwI7hPQho3OlY16JjBhC1dbsYAgtGQ0pZMPd7Plpa3fj7H94KayPFM1ooXa2t417_GWhC_TROROLGBHsuTePAjYMYuz3wMhJyGociRGNoR2h7CN4fQYR-SJIM3ARw6tKYgxswit2MhZD2qD1NOsrpWtQ-5TTmIl7KQlfCeZeL3ViLKm9sxYhkpXShcyl2yLbSsTZ21Slue-wuDjzfh_xwcmzsDxX3n5zzWihUrhdv3zogr1JKN4p7xaYczAfZ1YDQ5WTz43Ozspv5p59h2bdT/",
+  "source_confidence": "official",
+  "tags": [
+    "Digital government & identity"
+  ],
+  "year": 2022,
+  "theme_notes": {
+    "digital_government.egovernment_services": "Principles for Bahrain’s digital government service model."
+  },
+  "notes": "Related instruments: Related to Digital Government Strategy 2022 and Open Data Policy"
+}

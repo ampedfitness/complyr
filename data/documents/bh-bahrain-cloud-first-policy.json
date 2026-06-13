@@ -1,0 +1,24 @@
+{
+  "id": "bh-bahrain-cloud-first-policy",
+  "title": "Bahrain Cloud First Policy",
+  "jurisdiction": "BH",
+  "instrument_class": "policy",
+  "binding_status": "non_binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "data_privacy.crossborder_data_flows"
+  ],
+  "issuing_authority": "bh-iga",
+  "date_issued": null,
+  "summary": "Creates public-sector data-hosting and cloud migration policy obligations relevant to government data flows, although it is broader cloud policy rather than a dedicated cross-border transfer instrument.",
+  "source_url": "https://www.bahrain.bh/wps/portal/ar/BNP/HomeNationalPortal/ContentDetailsPage/!ut/p/z0/fY69DoIwFEZfpQvzrRKB1Z8BHYQRupALNHAF21Kuxse3-ABu30lOvhxQUIEy-KYBmazBOXCtkmZ3Pcg8O0uZ38uLTIo8S_fpKS7KGG6g_gvhgR7Loo6gOmtYfxiq1rhGm0hia18seNRiIjP09hnJFkePZEjMeqB1_nWskfQ6TN0Lto66wE77dQsUPTIK5y3rblPBTar-Ap3NchQ!/",
+  "source_confidence": "official",
+  "tags": [
+    "Data & privacy"
+  ],
+  "year": 2017,
+  "theme_notes": {
+    "data_privacy.crossborder_data_flows": "Directs Bahraini government entities toward cloud adoption."
+  },
+  "notes": "Related instruments: Related to Bahrain’s cloud computing and data governance framework"
+}

@@ -1,0 +1,34 @@
+{
+  "id": "bh-law-no-60-of-2014-on-information-technology-crimes",
+  "title": "Law No. 60 of 2014 on Information Technology Crimes",
+  "jurisdiction": "BH",
+  "instrument_class": "law",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "ai_emerging_tech.generative_ai",
+    "cybersecurity.cybercrime",
+    "online_content.online_media_licensing",
+    "online_content.content_standards_moderation",
+    "online_content.gaming_esports"
+  ],
+  "issuing_authority": "bh-gov",
+  "date_issued": null,
+  "summary": "Not generative-AI-specific, but directly relevant where generative AI is used to commit existing information technology crimes such as fraudulent acquisition, data falsification, misuse of tools, unauthorised access, identity-related misuse, or other digital offences.",
+  "source_url": "https://cyrilla.org/entity/y4ukthce4lrxih51wkamdkj4i?file=15206088716911uv37uwpe5u3z33skv1imb1emi.pdf&page=4",
+  "source_confidence": "secondary",
+  "tags": [
+    "AI & emerging technologies",
+    "Cybersecurity",
+    "Online content & media"
+  ],
+  "year": 2014,
+  "theme_notes": {
+    "ai_emerging_tech.generative_ai": "Baseline cybercrime law relevant to AI-enabled deception, fraud, falsification, and misuse.",
+    "cybersecurity.cybercrime": "Bahrain’s core cybercrime law.",
+    "online_content.online_media_licensing": "Cybercrime law containing online content offences.",
+    "online_content.content_standards_moderation": "Online content criminal offences under the cybercrime law.",
+    "online_content.gaming_esports": "Cybercrime law relevant to online gaming and esports platforms."
+  },
+  "notes": "Related instruments: Proposed 2025 AI-generated deepfakes and fabricated videos amendment Issuing authority unverified in the source; assigned to the Government of Bahrain pending confirmation."
+}

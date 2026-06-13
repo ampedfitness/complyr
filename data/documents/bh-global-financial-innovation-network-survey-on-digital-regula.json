@@ -1,0 +1,24 @@
+{
+  "id": "bh-global-financial-innovation-network-survey-on-digital-regula",
+  "title": "Global Financial Innovation Network Survey on Digital Regulatory Reporting",
+  "jurisdiction": "BH",
+  "instrument_class": "consultation_paper",
+  "binding_status": "non_binding",
+  "lifecycle": "consultation",
+  "themes": [
+    "digital_finance.payments_emoney"
+  ],
+  "issuing_authority": "bh-cbb",
+  "date_issued": null,
+  "summary": "GFIN survey material relevant to digital regulatory reporting and supervisory technology.",
+  "source_url": "https://www.cbb.gov.bh/consultations/",
+  "source_confidence": "pending_verification",
+  "tags": [
+    "Digital finance"
+  ],
+  "year": 2019,
+  "theme_notes": {
+    "digital_finance.payments_emoney": "Consultation/survey on digital regulatory reporting."
+  },
+  "notes": "Related instruments: CBB consultations archive and related rulebook modules Sourced from an official index listing; confirm against the instrument text."
+}

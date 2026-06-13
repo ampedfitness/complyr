@@ -1,0 +1,24 @@
+{
+  "id": "bh-telemedicine-dispensing-procedure-version-1-0",
+  "title": "Telemedicine Dispensing Procedure Version 1.0",
+  "jurisdiction": "BH",
+  "instrument_class": "guideline",
+  "binding_status": "non_binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "digital_health.telehealth_digital_services"
+  ],
+  "issuing_authority": "bh-nhra",
+  "date_issued": null,
+  "summary": "Provides practical guidance for licensed medical practitioners and pharmacists on telemedicine dispensing during crisis conditions, including secure and efficient medicine dispensing and compliance with pharmacy and professional rules.",
+  "source_url": "https://www.nhra.bh/MediaHandler/ImageHandler/documents/Announcements/General%20038_NHRA_PPR_Telemedicine%20Dispensing%20Procedure%20v1.0_20200510.pdf",
+  "source_confidence": "official",
+  "tags": [
+    "Digital health"
+  ],
+  "year": 2020,
+  "theme_notes": {
+    "digital_health.telehealth_digital_services": "Procedure for medicine dispensing through telemedicine."
+  },
+  "notes": "Related instruments: Related to NHRA Circular No. 14 of 2020 and pharmacy legislation"
+}

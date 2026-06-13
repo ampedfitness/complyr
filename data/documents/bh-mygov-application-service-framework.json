@@ -1,0 +1,24 @@
+{
+  "id": "bh-mygov-application-service-framework",
+  "title": "MyGov Application Service Framework",
+  "jurisdiction": "BH",
+  "instrument_class": "framework",
+  "binding_status": "non_binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "digital_government.egovernment_services"
+  ],
+  "issuing_authority": "bh-iga",
+  "date_issued": null,
+  "summary": "Provides citizens and residents access to government eServices, profile data, personal documents, certificates, notifications and service catalogue through a secured eKey 2.0 single sign-on model.",
+  "source_url": "https://services.bahrain.bh/wps/portal/en/BSP/GSX-UI-AllApps/GSX-UI-AppDetails?appID=25",
+  "source_confidence": "official",
+  "tags": [
+    "Digital government & identity"
+  ],
+  "year": 2024,
+  "theme_notes": {
+    "digital_government.egovernment_services": "Government mobile application framework for digital services."
+  },
+  "notes": "Related instruments: Related to eKey 2.0 and Digital Government Strategy 2022"
+}

@@ -1,0 +1,24 @@
+{
+  "id": "bh-cbb-rulebook-volume-6-crypto-asset-module-sandbox-exit-and-l",
+  "title": "CBB Rulebook Volume 6 Crypto-Asset Module Sandbox Exit and Licensing Pathway",
+  "jurisdiction": "BH",
+  "instrument_class": "rulebook_module",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "digital_finance.fintech_sandboxes"
+  ],
+  "issuing_authority": "bh-cbb",
+  "date_issued": null,
+  "summary": "Provides the full licensing and compliance pathway for crypto-asset service models that may first be tested through Bahrain’s regulatory sandbox.",
+  "source_url": "https://cbben.thomsonreuters.com/rulebook/cra-crypto-asset",
+  "source_confidence": "official",
+  "tags": [
+    "Digital finance"
+  ],
+  "year": 2019,
+  "theme_notes": {
+    "digital_finance.fintech_sandboxes": "Crypto-asset licensing framework used after fintech testing."
+  },
+  "notes": "Related instruments: Related to CBB Regulatory Sandbox Framework"
+}

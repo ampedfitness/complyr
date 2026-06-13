@@ -1,0 +1,26 @@
+{
+  "id": "bh-royal-order-no-17-of-2025-regarding-the-national-cyber-secur",
+  "title": "Royal Order No. 17 of 2025 Regarding the National Cyber Security Center",
+  "jurisdiction": "BH",
+  "instrument_class": "decree",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "cybersecurity.security_controls_frameworks",
+    "cybersecurity.critical_infrastructure"
+  ],
+  "issuing_authority": "bh-king",
+  "date_issued": null,
+  "summary": "Establishes the NCSC as Bahrain’s central cybersecurity authority with powers to issue and enforce cybersecurity policies, standards and compliance frameworks, oversee critical sectors, coordinate incident response, and certify cybersecurity tools and software.",
+  "source_url": "https://www.asarlegal.com/bahrain-formalizes-cybersecurity-centers-structure-and-powers/",
+  "source_confidence": "secondary",
+  "tags": [
+    "Cybersecurity"
+  ],
+  "year": 2025,
+  "theme_notes": {
+    "cybersecurity.security_controls_frameworks": "Formalises NCSC’s national cybersecurity authority and powers.",
+    "cybersecurity.critical_infrastructure": "Formalises NCSC as Bahrain’s central cybersecurity authority."
+  },
+  "notes": "Instrument type recorded as uncertain in the source (decree?). Related instruments: Related to Decree No. 65 of 2020 and Royal Order No. 25 of 2025"
+}

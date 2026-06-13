@@ -1,0 +1,24 @@
+{
+  "id": "bh-position-paper-on-regulating-fixed-point-to-point-links-and-2",
+  "title": "Position Paper on Regulating Fixed Point-to-Point Links and Point-to-Multipoint Systems",
+  "jurisdiction": "BH",
+  "instrument_class": "white_paper",
+  "binding_status": "non_binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "telecom_digital_infrastructure.spectrum"
+  ],
+  "issuing_authority": "bh-tra",
+  "date_issued": null,
+  "summary": "Sets TRA policy for fixed point-to-point and point-to-multipoint radio systems used for backhaul, enterprise links and wireless digital infrastructure.",
+  "source_url": "https://www.tra.org.bh/en/category/position-papers-and-guidelines",
+  "source_confidence": "pending_verification",
+  "tags": [
+    "Telecommunications & digital infrastructure"
+  ],
+  "year": 2024,
+  "theme_notes": {
+    "telecom_digital_infrastructure.spectrum": "Position paper for fixed wireless links."
+  },
+  "notes": "Related instruments: Telecommunications Law and TRA legal instruments archive Sourced from an official index listing; confirm against the instrument text."
+}

@@ -1,0 +1,30 @@
+{
+  "id": "bh-digital-government-policies-version-1-1",
+  "title": "Digital Government Policies Version 1.1",
+  "jurisdiction": "BH",
+  "instrument_class": "policy",
+  "binding_status": "non_binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "data_privacy.data_governance_open_data",
+    "telecom_digital_infrastructure.cloud_data_centres",
+    "digital_government.egovernment_services"
+  ],
+  "issuing_authority": "bh-iga",
+  "date_issued": null,
+  "summary": "Requires government to simplify and enhance public-sector data sharing practices and promote open data policy supporting reuse of government data for value creation.",
+  "source_url": "https://www.iga.gov.bh/Media/Publications/National%20Digital%20Policies/Digital%20Government%20Policies%20V1.1.pdf",
+  "source_confidence": "official",
+  "tags": [
+    "Data & privacy",
+    "Telecommunications & digital infrastructure",
+    "Digital government & identity"
+  ],
+  "year": 2021,
+  "theme_notes": {
+    "data_privacy.data_governance_open_data": "Sets cross-government digital policy requirements including data sharing and open data.",
+    "telecom_digital_infrastructure.cloud_data_centres": "Digital government policy suite including cloud and shared digital services.",
+    "digital_government.egovernment_services": "Government-wide digital services policy suite."
+  },
+  "notes": "Related instruments: Open Data Policy and Cloud First Policy"
+}

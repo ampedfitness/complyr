@@ -1,0 +1,24 @@
+{
+  "id": "bh-order-no-43-of-2022-determining-technical-and-organisational",
+  "title": "Order No. 43 of 2022 Determining Technical and Organisational Measures for Personal Data Protection",
+  "jurisdiction": "BH",
+  "instrument_class": "decision",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "data_privacy.personal_data_protection"
+  ],
+  "issuing_authority": "bh-moj",
+  "date_issued": null,
+  "summary": "Requires appropriate technical and organisational measures, including risk assessment, data protection impact assessment, breach notification, internal investigation, processor and third-party controls, joint-controller arrangements, and staff training.",
+  "source_url": "https://www.pdp.gov.bh/assets/pdf/executive-decisions/eng/the_be_met_in_the_technical.pdf",
+  "source_confidence": "official",
+  "tags": [
+    "Data & privacy"
+  ],
+  "year": 2022,
+  "theme_notes": {
+    "data_privacy.personal_data_protection": "Specifies security and governance measures for personal data processing."
+  },
+  "notes": "Related instruments: Law No. 30 of 2018"
+}

@@ -1,0 +1,29 @@
+{
+  "id": "bh-retail-sale-via-internet-activity-requirements",
+  "title": "Retail Sale via Internet Activity Requirements",
+  "jurisdiction": "BH",
+  "instrument_class": "guideline",
+  "binding_status": "non_binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "digital_economy.ecommerce",
+    "digital_economy.online_platforms",
+    "online_content.online_advertising_influencers"
+  ],
+  "issuing_authority": "bh-moic",
+  "date_issued": null,
+  "summary": "Requires online sellers to register an e-store or e-marketplace address, provide return and refund policy, terms of use, user data protection policy, secure online payment, active shopping cart and goods delivery before commencing operations.",
+  "source_url": "https://www.moic.gov.bh/en/node/5815",
+  "source_confidence": "official",
+  "tags": [
+    "Digital economy & platforms",
+    "Online content & media"
+  ],
+  "year": 2025,
+  "theme_notes": {
+    "digital_economy.ecommerce": "Requirements for businesses conducting retail sales online.",
+    "digital_economy.online_platforms": "Requirements for online selling platforms and e-stores.",
+    "online_content.online_advertising_influencers": "Commercial requirements for online sellers and e-store operators."
+  },
+  "notes": "Related instruments: Related to ISIC Code 4791 Retail Sale via Internet and eCommerce National Strategy"
+}

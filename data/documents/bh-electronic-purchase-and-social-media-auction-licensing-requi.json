@@ -1,0 +1,31 @@
+{
+  "id": "bh-electronic-purchase-and-social-media-auction-licensing-requi",
+  "title": "Electronic Purchase and Social Media Auction Licensing Requirements",
+  "jurisdiction": "BH",
+  "instrument_class": "decision",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "digital_economy.ecommerce",
+    "digital_economy.online_platforms",
+    "online_content.online_media_licensing",
+    "online_content.online_advertising_influencers"
+  ],
+  "issuing_authority": "bh-moic",
+  "date_issued": null,
+  "summary": "Requires auctioneers selling goods or providing services via social media to apply for a commercial activity licence and display the commercial registration number on auction-site social media accounts.",
+  "source_url": "https://www.bahrain.bh/wps/portal/en/BNP/HomeNationalPortal/ContentDetailsPage/%21ut/p/z1/rVRNc5swEP0r5OAjo0UIAUenTkK-SmKbJObiESBsNXxFlp2mv76CybQT7OB0phwY7eit9u3bJ6EYPaG4YjuxYkrUFSt0vIjp0rp0IPC-AdxNCIb7B39KT28tuL2w0eNHgDWPQAMux9PwfGIBsVD8lXz45BvD1_L_AILvdxOgYeC52D21YY4_5ve2KaAHFKN4o9p_WqlGrdEiqZolkyNgSb1Vhlpz41lUq6wuR5CwtWSiEkbBV2JTdCptRiC5XvLMUHUjUh3zRtbpVvKSV93JTSoytHCYR7DLmUlxwkxi-Zbpp4lrpk4CGfg5wxkc6Yf29AhshwDFZze3k8CxZ3RPD3_uUw3AY4JnFzaE_6rnPiAeHlef_x7BeJjeVQcIQqAW9vBVaJ_ZMA5vTu-j-QOEEbSOFD9eXuKxHlhdKf5ToSe-qndNLRUrlrwagY64rFrxR7Dd8HxbGKLKa1l282rH1Qab91oDvR6q9Z_dcTVoUO3fIQ5v9VYahci57s94rz6CnJWieDNYlRld6ZbFWjQHmCRCqnUHzDjTq5RLJXKRapBO1T0o2aUbLWOeac4bPeD42J2Kh3QFIH3AgUfjmM16J_hRdA7UuzgnhHpT13HRQvvQ_VxXbfSd4K8oqlpbFGj295piHzPipYmpscQkPvdMz8auSVI_yVzdILY9FEC_Qs89lwMVvvQQzJhETRlF0XPyK7--vr5xil35aMYJnZ5Nvdd5vl6Vy_HJyW_iaq6r/dz/d5/L0lHSkpZQSEhL0lLakFBQnhBQUVSQS80TlZFL2Vu/",
+  "source_confidence": "official",
+  "tags": [
+    "Digital economy & platforms",
+    "Online content & media"
+  ],
+  "year": 2020,
+  "theme_notes": {
+    "digital_economy.ecommerce": "Licensing requirements for online auctions through social media.",
+    "digital_economy.online_platforms": "Licensing requirements for auction activity conducted through social media platforms.",
+    "online_content.online_media_licensing": "Licensing requirements for commercial activity conducted on social media.",
+    "online_content.online_advertising_influencers": "Rules for commercial auctions conducted through social media."
+  },
+  "notes": "Instrument type recorded as uncertain in the source (decision?). Related instruments: Related to Commercial Registration framework and e-commerce activity licensing"
+}

@@ -1,0 +1,24 @@
+{
+  "id": "bh-order-no-44-of-2022-regarding-notification-and-prior-authori",
+  "title": "Order No. 44 of 2022 Regarding Notification and Prior Authorisation Procedures",
+  "jurisdiction": "BH",
+  "instrument_class": "decision",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "data_privacy.personal_data_protection"
+  ],
+  "issuing_authority": "bh-moj",
+  "date_issued": null,
+  "summary": "Operationalises PDPL notification and authorisation controls by prescribing submission procedures, required information, record-keeping, and PDPA decision processes for processing activities requiring notification or prior permission.",
+  "source_url": "https://www.pdp.gov.bh/assets/pdf/executive-decisions/eng/trans-order-submission-of-notifications-en.pdf",
+  "source_confidence": "official",
+  "tags": [
+    "Data & privacy"
+  ],
+  "year": 2022,
+  "theme_notes": {
+    "data_privacy.personal_data_protection": "Sets procedures for PDPA notifications and prior authorisation applications."
+  },
+  "notes": "Related instruments: Law No. 30 of 2018"
+}

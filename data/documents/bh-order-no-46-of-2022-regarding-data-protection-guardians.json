@@ -1,0 +1,24 @@
+{
+  "id": "bh-order-no-46-of-2022-regarding-data-protection-guardians",
+  "title": "Order No. 46 of 2022 Regarding Data Protection Guardians",
+  "jurisdiction": "BH",
+  "instrument_class": "decision",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "data_privacy.personal_data_protection"
+  ],
+  "issuing_authority": "bh-moj",
+  "date_issued": null,
+  "summary": "Establishes the register, qualification and appointment framework for internal and external data protection guardians, including their advisory, inspection, monitoring, and reporting responsibilities.",
+  "source_url": "https://www.pdp.gov.bh/assets/pdf/executive-decisions/eng/trans-order-auditor-tasks-en.pdf",
+  "source_confidence": "official",
+  "tags": [
+    "Data & privacy"
+  ],
+  "year": 2022,
+  "theme_notes": {
+    "data_privacy.personal_data_protection": "Regulates the appointment and duties of data protection guardians."
+  },
+  "notes": "Related instruments: Law No. 30 of 2018"
+}

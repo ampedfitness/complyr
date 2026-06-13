@@ -1,0 +1,31 @@
+{
+  "id": "bh-digital-government-strategy-2022",
+  "title": "Digital Government Strategy 2022",
+  "jurisdiction": "BH",
+  "instrument_class": "national_strategy",
+  "binding_status": "non_binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "ai_emerging_tech.autonomous_smart_systems",
+    "ai_emerging_tech.iot_connected_devices",
+    "ai_emerging_tech.blockchain_web3",
+    "digital_government.egovernment_services"
+  ],
+  "issuing_authority": "bh-iga",
+  "date_issued": null,
+  "summary": "Recommends that Bahraini government entities use emerging technologies with positive public impact, including artificial intelligence, blockchain, robotics, internet of things, data analytics, and smart-service applications.",
+  "source_url": "https://bahrain.bh/wps/portal/ar/BNP/HomeNationalPortal/ContentDetailsPage/!ut/p/z0/hY5BC4JAFEb_ynqwN6a3KzJGshFEF60UjUY8ZpiJ2jTz3x8S0QVDL977HsObFzDgQe-lHG1cV-jqsit7CbhMUx3jFumZwTTAQ8DYQv7l0FSnhxEPEyweAkAJGhVgRHoOWtfLK6G6MltCgXsivzBjL3vlDFooC_4gY0J4XU6q5L6c0c5mrkHnlRWZVAwxbpujmEDMpW-UpFWBlLH2N9ufWbg7M9Xn0DzgmxKdBM80QMHPwUj2IYyPoB8gOh3w!!/",
+  "source_confidence": "official",
+  "tags": [
+    "AI & emerging technologies",
+    "Digital government & identity"
+  ],
+  "year": 2022,
+  "theme_notes": {
+    "ai_emerging_tech.autonomous_smart_systems": "Strategy directing government entities to explore emerging technologies.",
+    "ai_emerging_tech.iot_connected_devices": "Digital government strategy supporting government use of IoT and emerging technologies.",
+    "ai_emerging_tech.blockchain_web3": "Government strategy encouraging use of emerging technologies including blockchain.",
+    "digital_government.egovernment_services": "National strategy for Bahrain digital government transformation."
+  },
+  "notes": "Related instruments: General Policy for the Use of Artificial Intelligence and National Digital Economy Strategy"
+}

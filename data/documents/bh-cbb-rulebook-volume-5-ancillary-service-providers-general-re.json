@@ -1,0 +1,24 @@
+{
+  "id": "bh-cbb-rulebook-volume-5-ancillary-service-providers-general-re",
+  "title": "CBB Rulebook Volume 5 Ancillary Service Providers General Requirements Module GR-12.2 Cyber Security Risk Management",
+  "jurisdiction": "BH",
+  "instrument_class": "rulebook_module",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "cybersecurity.security_controls_frameworks"
+  ],
+  "issuing_authority": "bh-cbb",
+  "date_issued": null,
+  "summary": "Requires ancillary service providers to maintain vulnerability and patch management processes, robust board-level cybersecurity risk frameworks, clear accountability, cyber risk controls, incident detection, recovery and reporting obligations.",
+  "source_url": "https://cbben.thomsonreuters.com/rulebook/gr-1225",
+  "source_confidence": "official",
+  "tags": [
+    "Cybersecurity"
+  ],
+  "year": 2022,
+  "theme_notes": {
+    "cybersecurity.security_controls_frameworks": "Cybersecurity risk rules for ancillary service providers using digital channels."
+  },
+  "notes": "Related instruments: Related to CBB Appendix A Cyber Security Control Guidelines"
+}

@@ -1,0 +1,24 @@
+{
+  "id": "bh-proposal-by-law-regulating-artificial-intelligence-technolog",
+  "title": "Proposal by Law Regulating Artificial Intelligence Technologies and Uses",
+  "jurisdiction": "BH",
+  "instrument_class": "law",
+  "binding_status": "binding",
+  "lifecycle": "consultation",
+  "themes": [
+    "ai_emerging_tech.generative_ai"
+  ],
+  "issuing_authority": "bh-shura",
+  "date_issued": null,
+  "summary": "Reported as a 38-article AI regulation proposal under Council of Representatives review that would require ministers to establish sector AI regulations and prohibit manipulation of content without explicit consent, making it directly relevant to generative AI outputs and synthetic content.",
+  "source_url": "https://www.ipu.org/impact/democracy-and-strong-parliaments/artificial-intelligence/parliamentary-actions-ai-policy",
+  "source_confidence": "secondary",
+  "tags": [
+    "AI & emerging technologies"
+  ],
+  "year": 2024,
+  "theme_notes": {
+    "ai_emerging_tech.generative_ai": "Proposed standalone AI law with a direct AI content manipulation rule."
+  },
+  "notes": "Instrument type recorded as uncertain in the source (law?). Related instruments: Related to the General Policy for the Use of Artificial Intelligence and the proposed deepfake amendment to the Information Technology Crimes Law"
+}

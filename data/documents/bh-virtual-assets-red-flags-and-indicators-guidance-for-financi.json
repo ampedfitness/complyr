@@ -1,0 +1,27 @@
+{
+  "id": "bh-virtual-assets-red-flags-and-indicators-guidance-for-financi",
+  "title": "Virtual Assets Red Flags and Indicators Guidance for Financial Institutions",
+  "jurisdiction": "BH",
+  "instrument_class": "guideline",
+  "binding_status": "non_binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "ai_emerging_tech.blockchain_web3",
+    "digital_finance.virtual_assets"
+  ],
+  "issuing_authority": "bh-cbb",
+  "date_issued": null,
+  "summary": "Applies to CBB-supervised licensees and provides red flags for detecting and reporting suspicious activity involving virtual assets and virtual asset service providers, including exchange activity, transfers, custody, anonymity-enhancing services, mixers, tumblers, dark-net exposure, unlicensed VASPs, private wallets and cross-border VA movement.",
+  "source_url": "https://www.cbb.gov.bh/wp-content/uploads/2021/10/Guidance_Paper_-_Virtual_Assets_30_Nov_2020.pdf",
+  "source_confidence": "official",
+  "tags": [
+    "AI & emerging technologies",
+    "Digital finance"
+  ],
+  "year": 2020,
+  "theme_notes": {
+    "ai_emerging_tech.blockchain_web3": "AML guidance for virtual assets and VASPs.",
+    "digital_finance.virtual_assets": "AML guidance for virtual assets and VASPs."
+  },
+  "notes": "Related instruments: Crypto-Asset Module, AML and financial crime modules, FATF virtual asset guidance"
+}

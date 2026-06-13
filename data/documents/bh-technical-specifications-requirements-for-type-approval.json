@@ -1,0 +1,23 @@
+{
+  "id": "bh-technical-specifications-requirements-for-type-approval",
+  "title": "Technical Specifications Requirements for Type Approval",
+  "jurisdiction": "BH",
+  "instrument_class": "standard",
+  "binding_status": "non_binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "telecom_digital_infrastructure.spectrum"
+  ],
+  "issuing_authority": "bh-tra",
+  "date_issued": null,
+  "summary": "Sets technical requirements used in type approval of telecommunications and radiocommunications equipment imported or supplied in Bahrain.",
+  "source_url": "https://www.tra.org.bh/en/category/useful-documents",
+  "source_confidence": "pending_verification",
+  "tags": [
+    "Telecommunications & digital infrastructure"
+  ],
+  "theme_notes": {
+    "telecom_digital_infrastructure.spectrum": "Technical specifications for telecom equipment type approval."
+  },
+  "notes": "Related instruments: Telecommunications Law, National Frequency Plan and TRA spectrum instruments Sourced from an official index listing; confirm against the instrument text."
+}

@@ -1,0 +1,24 @@
+{
+  "id": "bh-decision-no-80-of-2025-amending-order-no-48-of-2022-regardin",
+  "title": "Decision No. 80 of 2025 Amending Order No. 48 of 2022 Regarding Data Subject Rights",
+  "jurisdiction": "BH",
+  "instrument_class": "decision",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "data_privacy.personal_data_protection"
+  ],
+  "issuing_authority": "bh-moj",
+  "date_issued": null,
+  "summary": "Introduces an additional right within the framework of Decision No. 48 of 2022, reported as a data portability-related amendment, but the exact official issue date was not verified from an opened source.",
+  "source_url": "https://www.pdp.gov.bh/assets/pdf/executive-decisions/rights_of_the_data_subject.pdf",
+  "source_confidence": "official",
+  "tags": [
+    "Data & privacy"
+  ],
+  "year": 2025,
+  "theme_notes": {
+    "data_privacy.personal_data_protection": "Adds a new provision to the data subject rights decision."
+  },
+  "notes": "Related instruments: Decision No. 48 of 2022"
+}

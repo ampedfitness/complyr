@@ -1,0 +1,24 @@
+{
+  "id": "bh-emergency-order-no-1-of-2011-to-moving-gulf-telecom",
+  "title": "Emergency Order No. 1 of 2011 to Moving Gulf Telecom",
+  "jurisdiction": "BH",
+  "instrument_class": "decision",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "telecom_digital_infrastructure.licensing_markets"
+  ],
+  "issuing_authority": "bh-tra",
+  "date_issued": null,
+  "summary": "Requires Moving Gulf Telecom to cease and desist all telecommunications services.",
+  "source_url": "https://www.tra.org.bh/en/category/orders",
+  "source_confidence": "pending_verification",
+  "tags": [
+    "Telecommunications & digital infrastructure"
+  ],
+  "year": 2011,
+  "theme_notes": {
+    "telecom_digital_infrastructure.licensing_markets": "Emergency order to cease telecommunications services."
+  },
+  "notes": "Related instruments: Telecommunications Law and TRA orders archive Sourced from an official index listing; confirm against the instrument text."
+}

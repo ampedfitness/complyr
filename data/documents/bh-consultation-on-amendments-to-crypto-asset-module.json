@@ -1,0 +1,24 @@
+{
+  "id": "bh-consultation-on-amendments-to-crypto-asset-module",
+  "title": "Consultation on Amendments to Crypto-Asset Module",
+  "jurisdiction": "BH",
+  "instrument_class": "consultation_paper",
+  "binding_status": "non_binding",
+  "lifecycle": "consultation",
+  "themes": [
+    "digital_finance.virtual_assets"
+  ],
+  "issuing_authority": "bh-cbb",
+  "date_issued": null,
+  "summary": "Consults on amendments to the CRA Module including digital token and crypto-asset controls.",
+  "source_url": "https://www.cbb.gov.bh/consultations/",
+  "source_confidence": "pending_verification",
+  "tags": [
+    "Digital finance"
+  ],
+  "year": 2023,
+  "theme_notes": {
+    "digital_finance.virtual_assets": "Consultation on CBB crypto-asset module amendments."
+  },
+  "notes": "Related instruments: CBB consultations archive and related rulebook modules Sourced from an official index listing; confirm against the instrument text."
+}

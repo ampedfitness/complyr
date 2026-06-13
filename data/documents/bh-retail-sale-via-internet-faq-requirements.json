@@ -1,0 +1,24 @@
+{
+  "id": "bh-retail-sale-via-internet-faq-requirements",
+  "title": "Retail Sale via Internet FAQ Requirements",
+  "jurisdiction": "BH",
+  "instrument_class": "guideline",
+  "binding_status": "non_binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "digital_economy.ecommerce"
+  ],
+  "issuing_authority": "bh-moic",
+  "date_issued": null,
+  "summary": "Specifies that applicants must provide a live domain URL, returns and refund policy, terms of use, consumer protection policy, secure electronic payment method, active shopping cart and delivery service.",
+  "source_url": "https://www.moic.gov.bh/en/faq/27",
+  "source_confidence": "official",
+  "tags": [
+    "Digital economy & platforms"
+  ],
+  "year": 2025,
+  "theme_notes": {
+    "digital_economy.ecommerce": "MOIC FAQ setting requirements for online retail activity applications."
+  },
+  "notes": "Related instruments: Related to Retail Sale via Internet Activity Requirements"
+}

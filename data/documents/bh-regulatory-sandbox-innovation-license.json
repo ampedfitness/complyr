@@ -1,0 +1,26 @@
+{
+  "id": "bh-regulatory-sandbox-innovation-license",
+  "title": "Regulatory Sandbox Innovation License",
+  "jurisdiction": "BH",
+  "instrument_class": "framework",
+  "binding_status": "non_binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "ai_emerging_tech.iot_connected_devices",
+    "telecom_digital_infrastructure.licensing_markets"
+  ],
+  "issuing_authority": "bh-tra",
+  "date_issued": null,
+  "summary": "Allows research and pre-commercial testing of emerging wireless technologies and services, including passive IoT and other connected-device use cases, subject to TRA application, review, fee, and temporary licence approval.",
+  "source_url": "https://www.tra.org.bh/en/category/regulatory-sandbox-innovation-license",
+  "source_confidence": "official",
+  "tags": [
+    "AI & emerging technologies",
+    "Telecommunications & digital infrastructure"
+  ],
+  "theme_notes": {
+    "ai_emerging_tech.iot_connected_devices": "Temporary licensing framework for testing advanced wireless technologies.",
+    "telecom_digital_infrastructure.licensing_markets": "Temporary licensing framework for testing advanced telecom technologies."
+  },
+  "notes": "Related instruments: Telecommunications Law and TRA licensing framework"
+}

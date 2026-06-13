@@ -1,0 +1,24 @@
+{
+  "id": "bh-final-strategic-market-review-report",
+  "title": "Final Strategic Market Review Report",
+  "jurisdiction": "BH",
+  "instrument_class": "white_paper",
+  "binding_status": "non_binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "telecom_digital_infrastructure.licensing_markets"
+  ],
+  "issuing_authority": "bh-tra",
+  "date_issued": null,
+  "summary": "Reviews susceptible markets and regulatory measures to foster dynamic telecommunications sector development.",
+  "source_url": "https://www.tra.org.bh/en/category/position-papers-and-guidelines",
+  "source_confidence": "pending_verification",
+  "tags": [
+    "Telecommunications & digital infrastructure"
+  ],
+  "year": 2015,
+  "theme_notes": {
+    "telecom_digital_infrastructure.licensing_markets": "Strategic market review report on telecom ex ante regulation."
+  },
+  "notes": "Related instruments: Telecommunications Law and TRA legal instruments archive Sourced from an official index listing; confirm against the instrument text."
+}

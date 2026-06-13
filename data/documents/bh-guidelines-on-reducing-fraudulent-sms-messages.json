@@ -1,0 +1,27 @@
+{
+  "id": "bh-guidelines-on-reducing-fraudulent-sms-messages",
+  "title": "Guidelines on Reducing Fraudulent SMS Messages",
+  "jurisdiction": "BH",
+  "instrument_class": "guideline",
+  "binding_status": "non_binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "telecom_digital_infrastructure.ott_digital_comms",
+    "online_content.content_standards_moderation"
+  ],
+  "issuing_authority": "bh-tra",
+  "date_issued": null,
+  "summary": "Sets telecom-sector expectations for reducing fraudulent SMS and protecting users from impersonation, scam messaging and misuse of digital communication channels.",
+  "source_url": "https://www.tra.org.bh/en/category/position-papers-and-guidelines",
+  "source_confidence": "official",
+  "tags": [
+    "Telecommunications & digital infrastructure",
+    "Online content & media"
+  ],
+  "year": 2025,
+  "theme_notes": {
+    "telecom_digital_infrastructure.ott_digital_comms": "Guidelines to reduce fraudulent SMS messages in Bahrain.",
+    "online_content.content_standards_moderation": "Guidelines to reduce fraudulent SMS content."
+  },
+  "notes": "Related instruments: Telecommunications Law and SIM registration framework"
+}

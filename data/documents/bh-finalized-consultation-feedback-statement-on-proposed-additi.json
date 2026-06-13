@@ -1,0 +1,23 @@
+{
+  "id": "bh-finalized-consultation-feedback-statement-on-proposed-additi",
+  "title": "Finalized Consultation Feedback Statement on Proposed Additions to Payment Service Provider Requirements",
+  "jurisdiction": "BH",
+  "instrument_class": "consultation_paper",
+  "binding_status": "non_binding",
+  "lifecycle": "superseded",
+  "themes": [
+    "digital_finance.payments_emoney"
+  ],
+  "issuing_authority": "bh-cbb",
+  "date_issued": null,
+  "summary": "Records CBB feedback on proposed additions to payment service provider requirements.",
+  "source_url": "https://www.cbb.gov.bh/consultations/",
+  "source_confidence": "pending_verification",
+  "tags": [
+    "Digital finance"
+  ],
+  "theme_notes": {
+    "digital_finance.payments_emoney": "Feedback statement on PSP requirements."
+  },
+  "notes": "Related instruments: CBB consultations archive and related rulebook modules Sourced from an official index listing; confirm against the instrument text."
+}

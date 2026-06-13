@@ -1,0 +1,23 @@
+{
+  "id": "bh-cbb-volume-2-om-5-5-cyber-security-policy",
+  "title": "CBB Volume 2 OM-5.5 Cyber Security Policy",
+  "jurisdiction": "BH",
+  "instrument_class": "rulebook_module",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "cybersecurity.security_controls_frameworks"
+  ],
+  "issuing_authority": "bh-cbb",
+  "date_issued": null,
+  "summary": "Requires cybersecurity policy as part of cyber security risk management under operational risk module.",
+  "source_url": "https://cbben.thomsonreuters.com/rulebook/cyber-security-policy",
+  "source_confidence": "official",
+  "tags": [
+    "Cybersecurity"
+  ],
+  "theme_notes": {
+    "cybersecurity.security_controls_frameworks": "Cybersecurity policy requirement for Islamic bank licensees."
+  },
+  "notes": "Related instruments: CBB Rulebook and CBB consultations"
+}

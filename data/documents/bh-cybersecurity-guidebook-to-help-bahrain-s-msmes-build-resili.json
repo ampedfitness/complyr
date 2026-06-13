@@ -1,0 +1,24 @@
+{
+  "id": "bh-cybersecurity-guidebook-to-help-bahrain-s-msmes-build-resili",
+  "title": "Cybersecurity Guidebook to Help Bahrain’s MSMEs Build Resilience",
+  "jurisdiction": "BH",
+  "instrument_class": "handbook",
+  "binding_status": "non_binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "cybersecurity.security_controls_frameworks"
+  ],
+  "issuing_authority": "bh-ncsc",
+  "date_issued": null,
+  "summary": "Provides MSMEs with scalable guidance aligned with national cybersecurity goals, including risk assessment, security infrastructure, awareness, threat-intelligence collaboration, maturity models, case studies, access controls, backups, cloud security and incident readiness.",
+  "source_url": "https://www.ncsc.gov.bh/assets%2Fimages%2FMSM_Es_Booklet_En_d97ca2b2a0.pdf",
+  "source_confidence": "official",
+  "tags": [
+    "Cybersecurity"
+  ],
+  "year": 2025,
+  "theme_notes": {
+    "cybersecurity.security_controls_frameworks": "Practical cybersecurity guidebook for Bahrain micro, small and medium enterprises."
+  },
+  "notes": "Related instruments: Related to Bahrain National Cyber Security Strategy 2025-2028"
+}

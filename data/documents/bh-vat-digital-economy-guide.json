@@ -1,0 +1,29 @@
+{
+  "id": "bh-vat-digital-economy-guide",
+  "title": "VAT Digital Economy Guide",
+  "jurisdiction": "BH",
+  "instrument_class": "guideline",
+  "binding_status": "non_binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "digital_economy.einvoicing_digital_tax",
+    "online_content.online_advertising_influencers",
+    "online_content.gaming_esports"
+  ],
+  "issuing_authority": "bh-nbr",
+  "date_issued": null,
+  "summary": "Sets non-binding NBR views on VAT rules and procedures for digital economy supplies, including electronically supplied services, online content, platforms, digital advertising, gaming and cross-border digital services.",
+  "source_url": "https://www.lexismiddleeast.com/regulatory/Bahrain/BahrainNationalBureauforRevenue_VAT_Digital_Economy_Guide/en",
+  "source_confidence": "secondary",
+  "tags": [
+    "Digital economy & platforms",
+    "Online content & media"
+  ],
+  "year": 2019,
+  "theme_notes": {
+    "digital_economy.einvoicing_digital_tax": "NBR guidance on VAT treatment of Bahrain digital economy supplies.",
+    "online_content.online_advertising_influencers": "VAT guidance for digital advertising and digital economy services.",
+    "online_content.gaming_esports": "VAT guidance for digital economy services including online gaming."
+  },
+  "notes": "Related instruments: Related to Value Added Tax Law and VAT Executive Regulations"
+}

@@ -1,0 +1,28 @@
+{
+  "id": "bh-baseline-cyber-security-controls",
+  "title": "Baseline Cyber Security Controls",
+  "jurisdiction": "BH",
+  "instrument_class": "standard",
+  "binding_status": "non_binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "cybersecurity.security_controls_frameworks",
+    "cybersecurity.critical_infrastructure",
+    "cybersecurity.incident_reporting"
+  ],
+  "issuing_authority": "bh-ncsc",
+  "date_issued": null,
+  "summary": "Sets minimum high-level cybersecurity controls across governance, awareness, defence, incident and log management, third-party and cloud security, OT and IoT security, and audit, and is mandatory for public and private entities that form part of CNI.",
+  "source_url": "https://www.ncsc.gov.bh/assets/images/baseline_cybersecurity_controls_v1_80828fdb7d.pdf",
+  "source_confidence": "official",
+  "tags": [
+    "Cybersecurity"
+  ],
+  "year": 2022,
+  "theme_notes": {
+    "cybersecurity.security_controls_frameworks": "National baseline controls for Bahraini public and private entities.",
+    "cybersecurity.critical_infrastructure": "National baseline cybersecurity controls for entities in Bahrain.",
+    "cybersecurity.incident_reporting": "National baseline controls including incident and log management."
+  },
+  "notes": "Related instruments: Supports Bahrain National Cyber Security Strategy 2025-2028 and CNI Cybersecurity Controls"
+}

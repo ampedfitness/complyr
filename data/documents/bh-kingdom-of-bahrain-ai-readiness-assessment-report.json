@@ -1,0 +1,24 @@
+{
+  "id": "bh-kingdom-of-bahrain-ai-readiness-assessment-report",
+  "title": "Kingdom of Bahrain AI Readiness Assessment Report",
+  "jurisdiction": "BH",
+  "instrument_class": "white_paper",
+  "binding_status": "non_binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "ai_emerging_tech.ai_governance_ethics"
+  ],
+  "issuing_authority": "bh-iga",
+  "date_issued": null,
+  "summary": "Assesses Bahrain’s AI readiness across governance, legislation and regulation, society, research and education, economy and technology infrastructure, supporting future ethical AI policy development without creating binding duties.",
+  "source_url": "https://business.bahrain.bh/wps/portal/en/BNP/HomeNationalPortal/ContentDetailsPage/",
+  "source_confidence": "official",
+  "tags": [
+    "AI & emerging technologies"
+  ],
+  "year": 2025,
+  "theme_notes": {
+    "ai_emerging_tech.ai_governance_ethics": "Readiness assessment for responsible and ethical AI governance."
+  },
+  "notes": "Related instruments: UNESCO Recommendation on the Ethics of Artificial Intelligence and General Policy for the Use of Artificial Intelligence"
+}

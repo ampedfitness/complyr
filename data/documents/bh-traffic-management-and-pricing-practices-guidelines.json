@@ -1,0 +1,24 @@
+{
+  "id": "bh-traffic-management-and-pricing-practices-guidelines",
+  "title": "Traffic Management and Pricing Practices Guidelines",
+  "jurisdiction": "BH",
+  "instrument_class": "guideline",
+  "binding_status": "non_binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "telecom_digital_infrastructure.internet_governance_domains"
+  ],
+  "issuing_authority": "bh-tra",
+  "date_issued": null,
+  "summary": "Sets TRA guidance on traffic management, transparency and pricing practices for internet access services.",
+  "source_url": "https://www.tra.org.bh/en/category/position-papers-and-guidelines",
+  "source_confidence": "pending_verification",
+  "tags": [
+    "Telecommunications & digital infrastructure"
+  ],
+  "year": 2017,
+  "theme_notes": {
+    "telecom_digital_infrastructure.internet_governance_domains": "Guidelines on internet traffic management and pricing practices."
+  },
+  "notes": "Related instruments: Telecommunications Law and TRA legal instruments archive Sourced from an official index listing; confirm against the instrument text."
+}

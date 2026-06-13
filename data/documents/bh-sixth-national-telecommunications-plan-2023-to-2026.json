@@ -1,0 +1,27 @@
+{
+  "id": "bh-sixth-national-telecommunications-plan-2023-to-2026",
+  "title": "Sixth National Telecommunications Plan 2023 to 2026",
+  "jurisdiction": "BH",
+  "instrument_class": "national_strategy",
+  "binding_status": "non_binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "ai_emerging_tech.iot_connected_devices",
+    "telecom_digital_infrastructure.licensing_markets"
+  ],
+  "issuing_authority": "bh-gov",
+  "date_issued": null,
+  "summary": "Sets national policy direction for Bahrain’s telecommunications sector, including 5G, IoT, machine-to-machine services, smart verticals, satellite connectivity, private mobile networks, digital economy enablement, and smart kingdom infrastructure.",
+  "source_url": "https://ir-tra-website-prod-01.s3-eu-west-1.amazonaws.com/Media/Documents/National_Telecommunications_Plans/20231114152812215_5dylpg40_in5.pdf",
+  "source_confidence": "official",
+  "tags": [
+    "AI & emerging technologies",
+    "Telecommunications & digital infrastructure"
+  ],
+  "year": 2023,
+  "theme_notes": {
+    "ai_emerging_tech.iot_connected_devices": "Current national telecommunications strategy supporting IoT and smart infrastructure.",
+    "telecom_digital_infrastructure.licensing_markets": "Current national telecommunications strategy."
+  },
+  "notes": "Related instruments: Telecommunications Law and National Frequency Plan 2024"
+}

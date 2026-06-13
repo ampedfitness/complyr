@@ -1,0 +1,24 @@
+{
+  "id": "bh-cbb-rulebook-volume-1-om-2a-cloud-outsourcing-arrangements-a",
+  "title": "CBB Rulebook Volume 1 OM-2A Cloud Outsourcing Arrangements and Appendix OM-2 Cloud Outsourcing Control Guidelines",
+  "jurisdiction": "BH",
+  "instrument_class": "rulebook_module",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "cybersecurity.security_controls_frameworks"
+  ],
+  "issuing_authority": "bh-cbb",
+  "date_issued": null,
+  "summary": "Requires banks to manage cloud outsourcing risks including information security, personal data protection, incident management, business continuity, disaster recovery, access, confidentiality, integrity, data sovereignty, regulatory compliance and auditability.",
+  "source_url": "https://www.cbb.gov.bh/wp-content/uploads/2021/07/Cloud-Outsourcing-Arrangements-Volume-1.pdf",
+  "source_confidence": "official",
+  "tags": [
+    "Cybersecurity"
+  ],
+  "year": 2021,
+  "theme_notes": {
+    "cybersecurity.security_controls_frameworks": "Cloud security and outsourcing controls for conventional banks."
+  },
+  "notes": "Related instruments: Related to CBB Operational Risk Management Module and Appendix OM-2 Cloud Outsourcing Control Guidelines"
+}

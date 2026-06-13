@@ -1,0 +1,24 @@
+{
+  "id": "bh-cbb-appendix-a-cyber-security-control-guidelines",
+  "title": "CBB Appendix A Cyber Security Control Guidelines",
+  "jurisdiction": "BH",
+  "instrument_class": "guideline",
+  "binding_status": "non_binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "cybersecurity.security_controls_frameworks"
+  ],
+  "issuing_authority": "bh-cbb",
+  "date_issued": null,
+  "summary": "Sets identify, protect, detect, respond and recover control activities for regulated licensees, including asset management, governance, risk assessment, third-party risk, access control, training, data security, backups, monitoring, incident response, exercises and recovery.",
+  "source_url": "https://www.cbb.gov.bh/wp-content/uploads/2024/10/Appendix-A-Cyber-Security-Control-Guidelines.pdf",
+  "source_confidence": "official",
+  "tags": [
+    "Cybersecurity"
+  ],
+  "year": 2024,
+  "theme_notes": {
+    "cybersecurity.security_controls_frameworks": "NIST-style cybersecurity control guidelines used across CBB rulebook modules."
+  },
+  "notes": "Related instruments: Referenced by CBB cyber security risk management modules"
+}

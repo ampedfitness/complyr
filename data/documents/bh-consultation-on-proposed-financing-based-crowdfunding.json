@@ -1,0 +1,24 @@
+{
+  "id": "bh-consultation-on-proposed-financing-based-crowdfunding",
+  "title": "Consultation on Proposed Financing Based Crowdfunding",
+  "jurisdiction": "BH",
+  "instrument_class": "consultation_paper",
+  "binding_status": "non_binding",
+  "lifecycle": "consultation",
+  "themes": [
+    "digital_finance.fintech_sandboxes"
+  ],
+  "issuing_authority": "bh-cbb",
+  "date_issued": null,
+  "summary": "Consults on conventional and Sharia-compliant financing-based crowdfunding rules.",
+  "source_url": "https://www.cbb.gov.bh/consultations/",
+  "source_confidence": "pending_verification",
+  "tags": [
+    "Digital finance"
+  ],
+  "year": 2017,
+  "theme_notes": {
+    "digital_finance.fintech_sandboxes": "Consultation on financing-based crowdfunding."
+  },
+  "notes": "Related instruments: CBB consultations archive and related rulebook modules Sourced from an official index listing; confirm against the instrument text."
+}

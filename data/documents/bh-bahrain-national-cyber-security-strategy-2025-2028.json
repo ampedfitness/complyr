@@ -1,0 +1,26 @@
+{
+  "id": "bh-bahrain-national-cyber-security-strategy-2025-2028",
+  "title": "Bahrain National Cyber Security Strategy 2025-2028",
+  "jurisdiction": "BH",
+  "instrument_class": "national_strategy",
+  "binding_status": "non_binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "cybersecurity.security_controls_frameworks",
+    "cybersecurity.critical_infrastructure"
+  ],
+  "issuing_authority": "bh-ncsc",
+  "date_issued": null,
+  "summary": "Establishes Bahrain’s four-year national cybersecurity framework across cyber resilience, governance, collaboration, awareness, workforce development, and cyber research, with direct focus on CNI protection, standardized risk management, regulation, compliance, and national cyber resilience.",
+  "source_url": "https://www.ncsc.gov.bh/assets/images/National_Cyber_Security_Strategy_Summary_2025_2028_1517a02fac.pdf",
+  "source_confidence": "official",
+  "tags": [
+    "Cybersecurity"
+  ],
+  "year": 2025,
+  "theme_notes": {
+    "cybersecurity.security_controls_frameworks": "Current national cybersecurity strategy for Bahrain.",
+    "cybersecurity.critical_infrastructure": "Current national cybersecurity strategy prioritising CNI resilience."
+  },
+  "notes": "Related instruments: Supersedes Bahrain National Cyber Security Strategy 2020-2024 and supports Baseline Cyber Security Controls, CNI Cybersecurity Controls, and National Cybersecurity Risk Management Framework"
+}

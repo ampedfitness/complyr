@@ -1,0 +1,24 @@
+{
+  "id": "bh-emergency-order-no-1-of-2016-against-batelco-retail-tariff-n",
+  "title": "Emergency Order No. 1 of 2016 against Batelco Retail Tariff Notification Breach",
+  "jurisdiction": "BH",
+  "instrument_class": "decision",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "telecom_digital_infrastructure.licensing_markets"
+  ],
+  "issuing_authority": "bh-tra",
+  "date_issued": null,
+  "summary": "Issued against Batelco for breach of retail tariff notification regulation requirements.",
+  "source_url": "https://www.tra.org.bh/en/category/orders",
+  "source_confidence": "pending_verification",
+  "tags": [
+    "Telecommunications & digital infrastructure"
+  ],
+  "year": 2016,
+  "theme_notes": {
+    "telecom_digital_infrastructure.licensing_markets": "Emergency order for retail tariff notification breach."
+  },
+  "notes": "Related instruments: Telecommunications Law and TRA orders archive Sourced from an official index listing; confirm against the instrument text."
+}

@@ -1,0 +1,24 @@
+{
+  "id": "bh-health-requirements-technical-standards-and-safety-requireme",
+  "title": "Health Requirements, Technical Standards and Safety Requirements for Health Facilities Version 2",
+  "jurisdiction": "BH",
+  "instrument_class": "standard",
+  "binding_status": "non_binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "digital_health.telehealth_digital_services"
+  ],
+  "issuing_authority": "bh-nhra",
+  "date_issued": null,
+  "summary": "Defines telemedicine as medical consultation through telephone, email, video conference or other electronic means and sets requirements for telemedicine centres, including service, consent, pricing and treatment limitations.",
+  "source_url": "https://www.nhra.bh/Departments/HCF/MediaHandler/GenericHandler/documents/departments/LAU/HCF/Health%20facilities%20requirments%20and%20conditions%20V2.pdf",
+  "source_confidence": "official",
+  "tags": [
+    "Digital health"
+  ],
+  "year": 2019,
+  "theme_notes": {
+    "digital_health.telehealth_digital_services": "Health facility licensing standards including telemedicine centres."
+  },
+  "notes": "Related instruments: Related to NHRA health facility licensing and telemedicine circulars"
+}

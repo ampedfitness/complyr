@@ -1,0 +1,24 @@
+{
+  "id": "bh-position-paper-on-voip",
+  "title": "Position Paper on VoIP",
+  "jurisdiction": "BH",
+  "instrument_class": "white_paper",
+  "binding_status": "non_binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "telecom_digital_infrastructure.ott_digital_comms"
+  ],
+  "issuing_authority": "bh-tra",
+  "date_issued": null,
+  "summary": "Early TRA position on voice over IP service regulation in Bahrain.",
+  "source_url": "https://www.tra.org.bh/en/category/position-papers-and-guidelines",
+  "source_confidence": "pending_verification",
+  "tags": [
+    "Telecommunications & digital infrastructure"
+  ],
+  "year": 2004,
+  "theme_notes": {
+    "telecom_digital_infrastructure.ott_digital_comms": "TRA position paper on VoIP services."
+  },
+  "notes": "Related instruments: Telecommunications Law and TRA legal instruments archive Sourced from an official index listing; confirm against the instrument text."
+}

@@ -1,0 +1,24 @@
+{
+  "id": "bh-cbb-rulebook-volume-2-om-2a-cloud-outsourcing-arrangements",
+  "title": "CBB Rulebook Volume 2 OM-2A Cloud Outsourcing Arrangements",
+  "jurisdiction": "BH",
+  "instrument_class": "rulebook_module",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "telecom_digital_infrastructure.cloud_data_centres"
+  ],
+  "issuing_authority": "bh-cbb",
+  "date_issued": null,
+  "summary": "Applies cloud outsourcing governance, security, data protection, confidentiality, audit, regulatory access and resilience requirements to Islamic bank licensees using cloud service providers.",
+  "source_url": "https://www.cbb.gov.bh/wp-content/uploads/2021/07/Cloud-Outsourcing-Arrangements-Volume-2.pdf",
+  "source_confidence": "official",
+  "tags": [
+    "Telecommunications & digital infrastructure"
+  ],
+  "year": 2021,
+  "theme_notes": {
+    "telecom_digital_infrastructure.cloud_data_centres": "Cloud outsourcing controls for Islamic bank licensees."
+  },
+  "notes": "Related instruments: Related to CBB Appendix OM-2 Cloud Outsourcing Control Guidelines"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "bh-decree-law-no-47-of-2002-on-the-organisation-of-the-press-pr",
+  "title": "Decree-Law No. 47 of 2002 on the Organisation of the Press, Printing and Publishing",
+  "jurisdiction": "BH",
+  "instrument_class": "decree",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "online_content.online_media_licensing",
+    "online_content.content_standards_moderation"
+  ],
+  "issuing_authority": "bh-king",
+  "date_issued": null,
+  "summary": "Regulates press, printing and publishing and is relevant to online media because official and secondary sources identify coverage of publishing and permanent or temporary electronic storage.",
+  "source_url": "https://www.wipo.int/wipolex/en/legislation/details/7270",
+  "source_confidence": "secondary",
+  "tags": [
+    "Online content & media"
+  ],
+  "year": 2002,
+  "theme_notes": {
+    "online_content.online_media_licensing": "Core press and publishing law covering electronic storage and publication-related activity.",
+    "online_content.content_standards_moderation": "Press and publishing content law relevant to online publishing."
+  },
+  "notes": "Related instruments: Related to Information Technology Crimes Law No. 60 of 2014"
+}

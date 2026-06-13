@@ -1,0 +1,23 @@
+{
+  "id": "bh-cbb-volume-5-au-1-2-payment-initiation-service-provider-acti",
+  "title": "CBB Volume 5 AU-1.2 Payment Initiation Service Provider Activity",
+  "jurisdiction": "BH",
+  "instrument_class": "rulebook_module",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "digital_finance.open_banking"
+  ],
+  "issuing_authority": "bh-cbb",
+  "date_issued": null,
+  "summary": "Sets perimeter for providers initiating payment transactions on behalf of payment service users.",
+  "source_url": "https://cbben.thomsonreuters.com/rulebook/payment-service-provider-psp",
+  "source_confidence": "official",
+  "tags": [
+    "Digital finance"
+  ],
+  "theme_notes": {
+    "digital_finance.open_banking": "Defines payment initiation service provider activity."
+  },
+  "notes": "Related instruments: CBB Rulebook and CBB consultations"
+}

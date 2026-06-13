@@ -1,0 +1,24 @@
+{
+  "id": "bh-the-digital-authentication-framework-ekey",
+  "title": "The Digital Authentication Framework - eKey",
+  "jurisdiction": "BH",
+  "instrument_class": "framework",
+  "binding_status": "non_binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "digital_government.digital_identity_trust"
+  ],
+  "issuing_authority": "bh-iga",
+  "date_issued": null,
+  "summary": "Describes eKey as the single sign-in unified platform for eServices requiring authentication and sets the framework for digital identity, eKYC and authenticated access to government digital services.",
+  "source_url": "https://www.bahrain.bh/wps/portal/en/BNP/HomeNationalPortal/ContentDetailsPage/%21ut/p/z1/nVRdd5owGP4r7MJztgtISPi8RLuq7aoWa1u56QkQIW0IFKLO_fpB19NNqNouN3zked73eT9BAO5BIMiGJUSyXBBefy8D60Efm3DkDCCcnRkIXt-6vtW_0uHVEIO7fYB-s4A1YOz50_MzHRo6CD7ChweOBz_GfwOMJrMzaE1Hjo3sPp7OcIt_aenQuvZ8z5hBHTrmKT7a53fNv6ffg30f9TGEwzk8zkdt_-6Na0ELIc9A8yGG08_G3wUEx9Pb5ncStOffNS8H0BrPjYl5caM7qMPvAo7oh9A4rr8BBMfTcwuWfbAsN2gw8MDF0Wy7qGln9vj8HHggiHIh6U8J7kNRPFDRgyTM11KRKVWemEjiPOvBkKQlYUKJWcIk4UqSb2gpMiqk8pivS0F3PVhSTiSNFZkXLKp6sDHAxCovs5cZUoiIFfoPkaxlmpdM7pRKljUz2bVld2v4Sdm5iKiaC75TipKJiBWcKjGRpCtWvM65klLCZbonvNpVkmbKV6ZWNCW1qTwpSfbtRJJn-D-TzBROE1bxF-dVVyqrLXFOI7mu5dZiClrWOSxZksqq7qLg1KC1AK1FdQlPAJpNdmqW3gP83QXTjgZ3sTiHljM8NwzL8W3TBst6GuyDUZj1utgwugUL0VSJg3ljsYhYDJaRayNCqa6GtumqhoVdlTihpeoUo0hfhaG7ImAEXz0c0Oj9QH9skqipAlhui0or8lJyKiuNM_HUXDZPUhQvXvNMY2GmbQuNxBkTWkp5_VoU2pby-pJqr-0uknZsrS4f48Ox6ZjQ2Ix0FVuIqIYbhqqzWhmqadsY2_VPvLLBnApQZIu3I0y-ye7UILT87_7oV3-iDjMHm0n24H35DfRWzwY%21/?1dmy=&current=true&urile=wcm%3Apath%3A%2Fbnp_en%2Fabout%2Bthe%2Bkingdom%2Fonce-only%2Bprinciple%2Bdata%2Frelated%2Btopics%2Fthe%2Bnational%2Bauthentication%2Bframework%2Bproject%2B%2528ekey%2Bsystem%2529",
+  "source_confidence": "official",
+  "tags": [
+    "Digital government & identity"
+  ],
+  "year": 2025,
+  "theme_notes": {
+    "digital_government.digital_identity_trust": "National authentication framework for eKey digital identity."
+  },
+  "notes": "Related instruments: Related to eKey 2.0 and Digital Government Strategy Principles"
+}

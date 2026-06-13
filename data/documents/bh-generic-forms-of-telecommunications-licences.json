@@ -1,0 +1,23 @@
+{
+  "id": "bh-generic-forms-of-telecommunications-licences",
+  "title": "Generic Forms of Telecommunications Licences",
+  "jurisdiction": "BH",
+  "instrument_class": "framework",
+  "binding_status": "non_binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "telecom_digital_infrastructure.licensing_markets"
+  ],
+  "issuing_authority": "bh-tra",
+  "date_issued": null,
+  "summary": "Publishes generic forms for VSAT, internet exchange, international facilities, international services, mobile, national fixed, internet services and value-added service licences, setting licence condition baselines for market entry.",
+  "source_url": "https://www.tra.org.bh/en/category/generic-form-of-licences",
+  "source_confidence": "official",
+  "tags": [
+    "Telecommunications & digital infrastructure"
+  ],
+  "theme_notes": {
+    "telecom_digital_infrastructure.licensing_markets": "TRA template licence framework for telecom service providers."
+  },
+  "notes": "Related instruments: Based on Telecommunications Law Articles 29 and 32"
+}

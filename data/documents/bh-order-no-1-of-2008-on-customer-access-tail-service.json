@@ -1,0 +1,24 @@
+{
+  "id": "bh-order-no-1-of-2008-on-customer-access-tail-service",
+  "title": "Order No. 1 of 2008 on Customer Access Tail Service",
+  "jurisdiction": "BH",
+  "instrument_class": "decision",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "telecom_digital_infrastructure.licensing_markets"
+  ],
+  "issuing_authority": "bh-tra",
+  "date_issued": null,
+  "summary": "Sets obligations for providing customer access tail service.",
+  "source_url": "https://www.tra.org.bh/en/category/orders",
+  "source_confidence": "pending_verification",
+  "tags": [
+    "Telecommunications & digital infrastructure"
+  ],
+  "year": 2008,
+  "theme_notes": {
+    "telecom_digital_infrastructure.licensing_markets": "Order on Batelco customer access tail service obligation."
+  },
+  "notes": "Related instruments: Telecommunications Law and TRA orders archive Sourced from an official index listing; confirm against the instrument text."
+}

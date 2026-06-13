@@ -1,0 +1,24 @@
+{
+  "id": "bh-resolution-no-3-of-2008-assigning-tra-responsibility-for-bh",
+  "title": "Resolution No. 3 of 2008 Assigning TRA Responsibility for .bh and البحرين Domain Names",
+  "jurisdiction": "BH",
+  "instrument_class": "resolution",
+  "binding_status": "binding",
+  "lifecycle": "amended",
+  "themes": [
+    "telecom_digital_infrastructure.internet_governance_domains"
+  ],
+  "issuing_authority": "bh-mtt",
+  "date_issued": null,
+  "summary": "Assigns TRA responsibility for registration and management of the .bh and البحرين country-code top-level domains as national resources and underpins the Bahrain Domain Registry regime.",
+  "source_url": "https://register.bh/about-bh/",
+  "source_confidence": "official",
+  "tags": [
+    "Telecommunications & digital infrastructure"
+  ],
+  "year": 2008,
+  "theme_notes": {
+    "telecom_digital_infrastructure.internet_governance_domains": "Assigns TRA responsibility for Bahrain country-code domain names."
+  },
+  "notes": "Related instruments: Amended in 2018 according to Bahrain Domain Registry official materials"
+}

@@ -1,0 +1,31 @@
+{
+  "id": "bh-guidelines-on-telecommunications-sector-cybersecurity-contro",
+  "title": "Guidelines on Telecommunications Sector Cybersecurity Controls",
+  "jurisdiction": "BH",
+  "instrument_class": "guideline",
+  "binding_status": "non_binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "ai_emerging_tech.iot_connected_devices",
+    "cybersecurity.security_controls_frameworks",
+    "cybersecurity.critical_infrastructure",
+    "cybersecurity.incident_reporting"
+  ],
+  "issuing_authority": "bh-tra",
+  "date_issued": null,
+  "summary": "Recommends cybersecurity controls relevant to connected-device infrastructure, including secure by design, secure by default, privacy by design, security risk assessment, data protection assessment, and privacy assessment for technology and telecommunications infrastructure projects.",
+  "source_url": "https://ir-tra-website-prod-01.s3-eu-west-1.amazonaws.com/Media/Documents/Position_Papers_%26_Guidelines/20241230115016464_0uzs3exl_jsa.pdf",
+  "source_confidence": "official",
+  "tags": [
+    "AI & emerging technologies",
+    "Cybersecurity"
+  ],
+  "year": 2024,
+  "theme_notes": {
+    "ai_emerging_tech.iot_connected_devices": "Non-binding cybersecurity controls for telecommunications entities.",
+    "cybersecurity.security_controls_frameworks": "Non-binding cybersecurity control guidelines for the telecommunications sector.",
+    "cybersecurity.critical_infrastructure": "Cybersecurity control guidance for telecommunications entities.",
+    "cybersecurity.incident_reporting": "Telecom cybersecurity guidelines covering incident management."
+  },
+  "notes": "Related instruments: Telecommunications Law, Critical Telecommunications Infrastructure Risk Management Regulation, Position Paper on the Internet of Things"
+}

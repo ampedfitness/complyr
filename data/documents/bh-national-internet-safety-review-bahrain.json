@@ -1,0 +1,26 @@
+{
+  "id": "bh-national-internet-safety-review-bahrain",
+  "title": "National Internet Safety Review Bahrain",
+  "jurisdiction": "BH",
+  "instrument_class": "white_paper",
+  "binding_status": "non_binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "online_content.online_media_licensing",
+    "online_content.content_standards_moderation"
+  ],
+  "issuing_authority": "bh-tra",
+  "date_issued": null,
+  "summary": "Assesses internet safety, cyber safety, online risks and stakeholder responsibilities, providing non-binding context for online media and platform safety governance.",
+  "source_url": "https://www.tra.org.bh/Media/Awareness-Campaigns/nisr/NISR_report_English1.pdf",
+  "source_confidence": "official",
+  "tags": [
+    "Online content & media"
+  ],
+  "year": 2021,
+  "theme_notes": {
+    "online_content.online_media_licensing": "Review of internet safety and online safety issues in Bahrain.",
+    "online_content.content_standards_moderation": "Internet safety white paper addressing online content risks."
+  },
+  "notes": "Related instruments: Related to TRA online safety initiatives and Information Technology Crimes Law"
+}

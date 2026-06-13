@@ -1,0 +1,23 @@
+{
+  "id": "bh-cbb-volume-5-au-1-2-card-processing-activity",
+  "title": "CBB Volume 5 AU-1.2 Card Processing Activity",
+  "jurisdiction": "BH",
+  "instrument_class": "rulebook_module",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "digital_finance.payments_emoney"
+  ],
+  "issuing_authority": "bh-cbb",
+  "date_issued": null,
+  "summary": "Covers processing or transmission of cardholder and transaction data, customer delivery channel integration, ATM, POS, IVR, mobile and internet card program hosting.",
+  "source_url": "https://cbben.thomsonreuters.com/rulebook/payment-service-provider-psp",
+  "source_confidence": "official",
+  "tags": [
+    "Digital finance"
+  ],
+  "theme_notes": {
+    "digital_finance.payments_emoney": "Defines card processing under Volume 5."
+  },
+  "notes": "Related instruments: CBB Rulebook and CBB consultations"
+}

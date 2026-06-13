@@ -1,0 +1,24 @@
+{
+  "id": "bh-emergency-order-no-3-of-2010-on-retail-tariffs-for-internati",
+  "title": "Emergency Order No. 3 of 2010 on Retail Tariffs for International Calls",
+  "jurisdiction": "BH",
+  "instrument_class": "decision",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "telecom_digital_infrastructure.licensing_markets"
+  ],
+  "issuing_authority": "bh-tra",
+  "date_issued": null,
+  "summary": "Order against Batelco concerning retail tariffs for international calls to India and Bangladesh.",
+  "source_url": "https://www.tra.org.bh/en/category/orders",
+  "source_confidence": "pending_verification",
+  "tags": [
+    "Telecommunications & digital infrastructure"
+  ],
+  "year": 2010,
+  "theme_notes": {
+    "telecom_digital_infrastructure.licensing_markets": "Emergency order on international call tariffs."
+  },
+  "notes": "Related instruments: Telecommunications Law and TRA orders archive Sourced from an official index listing; confirm against the instrument text."
+}

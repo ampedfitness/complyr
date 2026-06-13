@@ -1,0 +1,24 @@
+{
+  "id": "bh-legislative-decree-no-55-of-2018-regarding-electronic-transf",
+  "title": "Legislative Decree No. 55 of 2018 Regarding Electronic Transferable Records",
+  "jurisdiction": "BH",
+  "instrument_class": "decree",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "ai_emerging_tech.blockchain_web3"
+  ],
+  "issuing_authority": "bh-king",
+  "date_issued": null,
+  "summary": "Enables blockchain and DLT-based trade documentation by recognising electronic transferable records as legally valid transferable instruments where functional-equivalence requirements are met, including control, integrity, endorsement, possession and cross-border treatment.",
+  "source_url": "https://www.lloc.gov.bh/Legislation/HTM/L5518",
+  "source_confidence": "official",
+  "tags": [
+    "AI & emerging technologies"
+  ],
+  "year": 2018,
+  "theme_notes": {
+    "ai_emerging_tech.blockchain_web3": "Gives legal recognition to electronic transferable records."
+  },
+  "notes": "Related instruments: Related to Legislative Decree No. 54 of 2018 and UNCITRAL Model Law on Electronic Transferable Records"
+}

@@ -1,0 +1,24 @@
+{
+  "id": "bh-cbb-directives-on-outsourcing-services-containing-customer-i",
+  "title": "CBB Directives on Outsourcing Services Containing Customer Information",
+  "jurisdiction": "BH",
+  "instrument_class": "circular",
+  "binding_status": "binding",
+  "lifecycle": "superseded",
+  "themes": [
+    "data_privacy.crossborder_data_flows"
+  ],
+  "issuing_authority": "bh-cbb",
+  "date_issued": null,
+  "summary": "Prohibited retail banks and financing companies from outsourcing services containing private customer information to non-licensee service providers or service providers operating outside Bahrain, based on the CBB annual report description.",
+  "source_url": "https://www.cbb.gov.bh/wp-content/uploads/2019/01/CBB-ANNUAL-REPORT-2016-English-final.pdf",
+  "source_confidence": "official",
+  "tags": [
+    "Data & privacy"
+  ],
+  "year": 2016,
+  "theme_notes": {
+    "data_privacy.crossborder_data_flows": "Restricted offshore outsourcing of customer information by retail banks and financing companies."
+  },
+  "notes": "Related instruments: Later reflected or replaced by CBB OM-2 and cloud outsourcing rules"
+}

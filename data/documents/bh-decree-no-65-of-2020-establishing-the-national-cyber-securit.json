@@ -1,0 +1,26 @@
+{
+  "id": "bh-decree-no-65-of-2020-establishing-the-national-cyber-securit",
+  "title": "Decree No. 65 of 2020 Establishing the National Cyber Security Center",
+  "jurisdiction": "BH",
+  "instrument_class": "decree",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "cybersecurity.security_controls_frameworks",
+    "cybersecurity.critical_infrastructure"
+  ],
+  "issuing_authority": "bh-king",
+  "date_issued": null,
+  "summary": "Creates the institutional basis for national cybersecurity strategy, CNI protection, standards, guidelines, policies, risk assessment frameworks, audits, threat sharing, and national incident response coordination.",
+  "source_url": "https://www.ncsc.gov.bh/en/about/who-are-we.html",
+  "source_confidence": "official",
+  "tags": [
+    "Cybersecurity"
+  ],
+  "year": 2020,
+  "theme_notes": {
+    "cybersecurity.security_controls_frameworks": "Establishes Bahrain’s national cybersecurity centre.",
+    "cybersecurity.critical_infrastructure": "Establishes Bahrain’s National Cyber Security Center."
+  },
+  "notes": "Related instruments: Related to Royal Order No. 17 of 2025 and Bahrain National Cyber Security Strategy 2025-2028"
+}

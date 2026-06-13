@@ -1,0 +1,24 @@
+{
+  "id": "bh-cbb-rulebook-volume-1-operational-risk-management-module-om",
+  "title": "CBB Rulebook Volume 1 Operational Risk Management Module OM-2 Outsourcing Requirements",
+  "jurisdiction": "BH",
+  "instrument_class": "rulebook_module",
+  "binding_status": "binding",
+  "lifecycle": "amended",
+  "themes": [
+    "data_privacy.crossborder_data_flows"
+  ],
+  "issuing_authority": "bh-cbb",
+  "date_issued": null,
+  "summary": "Requires prior CBB approval for outsourcing to a third party outside Bahrain, with separate notification treatment for intragroup and cloud data services inside or outside Bahrain, and requires confidentiality, encryption, audit access, and reporting safeguards in service agreements.",
+  "source_url": "https://cbben.thomsonreuters.com/entiresection/115794",
+  "source_confidence": "official",
+  "tags": [
+    "Data & privacy"
+  ],
+  "year": 2020,
+  "theme_notes": {
+    "data_privacy.crossborder_data_flows": "Sets outsourcing approval and notification rules for Bahrain retail banks."
+  },
+  "notes": "Related instruments: Amended in July 2022 and April 2023"
+}

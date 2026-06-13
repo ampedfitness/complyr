@@ -1,0 +1,31 @@
+{
+  "id": "bh-cbb-cyber-security-requirements-letter-eds-na-c-03-2025",
+  "title": "CBB Cyber Security Requirements Letter EDS/NA/C/03/2025",
+  "jurisdiction": "BH",
+  "instrument_class": "circular",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "cybersecurity.security_controls_frameworks",
+    "cybersecurity.critical_infrastructure",
+    "cybersecurity.incident_reporting",
+    "digital_finance.payments_emoney"
+  ],
+  "issuing_authority": "bh-cbb",
+  "date_issued": null,
+  "summary": "Directs all CBB licensees to patch public-facing systems, enable MFA for critical systems, maintain and test backups, report suspicious activity to NCSC, and comply with NCSC Protect Your Organization recommendations in addition to CBB Rulebook requirements.",
+  "source_url": "https://cbben.thomsonreuters.com/sites/default/files/net_file_store/EDS_Cyber_Security_Requirements_17_July_2025.pdf",
+  "source_confidence": "official",
+  "tags": [
+    "Cybersecurity",
+    "Digital finance"
+  ],
+  "year": 2025,
+  "theme_notes": {
+    "cybersecurity.security_controls_frameworks": "Immediate cybersecurity requirements for all CBB licensees.",
+    "cybersecurity.critical_infrastructure": "Immediate cybersecurity requirements for all CBB licensees.",
+    "cybersecurity.incident_reporting": "Requires suspicious cyber activity reporting to NCSC by CBB licensees.",
+    "digital_finance.payments_emoney": "Cybersecurity requirements for all CBB licensees including payment providers."
+  },
+  "notes": "Related instruments: Related to CBB cyber risk modules and NCSC Protect Your Organization guidance"
+}

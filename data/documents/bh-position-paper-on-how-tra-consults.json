@@ -1,0 +1,24 @@
+{
+  "id": "bh-position-paper-on-how-tra-consults",
+  "title": "Position Paper on How TRA Consults",
+  "jurisdiction": "BH",
+  "instrument_class": "white_paper",
+  "binding_status": "non_binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "telecom_digital_infrastructure.licensing_markets"
+  ],
+  "issuing_authority": "bh-tra",
+  "date_issued": null,
+  "summary": "Sets TRA’s consultation approach for regulatory measures that materially affect telecom markets.",
+  "source_url": "https://www.tra.org.bh/en/category/position-papers-and-guidelines",
+  "source_confidence": "pending_verification",
+  "tags": [
+    "Telecommunications & digital infrastructure"
+  ],
+  "year": 2017,
+  "theme_notes": {
+    "telecom_digital_infrastructure.licensing_markets": "TRA position paper on consultation procedures."
+  },
+  "notes": "Related instruments: Telecommunications Law and TRA legal instruments archive Sourced from an official index listing; confirm against the instrument text."
+}

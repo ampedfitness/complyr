@@ -1,0 +1,24 @@
+{
+  "id": "bh-cbb-rulebook-volume-5-payment-service-provider-module",
+  "title": "CBB Rulebook Volume 5 Payment Service Provider Module",
+  "jurisdiction": "BH",
+  "instrument_class": "rulebook_module",
+  "binding_status": "binding",
+  "lifecycle": "consultation",
+  "themes": [
+    "digital_finance.payments_emoney"
+  ],
+  "issuing_authority": "bh-cbb",
+  "date_issued": null,
+  "summary": "Sets requirements for payment service providers undertaking regulated payment services, including authorisation, governance, technology, risk management, customer protection and operational requirements.",
+  "source_url": "https://www.cbb.gov.bh/wp-content/uploads/2026/02/Volume-5_PSP-Module_5-Feb-26.pdf",
+  "source_confidence": "official",
+  "tags": [
+    "Digital finance"
+  ],
+  "year": 2026,
+  "theme_notes": {
+    "digital_finance.payments_emoney": "Payment service provider requirements for regulated payment services."
+  },
+  "notes": "Related instruments: Published as proposed Payment Service Requirements Module on CBB consultations page"
+}

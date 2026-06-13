@@ -1,0 +1,24 @@
+{
+  "id": "bh-consultation-on-draft-electronic-commerce-law",
+  "title": "Consultation on Draft Electronic Commerce Law",
+  "jurisdiction": "BH",
+  "instrument_class": "consultation_paper",
+  "binding_status": "non_binding",
+  "lifecycle": "consultation",
+  "themes": [
+    "digital_economy.ecommerce"
+  ],
+  "issuing_authority": "bh-cbb",
+  "date_issued": null,
+  "summary": "Consults on draft e-commerce legislation relevant to digital commerce and electronic contracting.",
+  "source_url": "https://www.cbb.gov.bh/consultations/",
+  "source_confidence": "pending_verification",
+  "tags": [
+    "Digital economy & platforms"
+  ],
+  "year": 2019,
+  "theme_notes": {
+    "digital_economy.ecommerce": "Consultation on draft electronic commerce law."
+  },
+  "notes": "Related instruments: CBB consultations archive and related rulebook modules Sourced from an official index listing; confirm against the instrument text."
+}

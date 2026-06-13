@@ -1,0 +1,38 @@
+{
+  "id": "bh-legislative-decree-no-54-of-2018-issuing-the-law-on-electron",
+  "title": "Legislative Decree No. 54 of 2018 Issuing the Law on Electronic Communications and Transactions",
+  "jurisdiction": "BH",
+  "instrument_class": "decree",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "data_privacy.data_governance_open_data",
+    "ai_emerging_tech.blockchain_web3",
+    "cybersecurity.cybercrime",
+    "digital_government.egovernment_services",
+    "digital_government.digital_identity_trust",
+    "digital_economy.ecommerce"
+  ],
+  "issuing_authority": "bh-king",
+  "date_issued": null,
+  "summary": "Provides the legal foundation for electronic records and digital transactions, supporting governance, validity, and reliability of official and private electronic data records.",
+  "source_url": "https://www.legalaffairs.gov.bh/Legislation/HTM/L5418",
+  "source_confidence": "official",
+  "tags": [
+    "Data & privacy",
+    "AI & emerging technologies",
+    "Cybersecurity",
+    "Digital government & identity",
+    "Digital economy & platforms"
+  ],
+  "year": 2018,
+  "theme_notes": {
+    "data_privacy.data_governance_open_data": "Establishes the legal framework for electronic communications, transactions, records, and signatures.",
+    "ai_emerging_tech.blockchain_web3": "Legal foundation for electronic records, communications and signatures.",
+    "cybersecurity.cybercrime": "Creates electronic records and electronic transactions framework.",
+    "digital_government.egovernment_services": "Legal framework for electronic records, communications and signatures.",
+    "digital_government.digital_identity_trust": "Legal framework for electronic signatures and electronic records.",
+    "digital_economy.ecommerce": "Legal framework for electronic contracts and records supporting e-commerce."
+  },
+  "notes": "Related instruments: Implemented for public entities by Prime Minister Decision No. 36 of 2018"
+}

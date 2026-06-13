@@ -1,0 +1,27 @@
+{
+  "id": "bh-decision-no-10-of-2026-amending-decision-no-67-of-2021-desig",
+  "title": "Decision No. 10 of 2026 Amending Decision No. 67 of 2021 Designating Foreign States under Legislative Decree No. 56 of 2018",
+  "jurisdiction": "BH",
+  "instrument_class": "decision",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "data_privacy.crossborder_data_flows",
+    "telecom_digital_infrastructure.cloud_data_centres"
+  ],
+  "issuing_authority": "bh-pm",
+  "date_issued": null,
+  "summary": "Updates the designated foreign-state regime for Bahrain-hosted foreign-party cloud customer content.",
+  "source_url": "https://mohamoon-bh.com/Default.aspx/CSS/images/Default.aspx?ID=42148&action=DisplayNews",
+  "source_confidence": "secondary",
+  "tags": [
+    "Data & privacy",
+    "Telecommunications & digital infrastructure"
+  ],
+  "year": 2026,
+  "theme_notes": {
+    "data_privacy.crossborder_data_flows": "Further amends the foreign-state designations under the cloud law.",
+    "telecom_digital_infrastructure.cloud_data_centres": "Further amends the designated foreign-state list under Bahrain’s cloud law."
+  },
+  "notes": "Related instruments: Amends Decision No. 67 of 2021"
+}

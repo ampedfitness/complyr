@@ -1,0 +1,24 @@
+{
+  "id": "bh-national-frequency-plan-2024",
+  "title": "National Frequency Plan 2024",
+  "jurisdiction": "BH",
+  "instrument_class": "standard",
+  "binding_status": "non_binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "telecom_digital_infrastructure.spectrum"
+  ],
+  "issuing_authority": "bh-tra",
+  "date_issued": null,
+  "summary": "Provides Bahrain’s frequency allocation table and national footnotes, serving as a source document for importers, manufacturers, spectrum users, foreign administrations and regional telecommunications organizations.",
+  "source_url": "https://www.tra.org.bh/en/category/frequency-plans",
+  "source_confidence": "official",
+  "tags": [
+    "Telecommunications & digital infrastructure"
+  ],
+  "year": 2024,
+  "theme_notes": {
+    "telecom_digital_infrastructure.spectrum": "Technical guide for permitted radiocommunication services by band."
+  },
+  "notes": "Related instruments: Approved by Resolution No. 4 of 2024"
+}

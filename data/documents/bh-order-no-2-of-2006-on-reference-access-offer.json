@@ -1,0 +1,24 @@
+{
+  "id": "bh-order-no-2-of-2006-on-reference-access-offer",
+  "title": "Order No. 2 of 2006 on Reference Access Offer",
+  "jurisdiction": "BH",
+  "instrument_class": "decision",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "telecom_digital_infrastructure.licensing_markets"
+  ],
+  "issuing_authority": "bh-tra",
+  "date_issued": null,
+  "summary": "Sets or enforces reference access offer terms.",
+  "source_url": "https://www.tra.org.bh/en/category/orders",
+  "source_confidence": "pending_verification",
+  "tags": [
+    "Telecommunications & digital infrastructure"
+  ],
+  "year": 2006,
+  "theme_notes": {
+    "telecom_digital_infrastructure.licensing_markets": "Order concerning Batelco reference access offer."
+  },
+  "notes": "Related instruments: Telecommunications Law and TRA orders archive Sourced from an official index listing; confirm against the instrument text."
+}

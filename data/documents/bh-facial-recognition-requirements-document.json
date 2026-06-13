@@ -1,0 +1,24 @@
+{
+  "id": "bh-facial-recognition-requirements-document",
+  "title": "Facial Recognition Requirements Document",
+  "jurisdiction": "BH",
+  "instrument_class": "guideline",
+  "binding_status": "non_binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "ai_emerging_tech.autonomous_smart_systems"
+  ],
+  "issuing_authority": "bh-tra",
+  "date_issued": null,
+  "summary": "Creates sector expectations for use of facial recognition technology, relevant to automated identification systems and smart infrastructure.",
+  "source_url": "https://www.tra.org.bh/en/category/position-papers-and-guidelines",
+  "source_confidence": "pending_verification",
+  "tags": [
+    "AI & emerging technologies"
+  ],
+  "year": 2024,
+  "theme_notes": {
+    "ai_emerging_tech.autonomous_smart_systems": "TRA requirements document for facial recognition systems."
+  },
+  "notes": "Related instruments: Telecommunications Law and TRA legal instruments archive Sourced from an official index listing; confirm against the instrument text."
+}

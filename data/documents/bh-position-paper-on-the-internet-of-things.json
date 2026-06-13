@@ -1,0 +1,24 @@
+{
+  "id": "bh-position-paper-on-the-internet-of-things",
+  "title": "Position Paper on the Internet of Things",
+  "jurisdiction": "BH",
+  "instrument_class": "white_paper",
+  "binding_status": "non_binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "ai_emerging_tech.iot_connected_devices"
+  ],
+  "issuing_authority": "bh-tra",
+  "date_issued": null,
+  "summary": "Sets Bahrain’s regulatory position on IoT across licensing, spectrum, numbering, permanent roaming, SIM and eSIM use, type approval, short-range devices, cybersecurity, resilience, personal data protection, and compliance with the Telecommunications Law and TRA instruments.",
+  "source_url": "https://ir-tra-website-prod-01.s3-eu-west-1.amazonaws.com/Media/Documents/Position_Papers_%26_Guidelines/20230227104608078_wf05wzja_drq.pdf",
+  "source_confidence": "official",
+  "tags": [
+    "AI & emerging technologies"
+  ],
+  "year": 2023,
+  "theme_notes": {
+    "ai_emerging_tech.iot_connected_devices": "TRA’s main IoT regulatory position paper."
+  },
+  "notes": "Related instruments: Telecommunications Law, Type Approval Regulation, Short Range Devices Regulation, SIM-Card Enabled Telecommunications Services Registration Regulation, Personal Data Protection Law"
+}

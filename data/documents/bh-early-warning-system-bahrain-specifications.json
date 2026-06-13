@@ -1,0 +1,24 @@
+{
+  "id": "bh-early-warning-system-bahrain-specifications",
+  "title": "Early Warning System Bahrain Specifications",
+  "jurisdiction": "BH",
+  "instrument_class": "standard",
+  "binding_status": "non_binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "cybersecurity.security_controls_frameworks"
+  ],
+  "issuing_authority": "bh-tra",
+  "date_issued": null,
+  "summary": "Sets technical specifications relevant to public warning communications over telecom networks and connected devices.",
+  "source_url": "https://www.tra.org.bh/en/category/position-papers-and-guidelines",
+  "source_confidence": "pending_verification",
+  "tags": [
+    "Cybersecurity"
+  ],
+  "year": 2026,
+  "theme_notes": {
+    "cybersecurity.security_controls_frameworks": "Specifications for Bahrain early warning system telecommunications messaging."
+  },
+  "notes": "Related instruments: Telecommunications Law and TRA legal instruments archive Sourced from an official index listing; confirm against the instrument text."
+}

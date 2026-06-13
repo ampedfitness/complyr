@@ -1,0 +1,24 @@
+{
+  "id": "bh-order-no-1-of-2015-on-voip-blocking-and-fair-usage-policy",
+  "title": "Order No. 1 of 2015 on VoIP Blocking and Fair Usage Policy",
+  "jurisdiction": "BH",
+  "instrument_class": "decision",
+  "binding_status": "binding",
+  "lifecycle": "in_force",
+  "themes": [
+    "telecom_digital_infrastructure.ott_digital_comms"
+  ],
+  "issuing_authority": "bh-tra",
+  "date_issued": null,
+  "summary": "Requires refraining from blocking or degrading voice over IP traffic, applying additional charges and amending fair usage policy.",
+  "source_url": "https://www.tra.org.bh/en/category/orders",
+  "source_confidence": "pending_verification",
+  "tags": [
+    "Telecommunications & digital infrastructure"
+  ],
+  "year": 2015,
+  "theme_notes": {
+    "telecom_digital_infrastructure.ott_digital_comms": "Emergency order against blocking or degrading VoIP traffic."
+  },
+  "notes": "Related instruments: Telecommunications Law and TRA orders archive Sourced from an official index listing; confirm against the instrument text."
+}

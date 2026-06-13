@@ -1,0 +1,24 @@
+{
+  "id": "bh-consultation-on-proposed-financial-cybersecurity-controls",
+  "title": "Consultation on Proposed Financial Cybersecurity Controls",
+  "jurisdiction": "BH",
+  "instrument_class": "consultation_paper",
+  "binding_status": "non_binding",
+  "lifecycle": "consultation",
+  "themes": [
+    "cybersecurity.security_controls_frameworks"
+  ],
+  "issuing_authority": "bh-cbb",
+  "date_issued": null,
+  "summary": "Consults on financial cybersecurity controls for CBB regulated institutions.",
+  "source_url": "https://www.cbb.gov.bh/consultations/",
+  "source_confidence": "pending_verification",
+  "tags": [
+    "Cybersecurity"
+  ],
+  "year": 2022,
+  "theme_notes": {
+    "cybersecurity.security_controls_frameworks": "Consultation on financial cybersecurity controls."
+  },
+  "notes": "Related instruments: CBB consultations archive and related rulebook modules Sourced from an official index listing; confirm against the instrument text."
+}
