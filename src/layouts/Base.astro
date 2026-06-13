@@ -24,6 +24,12 @@ const isActive = (path: string) =>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
     <title>{title}</title>
+    <link rel="icon" href={`${base}/favicon/favicon.svg`} type="image/svg+xml" />
+    <link rel="icon" href={`${base}/favicon/favicon-32.png`} sizes="32x32" type="image/png" />
+    <link rel="icon" href={`${base}/favicon/favicon-16.png`} sizes="16x16" type="image/png" />
+    <link rel="apple-touch-icon" href={`${base}/favicon/apple-touch-icon.png`} />
+    <link rel="manifest" href={`${base}/manifest.webmanifest`} />
+    <meta name="theme-color" content="#5048e5" />
     <script is:inline>
       (() => {
         const stored = localStorage.getItem('complyr-theme');
@@ -38,8 +44,16 @@ const isActive = (path: string) =>
       <div class="container">
         <a class="brand" href={base}>
           <span class="brand-mark" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round">
-              <path d="M17.5 7.5a7 7 0 1 0 0 9" />
+            <svg viewBox="0 0 48 48" fill="none">
+              <g stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 11 H11 V37 H16" />
+                <path d="M32 11 H37 V37 H32" />
+              </g>
+              <g fill="currentColor">
+                <rect x="15" y="16" width="18" height="3.4" rx="1.7" />
+                <rect x="15" y="22.3" width="12" height="3.4" rx="1.7" />
+                <rect x="15" y="28.6" width="18" height="3.4" rx="1.7" />
+              </g>
             </svg>
           </span>
           <span class="wordmark">Complyr</span>
@@ -47,12 +61,6 @@ const isActive = (path: string) =>
         <nav class="site-nav" aria-label="Main">
           <a href={base} aria-current={isActive('')}>Home</a>
           <a href={`${base}dashboard/`} aria-current={isActive('dashboard')}>Dashboard</a>
-          <a href="https://github.com/ampedfitness/complyr">
-            GitHub
-            <svg class="ext-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M6.5 3.5h-3a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-3M9.5 2.5h4v4M13 3 7.5 8.5" />
-            </svg>
-          </a>
         </nav>
         <div class="header-tools">
           <button type="button" class="theme-btn" id="theme-toggle" aria-label="Switch colour theme">
@@ -76,8 +84,16 @@ const isActive = (path: string) =>
       <div class="container">
         <a class="brand" href={base}>
           <span class="brand-mark" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round">
-              <path d="M17.5 7.5a7 7 0 1 0 0 9" />
+            <svg viewBox="0 0 48 48" fill="none">
+              <g stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 11 H11 V37 H16" />
+                <path d="M32 11 H37 V37 H32" />
+              </g>
+              <g fill="currentColor">
+                <rect x="15" y="16" width="18" height="3.4" rx="1.7" />
+                <rect x="15" y="22.3" width="12" height="3.4" rx="1.7" />
+                <rect x="15" y="28.6" width="18" height="3.4" rx="1.7" />
+              </g>
             </svg>
           </span>
           <span class="wordmark">Complyr</span>

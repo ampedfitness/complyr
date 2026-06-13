@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 224 48" width="224" height="48" fill="none" role="img" aria-label="Complyr">
+  <g stroke="#FFFFFF" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M16 11 H11 V37 H16"></path>
+    <path d="M32 11 H37 V37 H32"></path>
+  </g>
+  <g fill="#FFFFFF">
+    <rect x="15" y="16" width="18" height="3.4" rx="1.7"></rect>
+    <rect x="15" y="22.3" width="12" height="3.4" rx="1.7"></rect>
+    <rect x="15" y="28.6" width="18" height="3.4" rx="1.7"></rect>
+  </g>
+  <text x="58" y="32.5" font-family="Inter, system-ui, sans-serif" font-size="32" font-weight="700" letter-spacing="-1.2" fill="#FFFFFF">Complyr</text>
+</svg>

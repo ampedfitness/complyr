@@ -92,9 +92,6 @@ export default function RecordCard({
               </span>
             </>
           )}
-          {doc.source_confidence === 'pending_verification' && (
-            <span className="pill confidence-pending_verification">Pending verification</span>
-          )}
           <span className="year">{doc.year}</span>
         </span>
         <span className="record-title">
@@ -249,7 +246,9 @@ export default function RecordCard({
               <a href={doc.source_url} rel="noopener">
                 Official text
               </a>
-              <span className="muted">{CONFIDENCE_LABELS[doc.source_confidence]}</span>
+              {doc.source_confidence !== 'pending_verification' && (
+                <span className="muted">{CONFIDENCE_LABELS[doc.source_confidence]}</span>
+              )}
               {doc.last_verified && (
                 <span className="muted">
                   Last verified <span className="mono">{doc.last_verified}</span>

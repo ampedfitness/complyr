@@ -923,6 +923,10 @@ main {
 }
 
 @media (max-width: 40rem) {
+  .container {
+    padding: 0 1.1rem;
+  }
+
   .site-header .container {
     flex-wrap: wrap;
     gap: 0.5rem 1.2rem;
@@ -932,11 +936,42 @@ main {
     order: 3;
     width: 100%;
     margin: 0;
-    gap: 1.2rem;
+    gap: 1.6rem;
   }
 
   .header-tools {
     margin-left: auto;
+  }
+}
+
+/* Touch devices: enlarge tap targets to ~44px without affecting the dense
+   desktop layout the owner wants. Pointer-scoped, so mouse users are untouched. */
+@media (pointer: coarse) {
+  .site-nav a {
+    padding: 0.55rem 0;
+  }
+
+  .theme-btn {
+    width: 2.6rem;
+    height: 2.6rem;
+  }
+
+  .btn,
+  .filter-select,
+  .search-input {
+    min-height: 2.6rem;
+  }
+
+  .rail-opt {
+    padding: 0.5rem 0.4rem;
+  }
+
+  .lang-toggle button {
+    padding: 0.55rem 0.95rem;
+  }
+
+  .filter-chip {
+    padding: 0.4rem 0.75rem;
   }
 }
 

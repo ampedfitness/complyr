@@ -8,12 +8,6 @@ import type { DocRecord, Jurisdiction } from '../lib/types';
 const base = import.meta.env.BASE_URL;
 const classLabels = new Map(dataset.instrumentClasses.map((c) => [c.id, c.label]));
 
-const monthLabel = (iso: string) =>
-  new Date(`${iso}-15T00:00:00Z`).toLocaleString('en-US', {
-    month: 'long',
-    timeZone: 'UTC',
-  });
-
 const dayLabel = (iso: string) =>
   new Date(`${iso}T00:00:00Z`).toLocaleString('en-US', {
     month: 'short',
@@ -22,23 +16,36 @@ const dayLabel = (iso: string) =>
     timeZone: 'UTC',
   });
 
+// Most records carry only a year; show the full date when one exists.
+const fullDate = /^\d{4}-\d{2}-\d{2}$/;
+const dateLabel = (doc: DocRecord) =>
+  fullDate.test(doc.date_issued) ? dayLabel(doc.date_issued) : String(doc.year);
+
 const firstSentence = (text: string) => {
   const idx = text.indexOf('. ');
   return idx === -1 ? text : text.slice(0, idx + 1);
 };
 
-const groups: { month: string; name: string; year: string; docs: DocRecord[] }[] = [];
-for (const doc of dataset.documents) {
-  const month = doc.date_issued.slice(0, 7);
-  const group = groups.find((g) => g.month === month);
+// Homepage updates feed: the latest records by best-available date, capped at
+// the latest 10 per country so the catalogue does not overwhelm the page. Most
+// records are year-granular (some carry a full date); dataset.documents is
+// already sorted newest first. Records with no usable date at all are dropped.
+const perCountry = new Map<Jurisdiction, number>();
+const feedDocs = dataset.documents.filter((doc) => {
+  if (!doc.year) return false;
+  const seen = perCountry.get(doc.jurisdiction) ?? 0;
+  if (seen >= 10) return false;
+  perCountry.set(doc.jurisdiction, seen + 1);
+  return true;
+});
+
+// Group by year, since most records only resolve to a year.
+const groups: { year: string; docs: DocRecord[] }[] = [];
+for (const doc of feedDocs) {
+  const year = String(doc.year);
+  const group = groups.find((g) => g.year === year);
   if (group) group.docs.push(doc);
-  else
-    groups.push({
-      month,
-      name: monthLabel(month),
-      year: doc.date_issued.slice(0, 4),
-      docs: [doc],
-    });
+  else groups.push({ year, docs: [doc] });
 }
 const lead = groups[0];
 const rest = groups.slice(1, 4);
@@ -57,7 +64,7 @@ const confidence = (doc: DocRecord) =>
     ? { cls: 'high', label: 'High' }
     : doc.source_confidence === 'secondary'
       ? { cls: 'medium', label: 'Medium' }
-      : { cls: 'pending', label: 'Pending' };
+      : null;
 
 const ALL: Jurisdiction[] = ['BH', 'SA', 'AE', 'QA', 'KW', 'OM'];
 const jurCounts = ALL.map((j) => ({
@@ -124,7 +131,6 @@ const presentClasses = [...new Set(dataset.documents.map((d) => d.instrument_cla
 const legend = [
   { cls: 'high', name: 'High confidence', desc: 'Verified against an authoritative source' },
   { cls: 'medium', name: 'Medium confidence', desc: 'Verified against a secondary source' },
-  { cls: 'pending', name: 'Pending verification', desc: 'Source confirmation in progress' },
   { cls: 'info', name: 'All entries are source linked', desc: 'Transparency by design' },
 ];
 
@@ -275,7 +281,7 @@ const legend = [
         <div class="timeline">
           <article class="month-block lead">
             <header class="month-head">
-              <h3>{lead.name} {lead.year}</h3>
+              <h3>{lead.year}</h3>
               <span class="newest-tag">Newest</span>
               <span class="month-count">
                 {lead.docs.length} {lead.docs.length === 1 ? 'update' : 'updates'}
@@ -295,7 +301,7 @@ const legend = [
                   const conf = confidence(doc);
                   return (
                     <a class="update-row" data-jur={doc.jurisdiction} data-cls={doc.instrument_class} href={`${base}dashboard/?q=${encodeURIComponent(doc.title)}`}>
-                      <span class="u-date">{dayLabel(doc.date_issued)}</span>
+                      <span class="u-date">{dateLabel(doc)}</span>
                       <span class="u-jur">
                         <Flag code={doc.jurisdiction} />
                         {doc.jurisdiction}
@@ -307,13 +313,17 @@ const legend = [
                         <span class="u-name">{doc.title}</span>
                         <span class="u-line">{firstSentence(doc.summary)}</span>
                       </span>
-                      <span class={`conf ${conf.cls} conf-col`}>
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                          <path d="M12 3 5 5.5v5c0 4.5 3 8.5 7 10 4-1.5 7-5.5 7-10v-5L12 3Z" />
-                          <path d="m9 11.5 2 2 4-4" />
-                        </svg>
-                        {conf.label}
-                      </span>
+                      {conf ? (
+                        <span class={`conf ${conf.cls} conf-col`}>
+                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M12 3 5 5.5v5c0 4.5 3 8.5 7 10 4-1.5 7-5.5 7-10v-5L12 3Z" />
+                            <path d="m9 11.5 2 2 4-4" />
+                          </svg>
+                          {conf.label}
+                        </span>
+                      ) : (
+                        <span class="conf-col" />
+                      )}
                       <span class="go" aria-hidden="true">&rarr;</span>
                     </a>
                   );
@@ -326,7 +336,7 @@ const legend = [
             rest.map((group) => (
               <details class="month-block">
                 <summary>
-                  <h3>{group.name} {group.year}</h3>
+                  <h3>{group.year}</h3>
                   <span class="month-count">
                     {group.docs.length} {group.docs.length === 1 ? 'update' : 'updates'}
                   </span>
@@ -344,7 +354,7 @@ const legend = [
                     const conf = confidence(doc);
                     return (
                       <a class="update-row" data-jur={doc.jurisdiction} data-cls={doc.instrument_class} href={`${base}dashboard/?q=${encodeURIComponent(doc.title)}`}>
-                        <span class="u-date">{dayLabel(doc.date_issued)}</span>
+                        <span class="u-date">{dateLabel(doc)}</span>
                         <span class="u-jur">
                           <Flag code={doc.jurisdiction} />
                           {doc.jurisdiction}
@@ -355,13 +365,17 @@ const legend = [
                         <span class="u-title">
                           <span class="u-name">{doc.title}</span>
                         </span>
-                        <span class={`conf ${conf.cls} conf-col`}>
-                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <path d="M12 3 5 5.5v5c0 4.5 3 8.5 7 10 4-1.5 7-5.5 7-10v-5L12 3Z" />
-                            <path d="m9 11.5 2 2 4-4" />
-                          </svg>
-                          {conf.label}
-                        </span>
+                        {conf ? (
+                          <span class={`conf ${conf.cls} conf-col`}>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                              <path d="M12 3 5 5.5v5c0 4.5 3 8.5 7 10 4-1.5 7-5.5 7-10v-5L12 3Z" />
+                              <path d="m9 11.5 2 2 4-4" />
+                            </svg>
+                            {conf.label}
+                          </span>
+                        ) : (
+                          <span class="conf-col" />
+                        )}
                         <span class="go" aria-hidden="true">&rarr;</span>
                       </a>
                     );
@@ -1292,18 +1306,43 @@ const legend = [
       grid-template-columns: repeat(2, 1fr);
     }
 
-    .update-row,
-    .update-row.head {
-      grid-template-columns: 1fr;
-      gap: 0.3rem;
+    /* Stacked update rows read as a clean entry: meta line, title, then
+       type + confidence, instead of one item per line. */
+    .update-row {
+      grid-template-columns: auto 1fr auto;
+      grid-template-areas:
+        'jur date date'
+        'title title title'
+        'type type conf';
+      gap: 0.45rem 0.6rem;
+      padding: 0.8rem 0.9rem;
     }
 
     .update-row.head {
       display: none;
     }
 
-    .conf-col {
+    .u-jur {
+      grid-area: jur;
+    }
+
+    .u-date {
+      grid-area: date;
+      justify-self: end;
+    }
+
+    .u-title {
+      grid-area: title;
+    }
+
+    .u-type {
+      grid-area: type;
       justify-self: start;
+    }
+
+    .conf-col {
+      grid-area: conf;
+      justify-self: end;
     }
 
     .update-row .go {
@@ -1316,6 +1355,19 @@ const legend = [
 
     details.month-block summary {
       flex-wrap: wrap;
+    }
+  }
+
+  /* Touch devices: larger tap targets on the home page controls. */
+  @media (pointer: coarse) {
+    .filter-chip,
+    .filter-select {
+      padding: 0.45rem 0.85rem;
+    }
+
+    .dash-link,
+    .zone-link {
+      padding: 0.3rem 0;
     }
   }
 </style>

@@ -1,0 +1,9 @@
+{
+  "name": "Complyr",
+  "short_name": "Complyr",
+  "icons": [
+    { "src": "/complyr/favicon/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ],
+  "theme_color": "#5048e5",
+  "background_color": "#eeedf8"
+}
